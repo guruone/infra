@@ -5,7 +5,7 @@ class CMainParent:UIViewController
     weak var bar:VMainBar!
     weak var current:UIViewController?
     private var controllerRect:CGRect!
-    private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.Default
+    private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     private let kBarHeight:CGFloat = 64
     private let kAnimationDuration:NSTimeInterval = 0.3
     
