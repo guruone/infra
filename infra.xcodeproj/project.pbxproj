@@ -39,6 +39,10 @@
 		DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
+		DADCC0F31D4C0EFB0027B7BE /* CFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */; };
+		DADCC0F51D4C0FF20027B7BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */; };
+		DADCC0F71D4C1C110027B7BE /* CFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */; };
+		DADCC0F91D4C1DD40027B7BE /* CFirebaseAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADCC0F81D4C1DD40027B7BE /* CFirebaseAnalytics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +94,10 @@
 		DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButton.swift; sourceTree = "<group>"; };
 		DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonSummary.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
+		DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebase.swift; sourceTree = "<group>"; };
+		DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorage.swift; sourceTree = "<group>"; };
+		DADCC0F81D4C1DD40027B7BE /* CFirebaseAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseAnalytics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 		DA0EA1441D4BBE1600D300B2 /* infra */ = {
 			isa = PBXGroup;
 			children = (
+				DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */,
 				DA0EA2741D4BD81100D300B2 /* Controller */,
 				DA0EA27B1D4BD81100D300B2 /* Model */,
 				DA0EA27C1D4BD81100D300B2 /* View */,
@@ -263,6 +272,7 @@
 		DA0EA2741D4BD81100D300B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DADCC0F11D4C0EF10027B7BE /* Firebase */,
 				DA0EA2751D4BD81100D300B2 /* Landing */,
 				DA0EA2771D4BD81100D300B2 /* Main */,
 			);
@@ -321,6 +331,16 @@
 				DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DADCC0F11D4C0EF10027B7BE /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */,
+				DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */,
+				DADCC0F81D4C1DD40027B7BE /* CFirebaseAnalytics.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +430,7 @@
 			files = (
 				DA0EA24C1D4BD01100D300B2 /* Localizable.strings in Resources */,
 				DA0EA2021D4BD01100D300B2 /* brand.xcassets in Resources */,
+				DADCC0F51D4C0FF20027B7BE /* GoogleService-Info.plist in Resources */,
 				DA0EA24B1D4BD01100D300B2 /* LaunchScreen.storyboard in Resources */,
 				DA0EA2031D4BD01100D300B2 /* ui.xcassets in Resources */,
 			);
@@ -483,8 +504,10 @@
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
+				DADCC0F91D4C1DD40027B7BE /* CFirebaseAnalytics.swift in Sources */,
 				DA0EA2201D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
+				DADCC0F31D4C0EFB0027B7BE /* CFirebase.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
@@ -502,6 +525,7 @@
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
+				DADCC0F71D4C1C110027B7BE /* CFirebaseStorage.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
