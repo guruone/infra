@@ -34,7 +34,9 @@ class CMainParent:UIViewController
         super.viewDidLoad()
         
         controllerRect = CGRectMake(0, kBarHeight, view.bounds.maxX, view.bounds.maxY - kBarHeight)
-        startSession()
+        
+        let landing:CLanding = CLanding()
+        rootController(landing, bar:false)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle
@@ -48,17 +50,6 @@ class CMainParent:UIViewController
     }
     
     //MARK: private
-    
-    private func startSession()
-    {
-        let landing:CLanding = CLanding()
-        rootController(landing, bar:false)
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-        {
-            MConfiguration.sharedInstance.loadDevice(self)
-        }
-    }
     
     private func rootController(controller:UIViewController, bar:Bool)
     {
@@ -79,12 +70,6 @@ class CMainParent:UIViewController
         
         view.addSubview(controller.view)
         controller.didMoveToParentViewController(self)
-    }
-    
-    private func loadOnboarding()
-    {
-        let onboarding:COnboarding = COnboarding()
-        rootController(onboarding, bar:false)
     }
     
     private func showController(controller:UIViewController, scroll:CMainParentScroll)
@@ -140,70 +125,6 @@ class CMainParent:UIViewController
     }
     
     //MARK: public
-    
-    func healthKitError()
-    {
-        let error:CErrorHealthKit = CErrorHealthKit()
-        rootController(error, bar:false)
-    }
-    
-    func deviceLoaded()
-    {
-        MSession.sharedInstance.loadSession(self)
-    }
-    
-    func sessionLoaded()
-    {
-        dispatch_async(dispatch_get_main_queue())
-        { [weak self] in
-            
-            if MConfiguration.sharedInstance.device!.onboarded
-            {
-                self?.onboardingDone()
-            }
-            else
-            {
-                self?.loadOnboarding()
-            }
-        }
-    }
-    
-    func onboardingDone()
-    {
-        let summary:CSummary = CSummary()
-        rootController(summary, bar:true)
-        
-        let bar:VMainBar = VMainBar(controller:self)
-        bar.frame = CGRectMake(0, 0, view.bounds.maxX, kBarHeight)
-        bar.selectSummary(false)
-        self.bar = bar
-        
-        view.addSubview(bar)
-    }
-    
-    func showHistory()
-    {
-        let history:CHistory = CHistory()
-        showController(history, scroll:CMainParentScroll.Right)
-    }
-    
-    func showSummaryFromLeft()
-    {
-        let summary:CSummary = CSummary()
-        showController(summary, scroll:CMainParentScroll.Right)
-    }
-    
-    func showSummaryFromRight()
-    {
-        let summary:CSummary = CSummary()
-        showController(summary, scroll:CMainParentScroll.Left)
-    }
-    
-    func showConfig()
-    {
-        let config:CSettings = CSettings()
-        showController(config, scroll:CMainParentScroll.Left)
-    }
     
     func statusBarLight()
     {

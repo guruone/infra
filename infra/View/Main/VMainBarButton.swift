@@ -5,27 +5,6 @@ class VMainBarButton:UIButton
     weak var label:UILabel?
     private(set) var active:Bool
     
-    class func Summary() -> VMainBarButton
-    {
-        let button:VMainBarButton = VMainBarButtonSummary()
-        
-        return button
-    }
-    
-    class func History() -> VMainBarButton
-    {
-        let button:VMainBarButton = VMainBarButtonHistory()
-        
-        return button
-    }
-    
-    class func Config() -> VMainBarButton
-    {
-        let button:VMainBarButton = VMainBarButtonConfig()
-        
-        return button
-    }
-    
     init(image:String, title:String?)
     {
         active = false

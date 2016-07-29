@@ -18,20 +18,4 @@ class AppDelegate:UIResponder, UIApplicationDelegate
         
         return true
     }
-    
-    func applicationDidEnterBackground(application:UIApplication)
-    {
-        UILocalNotification.postRemainder()
-    }
-    
-    func applicationDidBecomeActive(application:UIApplication)
-    {
-        NSNotification.postBecameActive()
-        UILocalNotification.cancelAll()
-    }
-    
-    func applicationWillTerminate(application:UIApplication)
-    {
-        UILocalNotification.postRemainder()
-    }
 }

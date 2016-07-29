@@ -27,7 +27,6 @@
 		DA0EA2211D4BD01100D300B2 /* DUbikDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1971D4BD01100D300B2 /* DUbikDevice.swift */; };
 		DA0EA24B1D4BD01100D300B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA1CD1D4BD01100D300B2 /* LaunchScreen.storyboard */; };
 		DA0EA24C1D4BD01100D300B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA1CF1D4BD01100D300B2 /* Localizable.strings */; };
-		DA0EA24E1D4BD01100D300B2 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2761D4BD81100D300B2 /* CLanding.swift */; };
 		DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2781D4BD81100D300B2 /* CMain.swift */; };
 		DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2791D4BD81100D300B2 /* CMainController.swift */; };
@@ -37,6 +36,7 @@
 		DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */; };
 		DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
+		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +338,7 @@
 				TargetAttributes = {
 					DA0EA1411D4BBE1600D300B2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7AMWG3RLHN;
 					};
 					DA0EA1581D4BBE1600D300B2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -413,7 +414,6 @@
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
-				DA0EA24E1D4BD01100D300B2 /* infraTests.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 			);
@@ -423,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -533,7 +534,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,10 +546,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = infra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.infra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f3d3017c-d0dd-4d9b-a098-38a72914460c";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -556,10 +560,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = infra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.infra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2461959b-b340-400c-941f-0beb1af13f63";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -606,6 +613,7 @@
 				DA0EA1641D4BBE1600D300B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA0EA1651D4BBE1600D300B2 /* Build configuration list for PBXNativeTarget "tests" */ = {
 			isa = XCConfigurationList;
@@ -614,6 +622,7 @@
 				DA0EA1671D4BBE1600D300B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

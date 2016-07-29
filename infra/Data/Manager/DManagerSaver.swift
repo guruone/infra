@@ -1,13 +1,15 @@
 import Foundation
+import CoreData
 
 class DManagerSaver
 {
-    weak var model:DManagerModel!
+    weak var context:NSManagedObjectContext!
     weak var timer:NSTimer?
     private let kTimeoutSave:NSTimeInterval = 1
     
-    init()
+    init(context:NSManagedObjectContext)
     {
+        self.context = context
     }
     
     @objc func timerDone(sender timer:NSTimer)
@@ -26,16 +28,16 @@ class DManagerSaver
     
     private func actualSave()
     {
-        if model.managedObjectContext.hasChanges
+        if context.hasChanges
         {
-            model.managedObjectContext.performBlock
-            { [weak self] in
+            context.performBlock
+                { [weak self] in
                     
-                do
-                {
-                    try self?.model.managedObjectContext.save()
-                }
-                catch{}
+                    do
+                    {
+                        try self?.context.save()
+                    }
+                    catch{}
             }
         }
     }

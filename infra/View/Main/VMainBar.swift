@@ -55,7 +55,7 @@ class VMainBar:UIView
         backgroundColor = UIColor.complement()
         clipsToBounds = true
         self.controller = controller
-        
+        /*
         let buttonSummary:VMainBarButton = VMainBarButton.Summary()
         buttonSummary.addTarget(self, action:#selector(self.actionSummary(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
         self.buttonSummary = buttonSummary
@@ -141,35 +141,21 @@ class VMainBar:UIView
         
         addConstraint(layoutSummaryLeft)
         addConstraint(layoutHistoryLeft)
-        addConstraint(layoutConfigLeft)
+        addConstraint(layoutConfigLeft)*/
     }
     
     //MARK: actions
     
     func actionSummary(sender button:UIButton)
     {
-        if buttonHistory.active
-        {
-            controller.showSummaryFromRight()
-        }
-        else
-        {
-            controller.showSummaryFromLeft()
-        }
-        
-        selectSummary(true)
     }
     
     func actionHistory(sender button:UIButton)
     {
-        controller.showHistory()
-        selectHistory(true)
     }
     
     func actionConfig(sender button:UIButton)
     {
-        controller.showConfig()
-        selectConfig(true)
     }
     
     //MARK: private

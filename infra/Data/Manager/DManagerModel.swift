@@ -4,7 +4,7 @@ import CoreData
 class DManagerModel
 {
     let saver:DManagerSaver
-    let managedObjectContext:NSManagedObjectContext
+    private let managedObjectContext:NSManagedObjectContext
     private let kModelExtension:String = "momd"
     private let kSQLiteExtension:String = "%@.sqlite"
     
@@ -24,9 +24,7 @@ class DManagerModel
         
         managedObjectContext = NSManagedObjectContext(concurrencyType:NSManagedObjectContextConcurrencyType.PrivateQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
-        
-        saver = DManagerSaver()
-        saver.model = self
+        saver = DManagerSaver(context:managedObjectContext)
     }
     
     //MARK: public
@@ -36,16 +34,16 @@ class DManagerModel
         saver.delaySaving()
         
         managedObjectContext.performBlock
-        { [weak self] in
+            { [weak self] in
                 
-            if self != nil
-            {
-                let entityDescription:NSEntityDescription = NSEntityDescription.entityForName(modelType.entityName(), inManagedObjectContext:self!.managedObjectContext)!
-                let managedObject:NSManagedObject = NSManagedObject(entity:entityDescription, insertIntoManagedObjectContext:self!.managedObjectContext)
-                let managedGeneric:ModelType = managedObject as! ModelType
-                
-                block?(managedGeneric)
-            }
+                if self != nil
+                {
+                    let entityDescription:NSEntityDescription = NSEntityDescription.entityForName(modelType.entityName(), inManagedObjectContext:self!.managedObjectContext)!
+                    let managedObject:NSManagedObject = NSManagedObject(entity:entityDescription, insertIntoManagedObjectContext:self!.managedObjectContext)
+                    let managedGeneric:ModelType = managedObject as! ModelType
+                    
+                    block?(managedGeneric)
+                }
         }
     }
     
@@ -58,31 +56,33 @@ class DManagerModel
         fetchRequest.fetchLimit = limit
         
         managedObjectContext.performBlock
-        { [weak self] in
+            { [weak self] in
                 
-            let results:[ModelType]
-            
-            do
-            {
-                results = try self?.managedObjectContext.executeFetchRequest(fetchRequest) as! [ModelType]
-            }
-            catch
-            {
-                results = []
-            }
-            
-            block?(results)
+                let results:[ModelType]
+                
+                do
+                {
+                    results = try self?.managedObjectContext.executeFetchRequest(fetchRequest) as! [ModelType]
+                }
+                catch
+                {
+                    results = []
+                }
+                
+                block?(results)
         }
     }
     
-    func delete(object:NSManagedObject)
+    func delete(object:NSManagedObject, block:(() -> ())? = nil)
     {
         saver.delaySaving()
         
         managedObjectContext.performBlock
-        { [weak self] in
+            { [weak self] in
                 
-            self?.managedObjectContext.deleteObject(object)
+                self?.managedObjectContext.deleteObject(object)
+                
+                block?()
         }
     }
     

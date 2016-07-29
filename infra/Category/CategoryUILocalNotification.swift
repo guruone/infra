@@ -10,12 +10,12 @@ extension UILocalNotification
     class func postRemainder()
     {
         self.cancelAll()
-        
+        /*
         if MConfiguration.sharedInstance.device!.notifications
         {
             let notification:UILocalNotification = self.Remainder()
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
+        }*/
     }
     
     //MARK: private
