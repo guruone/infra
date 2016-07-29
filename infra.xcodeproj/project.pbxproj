@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0C453B1D4C017C003AF335 /* MConfiguration.swift */; };
 		DA0EA2021D4BD01100D300B2 /* brand.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA1691D4BD01000D300B2 /* brand.xcassets */; };
 		DA0EA2031D4BD01100D300B2 /* ui.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA16A1D4BD01000D300B2 /* ui.xcassets */; };
 		DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA16C1D4BD01000D300B2 /* CategoryNSDate.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA0C453B1D4C017C003AF335 /* MConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConfiguration.swift; sourceTree = "<group>"; };
 		DA0EA1421D4BBE1600D300B2 /* infra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = infra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0EA1591D4BBE1600D300B2 /* tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0EA1691D4BD01000D300B2 /* brand.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = brand.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0C453A1D4C016E003AF335 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DA0C453B1D4C017C003AF335 /* MConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		DA0EA1391D4BBE1600D300B2 = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 		DA0EA27B1D4BD81100D300B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA0C453A1D4C016E003AF335 /* Configuration */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +426,7 @@
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
+				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

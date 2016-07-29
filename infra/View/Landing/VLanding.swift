@@ -12,6 +12,10 @@ class VLanding:UIView
         backgroundColor = UIColor.whiteColor()
         self.controller = controller
         
+        let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        
+        print("pointsize 15.0: \(font.pointSize)")
+        
         let logo:UIImageView = UIImageView()
         logo.userInteractionEnabled = false
         logo.clipsToBounds = true
