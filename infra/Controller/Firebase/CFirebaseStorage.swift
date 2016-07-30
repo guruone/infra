@@ -5,7 +5,6 @@ class CFirebaseStorage
 {
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
-    private let kStorageReference_News:String = "news"
     
     init()
     {
@@ -15,7 +14,14 @@ class CFirebaseStorage
     
     //MARK: public
     
-    func loadNews
+    func loadNews(delegate:CFirebaseStorageNews?)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        { [weak delegate] in
+            
+            
+        }
+    }
     
     func news() -> FIRStorageReference
     {
