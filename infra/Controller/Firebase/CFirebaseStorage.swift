@@ -5,6 +5,7 @@ class CFirebaseStorage
 {
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
+    private weak var storageNews:CFirebaseStorageNews?
     
     init()
     {
@@ -14,12 +15,12 @@ class CFirebaseStorage
     
     //MARK: public
     
-    func loadNews(delegate:CFirebaseStorageNews?)
+    func loadNews(delegate:CFirebaseStorageNewsDelegate?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak delegate] in
             
-            
+            self.storageNews = CFirebaseStorageNews(storage:self.storageReference, delegate:delegate)
         }
     }
 }
