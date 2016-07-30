@@ -94,6 +94,7 @@
 		DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButton.swift; sourceTree = "<group>"; };
 		DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonSummary.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
+		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebase.swift; sourceTree = "<group>"; };
 		DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorage.swift; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 			children = (
 				DA0EA1CD1D4BD01100D300B2 /* LaunchScreen.storyboard */,
 				DA0EA1CF1D4BD01100D300B2 /* Localizable.strings */,
+				DAD352181D4C547D00401230 /* newsMap.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";

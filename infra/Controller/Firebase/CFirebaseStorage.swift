@@ -4,8 +4,7 @@ import Firebase
 class CFirebaseStorage
 {
     private let storage:FIRStorage
-    private let storageReference:FIRStorageReference
-    private let kStorageReference:String = "gs://infra-3cd0d.appspot.com"
+    let storageReference:FIRStorageReference
     private let kStorageReference_News:String = "news"
     
     init()
