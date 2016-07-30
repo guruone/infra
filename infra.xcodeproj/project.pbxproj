@@ -39,6 +39,8 @@
 		DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
+		DAD3521A1D4C551E00401230 /* CFirebaseStorageNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */; };
+		DAD3521C1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */; };
 		DADCC0F31D4C0EFB0027B7BE /* CFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */; };
 		DADCC0F51D4C0FF20027B7BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */; };
 		DADCC0F71D4C1C110027B7BE /* CFirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */; };
@@ -95,6 +97,8 @@
 		DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonSummary.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
+		DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorageNews.swift; sourceTree = "<group>"; };
+		DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorageNewsDelegate.swift; sourceTree = "<group>"; };
 		DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebase.swift; sourceTree = "<group>"; };
 		DADCC0F41D4C0FF20027B7BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorage.swift; sourceTree = "<group>"; };
@@ -341,6 +345,8 @@
 				DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */,
 				DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */,
 				DADCC0F81D4C1DD40027B7BE /* CFirebaseAnalytics.swift */,
+				DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */,
+				DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -507,9 +513,11 @@
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
 				DADCC0F91D4C1DD40027B7BE /* CFirebaseAnalytics.swift in Sources */,
+				DAD3521A1D4C551E00401230 /* CFirebaseStorageNews.swift in Sources */,
 				DA0EA2201D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DADCC0F31D4C0EFB0027B7BE /* CFirebase.swift in Sources */,
+				DAD3521C1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
