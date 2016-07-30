@@ -9,19 +9,15 @@ class VLanding:UIView
         self.init()
         userInteractionEnabled = false
         clipsToBounds = true
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.blackColor()
         self.controller = controller
-        
-        let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
-        
-        print("pointsize 15.0: \(font.pointSize)")
         
         let logo:UIImageView = UIImageView()
         logo.userInteractionEnabled = false
         logo.clipsToBounds = true
         logo.translatesAutoresizingMaskIntoConstraints = false
         logo.contentMode = UIViewContentMode.Center
-        logo.image = UIImage(named:"logo")
+        logo.image = UIImage(named:"genericLogo")
         
         addSubview(logo)
         

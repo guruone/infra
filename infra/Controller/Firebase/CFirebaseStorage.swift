@@ -22,11 +22,4 @@ class CFirebaseStorage
             
         }
     }
-    
-    func news() -> FIRStorageReference
-    {
-        let reference:FIRStorageReference = storageReference.child(kStorageReference_News)
-        
-        return reference
-    }
 }
