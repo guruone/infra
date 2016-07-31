@@ -4,6 +4,15 @@ class CLanding:CMainController
 {
     weak var viewLanding:VLanding!
     
+    override func viewDidAppear(animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        let controller:CHome = CHome()
+        
+        parent.pushController(controller, scroll: CMainParent.CMainParentScroll.Left)
+    }
+    
     override func loadView()
     {
         let viewLanding:VLanding = VLanding(controller:self)

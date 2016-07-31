@@ -72,21 +72,35 @@ class CMainParent:UIViewController
         controller.didMoveToParentViewController(self)
     }
     
-    private func showController(controller:UIViewController, scroll:CMainParentScroll)
+    //MARK: public
+    
+    func statusBarLight()
+    {
+        statusBarStyle = UIStatusBarStyle.LightContent
+        parent.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    func statusBarDefault()
+    {
+        statusBarStyle = UIStatusBarStyle.Default
+        parent.setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    func pushController(controller:UIViewController, scroll:CMainParentScroll)
     {
         switch scroll
         {
-            case CMainParentScroll.Left:
-        
-                controller.view.frame = rightRect
-                
-                break
-                
-            case CMainParentScroll.Right:
-                
-                controller.view.frame = leftRect
-                
-                break
+        case CMainParentScroll.Left:
+            
+            controller.view.frame = rightRect
+            
+            break
+            
+        case CMainParentScroll.Right:
+            
+            controller.view.frame = leftRect
+            
+            break
         }
         
         current!.willMoveToParentViewController(nil)
@@ -103,17 +117,17 @@ class CMainParent:UIViewController
                 
                 switch scroll
                 {
-                    case CMainParentScroll.Left:
-                        
-                        self.current!.view.frame = self.leftRect
-                        
-                        break
-                        
-                    case CMainParentScroll.Right:
-                        
-                        self.current!.view.frame = self.rightRect
-                        
-                        break
+                case CMainParentScroll.Left:
+                    
+                    self.current!.view.frame = self.leftRect
+                    
+                    break
+                    
+                case CMainParentScroll.Right:
+                    
+                    self.current!.view.frame = self.rightRect
+                    
+                    break
                 }
             })
         { (done) in
@@ -122,19 +136,5 @@ class CMainParent:UIViewController
             controller.didMoveToParentViewController(self)
             self.current = controller
         }
-    }
-    
-    //MARK: public
-    
-    func statusBarLight()
-    {
-        statusBarStyle = UIStatusBarStyle.LightContent
-        parent.setNeedsStatusBarAppearanceUpdate()
-    }
-    
-    func statusBarDefault()
-    {
-        statusBarStyle = UIStatusBarStyle.Default
-        parent.setNeedsStatusBarAppearanceUpdate()
     }
 }
