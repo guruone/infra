@@ -13,6 +13,7 @@ class CMainParent:UIViewController
     {
         case Left
         case Right
+        case None
     }
     
     private lazy var leftRect:CGRect =
@@ -36,7 +37,7 @@ class CMainParent:UIViewController
         controllerRect = CGRectMake(0, kBarHeight, view.bounds.maxX, view.bounds.maxY - kBarHeight)
         
         let landing:CLanding = CLanding()
-        rootController(landing, bar:false)
+        rootController(landing)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle
@@ -51,23 +52,14 @@ class CMainParent:UIViewController
     
     //MARK: private
     
-    private func rootController(controller:UIViewController, bar:Bool)
+    private func rootController(controller:UIViewController)
     {
         current?.view.removeFromSuperview()
         current?.removeFromParentViewController()
         current = controller
         
         addChildViewController(controller)
-        
-        if bar
-        {
-            controller.view.frame = controllerRect
-        }
-        else
-        {
-            controller.view.frame = view.bounds
-        }
-        
+        controller.view.frame = view.bounds
         view.addSubview(controller.view)
         controller.didMoveToParentViewController(self)
     }
@@ -88,21 +80,34 @@ class CMainParent:UIViewController
     
     func pushController(controller:UIViewController, scroll:CMainParentScroll)
     {
+        let enteringRect:CGRect
+        let leavingRect:CGRect
+        
         switch scroll
         {
-        case CMainParentScroll.Left:
+            case CMainParentScroll.Left:
+                
+                enteringRect = rightRect
+                leavingRect = leftRect
+                
+                break
+                
+            case CMainParentScroll.Right:
+                
+                enteringRect = leftRect
+                leavingRect = rightRect
+                
+                break
             
-            controller.view.frame = rightRect
-            
-            break
-            
-        case CMainParentScroll.Right:
-            
-            controller.view.frame = leftRect
-            
-            break
+            case CMainParentScroll.None:
+                
+                enteringRect = controllerRect
+                leavingRect = controllerRect
+                
+                break
         }
         
+        controller.view.frame = enteringRect
         current!.willMoveToParentViewController(nil)
         addChildViewController(controller)
         
@@ -114,21 +119,7 @@ class CMainParent:UIViewController
             animations:
             {
                 controller.view.frame = self.controllerRect
-                
-                switch scroll
-                {
-                case CMainParentScroll.Left:
-                    
-                    self.current!.view.frame = self.leftRect
-                    
-                    break
-                    
-                case CMainParentScroll.Right:
-                    
-                    self.current!.view.frame = self.rightRect
-                    
-                    break
-                }
+                self.current!.view.frame = leavingRect
             })
         { (done) in
             
