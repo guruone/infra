@@ -5,11 +5,13 @@ class CFirebaseStorageNews
 {
     weak var delegate:CFirebaseStorageNewsDelegate?
     weak var storage:FIRStorageReference?
+    weak var root:FIRStorageReference?
     private var newsImage:UIImage?
     private var newsText:String?
     private var newsImageReference:String?
     private var newsTextReference:String?
     private let kReferenceRoot:String = "news"
+    private let kReferenceMap:String = "newsMap.plist"
     private let kPListImage:String = "image"
     private let kPListText:String = "text"
     private let kFiveMegaBytes:Int64 = 5242880
@@ -36,7 +38,8 @@ class CFirebaseStorageNews
     
     private func loadMap()
     {
-        let reference:FIRStorageReference? = storage?.child(kReferenceRoot)
+        root = storage?.child(kReferenceRoot)
+        let reference:FIRStorageReference? = root?.child(kReferenceMap)
         
         if reference == nil
         {
@@ -101,7 +104,7 @@ class CFirebaseStorageNews
     
     private func loadText()
     {
-        let reference:FIRStorageReference? = storage?.child(newsTextReference!)
+        let reference:FIRStorageReference? = root?.child(newsTextReference!)
         
         if reference == nil
         {
@@ -144,7 +147,7 @@ class CFirebaseStorageNews
     
     private func loadImage()
     {
-        let reference:FIRStorageReference? = storage?.child(newsImageReference!)
+        let reference:FIRStorageReference? = root?.child(newsImageReference!)
         
         if reference == nil
         {
