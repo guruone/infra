@@ -2,11 +2,19 @@ import UIKit
 
 class CHome:CMainController, CFirebaseStorageNewsDelegate
 {
+    weak var viewHome:VHome!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        CFirebase.sharedInstance.storage.loadNews(self)
+    }
+    
     override func loadView()
     {
-        super.loadView()
-        
-        CFirebase.sharedInstance.storage.loadNews(self)
+        let viewHome:VHome = VHome(controller:self)
+        self.viewHome = viewHome
+        view = viewHome
     }
     
     //MARK: news delegate

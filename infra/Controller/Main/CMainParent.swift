@@ -116,7 +116,7 @@ class CMainParent:UIViewController
             case CMainParentScroll.None:
                 
                 enteringRect = controllerRect
-                leavingRect = controllerRect
+                leavingRect = view.bounds
                 
                 break
         }

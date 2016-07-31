@@ -10,7 +10,7 @@ class CLanding:CMainController
         
         let controller:CHome = CHome()
         
-        parent.pushController(controller, scroll: CMainParent.CMainParentScroll.Left)
+        parent.pushController(controller, scroll: CMainParent.CMainParentScroll.None)
     }
     
     override func loadView()
