@@ -48,7 +48,7 @@ class CFirebaseStorageNews
         else
         {
             reference!.dataWithMaxSize(kFiveMegaBytes)
-            { [weak self] (data, error) in
+            { (data, error) in
                 
                 if error == nil && data != nil
                 {
@@ -65,23 +65,20 @@ class CFirebaseStorageNews
                     
                     if dictionary == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        if self != nil
+                        self.newsImageReference = dictionary![self.kPListImage]
+                        self.newsTextReference = dictionary![self.kPListText]
+                        
+                        if self.newsImageReference == nil || self.newsTextReference == nil
                         {
-                            self!.newsImageReference = dictionary![self!.kPListImage]
-                            self!.newsTextReference = dictionary![self!.kPListText]
-                            
-                            if self!.newsImageReference == nil || self!.newsTextReference == nil
-                            {
-                                self!.errorUnknown()
-                            }
-                            else
-                            {
-                                self!.loadText()
-                            }
+                            self.errorUnknown()
+                        }
+                        else
+                        {
+                            self.loadText()
                         }
                     }
                 }
@@ -91,11 +88,11 @@ class CFirebaseStorageNews
                     
                     if errorDescription == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        self?.error(errorDescription!)
+                        self.error(errorDescription!)
                     }
                 }
             }
@@ -113,19 +110,19 @@ class CFirebaseStorageNews
         else
         {
             reference!.dataWithMaxSize(kFiveMegaBytes)
-            { [weak self] (data, error) in
+            { (data, error) in
                 
                 if error == nil && data != nil
                 {
-                    self?.newsText = String(data:data!, encoding:NSUTF8StringEncoding)
+                    self.newsText = String(data:data!, encoding:NSUTF8StringEncoding)
                     
-                    if self?.newsText == nil
+                    if self.newsText == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        self?.loadImage()
+                        self.loadImage()
                     }
                 }
                 else
@@ -134,11 +131,11 @@ class CFirebaseStorageNews
                     
                     if errorDescription == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        self?.error(errorDescription!)
+                        self.error(errorDescription!)
                     }
                 }
             }
@@ -156,19 +153,19 @@ class CFirebaseStorageNews
         else
         {
             reference!.dataWithMaxSize(kFiveMegaBytes)
-            { [weak self] (data, error) in
+            { (data, error) in
                 
                 if error == nil && data != nil
                 {
-                    self?.newsImage = UIImage(data:data!)
+                    self.newsImage = UIImage(data:data!)
                     
-                    if self?.newsImage == nil
+                    if self.newsImage == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        self?.loadFinished()
+                        self.loadFinished()
                     }
                 }
                 else
@@ -177,11 +174,11 @@ class CFirebaseStorageNews
                     
                     if errorDescription == nil
                     {
-                        self?.errorUnknown()
+                        self.errorUnknown()
                     }
                     else
                     {
-                        self?.error(errorDescription!)
+                        self.error(errorDescription!)
                     }
                 }
             }
@@ -191,10 +188,5 @@ class CFirebaseStorageNews
     private func loadFinished()
     {
         delegate?.firebaseStorageNewsLoaded(newsImage!, text:newsText!)
-        root = nil
-        newsImageReference = nil
-        newsTextReference = nil
-        newsImage = nil
-        newsText = nil
     }
 }

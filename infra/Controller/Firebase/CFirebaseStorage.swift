@@ -5,7 +5,7 @@ class CFirebaseStorage
 {
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
-    private var storageNews:CFirebaseStorageNews?
+    weak private var storageNews:CFirebaseStorageNews?
     
     init()
     {
