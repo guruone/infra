@@ -82,15 +82,15 @@ class VMainBarButton:UIButton
         
         if active
         {
-            color = UIColor.main()
+            color = UIColor.whiteColor()
         }
         else if selected || highlighted
         {
-            color = UIColor(white:0, alpha:0.1)
+            color = UIColor(white:1, alpha:0.2)
         }
         else
         {
-            color = UIColor.complementDark()
+            color = UIColor.blackColor()
         }
         
         imageView?.tintColor = color

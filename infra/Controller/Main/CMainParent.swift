@@ -52,6 +52,15 @@ class CMainParent:UIViewController
     
     //MARK: private
     
+    private func loadBar()
+    {
+        let bar:VMainBar = VMainBar(controller:self)
+        bar.frame = CGRectMake(0, 0, view.bounds.maxX, kBarHeight)
+        self.bar = bar
+        
+        view.addSubview(bar)
+    }
+    
     private func rootController(controller:UIViewController)
     {
         current?.view.removeFromSuperview()
@@ -80,6 +89,11 @@ class CMainParent:UIViewController
     
     func pushController(controller:UIViewController, scroll:CMainParentScroll)
     {
+        if bar == nil
+        {
+            loadBar()
+        }
+        
         let enteringRect:CGRect
         let leavingRect:CGRect
         
