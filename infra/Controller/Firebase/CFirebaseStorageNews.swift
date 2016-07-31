@@ -3,9 +3,9 @@ import Firebase
 
 class CFirebaseStorageNews
 {
-    weak var delegate:CFirebaseStorageNewsDelegate?
-    weak var storage:FIRStorageReference?
-    weak var root:FIRStorageReference?
+    private weak var delegate:CFirebaseStorageNewsDelegate?
+    private weak var storage:FIRStorageReference?
+    private var root:FIRStorageReference?
     private var newsImage:UIImage?
     private var newsText:String?
     private var newsImageReference:String?
@@ -191,5 +191,10 @@ class CFirebaseStorageNews
     private func loadFinished()
     {
         delegate?.firebaseStorageNewsLoaded(newsImage!, text:newsText!)
+        root = nil
+        newsImageReference = nil
+        newsTextReference = nil
+        newsImage = nil
+        newsText = nil
     }
 }
