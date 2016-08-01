@@ -9,4 +9,9 @@ class DInfraPost:NSManagedObject
     @NSManaged var userCreator:DInfraUser?
     @NSManaged var userDisliked:DInfraUser?
     @NSManaged var userLiked:DInfraUser?
+    
+    override class func entityName() -> String
+    {
+        return "Post"
+    }
 }

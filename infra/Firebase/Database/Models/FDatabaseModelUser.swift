@@ -14,8 +14,9 @@ class FDatabaseModelUser:FDatabaseModel
     init(snapshot:FIRDataSnapshot)
     {
         let json:[String:AnyObject] = snapshot.value as! [String:AnyObject]
-        let rawAccess:Int16 = json[kKeyAccess] as! Int16
-        access = DInfraUser.DInfraUserAccess(rawValue:rawAccess)!
+        let rawAccess:Int = json[kKeyAccess] as! Int
+        let rawAccessPrimitive:Int16 = Int16(rawAccess)
+        access = DInfraUser.DInfraUserAccess(rawValue:rawAccessPrimitive)!
     }
     
     //MARK: public

@@ -20,12 +20,14 @@ class DInfraUser:NSManagedObject
     @NSManaged var likedPost:NSSet
     private var updateHandler:UInt?
     
+    override class func entityName() -> String
+    {
+        return "User"
+    }
+    
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
         let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot)
-        
-        print("received snapshot")
-        print("access: \(fUser.access)")
         
         MConfiguration.sharedInstance.userSynced()
     }

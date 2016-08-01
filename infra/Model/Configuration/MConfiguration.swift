@@ -61,6 +61,6 @@ class MConfiguration
     
     func userSynced()
     {
-        
+        DManager.sharedInstance.managerUbik.saver.save(false)
     }
 }

@@ -50,6 +50,7 @@
 		DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B061D4FD69C008C4904 /* FDatabase.swift */; };
 		DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */; };
 		DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */; };
+		DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -116,6 +117,7 @@
 		DA800B061D4FD69C008C4904 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelUser.swift; sourceTree = "<group>"; };
 		DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModel.swift; sourceTree = "<group>"; };
+		DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAccessBanned.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		DA0EA2741D4BD81100D300B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA800B0D1D4FED06008C4904 /* Access */,
 				DAD3521D1D4C656E00401230 /* Home */,
 				DA0EA2751D4BD81100D300B2 /* Landing */,
 				DA0EA2771D4BD81100D300B2 /* Main */,
@@ -421,6 +424,14 @@
 				DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DA800B0D1D4FED06008C4904 /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */,
+			);
+			path = Access;
 			sourceTree = "<group>";
 		};
 		DA8421351D4D9098003CDEA2 /* Home */ = {
@@ -605,6 +616,7 @@
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
+				DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
 				DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */,
