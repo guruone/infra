@@ -11,6 +11,7 @@ class MMainTransitionFade:MMainTransition
     
     override func before(parent:CMainParent, current:UIViewController?, next:UIViewController)
     {
+        parent.view.addSubview(next.view)
         next.view.alpha = 0
         
         let barHeight:CGFloat

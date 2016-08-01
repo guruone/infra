@@ -8,7 +8,7 @@ class VAccessBanned:UIView
     {
         self.init()
         clipsToBounds = true
-        backgroundColor = UIColor.blueColor()
+        backgroundColor = UIColor.blackColor()
         userInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
@@ -24,10 +24,11 @@ class VAccessBanned:UIView
         label.userInteractionEnabled = false
         label.backgroundColor = UIColor.clearColor()
         label.font = UIFont.regular(17)
-        label.textColor = UIColor(white:1, alpha:0.5)
+        label.textColor = UIColor(white:1, alpha:0.85)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("VAccessBanned_label", comment:"")
+        label.textAlignment = NSTextAlignment.Center
         
         addSubview(logo)
         addSubview(label)
@@ -49,7 +50,12 @@ class VAccessBanned:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-100-[logo(100)]-20-[label]",
+            "V:[label]-20-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[logo]-0-|",
             options:[],
             metrics:metrics,
             views:views))

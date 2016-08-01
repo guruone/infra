@@ -11,6 +11,8 @@ class MMainTransitionReplace:MMainTransition
     
     override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
     {
+        parent.view.addSubview(next.view)
+        
         let barHeight:CGFloat
         
         if parent.bar == nil
