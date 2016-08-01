@@ -1,7 +1,7 @@
 import Foundation
 import Firebase
 
-class CFirebase
+class FMain
 {
     static let sharedInstance = CFirebase()
     let storage:CFirebaseStorage

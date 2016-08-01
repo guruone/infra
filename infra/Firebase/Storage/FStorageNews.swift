@@ -1,7 +1,7 @@
 import Foundation
 import Firebase
 
-class CFirebaseStorageNews
+class FStorageNews
 {
     private weak var delegate:CFirebaseStorageNewsDelegate?
     private weak var storage:FIRStorageReference?

@@ -1,7 +1,7 @@
 import Foundation
 import FirebaseDatabase
 
-class CFirebaseDatabase
+class FDatabase
 {
     private let reference:FIRDatabaseReference
     

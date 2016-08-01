@@ -1,7 +1,7 @@
 import Foundation
 import Firebase
 
-class CFirebaseStorage
+class FStorage
 {
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
