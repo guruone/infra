@@ -27,7 +27,7 @@ class MConfiguration
     
     private func loadUser()
     {
-        
+        DManager.sharedInstance.managerUbik.fetchManagedObjects(, limit: <#T##Int#>, predicate: <#T##NSPredicate?#>, sorters: <#T##[NSSortDescriptor]?#>, block: <#T##([ModelType] -> ())?##([ModelType] -> ())?##[ModelType] -> ()#>)
     }
     
     //MARK: public
