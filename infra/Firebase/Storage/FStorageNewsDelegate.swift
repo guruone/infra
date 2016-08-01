@@ -2,6 +2,6 @@ import UIKit
 
 protocol FStorageNewsDelegate:class
 {
-    func firebaseStorageNewsLoaded(image:UIImage, text:String)
-    func firebaseStorageNewsError(error:String)
+    func fStorageNewsLoaded(image:UIImage, text:String)
+    func fStorageNewsError(error:String)
 }

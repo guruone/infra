@@ -1,13 +1,13 @@
 import UIKit
 
-class CHome:CMainController, CFirebaseStorageNewsDelegate
+class CHome:CMainController, FStorageNewsDelegate
 {
     weak var viewHome:VHome!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        CFirebase.sharedInstance.storage.loadNews(self)
+        FMain.sharedInstance.storage.loadNews(self)
     }
     
     override func loadView()
@@ -19,12 +19,12 @@ class CHome:CMainController, CFirebaseStorageNewsDelegate
     
     //MARK: news delegate
     
-    func firebaseStorageNewsLoaded(image:UIImage, text:String)
+    func fStorageNewsLoaded(image:UIImage, text:String)
     {
         print("done")
     }
     
-    func firebaseStorageNewsError(error:String)
+    func fStorageNewsError(error:String)
     {
         print("error")
     }

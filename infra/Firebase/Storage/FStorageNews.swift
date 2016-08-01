@@ -3,7 +3,7 @@ import Firebase
 
 class FStorageNews
 {
-    private weak var delegate:CFirebaseStorageNewsDelegate?
+    private weak var delegate:FStorageNewsDelegate?
     private weak var storage:FIRStorageReference?
     private var root:FIRStorageReference?
     private var newsImage:UIImage?
@@ -16,7 +16,7 @@ class FStorageNews
     private let kPListText:String = "text"
     private let kFiveMegaBytes:Int64 = 5242880
     
-    init(storage:FIRStorageReference?, delegate:CFirebaseStorageNewsDelegate?)
+    init(storage:FIRStorageReference?, delegate:FStorageNewsDelegate?)
     {
         self.storage = storage
         self.delegate = delegate
@@ -27,7 +27,7 @@ class FStorageNews
     
     private func error(errorDescription:String)
     {
-        delegate?.firebaseStorageNewsError(errorDescription)
+//        delegate?.firebaseStorageNewsError(errorDescription)
     }
     
     private func errorUnknown()
@@ -187,6 +187,6 @@ class FStorageNews
     
     private func loadFinished()
     {
-        delegate?.firebaseStorageNewsLoaded(newsImage!, text:newsText!)
+//        delegate?.firebaseStorageNewsLoaded(newsImage!, text:newsText!)
     }
 }

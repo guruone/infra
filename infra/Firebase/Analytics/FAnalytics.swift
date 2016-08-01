@@ -1,7 +1,7 @@
 import Foundation
 import Firebase
 
-class CFirebaseAnalytics
+class FAnalytics
 {
     
 }
