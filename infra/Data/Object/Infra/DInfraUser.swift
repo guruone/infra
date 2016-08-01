@@ -1,17 +1,12 @@
-//
-//  DInfraUser.swift
-//  
-//
-//  Created by zero on 8/1/16.
-//
-//
-
 import Foundation
 import CoreData
 
 @objc(DInfraUser)
-class DInfraUser: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class DInfraUser:NSManagedObject
+{
+    @NSManaged private(set) var access:Int16
+    @NSManaged private(set) var userId:String?
+    @NSManaged var createdPost:NSSet
+    @NSManaged var dislikedPost:NSSet
+    @NSManaged var likedPost:NSSet
 }
