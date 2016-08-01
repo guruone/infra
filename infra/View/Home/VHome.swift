@@ -8,6 +8,9 @@ class VHome:UIView
     convenience init(controller:CHome)
     {
         self.init()
+        clipsToBounds = true
+        backgroundColor = UIColor.whiteColor()
+        translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
         let spinner:VMainLoader = VMainLoader()

@@ -12,7 +12,7 @@ class CLanding:CMainController
     override func viewDidAppear(animated:Bool)
     {
         super.viewDidAppear(animated)
-        NSNotification.observeConfigurated(self, sel:#selector(self.notifiedConfigurated(sender:)))
+        NSNotification.observeUserSynced(self, sel:#selector(self.notifiedUserSynced(sender:)))
         
         MConfiguration.sharedInstance.load()
     }
@@ -26,13 +26,13 @@ class CLanding:CMainController
     
     //MARK: notified
     
-    func notifiedConfigurated(sender notification:NSNotification)
+    func notifiedUserSynced(sender notification:NSNotification)
     {
         dispatch_async(dispatch_get_main_queue())
         { [weak self] in
             
-            let controller:CHome = CHome()
-            self?.parent.pushController(controller, scroll:CMainParent.CMainParentScroll.None)
+            let home:CHome = CHome()
+            self?.parent.pushController(home, transition:MMainTransition.Fade())
         }
     }
 }

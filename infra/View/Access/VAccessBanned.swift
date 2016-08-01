@@ -10,6 +10,7 @@ class VAccessBanned:UIView
         clipsToBounds = true
         backgroundColor = UIColor.blueColor()
         userInteractionEnabled = false
+        translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
         let logo:UIImageView = UIImageView()

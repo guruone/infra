@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MConfiguration
 {
@@ -62,5 +62,16 @@ class MConfiguration
     func userSynced()
     {
         DManager.sharedInstance.managerUbik.saver.save(false)
+        
+        if user!.access == DInfraUser.DInfraUserAccess.Banned
+        {
+            let parent:CMainParent = UIApplication.sharedApplication().keyWindow?.rootViewController as! CMainParent
+            let banned:CAccessBanned = CAccessBanned()
+            parent.pushController(banned, transition:MMainTransition.Replace())
+        }
+        else
+        {
+            NSNotification.postUserSynced()
+        }
     }
 }

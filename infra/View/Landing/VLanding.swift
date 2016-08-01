@@ -10,6 +10,7 @@ class VLanding:UIView
         userInteractionEnabled = false
         clipsToBounds = true
         backgroundColor = UIColor.blackColor()
+        translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
         let logo:UIImageView = UIImageView()

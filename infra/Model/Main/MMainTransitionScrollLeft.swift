@@ -8,4 +8,12 @@ class MMainTransitionScrollLeft:MMainTransition
     {
         super.init(animationDuration:kAnimationDuration)
     }
+    
+    override func before(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    {
+    }
+    
+    override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    {
+    }
 }
