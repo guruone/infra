@@ -39,6 +39,7 @@
 		DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
+		DA8421391D4F8A30003CDEA2 /* CFirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421381D4F8A30003CDEA2 /* CFirebaseDatabase.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521A1D4C551E00401230 /* CFirebaseStorageNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */; };
 		DAD3521C1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */; };
@@ -99,6 +100,7 @@
 		DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonSummary.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
+		DA8421381D4F8A30003CDEA2 /* CFirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseDatabase.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorageNews.swift; sourceTree = "<group>"; };
 		DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseStorageNewsDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 				DADCC0F21D4C0EFB0027B7BE /* CFirebase.swift */,
 				DADCC0F61D4C1C110027B7BE /* CFirebaseStorage.swift */,
 				DADCC0F81D4C1DD40027B7BE /* CFirebaseAnalytics.swift */,
+				DA8421381D4F8A30003CDEA2 /* CFirebaseDatabase.swift */,
 				DAD352191D4C551E00401230 /* CFirebaseStorageNews.swift */,
 				DAD3521B1D4C557800401230 /* CFirebaseStorageNewsDelegate.swift */,
 			);
@@ -555,6 +558,7 @@
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
+				DA8421391D4F8A30003CDEA2 /* CFirebaseDatabase.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
