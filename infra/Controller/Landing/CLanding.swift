@@ -12,8 +12,9 @@ class CLanding:CMainController
     override func viewDidAppear(animated:Bool)
     {
         super.viewDidAppear(animated)
+        NSNotification.observeConfigurated(self, sel:#selector(self.notifiedConfigurated(sender:)))
         
-        NSNotification.observeConfigurated(self, sel:#selector(self.notifiedConfigurated(sender:))
+        MConfiguration.sharedInstance.load()
     }
     
     override func loadView()

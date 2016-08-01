@@ -17,7 +17,7 @@ class MConfiguration
     {
         let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         let pointSize:CGFloat = font.pointSize
-        print("point size \(pointSize)")
+        
         if pointSize > kBodyFontSize
         {
             let delta:CGFloat = pointSize / kBodyFontSize
