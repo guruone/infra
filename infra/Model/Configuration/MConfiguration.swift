@@ -3,6 +3,7 @@ import UIKit
 class MConfiguration
 {
     static let sharedInstance = MConfiguration()
+    private 
     private(set) var fontModifier:CGFloat
     private let kBodyFontSize:CGFloat = 15
     
@@ -27,7 +28,25 @@ class MConfiguration
     
     private func loadUser()
     {
-        DManager.sharedInstance.managerUbik.fetchManagedObjects(, limit: <#T##Int#>, predicate: <#T##NSPredicate?#>, sorters: <#T##[NSSortDescriptor]?#>, block: <#T##([ModelType] -> ())?##([ModelType] -> ())?##[ModelType] -> ()#>)
+        DManager.sharedInstance.managerUbik.fetchManagedObjects(
+            DInfraUser.self,
+            limit:1)
+        { (models) in
+            
+            if models.isEmpty
+            {
+                self.createUser()
+            }
+            else
+            {
+                
+            }
+        }
+    }
+    
+    private func createUser()
+    {
+        
     }
     
     //MARK: public

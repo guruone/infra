@@ -40,6 +40,7 @@
 		DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */; };
 		DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */; };
 		DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */; };
+		DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DA8421391D4F8A30003CDEA2 /* CFirebaseDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421381D4F8A30003CDEA2 /* CFirebaseDatabase.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
@@ -103,6 +104,7 @@
 		DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraUser.swift; sourceTree = "<group>"; };
 		DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConfigurationFont.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DA8421381D4F8A30003CDEA2 /* CFirebaseDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFirebaseDatabase.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0C453B1D4C017C003AF335 /* MConfiguration.swift */,
+				DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
 				DADCC0F71D4C1C110027B7BE /* CFirebaseStorage.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
+				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
