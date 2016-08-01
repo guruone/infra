@@ -6,6 +6,7 @@ class CFirebase
     static let sharedInstance = CFirebase()
     let storage:CFirebaseStorage
     let analytics:CFirebaseAnalytics
+    let database:CFirebaseDatabase
     
     private init()
     {
@@ -13,5 +14,6 @@ class CFirebase
         FIRConfiguration.sharedInstance().logLevel = FIRLogLevel.Error
         storage = CFirebaseStorage()
         analytics = CFirebaseAnalytics()
+        database = CFirebaseDatabase()
     }
 }
