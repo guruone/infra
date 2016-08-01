@@ -27,7 +27,8 @@ class DInfraUser:NSManagedObject
     
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
-        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot)
+        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
+        access = fUser.access
         
         MConfiguration.sharedInstance.userSynced()
     }
