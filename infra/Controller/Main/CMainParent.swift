@@ -2,18 +2,11 @@ import UIKit
 
 class CMainParent:UIViewController
 {
-    weak var bar:VMainBar!
+    weak var bar:VMainBar?
     weak var current:UIViewController?
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     private let kBarHeight:CGFloat = 64
     private let kAnimationDuration:NSTimeInterval = 0.3
-    
-    enum CMainParentScroll
-    {
-        case Left
-        case Right
-        case None
-    }
     
     override func viewDidLoad()
     {
