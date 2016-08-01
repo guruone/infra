@@ -4,7 +4,6 @@ class CMainParent:UIViewController
 {
     weak var bar:VMainBar!
     weak var current:UIViewController?
-    private var controllerRect:CGRect!
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     private let kBarHeight:CGFloat = 64
     private let kAnimationDuration:NSTimeInterval = 0.3
@@ -16,25 +15,9 @@ class CMainParent:UIViewController
         case None
     }
     
-    private lazy var leftRect:CGRect =
-    {
-        let rect:CGRect = CGRectMake(-self.controllerRect.maxX, self.controllerRect.minY, self.controllerRect.maxX, self.controllerRect.maxY)
-        
-        return rect
-    }()
-    
-    private lazy var rightRect:CGRect =
-    {
-        let rect:CGRect = CGRectMake(self.controllerRect.maxX, self.controllerRect.minY, self.controllerRect.maxX, self.controllerRect.maxY)
-        
-        return rect
-    }()
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        controllerRect = CGRectMake(0, kBarHeight, view.bounds.maxX, view.bounds.maxY - kBarHeight)
         
         let landing:CLanding = CLanding()
         rootController(landing)
@@ -51,15 +34,6 @@ class CMainParent:UIViewController
     }
     
     //MARK: private
-    
-    private func loadBar()
-    {
-        let bar:VMainBar = VMainBar(controller:self)
-        bar.frame = CGRectMake(0, 0, view.bounds.maxX, kBarHeight)
-        self.bar = bar
-        
-        view.addSubview(bar)
-    }
     
     private func rootController(controller:UIViewController)
     {
@@ -87,13 +61,33 @@ class CMainParent:UIViewController
         parent.setNeedsStatusBarAppearanceUpdate()
     }
     
+    func loadBar()
+    {
+        let bar:VMainBar = VMainBar(controller:self)
+        self.bar = bar
+        
+        view.addSubview(bar)
+        
+        let views:[String:AnyObject] = [
+            "bar":bar]
+        
+        let metrics:[String:AnyObject] = [
+            "barHeight":kBarHeight]
+        
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[bar]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[bar(barHeight)]",
+            options:[],
+            metrics:metrics,
+            views:views))
+    }
+    
     func pushController(controller:UIViewController, scroll:CMainParentScroll)
     {
-        if bar == nil
-        {
-            loadBar()
-        }
-        
         let enteringRect:CGRect
         let leavingRect:CGRect
         

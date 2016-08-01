@@ -52,6 +52,10 @@
 		DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */; };
 		DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */; };
 		DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B111D4FF0B9008C4904 /* VAccessBanned.swift */; };
+		DA800B151D4FF9E0008C4904 /* MMainTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B141D4FF9E0008C4904 /* MMainTransition.swift */; };
+		DA800B171D4FFA23008C4904 /* MMainTransitionFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */; };
+		DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */; };
+		DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -120,6 +124,10 @@
 		DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModel.swift; sourceTree = "<group>"; };
 		DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAccessBanned.swift; sourceTree = "<group>"; };
 		DA800B111D4FF0B9008C4904 /* VAccessBanned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAccessBanned.swift; sourceTree = "<group>"; };
+		DA800B141D4FF9E0008C4904 /* MMainTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransition.swift; sourceTree = "<group>"; };
+		DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionFade.swift; sourceTree = "<group>"; };
+		DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollLeft.swift; sourceTree = "<group>"; };
+		DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollRight.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -330,6 +338,7 @@
 		DA0EA27B1D4BD81100D300B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA800B131D4FF9C9008C4904 /* Main */,
 				DA0C453A1D4C016E003AF335 /* Configuration */,
 			);
 			path = Model;
@@ -443,6 +452,17 @@
 				DA800B111D4FF0B9008C4904 /* VAccessBanned.swift */,
 			);
 			path = Access;
+			sourceTree = "<group>";
+		};
+		DA800B131D4FF9C9008C4904 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DA800B141D4FF9E0008C4904 /* MMainTransition.swift */,
+				DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */,
+				DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */,
+				DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		DA8421351D4D9098003CDEA2 /* Home */ = {
@@ -618,6 +638,7 @@
 			files = (
 				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
+				DA800B171D4FFA23008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
@@ -633,9 +654,11 @@
 				DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */,
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
+				DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
+				DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
 				DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
@@ -645,6 +668,7 @@
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
+				DA800B151D4FF9E0008C4904 /* MMainTransition.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,

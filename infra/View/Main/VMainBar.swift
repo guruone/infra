@@ -25,6 +25,7 @@ class VMainBar:UIView
         self.init()
         backgroundColor = UIColor.main()
         clipsToBounds = true
+        translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
     }
     
