@@ -23,4 +23,8 @@ class CFirebaseDatabase
             
         })*/
     }
+    
+    //MARK: public
+    
+    
 }

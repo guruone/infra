@@ -1,30 +1,17 @@
-import UIKit
+import Foundation
 
 class MConfiguration
 {
     static let sharedInstance = MConfiguration()
-    private 
-    private(set) var fontModifier:CGFloat
-    private let kBodyFontSize:CGFloat = 15
+    let font:MConfigurationFont
+    private(set) var user:DInfraUser?
     
     private init()
     {
-        fontModifier = 1
+        font = MConfigurationFont()
     }
     
     //MARK: private
-    
-    private func loadFonts()
-    {
-        let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
-        let pointSize:CGFloat = font.pointSize
-        
-        if pointSize > kBodyFontSize
-        {
-            let delta:CGFloat = pointSize / kBodyFontSize
-            fontModifier = delta
-        }
-    }
     
     private func loadUser()
     {
@@ -39,14 +26,29 @@ class MConfiguration
             }
             else
             {
-                
+                self.user = models.first
+                self.userLoaded()
             }
         }
     }
     
     private func createUser()
     {
-        
+        DManager.sharedInstance.managerUbik.createManagedObject(
+            DInfraUser.self)
+        { (model) in
+            
+            self.user = model
+            self.userLoaded()
+        }
+    }
+    
+    private func userLoaded()
+    {
+        if user!.userId == nil
+        {
+            user!.getServerId()
+        }
     }
     
     //MARK: public
@@ -55,7 +57,7 @@ class MConfiguration
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         {
-            self.loadFonts()
+            self.font.loadFonts()
             self.loadUser()
         }
     }

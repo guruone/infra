@@ -1,9 +1,26 @@
-//
-//  MConfigurationFont.swift
-//  infra
-//
-//  Created by zero on 8/1/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class MConfigurationFont
+{
+    private(set) var fontModifier:CGFloat
+    private let kBodyFontSize:CGFloat = 15
+    
+    init()
+    {
+        fontModifier = 1
+    }
+    
+    //MARK: public
+    
+    func loadFonts()
+    {
+        let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        let pointSize:CGFloat = font.pointSize
+        
+        if pointSize > kBodyFontSize
+        {
+            let delta:CGFloat = pointSize / kBodyFontSize
+            fontModifier = delta
+        }
+    }
+}
