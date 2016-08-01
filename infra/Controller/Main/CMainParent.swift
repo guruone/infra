@@ -6,14 +6,13 @@ class CMainParent:UIViewController
     weak var current:UIViewController?
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     private let kBarHeight:CGFloat = 64
-    private let kAnimationDuration:NSTimeInterval = 0.3
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         let landing:CLanding = CLanding()
-        rootController(landing)
+        pushController(landing, transition:MMainTransition.Replace())
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle
@@ -24,20 +23,6 @@ class CMainParent:UIViewController
     override func prefersStatusBarHidden() -> Bool
     {
         return false
-    }
-    
-    //MARK: private
-    
-    private func rootController(controller:UIViewController)
-    {
-        current?.view.removeFromSuperview()
-        current?.removeFromParentViewController()
-        current = controller
-        
-        addChildViewController(controller)
-        controller.view.frame = view.bounds
-        view.addSubview(controller.view)
-        controller.didMoveToParentViewController(self)
     }
     
     //MARK: public
@@ -79,54 +64,38 @@ class CMainParent:UIViewController
             views:views))
     }
     
-    func pushController(controller:UIViewController, scroll:CMainParentScroll)
+    func pushController(controller:UIViewController, transition:MMainTransition)
     {
-        let enteringRect:CGRect
-        let leavingRect:CGRect
-        
-        switch scroll
-        {
-            case CMainParentScroll.Left:
-                
-                enteringRect = rightRect
-                leavingRect = leftRect
-                
-                break
-                
-            case CMainParentScroll.Right:
-                
-                enteringRect = leftRect
-                leavingRect = rightRect
-                
-                break
-            
-            case CMainParentScroll.None:
-                
-                enteringRect = controllerRect
-                leavingRect = view.bounds
-                
-                break
-        }
-        
-        controller.view.frame = enteringRect
-        current!.willMoveToParentViewController(nil)
         addChildViewController(controller)
+        transition.before(self, current:current, next:controller)
         
-        transitionFromViewController(
-            current!,
-            toViewController:controller,
-            duration:kAnimationDuration,
-            options:UIViewAnimationOptions.CurveEaseOut,
-            animations:
-            {
-                controller.view.frame = self.controllerRect
-                self.current!.view.frame = leavingRect
-            })
-        { (done) in
+        if current == nil
+        {
+            transition.after(self, current:current, next:controller)
             
-            self.current!.removeFromParentViewController()
+            view.addSubview(controller.view)
             controller.didMoveToParentViewController(self)
-            self.current = controller
+            current = controller
+        }
+        else
+        {
+            current!.willMoveToParentViewController(nil)
+            
+            transitionFromViewController(
+                current!,
+                toViewController:controller,
+                duration:transition.animationDuration,
+                options:UIViewAnimationOptions.CurveEaseOut,
+                animations:
+                {
+                    transition.after(self, current:self.current, next:controller)
+                })
+            { (done) in
+                
+                self.current!.removeFromParentViewController()
+                controller.didMoveToParentViewController(self)
+                self.current = controller
+            }
         }
     }
 }

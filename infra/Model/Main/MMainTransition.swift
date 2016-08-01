@@ -39,11 +39,11 @@ class MMainTransition
     
     //MARK: public
     
-    func before(current:UIViewController?, next:UIViewController?)
+    func before(parent:CMainParent, current:UIViewController?, next:UIViewController?)
     {
     }
     
-    func after(current:UIViewController?, next:UIViewController?)
+    func after(parent:CMainParent, current:UIViewController?, next:UIViewController?)
     {
     }
 }
