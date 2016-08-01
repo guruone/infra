@@ -4,6 +4,7 @@ import FirebaseDatabase
 class FDatabase
 {
     private let reference:FIRDatabaseReference
+    private let kReferenceUser:String = "user"
     
     init()
     {
@@ -26,5 +27,21 @@ class FDatabase
     
     //MARK: public
     
+    func newUser(fUser:FDatabaseModelUser) -> String
+    {
+        let userJson:[String:AnyObject] = fUser.modelJson()
+        let newUser:FIRDatabaseReference = reference.child(kReferenceUser).childByAutoId()
+        let newUserId:String = newUser.key
+        newUser.setValue(userJson)
+        
+        return newUserId
+    }
     
+    func listenUser(userId:String, snapBlock:((FIRDataSnapshot) -> Void)) -> UInt
+    {
+        let userReference:FIRDatabaseReference = reference.child(kReferenceUser).child(userId)
+        let handler:UInt = userReference.observeEventType(FIRDataEventType.Value, withBlock:snapBlock)
+        
+        return handler
+    }
 }

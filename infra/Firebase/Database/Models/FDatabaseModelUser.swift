@@ -1,18 +1,18 @@
 import Foundation
 
-class FDatabaseModelUser
+class FDatabaseModelUser:FDatabaseModel
 {
     var access:DInfraUser.DInfraUserAccess
     private let kKeyAccess:String = "access"
     
-    init()
+    init(dbUser:DInfraUser)
     {
-        access = DInfraUser.DInfraUserAccess.Regular
+        access = dbUser.access
     }
     
     //MARK: public
     
-    func json() -> [String:AnyObject]
+    func modelJson() -> [String:AnyObject]
     {
         let accessNumber:Int = Int(access.rawValue)
         

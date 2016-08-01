@@ -45,10 +45,7 @@ class MConfiguration
     
     private func userLoaded()
     {
-        if user!.userId == nil
-        {
-            user!.getServerId()
-        }
+        user?.syncUser()
     }
     
     //MARK: public
@@ -60,5 +57,10 @@ class MConfiguration
             self.font.loadFonts()
             self.loadUser()
         }
+    }
+    
+    func userSynced()
+    {
+        
     }
 }

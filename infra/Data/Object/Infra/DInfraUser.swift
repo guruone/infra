@@ -1,5 +1,6 @@
 import Foundation
 import CoreData
+import FirebaseDatabase
 
 @objc(DInfraUser)
 class DInfraUser:NSManagedObject
@@ -17,11 +18,24 @@ class DInfraUser:NSManagedObject
     @NSManaged var createdPost:NSSet
     @NSManaged var dislikedPost:NSSet
     @NSManaged var likedPost:NSSet
+    private var updateHandler:UInt?
+    
+    private func snapBlock(snapshot:FIRDataSnapshot)
+    {
+        
+    }
     
     //MARK: public
     
-    func getServerId()
+    func syncUser()
     {
+        if userId == nil
+        {
+            let fUser:FDatabaseModelUser = FDatabaseModelUser(dbUser:self)
+            userId = FMain.sharedInstance.database.newUser(fUser)
+        }
         
+        updateHandler = FMain.sharedInstance.database.listenUser(userId!, snapBlock:snapBlock)
+        MConfiguration.sharedInstance.userSynced()
     }
 }

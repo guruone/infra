@@ -49,6 +49,7 @@
 		DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */; };
 		DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B061D4FD69C008C4904 /* FDatabase.swift */; };
 		DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */; };
+		DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -114,6 +115,7 @@
 		DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStorageNewsDelegate.swift; sourceTree = "<group>"; };
 		DA800B061D4FD69C008C4904 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelUser.swift; sourceTree = "<group>"; };
+		DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModel.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				DA800B061D4FD69C008C4904 /* FDatabase.swift */,
+				DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
+				DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */,
 				DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */,
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
 				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
