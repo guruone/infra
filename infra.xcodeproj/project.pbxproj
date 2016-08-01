@@ -25,8 +25,6 @@
 		DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA18F1D4BD01100D300B2 /* DManagerModelInfra.swift */; };
 		DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1901D4BD01100D300B2 /* DManagerSaver.swift */; };
 		DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1921D4BD01100D300B2 /* DInfraModel.xcdatamodeld */; };
-		DA0EA2201D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1961D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift */; };
-		DA0EA2211D4BD01100D300B2 /* DUbikDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1971D4BD01100D300B2 /* DUbikDevice.swift */; };
 		DA0EA24B1D4BD01100D300B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA1CD1D4BD01100D300B2 /* LaunchScreen.storyboard */; };
 		DA0EA24C1D4BD01100D300B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA0EA1CF1D4BD01100D300B2 /* Localizable.strings */; };
 		DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2761D4BD81100D300B2 /* CLanding.swift */; };
@@ -83,8 +81,6 @@
 		DA0EA18F1D4BD01100D300B2 /* DManagerModelInfra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManagerModelInfra.swift; sourceTree = "<group>"; };
 		DA0EA1901D4BD01100D300B2 /* DManagerSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DManagerSaver.swift; sourceTree = "<group>"; };
 		DA0EA1931D4BD01100D300B2 /* infra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = infra.xcdatamodel; sourceTree = "<group>"; };
-		DA0EA1961D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DUbikDevice+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DA0EA1971D4BD01100D300B2 /* DUbikDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUbikDevice.swift; sourceTree = "<group>"; };
 		DA0EA1981D4BD01100D300B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA0EA1CE1D4BD01100D300B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0EA1D01D4BD01100D300B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -256,8 +252,6 @@
 		DA0EA1951D4BD01100D300B2 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				DA0EA1961D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift */,
-				DA0EA1971D4BD01100D300B2 /* DUbikDevice.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -532,14 +526,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
-				DA0EA2211D4BD01100D300B2 /* DUbikDevice.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
 				DADCC0F91D4C1DD40027B7BE /* CFirebaseAnalytics.swift in Sources */,
 				DAD3521A1D4C551E00401230 /* CFirebaseStorageNews.swift in Sources */,
-				DA0EA2201D4BD01100D300B2 /* DUbikDevice+CoreDataProperties.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DADCC0F31D4C0EFB0027B7BE /* CFirebase.swift in Sources */,
