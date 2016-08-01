@@ -3,16 +3,10 @@ import UIKit
 class CLanding:CMainController
 {
     weak var viewLanding:VLanding!
-
-    deinit
-    {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
     
     override func viewDidAppear(animated:Bool)
     {
         super.viewDidAppear(animated)
-        NSNotification.observeUserSynced(self, sel:#selector(self.notifiedUserSynced(sender:)))
         
         MConfiguration.sharedInstance.load()
     }
@@ -24,15 +18,18 @@ class CLanding:CMainController
         view = viewLanding
     }
     
-    //MARK: notified
+    //MARK: public
     
-    func notifiedUserSynced(sender notification:NSNotification)
+    func loadFinished()
     {
-        dispatch_async(dispatch_get_main_queue())
-        { [weak self] in
-            
-            let home:CHome = CHome()
-            self?.parent.pushController(home, transition:MMainTransition.Fade())
-        }
+        viewLanding.animateLanding()
+    }
+    
+    func animationFinished()
+    {
+        let home:CHome = CHome()
+        let transition:MMainTransition = MMainTransition.Fade()
+        parent.loadBar()
+        parent.pushController(home, transition:transition)
     }
 }

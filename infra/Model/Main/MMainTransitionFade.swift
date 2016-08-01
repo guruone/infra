@@ -2,7 +2,7 @@ import UIKit
 
 class MMainTransitionFade:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 0.3
+    private let kAnimationDuration:NSTimeInterval = 0.25
     
     init()
     {
@@ -22,7 +22,7 @@ class MMainTransitionFade:MMainTransition
         }
         else
         {
-            barHeight = parent.bar!.bounds.maxY
+            barHeight = parent.kBarHeight
         }
         
         let views:[String:AnyObject] = [

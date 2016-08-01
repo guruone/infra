@@ -63,15 +63,26 @@ class MConfiguration
     {
         DManager.sharedInstance.managerUbik.saver.save(false)
         
-        if user!.access == DInfraUser.DInfraUserAccess.Banned
+        dispatch_async(dispatch_get_main_queue())
         {
             let parent:CMainParent = UIApplication.sharedApplication().keyWindow?.rootViewController as! CMainParent
-            let banned:CAccessBanned = CAccessBanned()
-            parent.pushController(banned, transition:MMainTransition.Replace())
-        }
-        else
-        {
-            NSNotification.postUserSynced()
+            
+            if self.user!.access == DInfraUser.DInfraUserAccess.Banned
+            {
+                self.user!.stopSyncing()
+                let banned:CAccessBanned = CAccessBanned()
+                let transition:MMainTransition = MMainTransition.Replace()
+                parent.pushController(banned, transition:transition)
+            }
+            else
+            {
+                let landing:CLanding? = parent.current as? CLanding
+                
+                if landing != nil
+                {
+                    landing!.loadFinished()
+                }
+            }
         }
     }
 }

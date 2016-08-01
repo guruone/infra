@@ -3,6 +3,10 @@ import UIKit
 class VLanding:UIView
 {
     weak var controller:CLanding!
+    weak var layoutLogoTop:NSLayoutConstraint!
+    weak var layoutLogoBottom:NSLayoutConstraint!
+    private let kAnimationDuration:NSTimeInterval = 0.3
+    private let kBottomTreshold:CGFloat = 50
     
     convenience init(controller:CLanding)
     {
@@ -32,10 +36,57 @@ class VLanding:UIView
             options:[],
             metrics:metrics,
             views:views))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[logo]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
+        
+        layoutLogoTop = NSLayoutConstraint(
+            item:logo,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1,
+            constant:0)
+        layoutLogoBottom = NSLayoutConstraint(
+            item:logo,
+            attribute:NSLayoutAttribute.Bottom,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Bottom,
+            multiplier:1,
+            constant:0)
+        addConstraint(layoutLogoTop)
+        addConstraint(layoutLogoBottom)
+    }
+    
+    //MARK: public
+    
+    func animateLanding()
+    {
+        let viewHeight:CGFloat = bounds.maxY
+        layoutLogoTop.constant = kBottomTreshold
+        layoutLogoBottom.constant = kBottomTreshold
+        
+        UIView.animateWithDuration(kAnimationDuration, animations:
+        { [weak self] in
+            
+            self?.layoutIfNeeded()
+        })
+        { [weak self] (done) in
+            
+            if self != nil
+            {
+                self!.layoutLogoTop.constant = -viewHeight
+                self!.layoutLogoBottom.constant = -viewHeight
+                
+                UIView.animateWithDuration(self!.kAnimationDuration, animations:
+                { [weak self] in
+                    
+                    self?.layoutIfNeeded()
+                })
+                { [weak self] (done) in
+                    
+                    self?.controller.animationFinished()
+                }
+            }
+        }
     }
 }

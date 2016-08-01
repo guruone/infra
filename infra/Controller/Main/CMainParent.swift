@@ -4,8 +4,8 @@ class CMainParent:UIViewController
 {
     weak var bar:VMainBar?
     weak var current:UIViewController?
+    let kBarHeight:CGFloat = 64
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
-    private let kBarHeight:CGFloat = 64
     
     override func viewDidLoad()
     {

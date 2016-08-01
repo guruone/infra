@@ -44,4 +44,10 @@ class FDatabase
         
         return handler
     }
+    
+    func stopListener(userId:String, handler:UInt)
+    {
+        let userReference:FIRDatabaseReference = reference.child(kReferenceUser).child(userId)
+        userReference.removeObserverWithHandle(handler)
+    }
 }

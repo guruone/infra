@@ -45,4 +45,12 @@ class DInfraUser:NSManagedObject
         
         updateHandler = FMain.sharedInstance.database.listenUser(userId!, snapBlock:snapBlock)
     }
+    
+    func stopSyncing()
+    {
+        if userId != nil && updateHandler != nil
+        {
+            FMain.sharedInstance.database.stopListener(userId!, handler:updateHandler!)
+        }
+    }
 }
