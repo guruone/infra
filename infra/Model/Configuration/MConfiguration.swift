@@ -17,7 +17,7 @@ class MConfiguration
     {
         let font:UIFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         let pointSize:CGFloat = font.pointSize
-        
+        print("point size \(pointSize)")
         if pointSize > kBodyFontSize
         {
             let delta:CGFloat = pointSize / kBodyFontSize
@@ -25,10 +25,19 @@ class MConfiguration
         }
     }
     
+    private func loadUser()
+    {
+        
+    }
+    
     //MARK: public
     
     func load()
     {
-        loadFonts()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        {
+            self.loadFonts()
+            self.loadUser()
+        }
     }
 }
