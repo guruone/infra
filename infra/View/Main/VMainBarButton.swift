@@ -5,7 +5,7 @@ class VMainBarButton:UIButton
     weak var label:UILabel?
     private(set) var active:Bool
     
-    init(image:String, title:String?)
+    init(image:String)
     {
         active = false
         super.init(frame:CGRectZero)
@@ -14,41 +14,7 @@ class VMainBarButton:UIButton
         setImage(UIImage(named:image)?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState:UIControlState.Normal)
         imageView?.contentMode = UIViewContentMode.Center
         imageView?.clipsToBounds = true
-        
-        if title == nil
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 0)
-        }
-        else
-        {
-            imageEdgeInsets = UIEdgeInsetsMake(18, 0, 12, 0)
-            
-            let label:UILabel = UILabel()
-            label.userInteractionEnabled = false
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = title!
-            label.textAlignment = NSTextAlignment.Center
-            label.font = UIFont.regular(11)
-            self.label = label
-            
-            addSubview(label)
-            
-            let views:[String:AnyObject] = [
-                "label":label]
-            
-            let metrics:[String:AnyObject] = [:]
-            
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                "H:|-0-[label]-0-|",
-                options:[],
-                metrics:metrics,
-                views:views))
-            addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                "V:[label(13)]-5-|",
-                options:[],
-                metrics:metrics,
-                views:views))
-        }
+        imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 0)
         
         hover()
     }

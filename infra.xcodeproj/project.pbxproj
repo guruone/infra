@@ -34,7 +34,6 @@
 		DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27E1D4BD81100D300B2 /* VLanding.swift */; };
 		DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2801D4BD81100D300B2 /* VMainBar.swift */; };
 		DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */; };
-		DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
 		DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC71D4FC3F1008C4904 /* DInfraPost.swift */; };
 		DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */; };
@@ -57,6 +56,10 @@
 		DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */; };
 		DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */; };
 		DA800B1D1D4FFC28008C4904 /* MMainTransitionReplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1C1D4FFC28008C4904 /* MMainTransitionReplace.swift */; };
+		DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1E1D5014A4008C4904 /* VMainBarButtonHome.swift */; };
+		DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */; };
+		DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */; };
+		DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -107,7 +110,6 @@
 		DA0EA27E1D4BD81100D300B2 /* VLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLanding.swift; sourceTree = "<group>"; };
 		DA0EA2801D4BD81100D300B2 /* VMainBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBar.swift; sourceTree = "<group>"; };
 		DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButton.swift; sourceTree = "<group>"; };
-		DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonSummary.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
 		DA800AC71D4FC3F1008C4904 /* DInfraPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraPost.swift; sourceTree = "<group>"; };
 		DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,10 @@
 		DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollLeft.swift; sourceTree = "<group>"; };
 		DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollRight.swift; sourceTree = "<group>"; };
 		DA800B1C1D4FFC28008C4904 /* MMainTransitionReplace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionReplace.swift; sourceTree = "<group>"; };
+		DA800B1E1D5014A4008C4904 /* VMainBarButtonHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonHome.swift; sourceTree = "<group>"; };
+		DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonCreate.swift; sourceTree = "<group>"; };
+		DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonLiked.swift; sourceTree = "<group>"; };
+		DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonProfile.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -368,10 +374,13 @@
 		DA0EA27F1D4BD81100D300B2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */,
 				DA0EA2801D4BD81100D300B2 /* VMainBar.swift */,
 				DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */,
-				DA0EA2821D4BD81100D300B2 /* VMainBarButtonSummary.swift */,
-				DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */,
+				DA800B1E1D5014A4008C4904 /* VMainBarButtonHome.swift */,
+				DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */,
+				DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */,
+				DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -643,11 +652,13 @@
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
 				DA800B171D4FFA23008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
+				DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
+				DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
@@ -658,11 +669,11 @@
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
 				DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */,
+				DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
 				DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
-				DA0EA28B1D4BD81100D300B2 /* VMainBarButtonSummary.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
@@ -682,6 +693,7 @@
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
 				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
 				DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */,
+				DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
