@@ -3,7 +3,7 @@ import CoreData
 
 class DManagerModelUbik:DManagerModel
 {
-    private let kModelName:String = "DUbikModel"
+    private let kModelName:String = "DInfraModel"
     
     init()
     {

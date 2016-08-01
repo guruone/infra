@@ -1,4 +1,5 @@
 import Foundation
+import FirebaseDatabase
 
 class FDatabaseModelUser:FDatabaseModel
 {
@@ -8,6 +9,13 @@ class FDatabaseModelUser:FDatabaseModel
     init(dbUser:DInfraUser)
     {
         access = dbUser.access
+    }
+    
+    init(snapshot:FIRDataSnapshot)
+    {
+        let json:[String:AnyObject] = snapshot.value as! [String:AnyObject]
+        let rawAccess:Int16 = json[kKeyAccess] as! Int16
+        access = DInfraUser.DInfraUserAccess(rawValue:rawAccess)!
     }
     
     //MARK: public

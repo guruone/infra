@@ -22,7 +22,12 @@ class DInfraUser:NSManagedObject
     
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
+        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot)
         
+        print("received snapshot")
+        print("access: \(fUser.access)")
+        
+        MConfiguration.sharedInstance.userSynced()
     }
     
     //MARK: public
@@ -36,6 +41,5 @@ class DInfraUser:NSManagedObject
         }
         
         updateHandler = FMain.sharedInstance.database.listenUser(userId!, snapBlock:snapBlock)
-        MConfiguration.sharedInstance.userSynced()
     }
 }
