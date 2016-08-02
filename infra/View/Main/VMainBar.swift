@@ -3,22 +3,9 @@ import UIKit
 class VMainBar:UIView
 {
     weak var controller:CMainParent!
-    weak var buttonSummary:VMainBarButton!
-    weak var buttonHistory:VMainBarButton!
-    weak var buttonConfig:VMainBarButton!
-    private weak var layoutSummaryLeft:NSLayoutConstraint!
-    private weak var layoutHistoryLeft:NSLayoutConstraint!
-    private weak var layoutConfigLeft:NSLayoutConstraint!
-    private let kButtonWidth:CGFloat = 70
+    weak var buttonHome:VMainBarButtonHome!
+    private let kButtonWidth:CGFloat = 80
     private let kButtonHeight:CGFloat = 64
-    private let kAnimationDurantion:NSTimeInterval = 0.3
-    
-    private lazy var totalWidth:CGFloat =
-    {
-        let width:CGFloat = self.bounds.maxX
-
-        return width
-    }()
     
     convenience init(controller:CMainParent)
     {
@@ -27,27 +14,28 @@ class VMainBar:UIView
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
-    }
-    
-    //MARK: actions
-    
-    //MARK: private
-    
-    private func animateButtons()
-    {
-        UIView.animateWithDuration(kAnimationDurantion)
-        {
-            self.layoutIfNeeded()
-        }
-    }
-    
-    //MARK: public
-    
-    func selectConfig(animate:Bool)
-    {
-        if animate
-        {
-            animateButtons()
-        }
+        
+        let buttonHome:VMainBarButtonHome = VMainBarButtonHome()
+        self.buttonHome = buttonHome
+        
+        addSubview(buttonHome)
+        
+        let views:[String:AnyObject] = [
+            "buttonHome":buttonHome]
+        
+        let metrics:[String:AnyObject] = [
+            "buttonWidth":kButtonWidth,
+            "buttonHeight":kButtonHeight]
+        
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:[buttonHome(buttonWidth)]",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[buttonHome(buttonHeight)]",
+            options:[],
+            metrics:metrics,
+            views:views))
     }
 }

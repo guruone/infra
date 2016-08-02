@@ -60,6 +60,7 @@
 		DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */; };
 		DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */; };
 		DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */; };
+		DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B261D50261D008C4904 /* VMainBarCell.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -136,6 +137,7 @@
 		DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonCreate.swift; sourceTree = "<group>"; };
 		DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonLiked.swift; sourceTree = "<group>"; };
 		DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonProfile.swift; sourceTree = "<group>"; };
+		DA800B261D50261D008C4904 /* VMainBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarCell.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */,
 				DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */,
 				DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */,
+				DA800B261D50261D008C4904 /* VMainBarCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
+				DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,

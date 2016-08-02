@@ -2,7 +2,7 @@ import UIKit
 
 class VMainBarButtonHome:VMainBarButton
 {
-    private let kIcon:String = "home"
+    private let kIcon:String = "navigationHome"
     
     init()
     {
