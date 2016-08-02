@@ -10,6 +10,13 @@ class CHome:CMainController, FStorageNewsDelegate
         FMain.sharedInstance.storage.loadNews(self)
     }
     
+    override func viewDidAppear(animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        print("home did appear")
+    }
+    
     override func loadView()
     {
         let viewHome:VHome = VHome(controller:self)

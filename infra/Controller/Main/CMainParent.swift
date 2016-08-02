@@ -67,6 +67,7 @@ class CMainParent:UIViewController
     func pushController(controller:UIViewController, transition:MMainTransition)
     {
         addChildViewController(controller)
+        view.addSubview(controller.view)
         transition.before(self, current:current, next:controller)
         
         if current == nil
@@ -81,21 +82,17 @@ class CMainParent:UIViewController
         {
             current!.willMoveToParentViewController(nil)
             
-            transitionFromViewController(
-                current!,
-                toViewController:controller,
-                duration:transition.animationDuration,
-                options:UIViewAnimationOptions.CurveEaseOut,
-                animations:
-                {
-                    transition.after(self, current:self.current, next:controller)
-                })
+            UIView.animateWithDuration(transition.animationDuration, animations:
+            {
+                transition.after(self, current:self.current, next:controller)
+            }, completion:
             { (done) in
                 
+                self.current!.view.removeFromSuperview()
                 self.current!.removeFromParentViewController()
                 controller.didMoveToParentViewController(self)
                 self.current = controller
-            }
+            })
         }
     }
 }
