@@ -67,6 +67,10 @@
 		DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */; };
 		DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */; };
 		DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */; };
+		DA800B411D502B78008C4904 /* MMainNavItemState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B401D502B78008C4904 /* MMainNavItemState.swift */; };
+		DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */; };
+		DA800B451D502BA3008C4904 /* MMainNavItemStateHover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B441D502BA3008C4904 /* MMainNavItemStateHover.swift */; };
+		DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -150,6 +154,10 @@
 		DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemProfile.swift; sourceTree = "<group>"; };
 		DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemCreate.swift; sourceTree = "<group>"; };
 		DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemLiked.swift; sourceTree = "<group>"; };
+		DA800B401D502B78008C4904 /* MMainNavItemState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemState.swift; sourceTree = "<group>"; };
+		DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemStateNone.swift; sourceTree = "<group>"; };
+		DA800B441D502BA3008C4904 /* MMainNavItemStateHover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemStateHover.swift; sourceTree = "<group>"; };
+		DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemStateActive.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -498,6 +506,10 @@
 				DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */,
 				DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */,
 				DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */,
+				DA800B401D502B78008C4904 /* MMainNavItemState.swift */,
+				DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */,
+				DA800B441D502BA3008C4904 /* MMainNavItemStateHover.swift */,
+				DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -686,16 +698,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
+				DA800B411D502B78008C4904 /* MMainNavItemState.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
 				DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
+				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
+				DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
 				DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
+				DA800B451D502BA3008C4904 /* MMainNavItemStateHover.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
 				DA800B2F1D502981008C4904 /* MMainTransition.swift in Sources */,
