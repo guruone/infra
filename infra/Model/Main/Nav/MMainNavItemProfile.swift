@@ -2,7 +2,7 @@ import Foundation
 
 class MMainNavItemProfile:MMainNavItem
 {
-    private let kImage:String = "navigationProfile"
+    private let kImage:String = "navigationHome"
     
     init()
     {

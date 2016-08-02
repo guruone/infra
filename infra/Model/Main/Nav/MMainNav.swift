@@ -11,13 +11,32 @@ class MMainNav
         let itemCreate:MMainNavItem = MMainNavItem.Create()
         let itemLiked:MMainNavItem = MMainNavItem.Liked()
         
-        itemHome.selected()
-        
         items = [
             itemProfile,
             itemLiked,
             itemHome,
             itemCreate
         ]
+    }
+    
+    //MARK: public
+    
+    func selectItem(selected:MMainNavItem)
+    {
+        for item:MMainNavItem in items
+        {
+            let state:MMainNavItemState
+            
+            if item === selected
+            {
+                state = MMainNavItemState.Active()
+            }
+            else
+            {
+                state = MMainNavItemState.None()
+            }
+            
+            item.restate(state)
+        }
     }
 }
