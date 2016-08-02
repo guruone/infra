@@ -1,11 +1,9 @@
 import UIKit
 
-class VMainBar:UIView
+class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CMainParent!
-    weak var buttonHome:VMainBarButtonHome!
-    private let kButtonWidth:CGFloat = 80
-    private let kButtonHeight:CGFloat = 64
+    private let kButtonWidth:CGFloat = 55
     
     convenience init(controller:CMainParent)
     {
@@ -37,5 +35,12 @@ class VMainBar:UIView
             options:[],
             metrics:metrics,
             views:views))
+    }
+    
+    //MARK: col del
+    
+    func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
+    {
+        return 1
     }
 }

@@ -51,16 +51,22 @@
 		DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */; };
 		DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */; };
 		DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B111D4FF0B9008C4904 /* VAccessBanned.swift */; };
-		DA800B151D4FF9E0008C4904 /* MMainTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B141D4FF9E0008C4904 /* MMainTransition.swift */; };
-		DA800B171D4FFA23008C4904 /* MMainTransitionFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */; };
-		DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */; };
-		DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */; };
-		DA800B1D1D4FFC28008C4904 /* MMainTransitionReplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1C1D4FFC28008C4904 /* MMainTransitionReplace.swift */; };
 		DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B1E1D5014A4008C4904 /* VMainBarButtonHome.swift */; };
 		DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */; };
 		DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */; };
 		DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */; };
 		DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B261D50261D008C4904 /* VMainBarCell.swift */; };
+		DA800B2F1D502981008C4904 /* MMainTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B2A1D502981008C4904 /* MMainTransition.swift */; };
+		DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B2B1D502981008C4904 /* MMainTransitionFade.swift */; };
+		DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B2C1D502981008C4904 /* MMainTransitionReplace.swift */; };
+		DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B2D1D502981008C4904 /* MMainTransitionScrollLeft.swift */; };
+		DA800B331D502981008C4904 /* MMainTransitionScrollRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B2E1D502981008C4904 /* MMainTransitionScrollRight.swift */; };
+		DA800B351D50298D008C4904 /* MMainNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B341D50298D008C4904 /* MMainNav.swift */; };
+		DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B361D50299B008C4904 /* MMainNavItem.swift */; };
+		DA800B391D5029AD008C4904 /* MMainNavItemHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B381D5029AD008C4904 /* MMainNavItemHome.swift */; };
+		DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */; };
+		DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */; };
+		DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
@@ -128,16 +134,22 @@
 		DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModel.swift; sourceTree = "<group>"; };
 		DA800B0E1D4FED14008C4904 /* CAccessBanned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAccessBanned.swift; sourceTree = "<group>"; };
 		DA800B111D4FF0B9008C4904 /* VAccessBanned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VAccessBanned.swift; sourceTree = "<group>"; };
-		DA800B141D4FF9E0008C4904 /* MMainTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransition.swift; sourceTree = "<group>"; };
-		DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionFade.swift; sourceTree = "<group>"; };
-		DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollLeft.swift; sourceTree = "<group>"; };
-		DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollRight.swift; sourceTree = "<group>"; };
-		DA800B1C1D4FFC28008C4904 /* MMainTransitionReplace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionReplace.swift; sourceTree = "<group>"; };
 		DA800B1E1D5014A4008C4904 /* VMainBarButtonHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonHome.swift; sourceTree = "<group>"; };
 		DA800B201D501585008C4904 /* VMainBarButtonCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonCreate.swift; sourceTree = "<group>"; };
 		DA800B221D5015A4008C4904 /* VMainBarButtonLiked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonLiked.swift; sourceTree = "<group>"; };
 		DA800B241D5015BD008C4904 /* VMainBarButtonProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButtonProfile.swift; sourceTree = "<group>"; };
 		DA800B261D50261D008C4904 /* VMainBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarCell.swift; sourceTree = "<group>"; };
+		DA800B2A1D502981008C4904 /* MMainTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransition.swift; sourceTree = "<group>"; };
+		DA800B2B1D502981008C4904 /* MMainTransitionFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionFade.swift; sourceTree = "<group>"; };
+		DA800B2C1D502981008C4904 /* MMainTransitionReplace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionReplace.swift; sourceTree = "<group>"; };
+		DA800B2D1D502981008C4904 /* MMainTransitionScrollLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollLeft.swift; sourceTree = "<group>"; };
+		DA800B2E1D502981008C4904 /* MMainTransitionScrollRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionScrollRight.swift; sourceTree = "<group>"; };
+		DA800B341D50298D008C4904 /* MMainNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNav.swift; sourceTree = "<group>"; };
+		DA800B361D50299B008C4904 /* MMainNavItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItem.swift; sourceTree = "<group>"; };
+		DA800B381D5029AD008C4904 /* MMainNavItemHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemHome.swift; sourceTree = "<group>"; };
+		DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemProfile.swift; sourceTree = "<group>"; };
+		DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemCreate.swift; sourceTree = "<group>"; };
+		DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemLiked.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
@@ -471,13 +483,35 @@
 		DA800B131D4FF9C9008C4904 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DA800B141D4FF9E0008C4904 /* MMainTransition.swift */,
-				DA800B161D4FFA23008C4904 /* MMainTransitionFade.swift */,
-				DA800B181D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift */,
-				DA800B1A1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift */,
-				DA800B1C1D4FFC28008C4904 /* MMainTransitionReplace.swift */,
+				DA800B281D502981008C4904 /* Nav */,
+				DA800B291D502981008C4904 /* Transition */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DA800B281D502981008C4904 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				DA800B341D50298D008C4904 /* MMainNav.swift */,
+				DA800B361D50299B008C4904 /* MMainNavItem.swift */,
+				DA800B381D5029AD008C4904 /* MMainNavItemHome.swift */,
+				DA800B3A1D5029B9008C4904 /* MMainNavItemProfile.swift */,
+				DA800B3C1D5029C2008C4904 /* MMainNavItemCreate.swift */,
+				DA800B3E1D5029CB008C4904 /* MMainNavItemLiked.swift */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		DA800B291D502981008C4904 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				DA800B2A1D502981008C4904 /* MMainTransition.swift */,
+				DA800B2B1D502981008C4904 /* MMainTransitionFade.swift */,
+				DA800B2C1D502981008C4904 /* MMainTransitionReplace.swift */,
+				DA800B2D1D502981008C4904 /* MMainTransitionScrollLeft.swift */,
+				DA800B2E1D502981008C4904 /* MMainTransitionScrollRight.swift */,
+			);
+			path = Transition;
 			sourceTree = "<group>";
 		};
 		DA8421351D4D9098003CDEA2 /* Home */ = {
@@ -653,7 +687,6 @@
 			files = (
 				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
-				DA800B171D4FFA23008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
 				DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
@@ -665,42 +698,49 @@
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
+				DA800B2F1D502981008C4904 /* MMainTransition.swift in Sources */,
 				DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
 				DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */,
+				DA800B331D502981008C4904 /* MMainTransitionScrollRight.swift in Sources */,
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
-				DA800B1B1D4FFA3D008C4904 /* MMainTransitionScrollRight.swift in Sources */,
+				DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */,
 				DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
-				DA800B191D4FFA2F008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
+				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
 				DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
+				DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */,
+				DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
-				DA800B1D1D4FFC28008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
+				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
-				DA800B151D4FF9E0008C4904 /* MMainTransition.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
+				DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
 				DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */,
 				DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */,
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
+				DA800B351D50298D008C4904 /* MMainNav.swift in Sources */,
 				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
 				DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */,
+				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
+				DA800B391D5029AD008C4904 /* MMainNavItemHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
