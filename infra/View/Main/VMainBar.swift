@@ -161,7 +161,6 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     {
         let item:MMainNavItem = modelAtIndex(indexPath)
         collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:true)
-        
         let transition:MMainTransition = MMainTransition.transition(model.current.index, toIndex:item.index)
         let controller:UIViewController = item.controller()
         controllerParent.pushController(controller, transition:transition)
