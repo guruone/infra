@@ -34,6 +34,13 @@ class MMainNavItem
         return item
     }
     
+    class func Notifications() -> MMainNavItem
+    {
+        let item:MMainNavItem = MMainNavItemNotifications()
+        
+        return item
+    }
+    
     init(image:String)
     {
         self.image = image
