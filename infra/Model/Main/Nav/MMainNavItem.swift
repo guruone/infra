@@ -70,7 +70,7 @@ class MMainNavItem
     
     func controller() -> UIViewController
     {
-        let controller:UIViewController = UIViewController()
+        let controller:UIViewController = CHome()
         
         return controller
     }

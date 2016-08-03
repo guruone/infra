@@ -21,22 +21,43 @@ class MMainTransitionReplace:MMainTransition
         {
             barHeight = parent.bar!.bounds.maxY
         }
+
+        parent.layoutTopTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1,
+            constant:barHeight)
+        parent.layoutBottomTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Bottom,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Bottom,
+            multiplier:1,
+            constant:0)
+        parent.layoutLeftTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:0)
+        parent.layoutRightTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Right,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Right,
+            multiplier:1,
+            constant:0)
         
-        let views:[String:AnyObject] = [
-            "nextView":next.view]
-        
-        let metrics:[String:AnyObject] = [
-            "barHeight":barHeight]
-        
-        parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-0-[nextView]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
-        parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(barHeight)-[nextView]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
+        parent.view.addConstraint(parent.layoutLeftTemporal!)
+        parent.view.addConstraint(parent.layoutRightTemporal!)
+        parent.view.addConstraint(parent.layoutTopTemporal!)
+        parent.view.addConstraint(parent.layoutBottomTemporal!)
     }
 }

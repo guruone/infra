@@ -32,24 +32,43 @@ class MMainTransitionScrollRight:MMainTransition
             barHeight = parent.kBarHeight
         }
         
-        let views:[String:AnyObject] = [
-            "nextView":next.view]
+        parent.layoutTopTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1,
+            constant:barHeight)
+        parent.layoutBottomTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Bottom,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Bottom,
+            multiplier:1,
+            constant:0)
+        parent.layoutLeftTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:width)
+        parent.layoutRightTemporal = NSLayoutConstraint(
+            item:next.view,
+            attribute:NSLayoutAttribute.Right,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:parent.view,
+            attribute:NSLayoutAttribute.Right,
+            multiplier:1,
+            constant:width)
         
-        let metrics:[String:AnyObject] = [
-            "barHeight":barHeight,
-            "viewWidth":width,
-            "viewWidthMinus":-width]
-        
-        parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-(viewWidthMinus)-[nextView(viewWidth)]",
-            options:[],
-            metrics:metrics,
-            views:views))
-        parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(barHeight)-[nextView]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
+        parent.view.addConstraint(parent.layoutLeftTemporal!)
+        parent.view.addConstraint(parent.layoutRightTemporal!)
+        parent.view.addConstraint(parent.layoutTopTemporal!)
+        parent.view.addConstraint(parent.layoutBottomTemporal!)
     }
     
     override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
@@ -57,18 +76,11 @@ class MMainTransitionScrollRight:MMainTransition
         if current != nil
         {
             let width:CGFloat = current!.view.bounds.maxX
-            
-            let views:[String:AnyObject] = [
-                "currentView":current!.view]
-            
-            let metrics:[String:AnyObject] = [
-                "viewWidthMinus":-width]
-            
-            parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                "H:[currentView]-(viewWidthMinus)-|",
-                options:[],
-                metrics:metrics,
-                views:views))
+            parent.layoutLeft!.constant = -width
+            parent.layoutRight!.constant = -width
         }
+        
+        parent.layoutLeftTemporal!.constant = 0
+        parent.layoutRightTemporal!.constant = 0
     }
 }

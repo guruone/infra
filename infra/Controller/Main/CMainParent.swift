@@ -89,10 +89,14 @@ class CMainParent:UIViewController
         else
         {
             current!.willMoveToParentViewController(nil)
+            view.layoutIfNeeded()
+            transition.after(self, current:self.current, next:controller)
             
             UIView.animateWithDuration(transition.animationDuration, animations:
             {
-                transition.after(self, current:self.current, next:controller)
+                
+                self.view.layoutIfNeeded()
+                
             }, completion:
             { (done) in
                 
@@ -100,6 +104,10 @@ class CMainParent:UIViewController
                 self.current!.removeFromParentViewController()
                 controller.didMoveToParentViewController(self)
                 self.current = controller
+                self.layoutRight = self.layoutRightTemporal
+                self.layoutLeft = self.layoutLeftTemporal
+                self.layoutTop = self.layoutTopTemporal
+                self.layoutBottom = self.layoutBottomTemporal
             })
         }
     }
