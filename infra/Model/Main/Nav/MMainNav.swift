@@ -37,6 +37,7 @@ class MMainNav
         }
         
         self.indexHome = indexHome
+        selectItem(itemHome)
     }
     
     //MARK: public

@@ -58,6 +58,16 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             options:[],
             metrics:metrics,
             views:views))
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_MSEC * 100)), dispatch_get_main_queue())
+        { [weak collection, weak model] in
+            
+            if model != nil
+            {
+                let indexPath:NSIndexPath = NSIndexPath(forItem:model!.indexHome, inSection:0)
+                collection?.selectItemAtIndexPath(indexPath, animated:false, scrollPosition:UICollectionViewScrollPosition.CenteredHorizontally)
+            }
+        }
     }
     
     required init?(coder:NSCoder)
