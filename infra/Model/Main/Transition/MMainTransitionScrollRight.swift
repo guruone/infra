@@ -37,10 +37,11 @@ class MMainTransitionScrollRight:MMainTransition
         
         let metrics:[String:AnyObject] = [
             "barHeight":barHeight,
-            "width":width]
+            "viewWidth":width,
+            "viewWidthMinus":-width]
         
         parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-(-width)-[nextView(width)]",
+            "H:|-(viewWidthMinus)-[nextView(viewWidth)]",
             options:[],
             metrics:metrics,
             views:views))
@@ -61,10 +62,10 @@ class MMainTransitionScrollRight:MMainTransition
                 "currentView":current!.view]
             
             let metrics:[String:AnyObject] = [
-                "width":width]
+                "viewWidthMinus":-width]
             
             parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-                "H:[currentView]-(-width)-|",
+                "H:[currentView]-(viewWidthMinus)-|",
                 options:[],
                 metrics:metrics,
                 views:views))

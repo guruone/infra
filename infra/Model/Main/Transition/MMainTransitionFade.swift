@@ -36,10 +36,12 @@ class MMainTransitionFade:MMainTransition
             metrics:metrics,
             views:views))
         parent.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(barHeight)-[nextView]-0-|",
+            "V:|-(barHeight)-[nextView]",
             options:[],
             metrics:metrics,
             views:views))
+        
+        parent.
     }
     
     override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)

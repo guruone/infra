@@ -2,9 +2,17 @@ import UIKit
 
 class CMainParent:UIViewController
 {
+    let kBarHeight:CGFloat = 64
     weak var bar:VMainBar?
     weak var current:UIViewController?
-    let kBarHeight:CGFloat = 64
+    weak var layoutLeft:NSLayoutConstraint?
+    weak var layoutRight:NSLayoutConstraint?
+    weak var layoutTop:NSLayoutConstraint?
+    weak var layoutBottom:NSLayoutConstraint?
+    weak var layoutLeftTemporal:NSLayoutConstraint?
+    weak var layoutRightTemporal:NSLayoutConstraint?
+    weak var layoutTopTemporal:NSLayoutConstraint?
+    weak var layoutBottomTemporal:NSLayoutConstraint?
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     
     override func viewDidLoad()
