@@ -65,7 +65,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             
             if model != nil
             {
-                let indexPath:NSIndexPath = NSIndexPath(forItem:model!.indexHome, inSection:0)
+                let indexPath:NSIndexPath = NSIndexPath(forItem:model!.current.index, inSection:0)
                 collection?.selectItemAtIndexPath(indexPath, animated:false, scrollPosition:UICollectionViewScrollPosition.CenteredHorizontally)
                 collection?.hidden = false
             }

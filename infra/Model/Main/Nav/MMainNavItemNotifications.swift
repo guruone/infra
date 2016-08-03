@@ -4,8 +4,8 @@ class MMainNavItemNotifications:MMainNavItem
 {
     private let kImage:String = "navigationNotifications"
     
-    init()
+    init(index:Int)
     {
-        super.init(image:kImage)
+        super.init(image:kImage, index:index)
     }
 }

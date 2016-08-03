@@ -3,40 +3,23 @@ import Foundation
 class MMainNav
 {
     let items:[MMainNavItem]
-    let indexHome:Int
+    weak var current:MMainNavItem!
     
     init()
     {
-        let itemHome:MMainNavItem = MMainNavItem.Home()
-        let itemProfile:MMainNavItem = MMainNavItem.Profile()
-        let itemCreate:MMainNavItem = MMainNavItem.Create()
-        let itemLiked:MMainNavItem = MMainNavItem.Liked()
-        let itemNotifications:MMainNavItem = MMainNavItem.Notifications()
+        var items:[MMainNavItem] = []
+        let itemProfile:MMainNavItem = MMainNavItem.Profile(items.count)
+        items.append(itemProfile)
+        let itemLiked:MMainNavItem = MMainNavItem.Liked(items.count)
+        items.append(itemLiked)
+        let itemHome:MMainNavItem = MMainNavItem.Home(items.count)
+        items.append(itemHome)
+        let itemCreate:MMainNavItem = MMainNavItem.Create(items.count)
+        items.append(itemCreate)
+        let itemNotifications:MMainNavItem = MMainNavItem.Notifications(items.count)
+        items.append(itemNotifications)
+        self.items = items
         
-        items = [
-            itemLiked,
-            itemNotifications,
-            itemHome,
-            itemCreate,
-            itemProfile
-        ]
-        
-        var indexHome:Int = 0
-        let itemsCount:Int = items.count
-        
-        for index:Int in 0 ..< itemsCount
-        {
-            let item:MMainNavItem = items[index]
-            
-            if item === itemHome
-            {
-                indexHome = index
-                
-                break
-            }
-        }
-        
-        self.indexHome = indexHome
         selectItem(itemHome)
     }
     
@@ -44,6 +27,8 @@ class MMainNav
     
     func selectItem(selected:MMainNavItem)
     {
+        current = selected
+        
         for item:MMainNavItem in items
         {
             let state:MMainNavItemState
