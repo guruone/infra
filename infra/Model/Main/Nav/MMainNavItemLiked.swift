@@ -2,7 +2,7 @@ import Foundation
 
 class MMainNavItemLiked:MMainNavItem
 {
-    private let kImage:String = "navigationHome"
+    private let kImage:String = "navigationLiked"
     
     init()
     {
