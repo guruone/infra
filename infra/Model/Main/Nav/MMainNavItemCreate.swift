@@ -4,8 +4,8 @@ class MMainNavItemCreate:MMainNavItem
 {
     private let kImage:String = "navigationCreate"
     
-    init()
+    init(index:Int)
     {
-        super.init(image:kImage)
+        super.init(image:kImage, index:index)
     }
 }

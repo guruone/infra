@@ -4,8 +4,8 @@ class MMainNavItemHome:MMainNavItem
 {
     private let kImage:String = "navigationHome"
     
-    init()
+    init(index:Int)
     {
-        super.init(image:kImage)
+        super.init(image:kImage, index:index)
     }
 }

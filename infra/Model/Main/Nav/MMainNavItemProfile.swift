@@ -4,8 +4,8 @@ class MMainNavItemProfile:MMainNavItem
 {
     private let kImage:String = "navigationProfile"
     
-    init()
+    init(index:Int)
     {
-        super.init(image:kImage)
+        super.init(image:kImage, index:index)
     }
 }
