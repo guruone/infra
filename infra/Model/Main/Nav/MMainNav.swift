@@ -3,6 +3,7 @@ import Foundation
 class MMainNav
 {
     let items:[MMainNavItem]
+    let indexHome:Int
     
     init()
     {
@@ -10,13 +11,32 @@ class MMainNav
         let itemProfile:MMainNavItem = MMainNavItem.Profile()
         let itemCreate:MMainNavItem = MMainNavItem.Create()
         let itemLiked:MMainNavItem = MMainNavItem.Liked()
+        let itemNotifications:MMainNavItem = MMainNavItem.Notifications()
         
         items = [
-            itemProfile,
             itemLiked,
+            itemNotifications,
             itemHome,
-            itemCreate
+            itemCreate,
+            itemProfile
         ]
+        
+        var indexHome:Int = 0
+        let itemsCount:Int = items.count
+        
+        for index:Int in 0 ..< itemsCount
+        {
+            let item:MMainNavItem = items[index]
+            
+            if item === itemHome
+            {
+                indexHome = index
+                
+                break
+            }
+        }
+        
+        self.indexHome = indexHome
     }
     
     //MARK: public

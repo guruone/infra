@@ -4,7 +4,7 @@ class MMainNavItem
 {
     let image:String
     private(set) var state:MMainNavItemState
-    weak var cell:VMainBarCell!
+    weak var cell:VMainBarCell?
     
     class func Home() -> MMainNavItem
     {
@@ -52,7 +52,7 @@ class MMainNavItem
     func restate(state:MMainNavItemState)
     {
         self.state = state
-        cell.image.tintColor = state.color
+        cell?.image.tintColor = state.color
     }
     
     func config(cell:VMainBarCell)
