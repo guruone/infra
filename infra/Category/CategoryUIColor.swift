@@ -4,6 +4,6 @@ extension UIColor
 {
     class func main() -> UIColor
     {
-        return UIColor(red:0.3, green:0.3, blue:0.3, alpha:1)
+        return UIColor(red:0.45, green:0.45, blue:0.45, alpha:1)
     }
 }

@@ -13,13 +13,6 @@ class MMainNavItemState
         return state
     }
     
-    class func Hover() -> MMainNavItemState
-    {
-        let state:MMainNavItemState = MMainNavItemStateHover()
-        
-        return state
-    }
-    
     class func Active() -> MMainNavItemState
     {
         let state:MMainNavItemState = MMainNavItemStateActive()
