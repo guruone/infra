@@ -67,4 +67,11 @@ class MMainNavItem
     func selected()
     {
     }
+    
+    func controller() -> UIViewController
+    {
+        let controller:UIViewController = UIViewController()
+        
+        return controller
+    }
 }

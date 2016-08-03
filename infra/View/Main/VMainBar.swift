@@ -2,12 +2,12 @@ import UIKit
 
 class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
-    weak var controller:CMainParent!
+    weak var controllerParent:CMainParent!
     weak var collection:UICollectionView!
     private let model:MMainNav
     private let kButtonWidth:CGFloat = 70
     
-    init(controller:CMainParent)
+    init(controllerParent:CMainParent)
     {
         model = MMainNav()
         
@@ -15,7 +15,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         backgroundColor = UIColor.main()
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        self.controller = controller
+        self.controllerParent = controllerParent
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flow.headerReferenceSize = CGSizeZero
@@ -160,7 +160,11 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     func collectionView(collectionView:UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         let item:MMainNavItem = modelAtIndex(indexPath)
-        model.selectItem(item)
         collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:true)
+        
+        let transition:MMainTransition = MMainTransition.transition(model.current.index, toIndex:item.index)
+        let controller:UIViewController = item.controller()
+        controllerParent.pushController(controller, transition:transition)
+        model.selectItem(item)
     }
 }

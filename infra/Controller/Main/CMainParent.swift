@@ -41,7 +41,7 @@ class CMainParent:UIViewController
     
     func loadBar()
     {
-        let bar:VMainBar = VMainBar(controller:self)
+        let bar:VMainBar = VMainBar(controllerParent:self)
         self.bar = bar
         
         view.addSubview(bar)

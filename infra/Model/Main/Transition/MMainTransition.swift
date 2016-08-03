@@ -4,6 +4,22 @@ class MMainTransition
 {
     let animationDuration:NSTimeInterval
     
+    class func transition(fromIndex:Int, toIndex:Int) -> MMainTransition
+    {
+        let scrollTransition:MMainTransition
+        
+        if fromIndex > toIndex
+        {
+            scrollTransition = MMainTransition.ScrollLeft()
+        }
+        else
+        {
+            scrollTransition = MMainTransition.ScrollRight()
+        }
+        
+        return scrollTransition
+    }
+    
     class func Fade() -> MMainTransition
     {
         let transition:MMainTransition = MMainTransitionFade()
