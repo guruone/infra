@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MMainNavItemCreate:MMainNavItem
 {
@@ -7,5 +7,12 @@ class MMainNavItemCreate:MMainNavItem
     init(index:Int)
     {
         super.init(image:kImage, index:index)
+    }
+    
+    override func controller() -> UIViewController
+    {
+        let create:CCreate = CCreate()
+        
+        return create
     }
 }
