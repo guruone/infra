@@ -74,6 +74,11 @@
 		DAA0551E1D53D9E60070D0E0 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0551D1D53D9E60070D0E0 /* CCreate.swift */; };
 		DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055201D53DAC20070D0E0 /* VCreate.swift */; };
 		DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055221D53E1C60070D0E0 /* VCreateCell.swift */; };
+		DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */; };
+		DAA055271D53E8620070D0E0 /* VCreateCellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055261D53E8620070D0E0 /* VCreateCellText.swift */; };
+		DAA055291D53E86F0070D0E0 /* VCreateCellPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */; };
+		DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */; };
+		DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
 		DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */; };
@@ -164,6 +169,11 @@
 		DAA0551D1D53D9E60070D0E0 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAA055201D53DAC20070D0E0 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DAA055221D53E1C60070D0E0 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
+		DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellTitle.swift; sourceTree = "<group>"; };
+		DAA055261D53E8620070D0E0 /* VCreateCellText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellText.swift; sourceTree = "<group>"; };
+		DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPicture.swift; sourceTree = "<group>"; };
+		DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPublish.swift; sourceTree = "<group>"; };
+		DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellAck.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemNotifications.swift; sourceTree = "<group>"; };
@@ -555,6 +565,11 @@
 			children = (
 				DAA055201D53DAC20070D0E0 /* VCreate.swift */,
 				DAA055221D53E1C60070D0E0 /* VCreateCell.swift */,
+				DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */,
+				DAA055261D53E8620070D0E0 /* VCreateCellText.swift */,
+				DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */,
+				DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */,
+				DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -731,6 +746,7 @@
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
+				DAA055291D53E86F0070D0E0 /* VCreateCellPicture.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
@@ -745,12 +761,15 @@
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
 				DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */,
 				DA800B331D502981008C4904 /* MMainTransitionScrollRight.swift in Sources */,
+				DAA055271D53E8620070D0E0 /* VCreateCellText.swift in Sources */,
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
 				DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */,
 				DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
+				DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */,
+				DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
@@ -763,6 +782,7 @@
 				DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */,
 				DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
+				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
