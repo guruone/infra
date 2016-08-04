@@ -33,6 +33,13 @@ class MCreateItem
         return item
     }
     
+    class func Publish() -> MCreateItem
+    {
+        let item:MCreateItem = MCreateItemPublish()
+        
+        return item
+    }
+    
     init(reusableIdentifier:String, cellHeight:CGFloat)
     {
         self.reusableIdentifier = reusableIdentifier

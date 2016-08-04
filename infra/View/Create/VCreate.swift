@@ -3,13 +3,14 @@ import UIKit
 class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CCreate!
+    private let kCollectionBottom:CGFloat = 40
     
     convenience init(controller:CCreate)
     {
         self.init()
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(white:0.96, alpha:1)
+        backgroundColor = UIColor(white:0.97, alpha:1)
         self.controller = controller
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -17,7 +18,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         flow.footerReferenceSize = CGSizeZero
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0
-        flow.sectionInset = UIEdgeInsetsZero
+        flow.sectionInset = UIEdgeInsetsMake(0, 0, kCollectionBottom, 0)
         flow.scrollDirection = UICollectionViewScrollDirection.Vertical
         
         let collection:UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout:flow)
@@ -45,6 +46,10 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             VCreateCellAck.self,
             forCellWithReuseIdentifier:
             VCreateCellAck.reusableIdentifier())
+        collection.registerClass(
+            VCreateCellPublish.self,
+            forCellWithReuseIdentifier:
+            VCreateCellPublish.reusableIdentifier())
         
         addSubview(collection)
         
