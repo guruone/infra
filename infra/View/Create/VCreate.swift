@@ -30,9 +30,21 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         collection.delegate = self
         collection.dataSource = self
         collection.registerClass(
-            VCreateCell.self,
+            VCreateCellTitle.self,
             forCellWithReuseIdentifier:
-            VCreateCell.reusableIdentifier())
+            VCreateCellTitle.reusableIdentifier())
+        collection.registerClass(
+            VCreateCellText.self,
+            forCellWithReuseIdentifier:
+            VCreateCellText.reusableIdentifier())
+        collection.registerClass(
+            VCreateCellPicture.self,
+            forCellWithReuseIdentifier:
+            VCreateCellPicture.reusableIdentifier())
+        collection.registerClass(
+            VCreateCellAck.self,
+            forCellWithReuseIdentifier:
+            VCreateCellAck.reusableIdentifier())
         
         addSubview(collection)
         
@@ -53,7 +65,25 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             views:views))
     }
     
+    //MARK: private
+    
+    private func modelAtIndex(index:NSIndexPath) -> MCreateItem
+    {
+        let item:MCreateItem = controller.model.items[index.item]
+        
+        return item
+    }
+    
     //MARK: col del
+    
+    func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    {
+        let item:MCreateItem = modelAtIndex(indexPath)
+        let width:CGFloat = collectionView.bounds.size.width
+        let size:CGSize = CGSizeMake(width, item.cellHeight)
+        
+        return size
+    }
     
     func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
     {
@@ -62,11 +92,20 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
     {
+        let count:Int = controller.model.items.count
         
+        return count
     }
     
     func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell
     {
+        let item:MCreateItem = modelAtIndex(indexPath)
+        let cell:VCreateCell = collectionView.dequeueReusableCellWithReuseIdentifier(
+            item.reusableIdentifier,
+            forIndexPath:
+            indexPath) as! VCreateCell
+        item.config(cell)
         
+        return cell
     }
 }

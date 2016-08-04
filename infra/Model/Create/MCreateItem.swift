@@ -38,4 +38,11 @@ class MCreateItem
         self.reusableIdentifier = reusableIdentifier
         self.cellHeight = cellHeight
     }
+    
+    //MARK: public
+    
+    func config(cell:VCreateCell)
+    {
+        
+    }
 }
