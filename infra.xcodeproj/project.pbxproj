@@ -79,6 +79,12 @@
 		DAA055291D53E86F0070D0E0 /* VCreateCellPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */; };
 		DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */; };
 		DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */; };
+		DAA055301D53EB890070D0E0 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552F1D53EB890070D0E0 /* MCreate.swift */; };
+		DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055311D53EBC90070D0E0 /* MCreateItem.swift */; };
+		DAA055341D53EBEC0070D0E0 /* MCreateItemTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */; };
+		DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */; };
+		DAA055381D53EC020070D0E0 /* MCreateItemPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */; };
+		DAA0553A1D53F01E0070D0E0 /* MCreateItemAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
 		DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */; };
@@ -174,6 +180,12 @@
 		DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPicture.swift; sourceTree = "<group>"; };
 		DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPublish.swift; sourceTree = "<group>"; };
 		DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellAck.swift; sourceTree = "<group>"; };
+		DAA0552F1D53EB890070D0E0 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
+		DAA055311D53EBC90070D0E0 /* MCreateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItem.swift; sourceTree = "<group>"; };
+		DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemTitle.swift; sourceTree = "<group>"; };
+		DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemText.swift; sourceTree = "<group>"; };
+		DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemPicture.swift; sourceTree = "<group>"; };
+		DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemAck.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemNotifications.swift; sourceTree = "<group>"; };
@@ -385,6 +397,7 @@
 		DA0EA27B1D4BD81100D300B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAA0552E1D53EB7C0070D0E0 /* Create */,
 				DA800B131D4FF9C9008C4904 /* Main */,
 				DA0C453A1D4C016E003AF335 /* Configuration */,
 			);
@@ -574,6 +587,19 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
+		DAA0552E1D53EB7C0070D0E0 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				DAA0552F1D53EB890070D0E0 /* MCreate.swift */,
+				DAA055311D53EBC90070D0E0 /* MCreateItem.swift */,
+				DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */,
+				DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */,
+				DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */,
+				DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		DAD3521D1D4C656E00401230 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -737,8 +763,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA0553A1D53F01E0070D0E0 /* MCreateItemAck.swift in Sources */,
 				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
 				DA800B411D502B78008C4904 /* MMainNavItemState.swift in Sources */,
+				DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
 				DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */,
@@ -750,6 +778,7 @@
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */,
 				DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */,
+				DAA055301D53EB890070D0E0 /* MCreate.swift in Sources */,
 				DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
@@ -772,6 +801,7 @@
 				DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
+				DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
@@ -798,11 +828,13 @@
 				DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */,
 				DA800B351D50298D008C4904 /* MMainNav.swift in Sources */,
 				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
+				DAA055341D53EBEC0070D0E0 /* MCreateItemTitle.swift in Sources */,
 				DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */,
 				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
+				DAA055381D53EC020070D0E0 /* MCreateItemPicture.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
 				DA800B391D5029AD008C4904 /* MMainNavItemHome.swift in Sources */,
 			);

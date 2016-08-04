@@ -1,9 +1,14 @@
-//
-//  VCreateCellPicture.swift
-//  infra
-//
-//  Created by zero on 8/4/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
+import UIKit
 
-import Foundation
+class VCreateCellPicture:VCreateCell
+{
+    override init(frame:CGRect)
+    {
+        super.init(frame:frame)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        fatalError()
+    }
+}
