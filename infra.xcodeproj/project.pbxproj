@@ -73,6 +73,7 @@
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
 		DAA0551E1D53D9E60070D0E0 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0551D1D53D9E60070D0E0 /* CCreate.swift */; };
 		DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055201D53DAC20070D0E0 /* VCreate.swift */; };
+		DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055221D53E1C60070D0E0 /* VCreateCell.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
 		DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */; };
@@ -162,6 +163,7 @@
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
 		DAA0551D1D53D9E60070D0E0 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAA055201D53DAC20070D0E0 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
+		DAA055221D53E1C60070D0E0 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemNotifications.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA055201D53DAC20070D0E0 /* VCreate.swift */,
+				DAA055221D53E1C60070D0E0 /* VCreateCell.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -765,6 +768,7 @@
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
+				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
 				DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
