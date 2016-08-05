@@ -7,6 +7,8 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
     weak var indexPath:NSIndexPath!
     private(set) var text:String
     private let kCellHeight:CGFloat = 180
+    private let kMinTextLenght:Int = 1
+    private let kMaxTextLenght:Int = 2048
     
     init()
     {
@@ -21,6 +23,25 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
         self.indexPath = indexPath
         cellText = cell as! VCreateCellText
         cellText.textView.delegate = self
+    }
+    
+    override func validate() -> String?
+    {
+        var error:String?
+        let countCharacters:Int = text.characters.count
+        
+        if countCharacters < kMinTextLenght
+        {
+            error = NSLocalizedString("MCreateItemText_minCharacters", comment:"")
+        }
+        else if countCharacters > kMaxTextLenght
+        {
+            let maximumCharacters:Int = kMaxTextLenght - 1
+            let compositeError:String = String(format:NSLocalizedString("MCreateItemText_maxCharacters", comment:""), maximumCharacters)
+            error = compositeError
+        }
+        
+        return error
     }
     
     //MARK: textView delegate

@@ -7,5 +7,7 @@
 "VCreateCellText_label"="Poem";
 "VCreateCellPublish_button"="Publish";
 
-"MCreateItemTitle_minCharacters"="Title is too short";
+"MCreateItemTitle_minCharacters"="The poem needs a title";
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters maximum"
+"MCreateItemText_minCharacters"="The poem is missing";
+"MCreateItemText_maxCharacters"="The poem can't be longer than %@ characters";
