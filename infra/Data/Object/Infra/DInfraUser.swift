@@ -15,9 +15,8 @@ class DInfraUser:NSManagedObject
     
     @NSManaged private(set) var access:DInfraUserAccess
     @NSManaged private(set) var userId:String?
-    @NSManaged var createdPost:NSSet
-    @NSManaged var dislikedPost:NSSet
-    @NSManaged var likedPost:NSSet
+    @NSManaged var createdPoem:NSSet
+    @NSManaged var likedPoem:NSSet
     private var updateHandler:UInt?
     
     override class func entityName() -> String
