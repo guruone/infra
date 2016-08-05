@@ -3,6 +3,7 @@ import UIKit
 class CLanding:CMainController
 {
     weak var viewLanding:VLanding!
+    private(set) var firstTime:Bool?
     
     override func viewDidAppear(animated:Bool)
     {
@@ -20,16 +21,21 @@ class CLanding:CMainController
     
     //MARK: public
     
-    func loadFinished()
+    func loadFinished(firstTime:Bool)
     {
+        self.firstTime = firstTime
         viewLanding.animateLanding()
     }
     
     func animationFinished()
     {
-        let home:CHome = CHome()
-        let transition:MMainTransition = MMainTransition.Fade()
-        parent.loadBar()
-        parent.pushController(home, transition:transition)
+        if firstTime!
+        {
+            parent.loadOnboarding()
+        }
+        else
+        {
+            parent.loadHome()
+        }
     }
 }

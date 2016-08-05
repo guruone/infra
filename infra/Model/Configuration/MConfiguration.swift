@@ -5,10 +5,12 @@ class MConfiguration
     static let sharedInstance = MConfiguration()
     let font:MConfigurationFont
     private(set) var user:DInfraUser?
+    private(set) var firstTime:Bool
     
     private init()
     {
         font = MConfigurationFont()
+        firstTime = false
     }
     
     //MARK: private
@@ -34,6 +36,7 @@ class MConfiguration
     
     private func createUser()
     {
+        firstTime = true
         DManager.sharedInstance.managerUbik.createManagedObject(
             DInfraUser.self)
         { (model) in
@@ -80,7 +83,7 @@ class MConfiguration
                 
                 if landing != nil
                 {
-                    landing!.loadFinished()
+                    landing!.loadFinished(self.firstTime)
                 }
             }
         }

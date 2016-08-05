@@ -110,4 +110,19 @@ class CMainParent:UIViewController
             })
         }
     }
+    
+    func loadHome()
+    {
+        let home:CHome = CHome()
+        let transition:MMainTransition = MMainTransition.Fade()
+        loadBar()
+        pushController(home, transition:transition)
+    }
+    
+    func loadOnboarding()
+    {
+        let onboarding:COnboarding = COnboarding()
+        let transition:MMainTransition = MMainTransition.Fade()
+        pushController(onboarding, transition:transition)
+    }
 }
