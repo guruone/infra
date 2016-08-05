@@ -6,3 +6,6 @@
 "VCreateCellTitle_fieldPlaceholder"="Unnamed poem";
 "VCreateCellText_label"="Poem";
 "VCreateCellPublish_button"="Publish";
+
+"MCreateItemTitle_minCharacters"="Title is too short";
+"MCreateItemTitle_maxCharacters"="Title should have %@ characters maximum"

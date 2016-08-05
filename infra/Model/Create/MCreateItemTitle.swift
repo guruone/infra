@@ -7,6 +7,8 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
     weak var indexPath:NSIndexPath!
     private(set) var title:String
     private let kCellHeight:CGFloat = 74
+    private let kMinTitleLenght:Int = 1
+    private let kMaxTitleLenght:Int = 64
     
     init()
     {
@@ -21,6 +23,25 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
         self.indexPath = indexPath
         cellTitle = cell as! VCreateCellTitle
         cellTitle.field.delegate = self
+    }
+    
+    override func validate() -> String?
+    {
+        var error:String?
+        let countCharacters:Int = title.characters.count
+        
+        if countCharacters < kMinTitleLenght
+        {
+            error = NSLocalizedString("MCreateItemTitle_minCharacters", comment:"")
+        }
+        else if countCharacters > kMaxTitleLenght
+        {
+            let maximumCharacters:Int = kMaxTitleLenght - 1
+            let compositeError:String = String(format:NSLocalizedString("MCreateItemTitle_maxCharacters", comment:""), maximumCharacters)
+            error = compositeError
+        }
+        
+        return error
     }
     
     //MARK: field delegate

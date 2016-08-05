@@ -16,4 +16,15 @@ class MCreate
             itemPublish
         ]
     }
+    
+    //MARK: public
+    
+    func validate() -> String?
+    {
+        var error:String?
+        
+        
+        
+        return error
+    }
 }

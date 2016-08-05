@@ -37,4 +37,9 @@ class MCreateItem:NSObject
     func config(cell:VCreateCell, controller:CCreate, indexPath:NSIndexPath)
     {
     }
+    
+    func validate() -> String?
+    {
+        return nil
+    }
 }
