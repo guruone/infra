@@ -22,4 +22,15 @@ class CCreate:CMainController
         self.viewCreate = viewCreate
         view = viewCreate
     }
+    
+    //MARK: public
+    
+    func publish()
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        { [weak self] in
+            
+            
+        }
+    }
 }
