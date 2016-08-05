@@ -23,6 +23,14 @@ class CCreate:CMainController
         view = viewCreate
     }
     
+    //MARK: private
+    
+    private func publishFailed(publishItem:MCreateItemPublish, error:String)
+    {
+        publishItem.publishFailed()
+        VMainAlert.Message(error)
+    }
+    
     //MARK: public
     
     func publish(publishItem:MCreateItemPublish)
@@ -34,12 +42,21 @@ class CCreate:CMainController
             
             if error == nil
             {
+                let poemUrl:NSURL? = self?.model.poemFile()
                 
+                if poemUrl == nil
+                {
+                    let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
+                    self?.publishFailed(publishItem, error:errorSaving)
+                }
+                else
+                {
+                    
+                }
             }
             else
             {
-                publishItem.publishFailed()
-                VMainAlert.Message(error!)
+                self?.publishFailed(publishItem, error:error!)
             }
         }
     }

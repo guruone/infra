@@ -1,5 +1,7 @@
 "general_errorDownload"="Error connecting to server";
 
+"CCreate_errorSaveFile"="Error saving poem";
+
 "VAccessBanned_label"="Your account has been suspended, please contact support if you want more information";
 "VCreateHeader_title"="Add a poem";
 "VCreateCellTitle_label"="Title";
