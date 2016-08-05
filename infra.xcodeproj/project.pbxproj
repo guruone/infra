@@ -84,6 +84,9 @@
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21B981D550718001CD703 /* MOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B971D550718001CD703 /* MOnboarding.swift */; };
 		DAB21B9A1D55075B001CD703 /* MOnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B991D55075B001CD703 /* MOnboardingItem.swift */; };
+		DAB21B9C1D5507EE001CD703 /* MOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B9B1D5507EE001CD703 /* MOnboardingItemHistory.swift */; };
+		DAB21B9E1D5507F7001CD703 /* MOnboardingItemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B9D1D5507F7001CD703 /* MOnboardingItemApp.swift */; };
+		DAB21BA01D550805001CD703 /* MOnboardingItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B9F1D550805001CD703 /* MOnboardingItemUser.swift */; };
 		DAB8CE0E1D54D7A800F273E1 /* VMainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */; };
 		DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */; };
 		DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */; };
@@ -188,6 +191,9 @@
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21B971D550718001CD703 /* MOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboarding.swift; sourceTree = "<group>"; };
 		DAB21B991D55075B001CD703 /* MOnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItem.swift; sourceTree = "<group>"; };
+		DAB21B9B1D5507EE001CD703 /* MOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItemHistory.swift; sourceTree = "<group>"; };
+		DAB21B9D1D5507F7001CD703 /* MOnboardingItemApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItemApp.swift; sourceTree = "<group>"; };
+		DAB21B9F1D550805001CD703 /* MOnboardingItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItemUser.swift; sourceTree = "<group>"; };
 		DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainAlert.swift; sourceTree = "<group>"; };
 		DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelPoem.swift; sourceTree = "<group>"; };
 		DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraPoem.swift; sourceTree = "<group>"; };
@@ -621,6 +627,9 @@
 			children = (
 				DAB21B971D550718001CD703 /* MOnboarding.swift */,
 				DAB21B991D55075B001CD703 /* MOnboardingItem.swift */,
+				DAB21B9B1D5507EE001CD703 /* MOnboardingItemHistory.swift */,
+				DAB21B9D1D5507F7001CD703 /* MOnboardingItemApp.swift */,
+				DAB21B9F1D550805001CD703 /* MOnboardingItemUser.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -806,6 +815,7 @@
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
 				DA0EA2851D4BD81100D300B2 /* CMain.swift in Sources */,
+				DAB21BA01D550805001CD703 /* MOnboardingItemUser.swift in Sources */,
 				DA800B2F1D502981008C4904 /* MMainTransition.swift in Sources */,
 				DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
@@ -856,10 +866,12 @@
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
 				DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */,
 				DA800B351D50298D008C4904 /* MMainNav.swift in Sources */,
+				DAB21B9C1D5507EE001CD703 /* MOnboardingItemHistory.swift in Sources */,
 				DAA055341D53EBEC0070D0E0 /* MCreateItemTitle.swift in Sources */,
 				DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */,
 				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */,
+				DAB21B9E1D5507F7001CD703 /* MOnboardingItemApp.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,

@@ -4,19 +4,19 @@ class MOnboardingItem
 {
     class func History() -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemWelcome()
+        let model:MOnboardingItem = MOnboardingItemHistory()
         return model
     }
     
     class func App() -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemPermission()
+        let model:MOnboardingItem = MOnboardingItemApp()
         return model
     }
     
     class func User() -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemLoading()
+        let model:MOnboardingItem = MOnboardingItemUser()
         return model
     }
     

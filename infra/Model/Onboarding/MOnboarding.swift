@@ -6,16 +6,14 @@ class MOnboarding
     
     init()
     {
-        let modelWelcome:MOnboardingItem = MOnboardingItem.Welcome()
-        let modelPermission:MOnboardingItem = MOnboardingItem.Permission()
-        let modelLoading:MOnboardingItem = MOnboardingItem.Loading()
-        let modelReady:MOnboardingItem = MOnboardingItem.Ready()
+        let modelHistory:MOnboardingItem = MOnboardingItem.History()
+        let modelApp:MOnboardingItem = MOnboardingItem.App()
+        let modelUser:MOnboardingItem = MOnboardingItem.User()
         
         items = [
-            modelWelcome,
-            modelPermission,
-            modelLoading,
-            modelReady
+            modelHistory,
+            modelApp,
+            modelUser
         ]
     }
 }
