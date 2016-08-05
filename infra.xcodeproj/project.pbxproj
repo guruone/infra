@@ -76,15 +76,11 @@
 		DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055221D53E1C60070D0E0 /* VCreateCell.swift */; };
 		DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */; };
 		DAA055271D53E8620070D0E0 /* VCreateCellText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055261D53E8620070D0E0 /* VCreateCellText.swift */; };
-		DAA055291D53E86F0070D0E0 /* VCreateCellPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */; };
 		DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */; };
-		DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */; };
 		DAA055301D53EB890070D0E0 /* MCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0552F1D53EB890070D0E0 /* MCreate.swift */; };
 		DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055311D53EBC90070D0E0 /* MCreateItem.swift */; };
 		DAA055341D53EBEC0070D0E0 /* MCreateItemTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */; };
 		DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */; };
-		DAA055381D53EC020070D0E0 /* MCreateItemPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */; };
-		DAA0553A1D53F01E0070D0E0 /* MCreateItemAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */; };
 		DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */; };
 		DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */; };
 		DAC549D51D4BF25D00740899 /* infraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA1D31D4BD01100D300B2 /* infraTests.swift */; };
@@ -179,15 +175,11 @@
 		DAA055221D53E1C60070D0E0 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
 		DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellTitle.swift; sourceTree = "<group>"; };
 		DAA055261D53E8620070D0E0 /* VCreateCellText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellText.swift; sourceTree = "<group>"; };
-		DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPicture.swift; sourceTree = "<group>"; };
 		DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellPublish.swift; sourceTree = "<group>"; };
-		DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCellAck.swift; sourceTree = "<group>"; };
 		DAA0552F1D53EB890070D0E0 /* MCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreate.swift; sourceTree = "<group>"; };
 		DAA055311D53EBC90070D0E0 /* MCreateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItem.swift; sourceTree = "<group>"; };
 		DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemTitle.swift; sourceTree = "<group>"; };
 		DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemText.swift; sourceTree = "<group>"; };
-		DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemPicture.swift; sourceTree = "<group>"; };
-		DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemAck.swift; sourceTree = "<group>"; };
 		DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemPublish.swift; sourceTree = "<group>"; };
 		DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateHeader.swift; sourceTree = "<group>"; };
 		DAD352181D4C547D00401230 /* newsMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = newsMap.plist; sourceTree = "<group>"; };
@@ -585,8 +577,6 @@
 				DAA055221D53E1C60070D0E0 /* VCreateCell.swift */,
 				DAA055241D53E73D0070D0E0 /* VCreateCellTitle.swift */,
 				DAA055261D53E8620070D0E0 /* VCreateCellText.swift */,
-				DAA055281D53E86F0070D0E0 /* VCreateCellPicture.swift */,
-				DAA0552C1D53E89C0070D0E0 /* VCreateCellAck.swift */,
 				DAA0552A1D53E88B0070D0E0 /* VCreateCellPublish.swift */,
 			);
 			path = Create;
@@ -599,8 +589,6 @@
 				DAA055311D53EBC90070D0E0 /* MCreateItem.swift */,
 				DAA055331D53EBEC0070D0E0 /* MCreateItemTitle.swift */,
 				DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */,
-				DAA055371D53EC020070D0E0 /* MCreateItemPicture.swift */,
-				DAA055391D53F01E0070D0E0 /* MCreateItemAck.swift */,
 				DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */,
 			);
 			path = Create;
@@ -769,7 +757,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAA0553A1D53F01E0070D0E0 /* MCreateItemAck.swift in Sources */,
 				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
 				DA800B411D502B78008C4904 /* MMainNavItemState.swift in Sources */,
 				DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */,
@@ -780,7 +767,6 @@
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
-				DAA055291D53E86F0070D0E0 /* VCreateCellPicture.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */,
 				DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */,
@@ -805,7 +791,6 @@
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */,
-				DAA0552D1D53E89C0070D0E0 /* VCreateCellAck.swift in Sources */,
 				DA0EA2081D4BD01100D300B2 /* CategoryUICollectionReusableView.swift in Sources */,
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */,
@@ -842,7 +827,6 @@
 				DA800B1F1D5014A4008C4904 /* VMainBarButtonHome.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
-				DAA055381D53EC020070D0E0 /* MCreateItemPicture.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
 				DA800B391D5029AD008C4904 /* MMainNavItemHome.swift in Sources */,
 			);

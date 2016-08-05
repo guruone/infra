@@ -2,7 +2,7 @@ import UIKit
 
 class MCreateItemPublish:MCreateItem
 {
-    private let kCellHeight:CGFloat = 80
+    private let kCellHeight:CGFloat = 200
     
     init()
     {

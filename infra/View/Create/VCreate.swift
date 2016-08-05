@@ -5,7 +5,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
     weak var controller:CCreate!
     weak var collection:UICollectionView!
     private let kHeaderHeight:CGFloat = 60
-    private let kCollectionBottom:CGFloat = 40
+    private let kCollectionBottom:CGFloat = 60
     
     convenience init(controller:CCreate)
     {
@@ -47,14 +47,6 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             VCreateCellText.self,
             forCellWithReuseIdentifier:
             VCreateCellText.reusableIdentifier())
-        collection.registerClass(
-            VCreateCellPicture.self,
-            forCellWithReuseIdentifier:
-            VCreateCellPicture.reusableIdentifier())
-        collection.registerClass(
-            VCreateCellAck.self,
-            forCellWithReuseIdentifier:
-            VCreateCellAck.reusableIdentifier())
         collection.registerClass(
             VCreateCellPublish.self,
             forCellWithReuseIdentifier:
