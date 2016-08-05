@@ -88,6 +88,9 @@
 		DAB21B9E1D5507F7001CD703 /* MOnboardingItemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B9D1D5507F7001CD703 /* MOnboardingItemApp.swift */; };
 		DAB21BA01D550805001CD703 /* MOnboardingItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B9F1D550805001CD703 /* MOnboardingItemUser.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
+		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
+		DAB21BA61D5508B9001CD703 /* COnboardingItemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA51D5508B9001CD703 /* COnboardingItemApp.swift */; };
+		DAB21BA81D5508C0001CD703 /* COnboardingItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA71D5508C0001CD703 /* COnboardingItemUser.swift */; };
 		DAB8CE0E1D54D7A800F273E1 /* VMainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */; };
 		DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */; };
 		DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */; };
@@ -196,6 +199,9 @@
 		DAB21B9D1D5507F7001CD703 /* MOnboardingItemApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItemApp.swift; sourceTree = "<group>"; };
 		DAB21B9F1D550805001CD703 /* MOnboardingItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboardingItemUser.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
+		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
+		DAB21BA51D5508B9001CD703 /* COnboardingItemApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemApp.swift; sourceTree = "<group>"; };
+		DAB21BA71D5508C0001CD703 /* COnboardingItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemUser.swift; sourceTree = "<group>"; };
 		DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainAlert.swift; sourceTree = "<group>"; };
 		DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelPoem.swift; sourceTree = "<group>"; };
 		DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraPoem.swift; sourceTree = "<group>"; };
@@ -621,6 +627,9 @@
 			children = (
 				DAB21B941D5506D8001CD703 /* COnboarding.swift */,
 				DAB21BA11D550887001CD703 /* COnboardingItem.swift */,
+				DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */,
+				DAB21BA51D5508B9001CD703 /* COnboardingItemApp.swift */,
+				DAB21BA71D5508C0001CD703 /* COnboardingItemUser.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -804,10 +813,12 @@
 				DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
 				DA0EA2061D4BD01100D300B2 /* CategoryNSManagerdObject.swift in Sources */,
+				DAB21BA81D5508C0001CD703 /* COnboardingItemUser.swift in Sources */,
 				DA800B251D5015BD008C4904 /* VMainBarButtonProfile.swift in Sources */,
 				DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */,
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
+				DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */,
@@ -825,6 +836,7 @@
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
 				DAA0551E1D53D9E60070D0E0 /* CCreate.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
+				DAB21BA61D5508B9001CD703 /* COnboardingItemApp.swift in Sources */,
 				DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */,
 				DA800B331D502981008C4904 /* MMainTransitionScrollRight.swift in Sources */,
 				DAA055271D53E8620070D0E0 /* VCreateCellText.swift in Sources */,
