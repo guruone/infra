@@ -35,8 +35,6 @@
 		DA0EA2891D4BD81100D300B2 /* VMainBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2801D4BD81100D300B2 /* VMainBar.swift */; };
 		DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */; };
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
-		DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC71D4FC3F1008C4904 /* DInfraPost.swift */; };
-		DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */; };
 		DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */; };
 		DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */; };
 		DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */; };
@@ -138,8 +136,6 @@
 		DA0EA2801D4BD81100D300B2 /* VMainBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBar.swift; sourceTree = "<group>"; };
 		DA0EA2811D4BD81100D300B2 /* VMainBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarButton.swift; sourceTree = "<group>"; };
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
-		DA800AC71D4FC3F1008C4904 /* DInfraPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraPost.swift; sourceTree = "<group>"; };
-		DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraPost+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraUser.swift; sourceTree = "<group>"; };
 		DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConfigurationFont.swift; sourceTree = "<group>"; };
@@ -343,8 +339,6 @@
 			children = (
 				DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */,
 				DAB8CE121D5503A500F273E1 /* DInfraPoem+CoreDataProperties.swift */,
-				DA800AC71D4FC3F1008C4904 /* DInfraPost.swift */,
-				DA800AC81D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift */,
 				DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */,
 				DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */,
 			);
@@ -769,7 +763,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA800ACB1D4FC3F1008C4904 /* DInfraPost.swift in Sources */,
 				DA800B411D502B78008C4904 /* MMainNavItemState.swift in Sources */,
 				DAA055321D53EBC90070D0E0 /* MCreateItem.swift in Sources */,
 				DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */,
@@ -836,7 +829,6 @@
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
 				DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */,
 				DA800B351D50298D008C4904 /* MMainNav.swift in Sources */,
-				DA800ACC1D4FC3F1008C4904 /* DInfraPost+CoreDataProperties.swift in Sources */,
 				DAA055341D53EBEC0070D0E0 /* MCreateItemTitle.swift in Sources */,
 				DA800B121D4FF0B9008C4904 /* VAccessBanned.swift in Sources */,
 				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,

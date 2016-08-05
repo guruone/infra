@@ -1,17 +1,17 @@
-//
-//  DInfraPoem.swift
-//  
-//
-//  Created by zero on 8/5/16.
-//
-//
-
 import Foundation
 import CoreData
 
 @objc(DInfraPoem)
-class DInfraPoem: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+class DInfraPoem:NSManagedObject
+{
+    @NSManaged private(set) var approved:Bool
+    @NSManaged private(set) var poemId:String
+    @NSManaged var userCreator:DInfraUser?
+    @NSManaged var userDisliked:DInfraUser?
+    @NSManaged var userLiked:DInfraUser?
+    
+    override class func entityName() -> String
+    {
+        return "Post"
+    }
 }
