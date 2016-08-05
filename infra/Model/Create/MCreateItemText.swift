@@ -37,7 +37,8 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
         else if countCharacters > kMaxTextLenght
         {
             let maximumCharacters:Int = kMaxTextLenght - 1
-            let compositeError:String = String(format:NSLocalizedString("MCreateItemText_maxCharacters", comment:""), maximumCharacters)
+            let maxCharsString:String = "\(maximumCharacters)"
+            let compositeError:String = String(format:NSLocalizedString("MCreateItemText_maxCharacters", comment:""), maxCharsString)
             error = compositeError
         }
         
