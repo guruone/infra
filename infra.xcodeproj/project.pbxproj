@@ -81,6 +81,8 @@
 		DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */; };
 		DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */; };
 		DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */; };
+		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
+		DAB21B981D550718001CD703 /* MOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B971D550718001CD703 /* MOnboarding.swift */; };
 		DAB8CE0E1D54D7A800F273E1 /* VMainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */; };
 		DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */; };
 		DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */; };
@@ -182,6 +184,8 @@
 		DAA055351D53EBF50070D0E0 /* MCreateItemText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemText.swift; sourceTree = "<group>"; };
 		DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemPublish.swift; sourceTree = "<group>"; };
 		DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateHeader.swift; sourceTree = "<group>"; };
+		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
+		DAB21B971D550718001CD703 /* MOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOnboarding.swift; sourceTree = "<group>"; };
 		DAB8CE0D1D54D7A800F273E1 /* VMainAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainAlert.swift; sourceTree = "<group>"; };
 		DAB8CE0F1D54FFED00F273E1 /* FDatabaseModelPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelPoem.swift; sourceTree = "<group>"; };
 		DAB8CE111D5503A500F273E1 /* DInfraPoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraPoem.swift; sourceTree = "<group>"; };
@@ -367,6 +371,7 @@
 		DA0EA2741D4BD81100D300B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DAB21B931D5506CE001CD703 /* Onboarding */,
 				DAA0551C1D53D9DD0070D0E0 /* Create */,
 				DA800B0D1D4FED06008C4904 /* Access */,
 				DAD3521D1D4C656E00401230 /* Home */,
@@ -397,6 +402,7 @@
 		DA0EA27B1D4BD81100D300B2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAB21B961D55070F001CD703 /* Onboarding */,
 				DAA0552E1D53EB7C0070D0E0 /* Create */,
 				DA800B131D4FF9C9008C4904 /* Main */,
 				DA0C453A1D4C016E003AF335 /* Configuration */,
@@ -598,6 +604,22 @@
 				DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */,
 			);
 			path = Create;
+			sourceTree = "<group>";
+		};
+		DAB21B931D5506CE001CD703 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DAB21B941D5506D8001CD703 /* COnboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DAB21B961D55070F001CD703 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DAB21B971D550718001CD703 /* MOnboarding.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		DAD3521D1D4C656E00401230 /* Home */ = {
@@ -815,9 +837,11 @@
 				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
+				DAB21B981D550718001CD703 /* MOnboarding.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
+				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
 				DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
