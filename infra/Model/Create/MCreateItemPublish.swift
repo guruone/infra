@@ -14,6 +14,7 @@ class MCreateItemPublish:MCreateItem
     
     override func config(cell:VCreateCell, controller:CCreate, indexPath:NSIndexPath)
     {
+        self.controller = controller
         cellPublish = cell as! VCreateCellPublish
         cellPublish.button.addTarget(self, action:#selector(self.actionPublish(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
     }
