@@ -19,20 +19,6 @@ class MCreateItem:NSObject
         return item
     }
     
-    class func Picture() -> MCreateItem
-    {
-        let item:MCreateItem = MCreateItemPicture()
-        
-        return item
-    }
-    
-    class func Ack() -> MCreateItem
-    {
-        let item:MCreateItem = MCreateItemAck()
-        
-        return item
-    }
-    
     class func Publish() -> MCreateItem
     {
         let item:MCreateItem = MCreateItemPublish()

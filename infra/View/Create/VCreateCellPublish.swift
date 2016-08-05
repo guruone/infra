@@ -7,22 +7,29 @@ class VCreateCellPublish:VCreateCell
         super.init(frame:frame)
         
         let button:UIButton = UIButton()
+        button.clipsToBounds = true
+        button.backgroundColor = UIColor.main()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 4
+        button.titleLabel?.font = UIFont.bold(15)
+        button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+        button.setTitleColor(UIColor(white:1, alpha:0.2), forState:UIControlState.Highlighted)
+        button.setTitle(NSLocalizedString("VCreateCellPublish_button", comment:""), forState:UIControlState.Normal)
         
-        
-        addSubview(label)
+        addSubview(button)
         
         let views:[String:AnyObject] = [
-            "label":label]
+            "button":button]
         
         let metrics:[String:AnyObject] = [:]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-0-[label]-0-|",
+            "H:[button(50)]-10-|",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[label]-0-|",
+            "V:|-10-[button]-10-|",
             options:[],
             metrics:metrics,
             views:views))

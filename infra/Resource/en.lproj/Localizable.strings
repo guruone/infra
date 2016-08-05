@@ -5,3 +5,4 @@
 "VCreateCellTitle_label"="Title";
 "VCreateCellTitle_fieldPlaceholder"="Unnamed poem";
 "VCreateCellText_label"="Poem";
+"VCreateCellPublish_button"="Publish";
