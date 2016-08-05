@@ -3,12 +3,15 @@ import Foundation
 class MCreate
 {
     let items:[MCreateItem]
+    private weak var itemText:MCreateItemText!
+    private let kPoemFileName:String = "new.poem"
     
     init()
     {
-        let itemTitle:MCreateItem = MCreateItem.Title()
-        let itemText:MCreateItem = MCreateItem.Text()
-        let itemPublish:MCreateItem = MCreateItem.Publish()
+        let itemTitle:MCreateItemTitle = MCreateItem.Title()
+        let itemText:MCreateItemText = MCreateItem.Text()
+        let itemPublish:MCreateItemPublish = MCreateItem.Publish()
+        self.itemText = itemText
         
         items = [
             itemTitle,
@@ -34,5 +37,22 @@ class MCreate
         }
         
         return error
+    }
+    
+    func poemFile() -> NSURL?
+    {
+        let poemText:String = itemText.text
+        var poemUrl:NSURL? = NSURL(fileURLWithPath:NSTemporaryDirectory()).URLByAppendingPathComponent(kPoemFileName)
+        
+        do
+        {
+            try poemText.writeToURL(poemUrl!, atomically:true, encoding:NSUTF8StringEncoding)
+        }
+        catch
+        {
+            poemUrl = nil
+        }
+        
+        return poemUrl
     }
 }

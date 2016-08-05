@@ -5,23 +5,23 @@ class MCreateItem:NSObject
     let reusableIdentifier:String
     let cellHeight:CGFloat
     
-    class func Title() -> MCreateItem
+    class func Title() -> MCreateItemTitle
     {
-        let item:MCreateItem = MCreateItemTitle()
+        let item:MCreateItemTitle = MCreateItemTitle()
         
         return item
     }
     
-    class func Text() -> MCreateItem
+    class func Text() -> MCreateItemText
     {
-        let item:MCreateItem = MCreateItemText()
+        let item:MCreateItemText = MCreateItemText()
         
         return item
     }
     
-    class func Publish() -> MCreateItem
+    class func Publish() -> MCreateItemPublish
     {
-        let item:MCreateItem = MCreateItemPublish()
+        let item:MCreateItemPublish = MCreateItemPublish()
         
         return item
     }
