@@ -26,6 +26,8 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         dataSource = self
         delegate = self
         
+        parent.statusBarDefault()
+        
         let pageControl:UIPageControl = UIPageControl()
         pageControl.numberOfPages = model.items.count
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -54,16 +56,6 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
             views:views))
         
         pageAtIndex(0, animated:false, direction:UIPageViewControllerNavigationDirection.Forward)
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle
-    {
-        return UIStatusBarStyle.LightContent
-    }
-    
-    override func prefersStatusBarHidden() -> Bool
-    {
-        return false
     }
     
     //MARK: private

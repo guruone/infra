@@ -3,7 +3,6 @@ import UIKit
 class CLanding:CMainController
 {
     weak var viewLanding:VLanding!
-    private(set) var firstTime:Bool?
     
     override func viewDidAppear(animated:Bool)
     {
@@ -21,21 +20,20 @@ class CLanding:CMainController
     
     //MARK: public
     
-    func loadFinished(firstTime:Bool)
+    func loadFinished()
     {
-        self.firstTime = firstTime
         viewLanding.animateLanding()
     }
     
     func animationFinished()
     {
-        if firstTime!
+        if MConfiguration.sharedInstance.user!.onboarded
         {
-            parent.loadOnboarding()
+            parent.loadHome()
         }
         else
         {
-            parent.loadHome()
+            parent.loadOnboarding()
         }
     }
 }

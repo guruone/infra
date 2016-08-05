@@ -38,13 +38,13 @@ class CMainParent:UIViewController
     func statusBarLight()
     {
         statusBarStyle = UIStatusBarStyle.LightContent
-        parent.setNeedsStatusBarAppearanceUpdate()
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     func statusBarDefault()
     {
         statusBarStyle = UIStatusBarStyle.Default
-        parent.setNeedsStatusBarAppearanceUpdate()
+        setNeedsStatusBarAppearanceUpdate()
     }
     
     func loadBar()
