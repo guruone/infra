@@ -1,12 +1,10 @@
 import UIKit
 
-class VOnboardingItemHistory:UIView
+class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewFlowLayout
 {
     weak var controller:COnboardingItemHistory!
     weak var layoutImageLeft:NSLayoutConstraint!
-    private let kImageWidth:CGFloat = 180
-    private let kImageHeight:CGFloat = 214
-    private let kImageTop:CGFloat = 30
+    private let kCollectionWidth:CGFloat = 320
     
     convenience init(controller:COnboardingItemHistory)
     {
@@ -18,9 +16,12 @@ class VOnboardingItemHistory:UIView
         let image:UIImageView = UIImageView()
         image.userInteractionEnabled = false
         image.clipsToBounds = true
-        image.contentMode = UIViewContentMode.ScaleAspectFit
+        image.contentMode = UIViewContentMode.ScaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named:"onboardingHistory")
+        image.layer.cornerRadius = 4
+        image.layer.borderWidth = 1
+        image.layer.borderColor = UIColor.blackColor().CGColor
         
         addSubview(image)
         
@@ -53,5 +54,15 @@ class VOnboardingItemHistory:UIView
             constant:0)
         
         addConstraint(layoutImageLeft)
+    }
+    
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.maxX
+        let remain:CGFloat = width - kImageWidth
+        let margin:CGFloat = remain / 2.0
+        layoutImageLeft.constant = margin
+        
+        super.layoutSubviews()
     }
 }

@@ -77,7 +77,7 @@ class VCreateCellPublish:VCreateCell
     
     override func layoutSubviews()
     {
-        let width:CGFloat = bounds.size.width
+        let width:CGFloat = bounds.maxX
         let remain:CGFloat = width - kButtonWidth
         let margin:CGFloat = remain / 2.0
         layoutButtonLeft.constant = margin
