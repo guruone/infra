@@ -31,6 +31,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         collection.backgroundColor = UIColor.clearColor()
         collection.delegate = self
         collection.dataSource = self
+        collection.keyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag
         collection.registerClass(
             VCreateHeader.self,
             forSupplementaryViewOfKind:

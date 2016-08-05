@@ -1,6 +1,6 @@
 import UIKit
 
-class MCreateItem
+class MCreateItem:NSObject
 {
     let reusableIdentifier:String
     let cellHeight:CGFloat
