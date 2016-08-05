@@ -20,7 +20,6 @@ class VCreateCell:UICollectionViewCell
         base.translatesAutoresizingMaskIntoConstraints = false
         base.layer.borderWidth = 1
         base.layer.borderColor = UIColor(white:0, alpha:0.1).CGColor
-        base.layer.cornerRadius = 3
         self.base = base
         
         addSubview(base)

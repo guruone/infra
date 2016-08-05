@@ -3,7 +3,7 @@ import UIKit
 class VCreateCellTitle:VCreateCell
 {
     weak var field:UITextField!
-    private let kMarginTitleHorizontal:CGFloat = 10
+    private let kMarginTitleHorizontal:CGFloat = 0
     private let kMarginTitleVertical:CGFloat = 5
     
     override init(frame:CGRect)

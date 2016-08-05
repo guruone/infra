@@ -48,8 +48,7 @@ class MCreateItem:NSObject
     
     //MARK: public
     
-    func config(cell:VCreateCell)
+    func config(cell:VCreateCell, controller:CCreate, indexPath:NSIndexPath)
     {
-        
     }
 }

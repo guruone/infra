@@ -79,10 +79,17 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     override func layoutSubviews()
     {
+        collection.collectionViewLayout.invalidateLayout()
+        
         dispatch_async(dispatch_get_main_queue())
         { [weak self] in
             
-            self?.collection.collectionViewLayout.invalidateLayout()
+            if self != nil
+            {
+                let selected:Int = self!.model.current.index
+                let selectedIndexPath:NSIndexPath = NSIndexPath(forItem:selected, inSection:0)
+                self!.collection.scrollToItemAtIndexPath(selectedIndexPath, atScrollPosition:UICollectionViewScrollPosition.CenteredHorizontally, animated:true)
+            }
         }
         
         super.layoutSubviews()

@@ -94,7 +94,6 @@ class CMainParent:UIViewController
             
             UIView.animateWithDuration(transition.animationDuration, animations:
             {
-                
                 self.view.layoutIfNeeded()
                 
             }, completion:

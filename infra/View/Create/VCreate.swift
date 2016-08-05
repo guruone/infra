@@ -3,6 +3,7 @@ import UIKit
 class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CCreate!
+    weak var collection:UICollectionView!
     private let kHeaderHeight:CGFloat = 60
     private let kCollectionBottom:CGFloat = 40
     
@@ -11,7 +12,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         self.init()
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = UIColor(white:0.97, alpha:1)
+        backgroundColor = UIColor(white:0.98, alpha:1)
         self.controller = controller
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -58,6 +59,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             VCreateCellPublish.self,
             forCellWithReuseIdentifier:
             VCreateCellPublish.reusableIdentifier())
+        self.collection = collection
         
         addSubview(collection)
         
@@ -76,6 +78,12 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             options:[],
             metrics:metrics,
             views:views))
+    }
+    
+    override func layoutSubviews()
+    {
+        collection.collectionViewLayout.invalidateLayout()
+        super.layoutSubviews()
     }
     
     //MARK: private
@@ -128,7 +136,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             item.reusableIdentifier,
             forIndexPath:
             indexPath) as! VCreateCell
-        item.config(cell)
+        item.config(cell, controller:controller, indexPath:indexPath)
         
         return cell
     }

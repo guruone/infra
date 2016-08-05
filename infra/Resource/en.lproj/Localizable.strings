@@ -4,3 +4,4 @@
 "VCreateHeader_title"="Add a poem";
 "VCreateCellTitle_label"="Title";
 "VCreateCellTitle_fieldPlaceholder"="Unnamed poem";
+"VCreateCellText_label"="Poem";
