@@ -25,12 +25,22 @@ class CCreate:CMainController
     
     //MARK: public
     
-    func publish()
+    func publish(publishItem:MCreateItemPublish)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak self] in
             
-            let title
+            let error:String? = self?.model.validate()
+            
+            if error == nil
+            {
+                
+            }
+            else
+            {
+                publishItem.publishFailed()
+                VMainAlert.Message(error!)
+            }
         }
     }
 }

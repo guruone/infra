@@ -25,6 +25,13 @@ class MCreateItemPublish:MCreateItem
     {
         UIApplication.sharedApplication().keyWindow?.endEditing(true)
         cellPublish.showLoading()
-        controller.publish()
+        controller.publish(self)
+    }
+    
+    //MARK: public
+    
+    func publishFailed()
+    {
+        cellPublish.hideLoading()
     }
 }
