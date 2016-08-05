@@ -23,7 +23,15 @@ class MCreate
     {
         var error:String?
         
-        
+        for item:MCreateItem in items
+        {
+            error = item.validate()
+            
+            if error != nil
+            {
+                break
+            }
+        }
         
         return error
     }
