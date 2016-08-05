@@ -7,8 +7,8 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
     weak var indexPath:NSIndexPath!
     private(set) var text:String
     private let kCellHeight:CGFloat = 180
-    private let kMinTextLenght:Int = 1
-    private let kMaxTextLenght:Int = 2048
+    private let kMinTextLength:Int = 1
+    private let kMaxTextLength:Int = 2048
     
     init()
     {
@@ -30,13 +30,13 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
         var error:String?
         let countCharacters:Int = text.characters.count
         
-        if countCharacters < kMinTextLenght
+        if countCharacters < kMinTextLength
         {
             error = NSLocalizedString("MCreateItemText_minCharacters", comment:"")
         }
-        else if countCharacters > kMaxTextLenght
+        else if countCharacters > kMaxTextLength
         {
-            let maximumCharacters:Int = kMaxTextLenght - 1
+            let maximumCharacters:Int = kMaxTextLength - 1
             let maxCharsString:String = "\(maximumCharacters)"
             let compositeError:String = String(format:NSLocalizedString("MCreateItemText_maxCharacters", comment:""), maxCharsString)
             error = compositeError

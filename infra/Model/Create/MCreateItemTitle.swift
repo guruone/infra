@@ -7,8 +7,8 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
     weak var indexPath:NSIndexPath!
     private(set) var title:String
     private let kCellHeight:CGFloat = 74
-    private let kMinTitleLenght:Int = 1
-    private let kMaxTitleLenght:Int = 64
+    private let kMinTitleLength:Int = 1
+    private let kMaxTitleLength:Int = 64
     
     init()
     {
@@ -30,13 +30,13 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
         var error:String?
         let countCharacters:Int = title.characters.count
         
-        if countCharacters < kMinTitleLenght
+        if countCharacters < kMinTitleLength
         {
             error = NSLocalizedString("MCreateItemTitle_minCharacters", comment:"")
         }
-        else if countCharacters > kMaxTitleLenght
+        else if countCharacters > kMaxTitleLength
         {
-            let maximumCharacters:Int = kMaxTitleLenght - 1
+            let maximumCharacters:Int = kMaxTitleLength - 1
             let maxCharsString:String = "\(maximumCharacters)"
             let compositeError:String = String(format:NSLocalizedString("MCreateItemTitle_maxCharacters", comment:""), maxCharsString)
             error = compositeError
