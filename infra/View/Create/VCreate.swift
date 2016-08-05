@@ -3,6 +3,7 @@ import UIKit
 class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CCreate!
+    private let kHeaderHeight:CGFloat = 60
     private let kCollectionBottom:CGFloat = 40
     
     convenience init(controller:CCreate)
@@ -14,7 +15,7 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         self.controller = controller
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flow.headerReferenceSize = CGSizeZero
+        flow.headerReferenceSize = CGSizeMake(0, kHeaderHeight)
         flow.footerReferenceSize = CGSizeZero
         flow.minimumInteritemSpacing = 0
         flow.minimumLineSpacing = 0
@@ -30,6 +31,12 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         collection.backgroundColor = UIColor.clearColor()
         collection.delegate = self
         collection.dataSource = self
+        collection.registerClass(
+            VCreateHeader.self,
+            forSupplementaryViewOfKind:
+            UICollectionElementKindSectionHeader,
+            withReuseIdentifier:
+            VCreateHeader.reusableIdentifier())
         collection.registerClass(
             VCreateCellTitle.self,
             forCellWithReuseIdentifier:
@@ -100,6 +107,17 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
         let count:Int = controller.model.items.count
         
         return count
+    }
+    
+    func collectionView(collectionView:UICollectionView, viewForSupplementaryElementOfKind kind:String, atIndexPath indexPath:NSIndexPath) -> UICollectionReusableView
+    {
+        let header:UICollectionReusableView = collectionView.dequeueReusableSupplementaryViewOfKind(
+            kind,
+            withReuseIdentifier:
+            VCreateHeader.reusableIdentifier(),
+            forIndexPath:indexPath)
+        
+        return header
     }
     
     func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell

@@ -1,3 +1,6 @@
 "general_errorDownload"="Error connecting to server";
 
 "VAccessBanned_label"="Your account has been suspended, please contact support if you want more information";
+"VCreateHeader_title"="Add a poem";
+"VCreateCellTitle_label"="Title";
+"VCreateCellTitle_fieldPlaceholder"="Unnamed poem";

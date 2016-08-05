@@ -39,7 +39,7 @@ class VCreateCell:UICollectionViewCell
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
             attribute:NSLayoutAttribute.Bottom,
-            multiplier:-1,
+            multiplier:1,
             constant:0)
         layoutBaseRight = NSLayoutConstraint(
             item:base,
@@ -47,7 +47,7 @@ class VCreateCell:UICollectionViewCell
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
             attribute:NSLayoutAttribute.Right,
-            multiplier:-1,
+            multiplier:1,
             constant:0)
         layoutBaseLeft = NSLayoutConstraint(
             item:base,
