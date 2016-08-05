@@ -5,18 +5,18 @@ class VMainAlert:UIView
     private weak var timer:NSTimer?
     private weak var layoutTop:NSLayoutConstraint!
     private weak var parentView:UIView?
-    private let kAnimationDuration:NSTimeInterval = 0.3
+    private let kAnimationDuration:NSTimeInterval = 0.2
     private let kTimeOut:NSTimeInterval = 3
-    private let kAlertHeight:CGFloat = 80
+    private let kAlertHeight:CGFloat = 64
+    private let kLabelTop:CGFloat = 20
     
     class func Message(message:String)
     {
         dispatch_async(dispatch_get_main_queue())
         {
             UIApplication.sharedApplication().keyWindow!.endEditing(true)
-            let alert:VMainAlert = VMainAlert()
+            let alert:VMainAlert = VMainAlert(message:message)
             alert.parentView = UIApplication.sharedApplication().keyWindow!.rootViewController!.view
-            alert.parentView!.addSubview(alert)
             alert.addToParent()
             alert.animateShow()
         }
@@ -32,18 +32,21 @@ class VMainAlert:UIView
         
         let label:UILabel = UILabel()
         label.backgroundColor = UIColor.clearColor()
-        label.font = UIFont.regular(15)
-        label.textColor = UIColor.main()
+        label.font = UIFont.bold(15)
+        label.textColor = UIColor.blackColor()
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.Center
         label.text = message
+        label.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(label)
         
         let views:[String:AnyObject] = [
             "label":label]
         
-        let metrics:[String:AnyObject] = [:]
+        let metrics:[String:AnyObject] = [
+            "labelHeight":(kAlertHeight - kLabelTop),
+            "labelTop":kLabelTop]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-10-[label]-10-|",
@@ -51,7 +54,7 @@ class VMainAlert:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-20-[label]-0-|",
+            "V:|-(labelTop)-[label(labelHeight)]",
             options:[],
             metrics:metrics,
             views:views))
@@ -74,6 +77,8 @@ class VMainAlert:UIView
     
     private func addToParent()
     {
+        parentView!.addSubview(self)
+        
         let views:[String:AnyObject] = [
             "alert":self]
         

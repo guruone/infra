@@ -32,6 +32,10 @@ class MCreateItemPublish:MCreateItem
     
     func publishFailed()
     {
-        cellPublish.hideLoading()
+        dispatch_async(dispatch_get_main_queue())
+        { [weak self] in
+            
+            self?.cellPublish.hideLoading()
+        }
     }
 }

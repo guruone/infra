@@ -29,7 +29,7 @@ class VCreateCellTitle:VCreateCell
         field.clipsToBounds = true
         field.backgroundColor = UIColor.clearColor()
         field.borderStyle = UITextBorderStyle.None
-        field.font = UIFont.regular(17)
+        field.font = UIFont.regular(18)
         field.textColor = textColor
         field.tintColor = textColor
         field.returnKeyType = UIReturnKeyType.Done

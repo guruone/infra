@@ -32,7 +32,7 @@ class VCreateCellText:VCreateCell
         textView.alwaysBounceVertical = true
         textView.textContainerInset = UIEdgeInsetsMake(kMarginVertical, kMarginHorizontal, kMarginVertical, kMarginHorizontal)
         textView.backgroundColor = UIColor.clearColor()
-        textView.font = UIFont.regular(17)
+        textView.font = UIFont.regular(18)
         textView.textColor = textColor
         textView.tintColor = textColor
         textView.keyboardAppearance = UIKeyboardAppearance.Light

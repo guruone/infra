@@ -37,7 +37,8 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
         else if countCharacters > kMaxTitleLenght
         {
             let maximumCharacters:Int = kMaxTitleLenght - 1
-            let compositeError:String = String(format:NSLocalizedString("MCreateItemTitle_maxCharacters", comment:""), maximumCharacters)
+            let maxCharsString:String = "\(maximumCharacters)"
+            let compositeError:String = String(format:NSLocalizedString("MCreateItemTitle_maxCharacters", comment:""), maxCharsString)
             error = compositeError
         }
         
