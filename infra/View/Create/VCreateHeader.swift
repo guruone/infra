@@ -14,8 +14,8 @@ class VCreateHeader:UICollectionReusableView
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = UIColor.clearColor()
         label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.bold(15)
-        label.textColor = UIColor(white:0.6, alpha:1)
+        label.font = UIFont.bold(17)
+        label.textColor = UIColor(white:0.7, alpha:1)
         label.text = NSLocalizedString("VCreateHeader_title", comment:"")
         
         addSubview(label)

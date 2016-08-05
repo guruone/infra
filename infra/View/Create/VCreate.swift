@@ -4,8 +4,9 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
 {
     weak var controller:CCreate!
     weak var collection:UICollectionView!
+    weak var layoutCollectionBottom:NSLayoutConstraint!
     private let kHeaderHeight:CGFloat = 60
-    private let kCollectionBottom:CGFloat = 60
+    private let kCollectionBottom:CGFloat = 20
     
     convenience init(controller:CCreate)
     {
@@ -66,16 +67,55 @@ class VCreate:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICo
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[collection]-0-|",
+            "V:|-0-[collection]",
             options:[],
             metrics:metrics,
             views:views))
+        
+        layoutCollectionBottom = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Bottom,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Bottom,
+            multiplier:1,
+            constant:0)
+        
+        addConstraint(layoutCollectionBottom)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(self.notifiedKeyboardChanged(sender:)), name:UIKeyboardWillChangeFrameNotification, object:nil)
+    }
+    
+    deinit
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func layoutSubviews()
     {
         collection.collectionViewLayout.invalidateLayout()
         super.layoutSubviews()
+    }
+    
+    //MARK: notifications
+    
+    func notifiedKeyboardChanged(sender notification:NSNotification)
+    {
+        let keyRect:CGRect = notification.userInfo![UIKeyboardFrameEndUserInfoKey]!.CGRectValue()
+        let yOrigin = keyRect.origin.y
+        let screenHeight:CGFloat = UIScreen.mainScreen().bounds.size.height
+        let collectionBottom:CGFloat
+        
+        if yOrigin < screenHeight
+        {
+            collectionBottom = -(screenHeight - yOrigin)
+        }
+        else
+        {
+            collectionBottom = 0
+        }
+        
+        layoutCollectionBottom.constant = collectionBottom
     }
     
     //MARK: private
