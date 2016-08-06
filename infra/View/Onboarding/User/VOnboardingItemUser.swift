@@ -7,8 +7,8 @@ class VOnboardingItemUser:UIView
     weak var layoutFieldLeft:NSLayoutConstraint!
     weak var field:UITextField!
     private let kLabelHeight:CGFloat = 40
-    private let kFieldHeight:CGFloat = 55
-    private let kFieldWidth:CGFloat = 200
+    private let kFieldHeight:CGFloat = 50
+    private let kFieldWidth:CGFloat = 160
     
     convenience init(controller:COnboardingItemUser)
     {
@@ -33,13 +33,16 @@ class VOnboardingItemUser:UIView
         fieldBase.clipsToBounds = true
         fieldBase.translatesAutoresizingMaskIntoConstraints = false
         fieldBase.backgroundColor = UIColor.clearColor()
+        fieldBase.layer.borderWidth = 1
+        fieldBase.layer.borderColor = UIColor(white:0, alpha:0.1).CGColor
+        fieldBase.layer.cornerRadius = 4
         
         let field:UITextField = UITextField()
         field.translatesAutoresizingMaskIntoConstraints = false
         field.clipsToBounds = true
         field.backgroundColor = UIColor.clearColor()
         field.borderStyle = UITextBorderStyle.None
-        field.font = UIFont.regular(18)
+        field.font = UIFont.regular(16)
         field.textColor = textColor
         field.tintColor = textColor
         field.returnKeyType = UIReturnKeyType.Done
