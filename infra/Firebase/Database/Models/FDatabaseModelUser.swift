@@ -10,6 +10,7 @@ class FDatabaseModelUser:FDatabaseModel
     init(dbUser:DInfraUser)
     {
         access = dbUser.access
+        name = dbUser.name
     }
     
     init(snapshot:AnyObject?)
@@ -21,10 +22,12 @@ class FDatabaseModelUser:FDatabaseModel
             let rawAccess:Int = json![kKeyAccess] as! Int
             let rawAccessPrimitive:Int16 = Int16(rawAccess)
             access = DInfraUser.DInfraUserAccess(rawValue:rawAccessPrimitive)!
+            name = json![kKeyName] as! String
         }
         else
         {
             access = DInfraUser.DInfraUserAccess.Banned
+            name = ""
         }
     }
     

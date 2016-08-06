@@ -30,6 +30,7 @@ class DInfraUser:NSManagedObject
     {
         let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
         access = fUser.access
+        name = fUser.name
         
         MConfiguration.sharedInstance.userSynced()
     }
