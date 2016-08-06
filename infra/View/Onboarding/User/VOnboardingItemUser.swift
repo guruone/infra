@@ -57,10 +57,19 @@ class VOnboardingItemUser:UIView
         self.field = field
         
         let button:UIButton = UIButton()
+        button.clipsToBounds = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor.main()
+        button.layer.cornerRadius = 4
+        button.titleLabel?.font = UIFont.bold(14)
+        button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
+        button.setTitleColor(UIColor(white:1, alpha:0.2), forState:UIControlState.Highlighted)
+        button.setTitle(NSLocalizedString("VOnboardingItemUser_button", comment:""), forState:UIControlState.Normal)
         
         fieldBase.addSubview(field)
         addSubview(label)
         addSubview(fieldBase)
+        addSubview(button)
         
         let views:[String:AnyObject] = [
             "label":label,

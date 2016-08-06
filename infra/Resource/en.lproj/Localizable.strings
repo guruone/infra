@@ -12,6 +12,7 @@
 "VOnboardingItemApp_label"="Now you can browse through\ninfrarealism poetry\nor share yours";
 "VOnboardingItemUser_label"="Nom de plume";
 "VOnboardingItemUser_placeholder"="Pen name";
+"VOnboardingItemUser_button"="Start";
 
 "MCreateItemTitle_minCharacters"="Poem needs a title";
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters max";
