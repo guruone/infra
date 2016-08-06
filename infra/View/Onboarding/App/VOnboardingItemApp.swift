@@ -11,5 +11,7 @@ class VOnboardingItemApp:UIView
         backgroundColor = UIColor.clearColor()
         userInteractionEnabled = false
         self.controller = controller
+        
+        
     }
 }
