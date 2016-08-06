@@ -5,12 +5,15 @@ class VOnboardingItemUser:UIView
     weak var controller:COnboardingItemUser!
     weak var layoutElementsTop:NSLayoutConstraint!
     weak var layoutFieldLeft:NSLayoutConstraint!
+    weak var layoutButtonLeft:NSLayoutConstraint!
     weak var field:UITextField!
     private let kLabelHeight:CGFloat = 40
     private let kFieldHeight:CGFloat = 50
     private let kButtonHeight:CGFloat = 38
     private let kFieldWidth:CGFloat = 160
-    private let kButtonWidth:CGFloat = 100
+    private let kButtonWidth:CGFloat = 140
+    private let kFieldButtonSpace:CGFloat = 30
+    private let kButtonBottom:CGFloat = 50
     
     convenience init(controller:COnboardingItemUser)
     {
@@ -74,12 +77,16 @@ class VOnboardingItemUser:UIView
         let views:[String:AnyObject] = [
             "label":label,
             "field":field,
-            "fieldBase":fieldBase]
+            "fieldBase":fieldBase,
+            "button":button]
         
         let metrics:[String:AnyObject] = [
             "labelHeight":kLabelHeight,
             "fieldHeight":kFieldHeight,
-            "fieldWidth":kFieldWidth]
+            "fieldWidth":kFieldWidth,
+            "buttonWidth":kButtonWidth,
+            "buttonHeight":kButtonHeight,
+            "fieldButtonSpace":kFieldButtonSpace]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:[fieldBase(fieldWidth)]",
@@ -97,12 +104,17 @@ class VOnboardingItemUser:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:[button(buttonWidth)]",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[field]-0-|",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[label(labelHeight)]-0-[fieldBase(fieldHeight)]",
+            "V:[label(labelHeight)]-0-[fieldBase(fieldHeight)]-(fieldButtonSpace)-[button(buttonHeight)]",
             options:[],
             metrics:metrics,
             views:views))
@@ -125,21 +137,34 @@ class VOnboardingItemUser:UIView
             multiplier:1,
             constant:0)
         
+        layoutButtonLeft = NSLayoutConstraint(
+            item:button,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:0)
+        
         addConstraint(layoutElementsTop)
         addConstraint(layoutFieldLeft)
+        addConstraint(layoutButtonLeft)
     }
     
     override func layoutSubviews()
     {
         let width:CGFloat = bounds.maxX
         let height:CGFloat = bounds.maxY
-        let remainX:CGFloat = width - kFieldWidth
-        let marginX:CGFloat = remainX / 2.0
-        let remainY:CGFloat = height - (kLabelHeight + kFieldHeight)
-        let marginY:CGFloat = remainY / 2.0
+        let remainField:CGFloat = width - kFieldWidth
+        let marginField:CGFloat = remainField / 2.0
+        let remainLabel:CGFloat = height - (kLabelHeight + kFieldHeight + kButtonHeight + kFieldButtonSpace + kButtonBottom)
+        let marginLabel:CGFloat = remainLabel / 2.0
+        let remainButton:CGFloat = width - kButtonWidth
+        let marginButton:CGFloat = remainButton / 2.0
         
-        layoutElementsTop.constant = marginY
-        layoutFieldLeft.constant = marginX
+        layoutElementsTop.constant = marginLabel
+        layoutFieldLeft.constant = marginField
+        layoutButtonLeft.constant = marginButton
         
         super.layoutSubviews()
     }
