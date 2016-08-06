@@ -96,10 +96,9 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
-        let count:CGFloat = CGFloat(controller.model.items.count)
+        let item:MOnboardingItemHistoryModelItem = modelAtIndex(indexPath)
         let cellHeight:CGFloat = collectionView.bounds.maxY
-        let cellWidth:CGFloat = kCollectionWidth / count
-        let size:CGSize = CGSizeMake(cellWidth, cellHeight)
+        let size:CGSize = CGSizeMake(item.cellWidth, cellHeight)
         
         return size
     }
