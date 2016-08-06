@@ -2,9 +2,9 @@ import UIKit
 
 class VOnboardingItemHistoryImage:UICollectionViewCell
 {
-    private let kImageTop:CGFloat = 30
-    private let kImageWidth:CGFloat = 220
-    private let kImageHeight:CGFloat = 314
+    private let kImageMargin:CGFloat = 1
+    private let kImageWidth:CGFloat = 180
+    private let kImageHeight:CGFloat = 257
     
     override init(frame:CGRect)
     {
@@ -29,17 +29,17 @@ class VOnboardingItemHistoryImage:UICollectionViewCell
             "image":image]
         
         let metrics:[String:AnyObject] = [
-            "imageTop":kImageTop,
+            "imageMargin":kImageMargin,
             "imageWidth":kImageWidth,
             "imageHeight":kImageHeight]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:[image(imageWidth)]-2-|",
+            "H:[image(imageWidth)]-(imageMargin)-|",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(imageTop)-[image(imageHeight)]",
+            "V:|-(imageMargin)-[image(imageHeight)]",
             options:[],
             metrics:metrics,
             views:views))

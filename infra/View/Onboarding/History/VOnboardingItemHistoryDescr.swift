@@ -25,12 +25,12 @@ class VOnboardingItemHistoryDescr:UICollectionViewCell
         let metrics:[String:AnyObject] = [:]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-10-[label]-10-|",
+            "H:|-6-[label]-1-|",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-20-[label]-0-|",
+            "V:|-0-[label(180)]-0-|",
             options:[],
             metrics:metrics,
             views:views))

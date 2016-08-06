@@ -2,7 +2,7 @@ import UIKit
 
 class MOnboardingItemHistoryModelItemImage:MOnboardingItemHistoryModelItem
 {
-    private let kCellWidth:CGFloat = 225
+    private let kCellWidth:CGFloat = 182
     
     init()
     {

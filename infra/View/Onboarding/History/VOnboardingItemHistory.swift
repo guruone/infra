@@ -4,8 +4,10 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
 {
     weak var controller:COnboardingItemHistory!
     weak var collection:UICollectionView!
+    weak var layoutCollectionTop:NSLayoutConstraint!
     weak var layoutCollectionLeft:NSLayoutConstraint!
     private let kCollectionWidth:CGFloat = 320
+    private let kCollectionHeight:CGFloat = 259
     
     convenience init(controller:COnboardingItemHistory)
     {
@@ -48,7 +50,8 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
             "collection":collection]
         
         let metrics:[String:AnyObject] = [
-            "collectionWidth":kCollectionWidth]
+            "collectionWidth":kCollectionWidth,
+            "collectionHeight":kCollectionHeight]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:[collection(collectionWidth)]",
@@ -56,11 +59,19 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[collection]-0-|",
+            "V:[collection(collectionHeight)]",
             options:[],
             metrics:metrics,
             views:views))
         
+        layoutCollectionTop = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1,
+            constant:0)
         layoutCollectionLeft = NSLayoutConstraint(
             item:collection,
             attribute:NSLayoutAttribute.Left,
@@ -70,16 +81,22 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
             multiplier:1,
             constant:0)
         
+        addConstraint(layoutCollectionTop)
         addConstraint(layoutCollectionLeft)
     }
     
     override func layoutSubviews()
     {
         let width:CGFloat = bounds.maxX
-        let remain:CGFloat = width - kCollectionWidth
-        let margin:CGFloat = remain / 2.0
-        layoutCollectionLeft.constant = margin
+        let height:CGFloat = bounds.maxY
+        let remainX:CGFloat = width - kCollectionWidth
+        let remainY:CGFloat = height - kCollectionHeight
+        let marginX:CGFloat = remainX / 2.0
+        let marginY:CGFloat = remainY / 2.0
+        layoutCollectionTop.constant = marginY
+        layoutCollectionLeft.constant = marginX
         collection.collectionViewLayout.invalidateLayout()
+        
         super.layoutSubviews()
     }
     
