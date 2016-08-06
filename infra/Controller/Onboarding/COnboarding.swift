@@ -78,22 +78,6 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     
     //MARK: public
     
-    func next()
-    {
-        let currentItem:Int = pageControl.currentPage
-        let nextItem:Int = currentItem + 1
-        let totalItems:Int = model.items.count
-        
-        if nextItem < totalItems
-        {
-            pageAtIndex(nextItem, animated:true, direction:UIPageViewControllerNavigationDirection.Forward)
-        }
-        else
-        {
-//            parent.onboardingDone()
-        }
-    }
-    
     func previous()
     {
         let currentItem:Int = pageControl.currentPage
@@ -114,11 +98,17 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     
     func pageViewController(pageViewController:UIPageViewController, viewControllerBeforeViewController viewController:UIViewController) -> UIViewController?
     {
-        return nil
+        let onboardingItem:COnboardingItem = viewController as! COnboardingItem
+        let previousController:COnboardingItem? = onboardingItem.pageModel.previousItem?.controller(self)
+        
+        return previousController
     }
     
     func pageViewController(pageViewController:UIPageViewController, viewControllerAfterViewController viewController:UIViewController) -> UIViewController?
     {
-        return nil
+        let onboardingItem:COnboardingItem = viewController as! COnboardingItem
+        let nextController:COnboardingItem? = onboardingItem.pageModel.nextItem?.controller(self)
+        
+        return nextController
     }
 }
