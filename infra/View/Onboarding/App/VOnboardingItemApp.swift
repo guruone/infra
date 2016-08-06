@@ -54,7 +54,7 @@ class VOnboardingItemApp:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:image(imageHeight)]-0-[label(labelHeight)]",
+            "V:[image(imageHeight)]-0-[label(labelHeight)]",
             options:[],
             metrics:metrics,
             views:views))
