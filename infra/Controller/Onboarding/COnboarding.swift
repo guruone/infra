@@ -34,7 +34,7 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         pageControl.backgroundColor = UIColor.clearColor()
         pageControl.currentPageIndicatorTintColor = UIColor.complement()
         pageControl.pageIndicatorTintColor = UIColor.main()
-        pageControl.delega
+        pageControl.addTarget(self, action:#selector(self.actionPageSelected(sender:)), forControlEvents:UIControlEvents.ValueChanged)
         self.pageControl = pageControl
         
         view.addSubview(pageControl)
@@ -57,6 +57,13 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
             views:views))
         
         pageAtIndex(0, animated:false, direction:UIPageViewControllerNavigationDirection.Forward)
+    }
+    
+    //MARK: actions
+    
+    func actionPageSelected(sender pageControl:UIPageControl)
+    {
+        print("current page \(pageControl.currentPage)")
     }
     
     //MARK: private
