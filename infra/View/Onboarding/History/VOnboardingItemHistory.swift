@@ -122,4 +122,14 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
         
         return cell
     }
+    
+    func collectionView(collectionView:UICollectionView, shouldDeselectItemAtIndexPath indexPath:NSIndexPath) -> Bool
+    {
+        return false
+    }
+    
+    func collectionView(collectionView:UICollectionView, shouldSelectItemAtIndexPath indexPath:NSIndexPath) -> Bool
+    {
+        return false
+    }
 }
