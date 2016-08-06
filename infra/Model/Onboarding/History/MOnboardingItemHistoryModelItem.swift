@@ -1,8 +1,9 @@
-import Foundation
+import UIKit
 
 class MOnboardingItemHistoryModelItem
 {
     let reusableIdentifier:String
+    let cellWidth:CGFloat
     
     class func Image() -> MOnboardingItemHistoryModelItem
     {
@@ -18,8 +19,9 @@ class MOnboardingItemHistoryModelItem
         return item
     }
     
-    init(reusableIdentifier:String)
+    init(reusableIdentifier:String, cellWidth:CGFloat)
     {
         self.reusableIdentifier = reusableIdentifier
+        self.cellWidth = cellWidth
     }
 }

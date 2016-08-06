@@ -4,7 +4,7 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
 {
     weak var controller:COnboardingItemHistory!
     weak var collection:UICollectionView!
-    weak var layoutImageLeft:NSLayoutConstraint!
+    weak var layoutCollectionLeft:NSLayoutConstraint!
     private let kCollectionWidth:CGFloat = 320
     
     convenience init(controller:COnboardingItemHistory)
@@ -14,41 +14,55 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
         backgroundColor = UIColor.whiteColor()
         self.controller = controller
         
-        let image:UIImageView = UIImageView()
-        image.userInteractionEnabled = false
-        image.clipsToBounds = true
-        image.contentMode = UIViewContentMode.ScaleAspectFill
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named:"onboardingHistory")
-        image.layer.cornerRadius = 4
-        image.layer.borderWidth = 1
-        image.layer.borderColor = UIColor.blackColor().CGColor
+        let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        flow.headerReferenceSize = CGSizeZero
+        flow.footerReferenceSize = CGSizeZero
+        flow.minimumLineSpacing = 0
+        flow.minimumInteritemSpacing = 0
+        flow.scrollDirection = UICollectionViewScrollDirection.Horizontal
+        flow.sectionInset = UIEdgeInsetsZero
+        
+        let collection:UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout:flow)
+        collection.clipsToBounds = true
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.backgroundColor = UIColor.clearColor()
+        collection.scrollEnabled = false
+        collection.bounces = false
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.delegate = self
+        collection.dataSource = self
+        collection.registerClass(
+            VOnboardingItemHistoryImage.self,
+            forCellWithReuseIdentifier:
+            VOnboardingItemHistoryImage.reusableIdentifier())
+        collection.registerClass(
+            VOnboardingItemHistoryDescr.self,
+            forCellWithReuseIdentifier:
+            VOnboardingItemHistoryDescr.reusableIdentifier())
+        self.collection = collection
         
         addSubview(collection)
-        addSubview(image)
         
         let views:[String:AnyObject] = [
             "collection":collection]
         
         let metrics:[String:AnyObject] = [
-            "imageTop":kImageTop,
-            "imageWidth":kImageWidth,
-            "imageHeight":kImageHeight,
             "collectionWidth":kCollectionWidth]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:[image(imageWidth)]",
+            "H:[collection(collectionWidth)]",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-(imageTop)-[image(imageHeight)]",
+            "V:|-0-[collection]-0-|",
             options:[],
             metrics:metrics,
             views:views))
         
-        layoutImageLeft = NSLayoutConstraint(
-            item:image,
+        layoutCollectionLeft = NSLayoutConstraint(
+            item:collection,
             attribute:NSLayoutAttribute.Left,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
@@ -56,7 +70,7 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
             multiplier:1,
             constant:0)
         
-        addConstraint(layoutImageLeft)
+        addConstraint(layoutCollectionLeft)
     }
     
     override func layoutSubviews()
@@ -64,7 +78,7 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
         let width:CGFloat = bounds.maxX
         let remain:CGFloat = width - kCollectionWidth
         let margin:CGFloat = remain / 2.0
-        layoutImageLeft.constant = margin
+        layoutCollectionLeft.constant = margin
         collection.collectionViewLayout.invalidateLayout()
         super.layoutSubviews()
     }

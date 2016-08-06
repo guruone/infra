@@ -34,7 +34,7 @@ class VOnboardingItemHistoryImage:UICollectionViewCell
             "imageHeight":kImageHeight]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:[image(imageWidth)]-0-|",
+            "H:[image(imageWidth)]-2-|",
             options:[],
             metrics:metrics,
             views:views))
