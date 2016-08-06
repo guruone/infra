@@ -63,7 +63,20 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     
     func actionPageSelected(sender pageControl:UIPageControl)
     {
-        print("current page \(pageControl.currentPage)")
+        let current:Int = currentIndex()
+        let selected:Int = pageControl.currentPage
+        let direction:UIPageViewControllerNavigationDirection
+        
+        if current > selected
+        {
+            direction = UIPageViewControllerNavigationDirection.Reverse
+        }
+        else
+        {
+            direction = UIPageViewControllerNavigationDirection.Forward
+        }
+        
+        pageAtIndex(selected, animated:true, direction:direction)
     }
     
     //MARK: private
@@ -76,24 +89,25 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         setViewControllers([controller], direction:direction, animated:animated, completion:nil)
     }
     
-    //MARK: public
-    
-    func previous()
+    private func currentIndex() -> Int
     {
-        let currentItem:Int = pageControl.currentPage
-        let previousItem:Int = currentItem - 1
+        let onboardingItem:COnboardingItem = viewControllers!.last! as! COnboardingItem
+        let index:Int = onboardingItem.pageModel.index
         
-        if previousItem >= 0
-        {
-            pageAtIndex(previousItem, animated:true, direction:UIPageViewControllerNavigationDirection.Reverse)
-        }
+        return index
     }
     
     //MARK: pagecontrol del
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int
+    func presentationCountForPageViewController(pageViewController:UIPageViewController) -> Int
     {
         return 1
+    }
+    
+    func pageViewController(pageViewController:UIPageViewController, didFinishAnimating finished:Bool, previousViewControllers: [UIViewController], transitionCompleted completed:Bool)
+    {
+        let current:Int = currentIndex()
+        pageControl.currentPage = current
     }
     
     func pageViewController(pageViewController:UIPageViewController, viewControllerBeforeViewController viewController:UIViewController) -> UIViewController?

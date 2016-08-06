@@ -8,13 +8,9 @@ class MOnboarding
     {
         items = []
         
-        let modelHistory:MOnboardingItem = MOnboardingItem.History()
-        let modelApp:MOnboardingItem = MOnboardingItem.App()
-        let modelUser:MOnboardingItem = MOnboardingItem.User()
-        
-        addItem(modelHistory)
-        addItem(modelApp)
-        addItem(modelUser)
+        addItem(MOnboardingItem.History(items.count))
+        addItem(MOnboardingItem.App(items.count))
+        addItem(MOnboardingItem.User(items.count))
     }
     
     //MARK: private

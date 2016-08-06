@@ -2,25 +2,31 @@ import UIKit
 
 class MOnboardingItem
 {
+    let index:Int
     weak var nextItem:MOnboardingItem?
     weak var previousItem:MOnboardingItem?
     
-    class func History() -> MOnboardingItem
+    class func History(index:Int) -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemHistory()
+        let model:MOnboardingItem = MOnboardingItemHistory(index:index)
         return model
     }
     
-    class func App() -> MOnboardingItem
+    class func App(index:Int) -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemApp()
+        let model:MOnboardingItem = MOnboardingItemApp(index:index)
         return model
     }
     
-    class func User() -> MOnboardingItem
+    class func User(index:Int) -> MOnboardingItem
     {
-        let model:MOnboardingItem = MOnboardingItemUser()
+        let model:MOnboardingItem = MOnboardingItemUser(index:index)
         return model
+    }
+    
+    init(index:Int)
+    {
+        self.index = index
     }
     
     //MARK: public
