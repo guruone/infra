@@ -4,14 +4,14 @@ class COnboardingItemHistory:COnboardingItem
 {
     let model:MOnboardingItemHistoryModel
     
-    override init(onboarding:COnboarding)
+    override init(onboarding:COnboarding, pageModel:MOnboardingItem)
     {
         model = MOnboardingItemHistoryModel()
         
-        super.init(onboarding:onboarding)
+        super.init(onboarding:onboarding, pageModel:pageModel)
     }
     
-    required init?(coder aDecoder:NSCoder)
+    required init?(coder:NSCoder)
     {
         fatalError()
     }

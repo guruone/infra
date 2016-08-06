@@ -32,8 +32,9 @@ class COnboarding:UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         pageControl.numberOfPages = model.items.count
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.backgroundColor = UIColor.clearColor()
-        pageControl.currentPageIndicatorTintColor = UIColor.main()
-        pageControl.pageIndicatorTintColor = UIColor.complement()
+        pageControl.currentPageIndicatorTintColor = UIColor.complement()
+        pageControl.pageIndicatorTintColor = UIColor.main()
+        pageControl.delega
         self.pageControl = pageControl
         
         view.addSubview(pageControl)
