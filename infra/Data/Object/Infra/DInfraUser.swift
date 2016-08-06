@@ -55,4 +55,10 @@ class DInfraUser:NSManagedObject
             FMain.sharedInstance.database.stopListener(userId!, handler:updateHandler!)
         }
     }
+    
+    func updateName(name:String)
+    {
+        self.name = name
+        let fUser:FDatabaseModelUser = FDatabaseModelUser(dbUser:self)
+    }
 }

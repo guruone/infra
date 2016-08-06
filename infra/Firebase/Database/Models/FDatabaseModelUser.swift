@@ -38,7 +38,8 @@ class FDatabaseModelUser:FDatabaseModel
         let accessNumber:Int = Int(access.rawValue)
         
         let dict:[String:AnyObject] = [
-            kKeyAccess:accessNumber
+            kKeyAccess:accessNumber,
+            kKeyName:name
         ]
         
         return dict

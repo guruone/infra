@@ -37,6 +37,8 @@ class FDatabase
         return newUserId
     }
     
+    func updateUser
+    
     func listenUser(userId:String, snapBlock:((FIRDataSnapshot) -> Void)) -> UInt
     {
         let userReference:FIRDatabaseReference = reference.child(kReferenceUser).child(userId)
