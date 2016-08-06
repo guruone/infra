@@ -6,9 +6,12 @@ class MOnboardingItemHistoryModel
     
     init()
     {
-        let itemImage:MOnboardingItemHistoryModelItem =
+        let itemImage:MOnboardingItemHistoryModelItem = MOnboardingItemHistoryModelItem.Image()
+        let itemDescr:MOnboardingItemHistoryModelItem = MOnboardingItemHistoryModelItem.Descr()
         
         items = [
+            itemImage,
+            itemDescr
         ]
     }
 }
