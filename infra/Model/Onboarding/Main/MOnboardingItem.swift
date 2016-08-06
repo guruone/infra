@@ -2,6 +2,9 @@ import UIKit
 
 class MOnboardingItem
 {
+    weak var nextItem:MOnboardingItem?
+    weak var previousItem:MOnboardingItem?
+    
     class func History() -> MOnboardingItem
     {
         let model:MOnboardingItem = MOnboardingItemHistory()
