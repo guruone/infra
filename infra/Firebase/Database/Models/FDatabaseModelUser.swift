@@ -3,7 +3,9 @@ import Foundation
 class FDatabaseModelUser:FDatabaseModel
 {
     var access:DInfraUser.DInfraUserAccess
+    var name:String
     private let kKeyAccess:String = "access"
+    private let kKeyName:String = "name"
     
     init(dbUser:DInfraUser)
     {

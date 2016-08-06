@@ -15,6 +15,7 @@ class DInfraUser:NSManagedObject
     
     @NSManaged private(set) var access:DInfraUserAccess
     @NSManaged private(set) var userId:String?
+    @NSManaged private(set) var name:String
     @NSManaged private(set) var onboarded:Bool
     @NSManaged var createdPoem:NSSet
     @NSManaged var likedPoem:NSSet
