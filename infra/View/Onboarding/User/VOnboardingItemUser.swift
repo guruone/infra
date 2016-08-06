@@ -57,6 +57,7 @@ class VOnboardingItemUser:UIView
         field.autocapitalizationType = UITextAutocapitalizationType.Words
         field.clearButtonMode = UITextFieldViewMode.Never
         field.placeholder = NSLocalizedString("VOnboardingItemUser_placeholder", comment:"")
+        field.delegate = controller
         self.field = field
         
         let button:UIButton = UIButton()
@@ -68,6 +69,7 @@ class VOnboardingItemUser:UIView
         button.setTitleColor(UIColor.whiteColor(), forState:UIControlState.Normal)
         button.setTitleColor(UIColor(white:1, alpha:0.2), forState:UIControlState.Highlighted)
         button.setTitle(NSLocalizedString("VOnboardingItemUser_button", comment:""), forState:UIControlState.Normal)
+        button.addTarget(controller, action:#selector(controller.actionStart(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
         
         fieldBase.addSubview(field)
         addSubview(label)
