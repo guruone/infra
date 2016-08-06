@@ -106,6 +106,7 @@
 		DAD3521F1D4C657600401230 /* CHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD3521E1D4C657600401230 /* CHome.swift */; };
 		DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */; };
 		DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF32B0D1D5586BC00704E75 /* VOnboardingItemApp.swift */; };
+		DAF32B101D55962900704E75 /* VOnboardingItemUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF32B0F1D55962900704E75 /* VOnboardingItemUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		DAD3521E1D4C657600401230 /* CHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHome.swift; sourceTree = "<group>"; };
 		DAF03C681D518AE000DA1B81 /* MMainNavItemNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemNotifications.swift; sourceTree = "<group>"; };
 		DAF32B0D1D5586BC00704E75 /* VOnboardingItemApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemApp.swift; sourceTree = "<group>"; };
+		DAF32B0F1D55962900704E75 /* VOnboardingItemUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +502,7 @@
 		DA381A231D55497300140F7E /* User */ = {
 			isa = PBXGroup;
 			children = (
+				DAF32B0F1D55962900704E75 /* VOnboardingItemUser.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -939,6 +942,7 @@
 				DAB8CE141D5503A500F273E1 /* DInfraPoem+CoreDataProperties.swift in Sources */,
 				DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */,
 				DA381A321D554C9B00140F7E /* MOnboardingItemApp.swift in Sources */,
+				DAF32B101D55962900704E75 /* VOnboardingItemUser.swift in Sources */,
 				DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
