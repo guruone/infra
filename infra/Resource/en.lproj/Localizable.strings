@@ -8,6 +8,7 @@
 "VCreateCellTitle_fieldPlaceholder"="Unnamed poem";
 "VCreateCellText_label"="Poem";
 "VCreateCellPublish_button"="Publish";
+"VOnboardingItemHistoryDescr_label"="A group of latinamerican poets published Infra first issue on October 1977\n\nMain goal was widespreading counter culture";
 
 "MCreateItemTitle_minCharacters"="Poem needs a title";
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters max";
