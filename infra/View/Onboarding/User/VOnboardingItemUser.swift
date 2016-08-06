@@ -8,7 +8,9 @@ class VOnboardingItemUser:UIView
     weak var field:UITextField!
     private let kLabelHeight:CGFloat = 40
     private let kFieldHeight:CGFloat = 50
+    private let kButtonHeight:CGFloat = 38
     private let kFieldWidth:CGFloat = 160
+    private let kButtonWidth:CGFloat = 100
     
     convenience init(controller:COnboardingItemUser)
     {
@@ -53,6 +55,8 @@ class VOnboardingItemUser:UIView
         field.clearButtonMode = UITextFieldViewMode.Never
         field.placeholder = NSLocalizedString("VOnboardingItemUser_placeholder", comment:"")
         self.field = field
+        
+        let button:UIButton = UIButton()
         
         fieldBase.addSubview(field)
         addSubview(label)
