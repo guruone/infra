@@ -30,7 +30,7 @@ class VOnboardingItemHistoryDescr:UICollectionViewCell
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[label(180)]-0-|",
+            "V:|-0-[label]-0-|",
             options:[],
             metrics:metrics,
             views:views))
