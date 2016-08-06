@@ -7,6 +7,7 @@ class VOnboardingItemHistoryDescr:UICollectionViewCell
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clearColor()
+        userInteractionEnabled = false
         
         let label:UILabel = UILabel()
         label.userInteractionEnabled = false

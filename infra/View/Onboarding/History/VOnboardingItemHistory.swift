@@ -13,7 +13,8 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
     {
         self.init()
         clipsToBounds = true
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.clearColor()
+        userInteractionEnabled = false
         self.controller = controller
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -28,6 +29,7 @@ class VOnboardingItemHistory:UIView, UICollectionViewDelegate, UICollectionViewD
         collection.clipsToBounds = true
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.backgroundColor = UIColor.clearColor()
+        collection.userInteractionEnabled = false
         collection.scrollEnabled = false
         collection.bounces = false
         collection.showsVerticalScrollIndicator = false
