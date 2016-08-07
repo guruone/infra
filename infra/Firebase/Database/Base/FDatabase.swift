@@ -51,9 +51,9 @@ class FDatabase
     {
         let userJson:[String:AnyObject] = fPoem.modelJson()
         let newPoem:FIRDatabaseReference = reference.child(kReferencePoem).childByAutoId()
-        let newUserId:String = newUser.key
-        newUser.setValue(userJson)
+        let newPoemId:String = newPoem.key
+        newPoem.setValue(userJson)
         
-        return newUserId
+        return newPoemId
     }
 }
