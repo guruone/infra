@@ -3,7 +3,9 @@ import UIKit
 class CCreate:CMainController, FStoragePoemDelegate
 {
     weak var viewCreate:VCreate!
+    weak var publishItem:MCreateItemPublish?
     let model:MCreate
+    private var poemId:String?
     
     init()
     {
@@ -25,9 +27,9 @@ class CCreate:CMainController, FStoragePoemDelegate
     
     //MARK: private
     
-    private func publishFailed(publishItem:MCreateItemPublish, error:String)
+    private func publishFailed(error:String)
     {
-        publishItem.publishFailed()
+        publishItem?.publishFailed()
         VMainAlert.Message(error)
     }
     
@@ -35,20 +37,16 @@ class CCreate:CMainController, FStoragePoemDelegate
     {
         let poemTitle:String = model.itemTitle.title
         let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
-        let newPoemId:String = FMain.sharedInstance.database.newPoem(fPoem)
-        FMain.sharedInstance.storage.savePoem(newPoemId, poem:poem, delegate:self)
-        /*
-        DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
-        { (model) in
-            
-            
-        }*/
+        poemId = FMain.sharedInstance.database.newPoem(fPoem)
+        FMain.sharedInstance.storage.savePoem(poemId!, poem:poem, delegate:self)
     }
     
     //MARK: public
     
     func publish(publishItem:MCreateItemPublish)
     {
+        self.publishItem = publishItem
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak self] in
             
@@ -61,7 +59,7 @@ class CCreate:CMainController, FStoragePoemDelegate
                 if poemUrl == nil
                 {
                     let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
-                    self?.publishFailed(publishItem, error:errorSaving)
+                    self?.publishFailed(errorSaving)
                 }
                 else
                 {
@@ -70,7 +68,7 @@ class CCreate:CMainController, FStoragePoemDelegate
             }
             else
             {
-                self?.publishFailed(publishItem, error:error!)
+                self?.publishFailed(error!)
             }
         }
     }
@@ -79,9 +77,23 @@ class CCreate:CMainController, FStoragePoemDelegate
     
     func fStoragePoemSaved()
     {
+        if poemId != nil
+        {
+            DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
+            { (model) in
+                
+                model.justSaved(self.poemId!)
+            }
+        }
+        else
+        {
+            let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
+            publishFailed(errorSaving)
+        }
     }
     
     func fStoragePoemError(error:String)
     {
+        publishFailed(error)
     }
 }
