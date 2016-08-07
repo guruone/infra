@@ -4,7 +4,10 @@ class FDatabaseModelPoem:FDatabaseModel
 {
     private let title:String
     private let userId:String
-    private let crated:Int
+    private let status:DInfraPoem.DInfraPoemStatus
+    private let created:Int
+    private let lastEdited:Int
+    private let likes:Int
     private let kKeyTitle:String = "title"
     private let kKeyUserId:String = "user_id"
     private let kKeyStatus:String = "status"
@@ -14,7 +17,14 @@ class FDatabaseModelPoem:FDatabaseModel
     
     init(title:String)
     {
-        self.
+        self.title = title
+        userId = MConfiguration.sharedInstance.user!.userId!
+        status = DInfraPoem.DInfraPoemStatus.Review
+        likes = 0
+        
+        let now:NSTimeInterval = NSDate().timeIntervalSince1970
+        created = Int(now)
+        lastEdited = Int(now)
     }
     
     //MARK: public
