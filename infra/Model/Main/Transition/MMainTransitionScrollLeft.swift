@@ -9,7 +9,7 @@ class MMainTransitionScrollLeft:MMainTransition
         super.init(animationDuration:kAnimationDuration)
     }
     
-    override func before(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    override func positionBefore()
     {
         let width:CGFloat
         let barHeight:CGFloat
@@ -71,7 +71,12 @@ class MMainTransitionScrollLeft:MMainTransition
         parent.view.addConstraint(parent.layoutBottomTemporal!)
     }
     
-    override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    override func animationBefore()
+    {
+        parent.view.layoutIfNeeded()
+    }
+    
+    override func positionAfter()
     {
         if current != nil
         {
@@ -82,5 +87,10 @@ class MMainTransitionScrollLeft:MMainTransition
         
         parent.layoutLeftTemporal!.constant = 0
         parent.layoutRightTemporal!.constant = 0
+    }
+    
+    override func animationAfter()
+    {
+        parent.view.layoutIfNeeded()
     }
 }

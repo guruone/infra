@@ -9,7 +9,7 @@ class MMainTransitionReplace:MMainTransition
         super.init(animationDuration:kAnimationDuration)
     }
     
-    override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    override func positionAfter()
     {
         let barHeight:CGFloat
         

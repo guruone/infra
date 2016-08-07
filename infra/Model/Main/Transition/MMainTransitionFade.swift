@@ -9,10 +9,8 @@ class MMainTransitionFade:MMainTransition
         super.init(animationDuration:kAnimationDuration)
     }
     
-    override func before(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    override func positionBefore()
     {
-        next.view.alpha = 0
-        
         let barHeight:CGFloat
         
         if parent.bar == nil
@@ -63,7 +61,13 @@ class MMainTransitionFade:MMainTransition
         parent.view.addConstraint(parent.layoutBottomTemporal!)
     }
     
-    override func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    override func animationBefore()
+    {
+        next.view.alpha = 0
+        parent.view.layoutIfNeeded()
+    }
+    
+    override func animationAfter()
     {
         current?.view.alpha = 0
         next.view.alpha = 1
