@@ -19,7 +19,7 @@ class FDatabaseModelPoem:FDatabaseModel
     {
         self.title = title
         userId = MConfiguration.sharedInstance.user!.userId!
-        status = DInfraPoem.DInfraPoemStatus.Review
+        status = DInfraPoem.DInfraPoemStatus.Uploading
         likes = 0
         
         let now:NSTimeInterval = NSDate().timeIntervalSince1970

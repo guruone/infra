@@ -35,6 +35,7 @@ class CCreate:CMainController
     {
         let poemTitle:String = model.itemTitle.title
         let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
+        let newPoemId:String = FMain.sharedInstance.database.newPoem(fPoem)
         
         DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
         { (model) in

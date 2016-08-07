@@ -6,7 +6,8 @@ class DInfraPoem:NSManagedObject
 {
     @objc enum DInfraPoemStatus:Int16
     {
-        case Review = 0
+        case Uploading = 0
+        case Review
         case NeedsRevision
         case Rejected
         case Ready
