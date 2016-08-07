@@ -20,13 +20,12 @@ class FStoragePoem
             
             if error == nil
             {
-                print(metadata!.downloadURL())
                 delegate?.fStoragePoemSaved()
             }
             else
             {
-                print(error!.localizedDescription)
-                delegate?.fStoragePoemError(error!.localizedDescription)
+                let errorSaving:String = NSLocalizedString("FStoragePoem_errorSaving", comment:"")
+                delegate?.fStoragePoemError(errorSaving)
             }
         }
     }

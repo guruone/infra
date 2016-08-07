@@ -20,3 +20,5 @@
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters max";
 "MCreateItemText_minCharacters"="Poem missing!";
 "MCreateItemText_maxCharacters"="Poem can't be longer than %@ characters";
+
+"FStoragePoem_errorSaving"="Error saving, try again";
