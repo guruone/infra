@@ -4,8 +4,9 @@ class CCreate:CMainController, FStoragePoemDelegate
 {
     weak var viewCreate:VCreate!
     weak var publishItem:MCreateItemPublish?
-    private(set) var model:MCreate
+    let model:MCreate
     private var poemId:String?
+    private var fPoem:FDatabaseModelPoem?
     
     init()
     {
@@ -36,8 +37,8 @@ class CCreate:CMainController, FStoragePoemDelegate
     private func createPoem(poem:NSURL)
     {
         let poemTitle:String = model.itemTitle.title
-        let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
-        poemId = FMain.sharedInstance.database.newPoem(fPoem)
+        fPoem = FDatabaseModelPoem(title:poemTitle)
+        poemId = FMain.sharedInstance.database.newPoem(fPoem!)
         FMain.sharedInstance.storage.savePoem(poemId!, poem:poem, delegate:self)
     }
     
@@ -45,12 +46,11 @@ class CCreate:CMainController, FStoragePoemDelegate
     {
         let message:String = NSLocalizedString("CCreate_poemSaved", comment:"")
         VMainAlert.Message(message)
-        model = MCreate()
         
         dispatch_async(dispatch_get_main_queue())
         { [weak self] in
             
-            self?.viewCreate.collection.reloadData()
+            self?.model.clean()
         }
     }
     
@@ -93,9 +93,13 @@ class CCreate:CMainController, FStoragePoemDelegate
         DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
         { [weak self] (model) in
             
-            if self?.poemId != nil
+            if self?.poemId != nil && self?.fPoem != nil
             {
                 model.justSaved(self!.poemId!)
+                
+                let property:[String:AnyObject] = self!.fPoem!.propertyStatus(model.status)
+                FMain.sharedInstance.database.updatePoem(self!.poemId!, property:property)
+                
                 self?.poemSaved()
             }
             else

@@ -19,6 +19,11 @@ class MCreateItemPublish:MCreateItem
         cellPublish.button.addTarget(self, action:#selector(self.actionPublish(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
     }
     
+    override func clean()
+    {
+        cellPublish.hideLoading()
+    }
+    
     //MARK: actions
     
     func actionPublish(sender button:UIButton)

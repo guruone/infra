@@ -45,6 +45,12 @@ class MCreateItemText:MCreateItem, UITextViewDelegate
         return error
     }
     
+    override func clean()
+    {
+        text = ""
+        cellText.textView.text = ""
+    }
+    
     //MARK: textView delegate
     
     func textViewDidBeginEditing(textView:UITextView)

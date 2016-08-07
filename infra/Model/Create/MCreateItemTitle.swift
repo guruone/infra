@@ -45,6 +45,12 @@ class MCreateItemTitle:MCreateItem, UITextFieldDelegate
         return error
     }
     
+    override func clean()
+    {
+        title = ""
+        cellTitle.field.text = ""
+    }
+    
     //MARK: field delegate
     
     func textFieldDidBeginEditing(textField:UITextField)

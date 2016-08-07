@@ -44,4 +44,15 @@ class FDatabaseModelPoem:FDatabaseModel
         
         return dict
     }
+    
+    func propertyStatus(status:DInfraPoem.DInfraPoemStatus) -> [String:AnyObject]
+    {
+        let statusNumber:Int = Int(status.rawValue)
+        
+        let dict:[String:AnyObject] = [
+            kKeyStatus:statusNumber
+        ]
+        
+        return dict
+    }
 }

@@ -56,4 +56,10 @@ class FDatabase
         
         return newPoemId
     }
+    
+    func updatePoem(poemId:String, property:[String:AnyObject])
+    {
+        let poemReference = reference.child(kReferencePoem).child(poemId)
+        poemReference.updateChildValues(property)
+    }
 }

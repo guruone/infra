@@ -57,4 +57,12 @@ class MCreate
         
         return poemUrl
     }
+    
+    func clean()
+    {
+        for item:MCreateItem in items
+        {
+            item.clean()
+        }
+    }
 }

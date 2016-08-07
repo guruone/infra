@@ -42,4 +42,8 @@ class MCreateItem:NSObject
     {
         return nil
     }
+    
+    func clean()
+    {
+    }
 }

@@ -32,7 +32,7 @@ class VMainAlert:UIView
         
         let label:UILabel = UILabel()
         label.backgroundColor = UIColor.clearColor()
-        label.font = UIFont.bold(15)
+        label.font = UIFont.bold(14)
         label.textColor = UIColor.blackColor()
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.Center
