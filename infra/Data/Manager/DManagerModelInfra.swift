@@ -1,7 +1,7 @@
 import Foundation
 import CoreData
 
-class DManagerModelUbik:DManagerModel
+class DManagerModelInfra:DManagerModel
 {
     private let kModelName:String = "DInfraModel"
     

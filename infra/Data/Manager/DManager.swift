@@ -3,10 +3,10 @@ import Foundation
 class DManager
 {
     static let sharedInstance = DManager()
-    let managerUbik:DManagerModelUbik
+    let managerInfra:DManagerModelInfra
     
     private init()
     {
-        managerUbik = DManagerModelUbik()
+        managerInfra = DManagerModelInfra()
     }
 }

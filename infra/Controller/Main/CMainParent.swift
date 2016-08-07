@@ -74,9 +74,9 @@ class CMainParent:UIViewController
     
     func pushController(controller:UIViewController, transition:MMainTransition)
     {
+        transition.prepare(self, current:current, next:controller)
         addChildViewController(controller)
         view.addSubview(controller.view)
-        transition.prepare(self, current:current, next:controller)
         transition.positionBefore()
         
         if current == nil
