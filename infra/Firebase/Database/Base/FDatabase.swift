@@ -9,20 +9,6 @@ class FDatabase
     init()
     {
         reference = FIRDatabase.database().reference()
-        /*let newUser:FIRDatabaseReference = reference.child("user").childByAutoId()
-        let key:String = newUser.key
-        newUser.setValue(["name":"juan", "id":"1234"])
-        
-        print(key)*/
-        
-//        reference.setValue(["roman":[]])
-        /*
-        reference.observeEventType(FIRDataEventType.Value, withBlock:
-        { (snapshot) in
-            
-            print(snapshot)
-            
-        })*/
     }
     
     //MARK: public
@@ -40,7 +26,7 @@ class FDatabase
     func updateUser(userId:String, property:[String:AnyObject])
     {
         let userReference = reference.child(kReferenceUser).child(userId)
-        userReference.setValue(property)
+        userReference.updateChildValues(property)
     }
     
     func listenUser(userId:String, snapBlock:((FIRDataSnapshot) -> Void)) -> UInt

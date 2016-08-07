@@ -13,6 +13,9 @@ class COnboardingItemUser:COnboardingItem, UITextFieldDelegate
     
     func actionStart(sender button:UIButton)
     {
+        button.alpha = 0.3
+        view.userInteractionEnabled = false
+        
         if name == nil
         {
             name = NSLocalizedString("COnboardingItemUser_defaultName", comment:"")
@@ -21,6 +24,9 @@ class COnboardingItemUser:COnboardingItem, UITextFieldDelegate
         {
             name = NSLocalizedString("COnboardingItemUser_defaultName", comment:"")
         }
+        
+        MConfiguration.sharedInstance.user!.updateName(name!)
+        MConfiguration.sharedInstance.user!.onboardingDone()
     }
     
     //MARK: field del

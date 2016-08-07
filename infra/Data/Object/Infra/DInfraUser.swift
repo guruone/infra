@@ -63,4 +63,10 @@ class DInfraUser:NSManagedObject
         let propertyName:[String:AnyObject] = fUser.propertyName()
         FMain.sharedInstance.database.updateUser(userId!, property:propertyName)
     }
+    
+    func onboardingDone()
+    {
+        onboarded = true
+        DManager.sharedInstance.managerUbik.saver.save(false)
+    }
 }
