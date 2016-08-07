@@ -5,7 +5,13 @@ class FStoragePoem
 {
     private let kReferenceRoot:String = "poems"
     
-    init(poemId:String, poem:NSURL, storage:FIRStorageReference, delegate:FStoragePoemDelegate?)
+    init()
+    {
+    }
+    
+    //MARK: public
+    
+    func save(poemId:String, poem:NSURL, storage:FIRStorageReference, delegate:FStoragePoemDelegate?)
     {
         let rootReference:FIRStorageReference = storage.child(kReferenceRoot)
         let poemReference:FIRStorageReference = rootReference.child(poemId)
@@ -19,6 +25,7 @@ class FStoragePoem
             }
             else
             {
+                print(error!.localizedDescription)
                 delegate?.fStoragePoemError(error!.localizedDescription)
             }
         }

@@ -6,7 +6,6 @@ class FStorage
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
     weak private var storageNews:FStorageNews?
-    weak private var storagePoem:FStoragePoem?
     
     init()
     {
@@ -30,7 +29,8 @@ class FStorage
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak delegate] in
             
-            self.storagePoem = FStoragePoem(poem:poem, delegate:delegate)
+            let fPoem:FStoragePoem = FStoragePoem()
+            fPoem.save(poemId, poem:poem, storage:self.storageReference, delegate:delegate)
         }
     }
 }

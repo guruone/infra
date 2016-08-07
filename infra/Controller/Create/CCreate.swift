@@ -1,6 +1,6 @@
 import UIKit
 
-class CCreate:CMainController
+class CCreate:CMainController, FStoragePoemDelegate
 {
     weak var viewCreate:VCreate!
     let model:MCreate
@@ -31,17 +31,18 @@ class CCreate:CMainController
         VMainAlert.Message(error)
     }
     
-    private func createPoem()
+    private func createPoem(poem:NSURL)
     {
         let poemTitle:String = model.itemTitle.title
         let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
         let newPoemId:String = FMain.sharedInstance.database.newPoem(fPoem)
-        
+        FMain.sharedInstance.storage.savePoem(newPoemId, poem:poem, delegate:self)
+        /*
         DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
         { (model) in
             
             
-        }
+        }*/
     }
     
     //MARK: public
@@ -64,7 +65,7 @@ class CCreate:CMainController
                 }
                 else
                 {
-                    self?.createPoem()
+                    self?.createPoem(poemUrl!)
                 }
             }
             else
@@ -72,5 +73,15 @@ class CCreate:CMainController
                 self?.publishFailed(publishItem, error:error!)
             }
         }
+    }
+    
+    //MARK: storage poem
+    
+    func fStoragePoemSaved()
+    {
+    }
+    
+    func fStoragePoemError(error:String)
+    {
     }
 }
