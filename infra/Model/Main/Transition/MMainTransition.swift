@@ -3,6 +3,9 @@ import UIKit
 class MMainTransition
 {
     let animationDuration:NSTimeInterval
+    weak var parent:CMainParent!
+    weak var current:UIViewController?
+    weak var next:UIViewController!
     
     class func transition(fromIndex:Int, toIndex:Int) -> MMainTransition
     {
@@ -55,11 +58,26 @@ class MMainTransition
     
     //MARK: public
     
-    func before(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    func prepare(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    {
+        self.parent = parent
+        self.current = current
+        self.next = next
+    }
+    
+    func positionBefore()
     {
     }
     
-    func after(parent:CMainParent, current:UIViewController?, next:UIViewController)
+    func animationBefore()
+    {
+    }
+    
+    func positionAfter()
+    {
+    }
+    
+    func animationAfter()
     {
     }
 }

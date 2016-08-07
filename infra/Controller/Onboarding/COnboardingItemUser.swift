@@ -27,6 +27,8 @@ class COnboardingItemUser:COnboardingItem, UITextFieldDelegate
         
         MConfiguration.sharedInstance.user!.updateName(name!)
         MConfiguration.sharedInstance.user!.onboardingDone()
+        onboarding.parent.statusBarLight()
+        onboarding.parent.loadHome()
     }
     
     //MARK: field del

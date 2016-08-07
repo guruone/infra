@@ -2,7 +2,7 @@ import UIKit
 
 class MMainTransitionFade:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 0.25
+    private let kAnimationDuration:NSTimeInterval = 4
     
     init()
     {
