@@ -76,11 +76,12 @@ class CMainParent:UIViewController
     {
         addChildViewController(controller)
         view.addSubview(controller.view)
-        transition.before(self, current:current, next:controller)
+        transition.prepare(self, current:current, next:controller)
+        transition.positionBefore()
         
         if current == nil
         {
-            transition.after(self, current:current, next:controller)
+            transition.positionAfter()
             
             view.addSubview(controller.view)
             controller.didMoveToParentViewController(self)
@@ -89,12 +90,12 @@ class CMainParent:UIViewController
         else
         {
             current!.willMoveToParentViewController(nil)
-            view.layoutIfNeeded()
-            transition.after(self, current:self.current, next:controller)
+            transition.animationBefore()
+            transition.positionAfter()
             
             UIView.animateWithDuration(transition.animationDuration, animations:
             {
-                self.view.layoutIfNeeded()
+                transition.animationAfter()
                 
             }, completion:
             { (done) in
