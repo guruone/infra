@@ -25,7 +25,7 @@ class FStorage
         }
     }
     
-    func savePoem(poem:NSURL, delegate:FStoragePoemDelegate?)
+    func savePoem(poemId:String, poem:NSURL, delegate:FStoragePoemDelegate?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak delegate] in
