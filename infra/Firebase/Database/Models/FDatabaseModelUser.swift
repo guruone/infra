@@ -44,4 +44,13 @@ class FDatabaseModelUser:FDatabaseModel
         
         return dict
     }
+    
+    func propertyName() -> [String:AnyObject]
+    {
+        let dict:[String:AnyObject] = [
+            kKeyName:name
+        ]
+        
+        return dict
+    }
 }
