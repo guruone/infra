@@ -5,6 +5,7 @@ class FDatabase
 {
     private let reference:FIRDatabaseReference
     private let kReferenceUser:String = "user"
+    private let kReferencePoem:String = "poem"
     
     init()
     {
@@ -49,7 +50,7 @@ class FDatabase
     func newPoem(fPoem:FDatabaseModel) -> String
     {
         let userJson:[String:AnyObject] = fPoem.modelJson()
-        let newUser:FIRDatabaseReference = reference.child(kReferenceUser).childByAutoId()
+        let newPoem:FIRDatabaseReference = reference.child(kReferencePoem).childByAutoId()
         let newUserId:String = newUser.key
         newUser.setValue(userJson)
         
