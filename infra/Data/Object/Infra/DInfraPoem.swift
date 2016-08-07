@@ -4,7 +4,15 @@ import CoreData
 @objc(DInfraPoem)
 class DInfraPoem:NSManagedObject
 {
-    @NSManaged private(set) var approved:Bool
+    @objc enum DInfraPoemStatus:Int16
+    {
+        case Review = 0
+        case NeedsRevision
+        case Rejected
+        case Ready
+    }
+    
+    @NSManaged private(set) var status:DInfraPoemStatus
     @NSManaged private(set) var poemId:String
     @NSManaged var userCreator:DInfraUser?
     @NSManaged var userDisliked:DInfraUser?

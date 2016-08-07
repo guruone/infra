@@ -2,12 +2,20 @@ import Foundation
 
 class FDatabaseModelPoem:FDatabaseModel
 {
+    private let title:String
+    private let userId:String
+    private let crated:Int
     private let kKeyTitle:String = "title"
     private let kKeyUserId:String = "user_id"
     private let kKeyStatus:String = "status"
     private let kKeyCreated:String = "created"
     private let kKeyLastEdit:String = "last_edit"
     private let kKeyLikes:String = "likes"
+    
+    init(title:String)
+    {
+        self.
+    }
     
     //MARK: public
     

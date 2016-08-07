@@ -2,8 +2,8 @@ import Foundation
 
 class FDatabaseModelUser:FDatabaseModel
 {
-    var access:DInfraUser.DInfraUserAccess
-    var name:String
+    let access:DInfraUser.DInfraUserAccess
+    let name:String
     private let kKeyAccess:String = "access"
     private let kKeyName:String = "name"
     

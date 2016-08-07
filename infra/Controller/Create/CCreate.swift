@@ -51,7 +51,13 @@ class CCreate:CMainController
                 }
                 else
                 {
+                    let fPoem:FDatabaseModelPoem = FDatabaseModelPoem()
                     
+                    DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
+                    { (model) in
+                        
+                        
+                    }
                 }
             }
             else
