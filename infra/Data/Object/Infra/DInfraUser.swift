@@ -60,5 +60,7 @@ class DInfraUser:NSManagedObject
     {
         self.name = name
         let fUser:FDatabaseModelUser = FDatabaseModelUser(dbUser:self)
+        let propertyName:[String:AnyObject] = fUser.propertyName()
+        FMain.sharedInstance.database.updateUser(userId!, property:propertyName)
     }
 }
