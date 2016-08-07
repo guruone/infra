@@ -15,7 +15,7 @@ class MConfiguration
     
     private func loadUser()
     {
-        DManager.sharedInstance.managerUbik.fetchManagedObjects(
+        DManager.sharedInstance.managerInfra.fetchManagedObjects(
             DInfraUser.self,
             limit:1)
         { (models) in
@@ -34,7 +34,7 @@ class MConfiguration
     
     private func createUser()
     {
-        DManager.sharedInstance.managerUbik.createManagedObject(
+        DManager.sharedInstance.managerInfra.createManagedObject(
             DInfraUser.self)
         { (model) in
             
@@ -61,7 +61,7 @@ class MConfiguration
     
     func userSynced()
     {
-        DManager.sharedInstance.managerUbik.saver.save(false)
+        DManager.sharedInstance.managerInfra.saver.save(false)
         
         dispatch_async(dispatch_get_main_queue())
         {

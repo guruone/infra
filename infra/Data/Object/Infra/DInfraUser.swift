@@ -67,6 +67,6 @@ class DInfraUser:NSManagedObject
     func onboardingDone()
     {
         onboarded = true
-        DManager.sharedInstance.managerUbik.saver.save(false)
+        DManager.sharedInstance.managerInfra.saver.save(false)
     }
 }
