@@ -31,6 +31,18 @@ class CCreate:CMainController
         VMainAlert.Message(error)
     }
     
+    private func createPoem()
+    {
+        let poemTitle:String = model.itemTitle.title
+        let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
+        
+        DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
+        { (model) in
+            
+            
+        }
+    }
+    
     //MARK: public
     
     func publish(publishItem:MCreateItemPublish)
@@ -51,13 +63,7 @@ class CCreate:CMainController
                 }
                 else
                 {
-                    let fPoem:FDatabaseModelPoem = FDatabaseModelPoem()
-                    
-                    DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
-                    { (model) in
-                        
-                        
-                    }
+                    self?.createPoem()
                 }
             }
             else

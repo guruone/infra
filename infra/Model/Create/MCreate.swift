@@ -3,7 +3,8 @@ import Foundation
 class MCreate
 {
     let items:[MCreateItem]
-    private weak var itemText:MCreateItemText!
+    weak var itemTitle:MCreateItemTitle!
+    weak var itemText:MCreateItemText!
     private let kPoemFileName:String = "new.poem"
     
     init()
@@ -11,6 +12,7 @@ class MCreate
         let itemTitle:MCreateItemTitle = MCreateItem.Title()
         let itemText:MCreateItemText = MCreateItem.Text()
         let itemPublish:MCreateItemPublish = MCreateItem.Publish()
+        self.itemTitle = itemTitle
         self.itemText = itemText
         
         items = [

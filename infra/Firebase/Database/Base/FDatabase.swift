@@ -12,8 +12,9 @@ class FDatabase
     }
     
     //MARK: public
+    //MARK: user
     
-    func newUser(fUser:FDatabaseModelUser) -> String
+    func newUser(fUser:FDatabaseModel) -> String
     {
         let userJson:[String:AnyObject] = fUser.modelJson()
         let newUser:FIRDatabaseReference = reference.child(kReferenceUser).childByAutoId()
@@ -41,5 +42,17 @@ class FDatabase
     {
         let userReference:FIRDatabaseReference = reference.child(kReferenceUser).child(userId)
         userReference.removeObserverWithHandle(handler)
+    }
+    
+    //MARK: poem
+    
+    func newPoem(fPoem:FDatabaseModel) -> String
+    {
+        let userJson:[String:AnyObject] = fPoem.modelJson()
+        let newUser:FIRDatabaseReference = reference.child(kReferenceUser).childByAutoId()
+        let newUserId:String = newUser.key
+        newUser.setValue(userJson)
+        
+        return newUserId
     }
 }

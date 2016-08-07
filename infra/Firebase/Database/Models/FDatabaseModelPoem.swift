@@ -2,12 +2,12 @@ import Foundation
 
 class FDatabaseModelPoem:FDatabaseModel
 {
-    private let title:String
-    private let userId:String
-    private let status:DInfraPoem.DInfraPoemStatus
-    private let created:Int
-    private let lastEdited:Int
-    private let likes:Int
+    let title:String
+    let userId:String
+    let status:DInfraPoem.DInfraPoemStatus
+    let created:Int
+    let lastEdited:Int
+    let likes:Int
     private let kKeyTitle:String = "title"
     private let kKeyUserId:String = "user_id"
     private let kKeyStatus:String = "status"
@@ -31,8 +31,15 @@ class FDatabaseModelPoem:FDatabaseModel
     
     func modelJson() -> [String:AnyObject]
     {
+        let statusNumber:Int = Int(status.rawValue)
+        
         let dict:[String:AnyObject] = [
-            :
+            kKeyTitle:title,
+            kKeyUserId:userId,
+            kKeyStatus:statusNumber,
+            kKeyCreated:created,
+            kKeyLastEdit:lastEdited,
+            kKeyLikes:likes
         ]
         
         return dict
