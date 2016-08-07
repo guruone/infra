@@ -20,7 +20,7 @@ class DInfraPoem:NSManagedObject
     
     override class func entityName() -> String
     {
-        return "Post"
+        return "Poem"
     }
     
     //MARK: public

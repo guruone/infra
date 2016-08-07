@@ -34,16 +34,16 @@ class DManagerModel
         saver.delaySaving()
         
         managedObjectContext.performBlock
-            { [weak self] in
+        { [weak self] in
+            
+            if self != nil
+            {
+                let entityDescription:NSEntityDescription = NSEntityDescription.entityForName(modelType.entityName(), inManagedObjectContext:self!.managedObjectContext)!
+                let managedObject:NSManagedObject = NSManagedObject(entity:entityDescription, insertIntoManagedObjectContext:self!.managedObjectContext)
+                let managedGeneric:ModelType = managedObject as! ModelType
                 
-                if self != nil
-                {
-                    let entityDescription:NSEntityDescription = NSEntityDescription.entityForName(modelType.entityName(), inManagedObjectContext:self!.managedObjectContext)!
-                    let managedObject:NSManagedObject = NSManagedObject(entity:entityDescription, insertIntoManagedObjectContext:self!.managedObjectContext)
-                    let managedGeneric:ModelType = managedObject as! ModelType
-                    
-                    block?(managedGeneric)
-                }
+                block?(managedGeneric)
+            }
         }
     }
     

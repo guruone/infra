@@ -4,7 +4,7 @@ class CCreate:CMainController, FStoragePoemDelegate
 {
     weak var viewCreate:VCreate!
     weak var publishItem:MCreateItemPublish?
-    let model:MCreate
+    private(set) var model:MCreate
     private var poemId:String?
     
     init()
@@ -39,6 +39,19 @@ class CCreate:CMainController, FStoragePoemDelegate
         let fPoem:FDatabaseModelPoem = FDatabaseModelPoem(title:poemTitle)
         poemId = FMain.sharedInstance.database.newPoem(fPoem)
         FMain.sharedInstance.storage.savePoem(poemId!, poem:poem, delegate:self)
+    }
+    
+    private func poemSaved()
+    {
+        let message:String = NSLocalizedString("CCreate_poemSaved", comment:"")
+        VMainAlert.Message(message)
+        model = MCreate()
+        
+        dispatch_async(dispatch_get_main_queue())
+        { [weak self] in
+            
+            self?.viewCreate.collection.reloadData()
+        }
     }
     
     //MARK: public
@@ -77,18 +90,19 @@ class CCreate:CMainController, FStoragePoemDelegate
     
     func fStoragePoemSaved()
     {
-        if poemId != nil
-        {
-            DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
-            { (model) in
-                
-                model.justSaved(self.poemId!)
+        DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
+        { [weak self] (model) in
+            
+            if self?.poemId != nil
+            {
+                model.justSaved(self!.poemId!)
+                self?.poemSaved()
             }
-        }
-        else
-        {
-            let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
-            publishFailed(errorSaving)
+            else
+            {
+                let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
+                self?.publishFailed(errorSaving)
+            }
         }
     }
     
