@@ -2,11 +2,11 @@ import UIKit
 
 class CRootListUploading:CRootList
 {
-    weak var viewUploading:VRootUploading!
+    weak var viewUploading:VRootListUploading!
     
     override func loadView()
     {
-        let viewUploading:VRootUploading = VRootUploading(controller:self)
+        let viewUploading:VRootListUploading = VRootListUploading(controller:self)
         self.viewUploading = viewUploading
         view = viewUploading
     }

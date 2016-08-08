@@ -1,6 +1,6 @@
 import UIKit
 
-class VRootUploading:UIView
+class VRootListUploading:UIView
 {
     weak var controller:CRootListUploading!
     

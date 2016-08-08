@@ -34,7 +34,7 @@
 		DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27E1D4BD81100D300B2 /* VLanding.swift */; };
 		DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217EC1D590F3F00DAF787 /* VRoot.swift */; };
 		DA3217F41D590F3F00DAF787 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217ED1D590F3F00DAF787 /* VRootCell.swift */; };
-		DA3217F61D59122F00DAF787 /* VRootUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F51D59122F00DAF787 /* VRootUploading.swift */; };
+		DA3217F61D59122F00DAF787 /* VRootListUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F51D59122F00DAF787 /* VRootListUploading.swift */; };
 		DA3217FE1D5918AA00DAF787 /* VMainBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F81D5918AA00DAF787 /* VMainBar.swift */; };
 		DA3217FF1D5918AA00DAF787 /* VMainBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F91D5918AA00DAF787 /* VMainBarCell.swift */; };
 		DA3218001D5918AA00DAF787 /* VMainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217FB1D5918AA00DAF787 /* VMainAlert.swift */; };
@@ -45,6 +45,7 @@
 		DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */; };
 		DA32180A1D592D5000DAF787 /* VMainBarBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218091D592D5000DAF787 /* VMainBarBack.swift */; };
 		DA32180C1D5932BD00DAF787 /* MMainTransitionPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */; };
+		DA32180E1D593BE300DAF787 /* VRootListReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180D1D593BE300DAF787 /* VRootListReview.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -178,7 +179,7 @@
 		DA0EA27E1D4BD81100D300B2 /* VLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLanding.swift; sourceTree = "<group>"; };
 		DA3217EC1D590F3F00DAF787 /* VRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRoot.swift; sourceTree = "<group>"; };
 		DA3217ED1D590F3F00DAF787 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
-		DA3217F51D59122F00DAF787 /* VRootUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootUploading.swift; sourceTree = "<group>"; };
+		DA3217F51D59122F00DAF787 /* VRootListUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListUploading.swift; sourceTree = "<group>"; };
 		DA3217F81D5918AA00DAF787 /* VMainBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBar.swift; sourceTree = "<group>"; };
 		DA3217F91D5918AA00DAF787 /* VMainBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarCell.swift; sourceTree = "<group>"; };
 		DA3217FB1D5918AA00DAF787 /* VMainAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainAlert.swift; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 		DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostPushed.swift; sourceTree = "<group>"; };
 		DA3218091D592D5000DAF787 /* VMainBarBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarBack.swift; sourceTree = "<group>"; };
 		DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionPop.swift; sourceTree = "<group>"; };
+		DA32180D1D593BE300DAF787 /* VRootListReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReview.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -558,6 +560,7 @@
 		DA3217F11D590F3F00DAF787 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				DA32180D1D593BE300DAF787 /* VRootListReview.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -565,7 +568,7 @@
 		DA3217F21D590F3F00DAF787 /* Uploading */ = {
 			isa = PBXGroup;
 			children = (
-				DA3217F51D59122F00DAF787 /* VRootUploading.swift */,
+				DA3217F51D59122F00DAF787 /* VRootListUploading.swift */,
 			);
 			path = Uploading;
 			sourceTree = "<group>";
@@ -1061,7 +1064,7 @@
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */,
-				DA3217F61D59122F00DAF787 /* VRootUploading.swift in Sources */,
+				DA3217F61D59122F00DAF787 /* VRootListUploading.swift in Sources */,
 				DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */,
 				DAA78FF71D5903E7007D86D9 /* MMainTransitionPush.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
@@ -1078,6 +1081,7 @@
 				DA381A311D554C9B00140F7E /* MOnboardingItem.swift in Sources */,
 				DAA78FCB1D57C4BC007D86D9 /* FStoragePoemDelegate.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
+				DA32180E1D593BE300DAF787 /* VRootListReview.swift in Sources */,
 				DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */,
 				DA381A3A1D554CFE00140F7E /* MOnboardingItemHistoryModelItem.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
