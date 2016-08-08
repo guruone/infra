@@ -8,4 +8,11 @@ class MMainNavItemRoot:MMainNavItem
     {
         super.init(image:kImage, index:index)
     }
+    
+    override func controller() -> UIViewController
+    {
+        let create:CRoot = CRoot()
+        
+        return create
+    }
 }
