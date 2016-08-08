@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MRootPoemsState
 {
@@ -44,5 +44,12 @@ class MRootPoemsState
     {
         self.state = state
         self.title = title
+    }
+    
+    //MARK: public
+    
+    func controller() -> UIViewController
+    {
+        fatalError()
     }
 }

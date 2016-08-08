@@ -15,7 +15,6 @@ class VRootCell:UICollectionViewCell
         title.userInteractionEnabled = false
         title.backgroundColor = UIColor.clearColor()
         title.font = UIFont.bold(15)
-        title.textColor = UIColor.main()
         title.translatesAutoresizingMaskIntoConstraints = false
         self.title = title
         
@@ -25,7 +24,6 @@ class VRootCell:UICollectionViewCell
         amount.font = UIFont.numeric(12)
         amount.translatesAutoresizingMaskIntoConstraints = false
         amount.textAlignment = NSTextAlignment.Center
-        amount.textColor = UIColor.main()
         self.amount = amount
         
         let circle:UIImageView = UIImageView()
@@ -125,11 +123,15 @@ class VRootCell:UICollectionViewCell
         
         if intAmount == 0
         {
+            title.textColor = UIColor(white:0.7, alpha:1)
+            amount.textColor = UIColor(white:0.7, alpha:1)
             backgroundColor = UIColor.clearColor()
             circle.hidden = true
         }
         else
         {
+            title.textColor = UIColor.main()
+            amount.textColor = UIColor.main()
             backgroundColor = UIColor.whiteColor()
             circle.hidden = false
         }
