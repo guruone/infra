@@ -13,7 +13,7 @@ class CMainParent:UIViewController
     weak var layoutRightTemporal:NSLayoutConstraint?
     weak var layoutTopTemporal:NSLayoutConstraint?
     weak var layoutBottomTemporal:NSLayoutConstraint?
-    weak var shadow:UIView!
+    weak var shadow:VMainShadow?
     var previous:UIViewController?
     private var statusBarStyle:UIStatusBarStyle = UIStatusBarStyle.LightContent
     
