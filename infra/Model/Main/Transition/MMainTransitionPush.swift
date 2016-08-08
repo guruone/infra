@@ -2,7 +2,7 @@ import UIKit
 
 class MMainTransitionPush:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 6
+    private let kAnimationDuration:NSTimeInterval = 0.35
     
     init()
     {
@@ -63,19 +63,19 @@ class MMainTransitionPush:MMainTransition
         parent.view.addConstraint(parent.layoutBottomTemporal!)
         
         parent.shadow = shadow
-        next.view.addSubview(shadow)
+        current?.view.addSubview(shadow)
         
         let views:[String:AnyObject] = [
             "shadow":shadow]
         
         let metrics:[String:AnyObject] = [:]
         
-        next.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+        current?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-0-[shadow]-0-|",
             options:[],
             metrics:metrics,
             views:views))
-        next.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+        current?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[shadow]-0-|",
             options:[],
             metrics:metrics,
