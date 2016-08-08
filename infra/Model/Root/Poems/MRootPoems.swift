@@ -3,7 +3,7 @@ import FirebaseDatabase
 
 class MRootPoems
 {
-    weak var controller:CRoot!
+    weak var controller:CRoot?
     let lists:[MRootPoemsList]
     
     init(controller:CRoot)
@@ -74,6 +74,6 @@ class MRootPoems
             }
         }
         
-        controller.viewRoot.listLoaded()
+        controller?.viewRoot.listLoaded()
     }
 }
