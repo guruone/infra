@@ -4,8 +4,11 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     weak var controllerParent:CMainParent!
     weak var collection:UICollectionView!
+    weak var back:UIButton!
     weak var layoutCollectionLeft:NSLayoutConstraint!
     weak var layoutCollectionRight:NSLayoutConstraint!
+    weak var layoutBackLeft:NSLayoutConstraint!
+    weak var layoutBackRight:NSLayoutConstraint!
     private let model:MMainNav
     private var pos:MMainNavPos
     private let kButtonWidth:CGFloat = 70
@@ -46,15 +49,32 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         )
         self.collection = collection
         
+        let back:UIButton = UIButton()
+        back.translatesAutoresizingMaskIntoConstraints = false
+        back.clipsToBounds = true
+        back.setImage(UIImage(named:"genericBack"), forState:UIControlState.Normal)
+        back.imageView?.contentMode = UIViewContentMode.Center
+        back.imageView?.clipsToBounds = true
+        back.addTarget(self, action:#selector(self.actionBack(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
+        back.imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 0)
+        self.back = back
+        
         addSubview(collection)
+        addSubview(back)
         
         let views:[String:AnyObject] = [
-            "collection":collection]
+            "collection":collection,
+            "back":back]
         
         let metrics:[String:AnyObject] = [:]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[collection]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[back]-0-|",
             options:[],
             metrics:metrics,
             views:views))
@@ -75,9 +95,27 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             attribute:NSLayoutAttribute.Left,
             multiplier:1,
             constant:0)
+        layoutBackRight = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Right,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Right,
+            multiplier:1,
+            constant:0)
+        layoutBackLeft = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:0)
         
         addConstraint(layoutCollectionRight)
         addConstraint(layoutCollectionLeft)
+        addConstraint(layoutBackRight)
+        addConstraint(layoutBackLeft)
         
         pos.adjust(self)
         
@@ -101,6 +139,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     override func layoutSubviews()
     {
         collection.collectionViewLayout.invalidateLayout()
+        pos.adjust(self)
         
         dispatch_async(dispatch_get_main_queue())
         { [weak self] in
@@ -114,6 +153,13 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }
         
         super.layoutSubviews()
+    }
+    
+    //MARK: actions
+    
+    func actionBack(sender button:UIButton)
+    {
+        print("action back")
     }
     
     //MARK: private
