@@ -37,6 +37,7 @@
 		DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */; };
 		DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217EC1D590F3F00DAF787 /* VRoot.swift */; };
 		DA3217F41D590F3F00DAF787 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217ED1D590F3F00DAF787 /* VRootCell.swift */; };
+		DA3217F61D59122F00DAF787 /* VRootUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F51D59122F00DAF787 /* VRootUploading.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -180,6 +181,7 @@
 		DA0EA2831D4BD81100D300B2 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
 		DA3217EC1D590F3F00DAF787 /* VRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRoot.swift; sourceTree = "<group>"; };
 		DA3217ED1D590F3F00DAF787 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
+		DA3217F51D59122F00DAF787 /* VRootUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootUploading.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 		DA3217F21D590F3F00DAF787 /* Uploading */ = {
 			isa = PBXGroup;
 			children = (
+				DA3217F51D59122F00DAF787 /* VRootUploading.swift */,
 			);
 			path = Uploading;
 			sourceTree = "<group>";
@@ -1043,6 +1046,7 @@
 				DA0EA2091D4BD01100D300B2 /* CategoryUIColor.swift in Sources */,
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */,
+				DA3217F61D59122F00DAF787 /* VRootUploading.swift in Sources */,
 				DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */,
 				DAA78FF71D5903E7007D86D9 /* MMainTransitionPush.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
