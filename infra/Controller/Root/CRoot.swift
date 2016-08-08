@@ -8,7 +8,7 @@ class CRoot:CMainController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        model = MRootPoems()
+        model = MRootPoems(controller:self)
     }
     
     override func loadView()

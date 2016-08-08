@@ -3,8 +3,11 @@ import FirebaseDatabase
 
 class MRootPoems
 {
-    init()
+    weak var controller:CRoot!
+    
+    init(controller:CRoot)
     {
+        self.controller = controller
         FMain.sharedInstance.database.listenPoems(snapBlock)
     }
     
