@@ -99,6 +99,14 @@
 		DAA78FD01D58CD47007D86D9 /* CRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCF1D58CD47007D86D9 /* CRoot.swift */; };
 		DAA78FD31D58CE18007D86D9 /* VRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD21D58CE18007D86D9 /* VRoot.swift */; };
 		DAA78FD71D58D1F7007D86D9 /* MRootPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */; };
+		DAA78FD91D58D62C007D86D9 /* MRootPoemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */; };
+		DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */; };
+		DAA78FDD1D58D65C007D86D9 /* MRootPoemsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */; };
+		DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */; };
+		DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */; };
+		DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */; };
+		DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */; };
+		DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */; };
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
 		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
@@ -225,6 +233,14 @@
 		DAA78FCF1D58CD47007D86D9 /* CRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRoot.swift; sourceTree = "<group>"; };
 		DAA78FD21D58CE18007D86D9 /* VRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRoot.swift; sourceTree = "<group>"; };
 		DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoems.swift; sourceTree = "<group>"; };
+		DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsList.swift; sourceTree = "<group>"; };
+		DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsState.swift; sourceTree = "<group>"; };
+		DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItem.swift; sourceTree = "<group>"; };
+		DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReview.swift; sourceTree = "<group>"; };
+		DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateUploading.swift; sourceTree = "<group>"; };
+		DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateNeedsRevision.swift; sourceTree = "<group>"; };
+		DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateRejected.swift; sourceTree = "<group>"; };
+		DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReady.swift; sourceTree = "<group>"; };
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
 		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
@@ -736,6 +752,14 @@
 			isa = PBXGroup;
 			children = (
 				DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */,
+				DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */,
+				DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */,
+				DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */,
+				DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */,
+				DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */,
+				DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */,
+				DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */,
+				DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */,
 			);
 			path = Poems;
 			sourceTree = "<group>";
@@ -976,8 +1000,11 @@
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
+				DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */,
 				DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */,
+				DAA78FD91D58D62C007D86D9 /* MRootPoemsList.swift in Sources */,
 				DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */,
+				DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */,
@@ -989,6 +1016,7 @@
 				DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */,
 				DAB8CE0E1D54D7A800F273E1 /* VMainAlert.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
+				DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */,
 				DA0EA28C1D4BD81100D300B2 /* VMainLoader.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
 				DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */,
@@ -1001,16 +1029,19 @@
 				DAF32B101D55962900704E75 /* VOnboardingItemUser.swift in Sources */,
 				DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
+				DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
 				DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */,
 				DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */,
 				DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
+				DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */,
 				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA0EA28A1D4BD81100D300B2 /* VMainBarButton.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
+				DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
@@ -1019,6 +1050,7 @@
 				DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */,
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
 				DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */,
+				DAA78FDD1D58D65C007D86D9 /* MRootPoemsListItem.swift in Sources */,
 				DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */,
 				DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */,
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
