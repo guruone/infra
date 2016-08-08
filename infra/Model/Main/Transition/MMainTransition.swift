@@ -51,9 +51,9 @@ class MMainTransition
         return transition
     }
     
-    class func Push() -> MMainTransition
+    class func Push(pushed:String) -> MMainTransition
     {
-        let transition:MMainTransition = MMainTransitionPush()
+        let transition:MMainTransition = MMainTransitionPush(pushed:pushed)
         
         return transition
     }

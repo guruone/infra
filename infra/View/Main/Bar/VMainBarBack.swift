@@ -19,7 +19,7 @@ class VMainBarBack:UIView
         button.setImage(UIImage(named:"genericBack"), forState:UIControlState.Normal)
         button.imageView?.contentMode = UIViewContentMode.Center
         button.imageView?.clipsToBounds = true
-        button.imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 20)
+        button.imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 25)
         button.addTarget(self, action:#selector(self.actionBack(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
         self.button = button
         
@@ -28,7 +28,7 @@ class VMainBarBack:UIView
         label.backgroundColor = UIColor.clearColor()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.bold(14)
+        label.font = UIFont.bold(15)
         label.textColor = UIColor.whiteColor()
         self.label = label
         
@@ -52,12 +52,12 @@ class VMainBarBack:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-20-[label]-20-|",
+            "H:|-0-[label]-0-|",
             options:[],
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[label]-0-|",
+            "V:|-20-[label(44)]",
             options:[],
             metrics:metrics,
             views:views))

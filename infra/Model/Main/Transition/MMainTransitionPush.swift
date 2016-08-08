@@ -3,9 +3,11 @@ import UIKit
 class MMainTransitionPush:MMainTransition
 {
     private let kAnimationDuration:NSTimeInterval = 0.4
+    let pushed:String
     
-    init()
+    init(pushed:String)
     {
+        self.pushed = pushed
         super.init(animationDuration:kAnimationDuration)
     }
     
@@ -94,7 +96,7 @@ class MMainTransitionPush:MMainTransition
         parent.layoutRight!.constant = -width
         parent.layoutLeftTemporal!.constant = 0
         parent.layoutRightTemporal!.constant = 0
-        parent.bar?.pushed()
+        parent.bar?.pushed(pushed)
     }
     
     override func animationAfter()

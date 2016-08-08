@@ -159,10 +159,11 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     //MARK: public
     
-    func pushed()
+    func pushed(name:String)
     {
         pos = MMainNavPos.Pushed()
         pos.adjust(self)
+        back.label.text = name
     }
     
     //MARK: col del

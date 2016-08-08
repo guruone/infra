@@ -22,7 +22,7 @@ class CRoot:CMainController
     
     func selectedList(controller:CRootList)
     {
-        let transition:MMainTransition = MMainTransition.Push()
+        let transition:MMainTransition = MMainTransition.Push(controller.model.state.title)
         parent.pushController(controller, transition:transition)
     }
 }
