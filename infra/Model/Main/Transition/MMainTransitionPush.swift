@@ -11,17 +11,8 @@ class MMainTransitionPush:MMainTransition
     
     override func positionBefore()
     {
-        let width:CGFloat
+        let width:CGFloat = current!.view.bounds.maxX
         let barHeight:CGFloat
-        
-        if current == nil
-        {
-            width = 0
-        }
-        else
-        {
-            width = current!.view.bounds.maxX
-        }
         
         if parent.bar == nil
         {
@@ -78,13 +69,9 @@ class MMainTransitionPush:MMainTransition
     
     override func positionAfter()
     {
-        if current != nil
-        {
-            let width:CGFloat = current!.view.bounds.maxX
-            parent.layoutLeft!.constant = -width
-            parent.layoutRight!.constant = -width
-        }
-        
+        let width:CGFloat = current!.view.bounds.maxX / 2.0
+        parent.layoutLeft!.constant = -width
+        parent.layoutRight!.constant = -width
         parent.layoutLeftTemporal!.constant = 0
         parent.layoutRightTemporal!.constant = 0
     }

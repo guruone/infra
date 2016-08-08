@@ -182,6 +182,8 @@ class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(collectionView:UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
-        
+        let item:MRootPoemsList = modelAtIndex(indexPath)
+        let list:CRootList = item.controller()
+        controller.selectedList(list)
     }
 }
