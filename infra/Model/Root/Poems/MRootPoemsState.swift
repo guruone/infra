@@ -3,6 +3,7 @@ import Foundation
 class MRootPoemsState
 {
     let state:DInfraPoem.DInfraPoemStatus
+    let title:String
     
     class func Uploading() -> MRootPoemsStateUploading
     {
@@ -39,8 +40,9 @@ class MRootPoemsState
         return state
     }
     
-    init(state:DInfraPoem.DInfraPoemStatus)
+    init(state:DInfraPoem.DInfraPoemStatus, title:String)
     {
         self.state = state
+        self.title = title
     }
 }
