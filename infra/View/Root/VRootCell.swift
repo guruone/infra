@@ -13,4 +13,11 @@ class VRootCell:UICollectionViewCell
     {
         fatalError()
     }
+    
+    //MARK: public
+    
+    func config(list:MRootPoemsList)
+    {
+        
+    }
 }
