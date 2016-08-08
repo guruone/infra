@@ -1,9 +1,13 @@
-//
-//  MRootPoemsItem.swift
-//  infra
-//
-//  Created by zero on 8/8/16.
-//  Copyright © 2016 iturbide. All rights reserved.
-//
-
 import Foundation
+
+class MRootPoemsList
+{
+    let state:MRootPoemsState
+    var items:[MRootPoemsListItem]
+    
+    init(state:MRootPoemsState)
+    {
+        self.state = state
+        items = []
+    }
+}
