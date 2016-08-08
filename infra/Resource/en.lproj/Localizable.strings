@@ -15,6 +15,7 @@
 "VOnboardingItemUser_label"="Nom de plume";
 "VOnboardingItemUser_placeholder"="Pen name";
 "VOnboardingItemUser_button"="Start";
+"VRootListUploading_button"="Remove";
 
 "MCreateItemTitle_minCharacters"="Poem needs a title";
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters max";
