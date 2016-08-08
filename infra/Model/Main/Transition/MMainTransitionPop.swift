@@ -1,21 +1,21 @@
 import UIKit
 
-class MMainTransitionPush:MMainTransition
+class MMainTransitionPop:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 0.4
-    let pushed:String
+    private let kAnimationDuration:NSTimeInterval = 0.3
     
-    init(pushed:String)
+    init()
     {
-        self.pushed = pushed
         super.init(animationDuration:kAnimationDuration)
     }
     
     override func positionBefore()
     {
-        let width:CGFloat = current!.view.bounds.maxX
+        parent.previous = nil
+        parent.view.bringSubviewToFront(current!.view)
+        
+        let width:CGFloat = current!.view.bounds.maxX / -2.0
         let barHeight:CGFloat = parent.kBarHeight
-        let shadow:VMainShadow = VMainShadow()
         
         parent.layoutTopTemporal = NSLayoutConstraint(
             item:next.view,
@@ -54,25 +54,6 @@ class MMainTransitionPush:MMainTransition
         parent.view.addConstraint(parent.layoutRightTemporal!)
         parent.view.addConstraint(parent.layoutTopTemporal!)
         parent.view.addConstraint(parent.layoutBottomTemporal!)
-        
-        parent.shadow = shadow
-        current?.view.addSubview(shadow)
-        
-        let views:[String:AnyObject] = [
-            "shadow":shadow]
-        
-        let metrics:[String:AnyObject] = [:]
-        
-        current?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-0-[shadow]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
-        current?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[shadow]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
     }
     
     override func animationBefore()
@@ -82,22 +63,23 @@ class MMainTransitionPush:MMainTransition
     
     override func positionAfter()
     {
-        let width:CGFloat = current!.view.bounds.maxX / -2.0
+        let width:CGFloat = current!.view.bounds.maxX
         parent.layoutLeft!.constant = width
         parent.layoutRight!.constant = width
         parent.layoutLeftTemporal!.constant = 0
         parent.layoutRightTemporal!.constant = 0
-        parent.bar?.pushed(pushed)
+        parent.bar?.poped()
     }
     
     override func animationAfter()
     {
         parent.view.layoutIfNeeded()
-        parent.shadow?.alpha = 1
+        parent.shadow?.alpha = 0
     }
     
     override func completed()
     {
-        parent.previous = parent.current
+        parent.shadow?.removeFromSuperview()
+        parent.bar?.back.label.text = ""
     }
 }

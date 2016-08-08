@@ -102,6 +102,8 @@ class CMainParent:UIViewController
             }, completion:
             { (done) in
                 
+                transition.completed()
+                
                 self.current!.view.removeFromSuperview()
                 self.current!.removeFromParentViewController()
                 controller.didMoveToParentViewController(self)

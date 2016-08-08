@@ -166,6 +166,12 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         back.label.text = name
     }
     
+    func poped()
+    {
+        pos = MMainNavPos.Normal()
+        pos.adjust(self)
+    }
+    
     //MARK: col del
     
     func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, insetForSectionAtIndex section:Int) -> UIEdgeInsets

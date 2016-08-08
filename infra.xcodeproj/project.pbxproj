@@ -44,6 +44,7 @@
 		DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */; };
 		DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */; };
 		DA32180A1D592D5000DAF787 /* VMainBarBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218091D592D5000DAF787 /* VMainBarBack.swift */; };
+		DA32180C1D5932BD00DAF787 /* MMainTransitionPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -187,6 +188,7 @@
 		DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostNormal.swift; sourceTree = "<group>"; };
 		DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostPushed.swift; sourceTree = "<group>"; };
 		DA3218091D592D5000DAF787 /* VMainBarBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarBack.swift; sourceTree = "<group>"; };
+		DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionPop.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -759,6 +761,7 @@
 				DA800B2D1D502981008C4904 /* MMainTransitionScrollLeft.swift */,
 				DA800B2E1D502981008C4904 /* MMainTransitionScrollRight.swift */,
 				DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */,
+				DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -1112,6 +1115,7 @@
 				DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
 				DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */,
+				DA32180C1D5932BD00DAF787 /* MMainTransitionPop.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
 				DA381A3C1D554D0B00140F7E /* MOnboardingItemHistoryModelItemImage.swift in Sources */,
 				DAA78FED1D58FDAC007D86D9 /* CRootListReview.swift in Sources */,

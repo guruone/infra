@@ -58,6 +58,13 @@ class MMainTransition
         return transition
     }
     
+    class func Pop() -> MMainTransition
+    {
+        let transition:MMainTransition = MMainTransitionPop()
+        
+        return transition
+    }
+    
     init(animationDuration:NSTimeInterval)
     {
         self.animationDuration = animationDuration
@@ -85,6 +92,10 @@ class MMainTransition
     }
     
     func animationAfter()
+    {
+    }
+    
+    func completed()
     {
     }
 }

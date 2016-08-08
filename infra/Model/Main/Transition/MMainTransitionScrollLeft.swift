@@ -20,7 +20,7 @@ class MMainTransitionScrollLeft:MMainTransition
         }
         else
         {
-            width = current!.view.bounds.maxX
+            width = -current!.view.bounds.maxX
         }
         
         if parent.bar == nil
@@ -55,7 +55,7 @@ class MMainTransitionScrollLeft:MMainTransition
             toItem:parent.view,
             attribute:NSLayoutAttribute.Left,
             multiplier:1,
-            constant:-width)
+            constant:width)
         parent.layoutRightTemporal = NSLayoutConstraint(
             item:next.view,
             attribute:NSLayoutAttribute.Right,
@@ -63,7 +63,7 @@ class MMainTransitionScrollLeft:MMainTransition
             toItem:parent.view,
             attribute:NSLayoutAttribute.Right,
             multiplier:1,
-            constant:-width)
+            constant:width)
         
         parent.view.addConstraint(parent.layoutLeftTemporal!)
         parent.view.addConstraint(parent.layoutRightTemporal!)
