@@ -51,6 +51,13 @@ class MMainTransition
         return transition
     }
     
+    class func Push() -> MMainTransition
+    {
+        let transition:MMainTransition = MMainTransitionPush()
+        
+        return transition
+    }
+    
     init(animationDuration:NSTimeInterval)
     {
         self.animationDuration = animationDuration

@@ -2,8 +2,17 @@ import UIKit
 
 class CRootList:CMainController
 {
-    init(model:MRootPoemsList)
+    let model:MRootPoemsList
+    
+    required init(model:MRootPoemsList)
     {
+        self.model = model
         
+        super.init(nibName:nil, bundle:nil)
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        fatalError()
     }
 }

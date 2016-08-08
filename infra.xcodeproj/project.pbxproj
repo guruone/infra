@@ -114,6 +114,7 @@
 		DAA78FF11D58FDC3007D86D9 /* CRootListRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF01D58FDC3007D86D9 /* CRootListRejected.swift */; };
 		DAA78FF31D58FDD4007D86D9 /* CRootListReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */; };
 		DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF41D58FF08007D86D9 /* CRootList.swift */; };
+		DAA78FF71D5903E7007D86D9 /* MMainTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */; };
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
 		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
@@ -255,6 +256,7 @@
 		DAA78FF01D58FDC3007D86D9 /* CRootListRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListRejected.swift; sourceTree = "<group>"; };
 		DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListReady.swift; sourceTree = "<group>"; };
 		DAA78FF41D58FF08007D86D9 /* CRootList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootList.swift; sourceTree = "<group>"; };
+		DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionPush.swift; sourceTree = "<group>"; };
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
 		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 				DA800B2C1D502981008C4904 /* MMainTransitionReplace.swift */,
 				DA800B2D1D502981008C4904 /* MMainTransitionScrollLeft.swift */,
 				DA800B2E1D502981008C4904 /* MMainTransitionScrollRight.swift */,
+				DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -990,6 +993,7 @@
 				DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */,
 				DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */,
 				DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */,
+				DAA78FF71D5903E7007D86D9 /* MMainTransitionPush.swift in Sources */,
 				DA0EA2841D4BD81100D300B2 /* CLanding.swift in Sources */,
 				DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */,
 				DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */,

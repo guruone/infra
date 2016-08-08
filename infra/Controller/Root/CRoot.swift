@@ -17,4 +17,12 @@ class CRoot:CMainController
         self.viewRoot = viewRoot
         view = viewRoot
     }
+    
+    //MARK: public
+    
+    func selectedList(controller:CRootList)
+    {
+        let transition:MMainTransition = MMainTransition.Push()
+        parent.pushController(controller, transition:transition)
+    }
 }
