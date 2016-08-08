@@ -9,4 +9,9 @@ class MRootPoemsStateUploading:MRootPoemsState
         let state:DInfraPoem.DInfraPoemStatus = DInfraPoem.DInfraPoemStatus.Uploading
         super.init(state:state, title:kTitle)
     }
+    
+    override func controller() -> UIViewController
+    {
+        
+    }
 }

@@ -108,11 +108,12 @@
 		DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */; };
 		DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */; };
 		DAA78FE91D58E915007D86D9 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE81D58E915007D86D9 /* VRootCell.swift */; };
-		DAA78FEB1D58FDA0007D86D9 /* CRootUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEA1D58FDA0007D86D9 /* CRootUploading.swift */; };
-		DAA78FED1D58FDAC007D86D9 /* CRootReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEC1D58FDAC007D86D9 /* CRootReview.swift */; };
-		DAA78FEF1D58FDB9007D86D9 /* CRootNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEE1D58FDB9007D86D9 /* CRootNeedsRevision.swift */; };
-		DAA78FF11D58FDC3007D86D9 /* CRootRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF01D58FDC3007D86D9 /* CRootRejected.swift */; };
-		DAA78FF31D58FDD4007D86D9 /* CRootReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF21D58FDD4007D86D9 /* CRootReady.swift */; };
+		DAA78FEB1D58FDA0007D86D9 /* CRootListUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEA1D58FDA0007D86D9 /* CRootListUploading.swift */; };
+		DAA78FED1D58FDAC007D86D9 /* CRootListReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEC1D58FDAC007D86D9 /* CRootListReview.swift */; };
+		DAA78FEF1D58FDB9007D86D9 /* CRootListNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEE1D58FDB9007D86D9 /* CRootListNeedsRevision.swift */; };
+		DAA78FF11D58FDC3007D86D9 /* CRootListRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF01D58FDC3007D86D9 /* CRootListRejected.swift */; };
+		DAA78FF31D58FDD4007D86D9 /* CRootListReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */; };
+		DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF41D58FF08007D86D9 /* CRootList.swift */; };
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
 		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
@@ -248,11 +249,12 @@
 		DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateRejected.swift; sourceTree = "<group>"; };
 		DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReady.swift; sourceTree = "<group>"; };
 		DAA78FE81D58E915007D86D9 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
-		DAA78FEA1D58FDA0007D86D9 /* CRootUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootUploading.swift; sourceTree = "<group>"; };
-		DAA78FEC1D58FDAC007D86D9 /* CRootReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootReview.swift; sourceTree = "<group>"; };
-		DAA78FEE1D58FDB9007D86D9 /* CRootNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootNeedsRevision.swift; sourceTree = "<group>"; };
-		DAA78FF01D58FDC3007D86D9 /* CRootRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootRejected.swift; sourceTree = "<group>"; };
-		DAA78FF21D58FDD4007D86D9 /* CRootReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootReady.swift; sourceTree = "<group>"; };
+		DAA78FEA1D58FDA0007D86D9 /* CRootListUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListUploading.swift; sourceTree = "<group>"; };
+		DAA78FEC1D58FDAC007D86D9 /* CRootListReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListReview.swift; sourceTree = "<group>"; };
+		DAA78FEE1D58FDB9007D86D9 /* CRootListNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListNeedsRevision.swift; sourceTree = "<group>"; };
+		DAA78FF01D58FDC3007D86D9 /* CRootListRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListRejected.swift; sourceTree = "<group>"; };
+		DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListReady.swift; sourceTree = "<group>"; };
+		DAA78FF41D58FF08007D86D9 /* CRootList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootList.swift; sourceTree = "<group>"; };
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
 		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
@@ -740,11 +742,12 @@
 			isa = PBXGroup;
 			children = (
 				DAA78FCF1D58CD47007D86D9 /* CRoot.swift */,
-				DAA78FEA1D58FDA0007D86D9 /* CRootUploading.swift */,
-				DAA78FEC1D58FDAC007D86D9 /* CRootReview.swift */,
-				DAA78FEE1D58FDB9007D86D9 /* CRootNeedsRevision.swift */,
-				DAA78FF01D58FDC3007D86D9 /* CRootRejected.swift */,
-				DAA78FF21D58FDD4007D86D9 /* CRootReady.swift */,
+				DAA78FF41D58FF08007D86D9 /* CRootList.swift */,
+				DAA78FEA1D58FDA0007D86D9 /* CRootListUploading.swift */,
+				DAA78FEC1D58FDAC007D86D9 /* CRootListReview.swift */,
+				DAA78FEE1D58FDB9007D86D9 /* CRootListNeedsRevision.swift */,
+				DAA78FF01D58FDC3007D86D9 /* CRootListRejected.swift */,
+				DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -1018,11 +1021,11 @@
 				DA381A381D554CE000140F7E /* MOnboardingItemHistoryModel.swift in Sources */,
 				DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */,
 				DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */,
-				DAA78FEB1D58FDA0007D86D9 /* CRootUploading.swift in Sources */,
-				DAA78FF11D58FDC3007D86D9 /* CRootRejected.swift in Sources */,
+				DAA78FEB1D58FDA0007D86D9 /* CRootListUploading.swift in Sources */,
+				DAA78FF11D58FDC3007D86D9 /* CRootListRejected.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
 				DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */,
-				DAA78FEF1D58FDB9007D86D9 /* CRootNeedsRevision.swift in Sources */,
+				DAA78FEF1D58FDB9007D86D9 /* CRootListNeedsRevision.swift in Sources */,
 				DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */,
 				DAA78FD91D58D62C007D86D9 /* MRootPoemsList.swift in Sources */,
 				DA800B211D501585008C4904 /* VMainBarButtonCreate.swift in Sources */,
@@ -1043,7 +1046,7 @@
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
 				DA800B271D50261D008C4904 /* VMainBarCell.swift in Sources */,
 				DA381A3C1D554D0B00140F7E /* MOnboardingItemHistoryModelItemImage.swift in Sources */,
-				DAA78FED1D58FDAC007D86D9 /* CRootReview.swift in Sources */,
+				DAA78FED1D58FDAC007D86D9 /* CRootListReview.swift in Sources */,
 				DAB8CE141D5503A500F273E1 /* DInfraPoem+CoreDataProperties.swift in Sources */,
 				DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */,
 				DAA78FD71D58D1F7007D86D9 /* MRootPoems.swift in Sources */,
@@ -1059,6 +1062,7 @@
 				DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
 				DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */,
+				DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */,
 				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
@@ -1069,7 +1073,7 @@
 				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
 				DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
-				DAA78FF31D58FDD4007D86D9 /* CRootReady.swift in Sources */,
+				DAA78FF31D58FDD4007D86D9 /* CRootListReady.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */,
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
