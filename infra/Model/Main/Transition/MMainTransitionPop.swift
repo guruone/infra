@@ -2,7 +2,7 @@ import UIKit
 
 class MMainTransitionPop:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 0.3
+    private let kAnimationDuration:NSTimeInterval = 0.4
     
     init()
     {
