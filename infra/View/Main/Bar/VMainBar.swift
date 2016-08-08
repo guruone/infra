@@ -4,6 +4,8 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     weak var controllerParent:CMainParent!
     weak var collection:UICollectionView!
+    weak var layoutCollectionLeft:NSLayoutConstraint!
+    weak var layoutCollectionRight:NSLayoutConstraint!
     private let model:MMainNav
     private let kButtonWidth:CGFloat = 70
     
@@ -49,11 +51,6 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         let metrics:[String:AnyObject] = [:]
         
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-0-[collection]-0-|",
-            options:[],
-            metrics:metrics,
-            views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[collection]-0-|",
             options:[],
@@ -102,6 +99,13 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         let item:MMainNavItem = model.items[index.item]
         
         return item
+    }
+    
+    //MARK: public
+    
+    func pushed()
+    {
+        
     }
     
     //MARK: col del

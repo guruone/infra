@@ -40,6 +40,9 @@
 		DA3218001D5918AA00DAF787 /* VMainAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217FB1D5918AA00DAF787 /* VMainAlert.swift */; };
 		DA3218011D5918AA00DAF787 /* VMainLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217FC1D5918AA00DAF787 /* VMainLoader.swift */; };
 		DA3218021D5918AA00DAF787 /* VMainShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217FD1D5918AA00DAF787 /* VMainShadow.swift */; };
+		DA3218041D591B8800DAF787 /* MMainNavPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218031D591B8800DAF787 /* MMainNavPos.swift */; };
+		DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */; };
+		DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -179,6 +182,9 @@
 		DA3217FB1D5918AA00DAF787 /* VMainAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainAlert.swift; sourceTree = "<group>"; };
 		DA3217FC1D5918AA00DAF787 /* VMainLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainLoader.swift; sourceTree = "<group>"; };
 		DA3217FD1D5918AA00DAF787 /* VMainShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainShadow.swift; sourceTree = "<group>"; };
+		DA3218031D591B8800DAF787 /* MMainNavPos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPos.swift; sourceTree = "<group>"; };
+		DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostNormal.swift; sourceTree = "<group>"; };
+		DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostPushed.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -734,6 +740,9 @@
 				DA800B401D502B78008C4904 /* MMainNavItemState.swift */,
 				DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */,
 				DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */,
+				DA3218031D591B8800DAF787 /* MMainNavPos.swift */,
+				DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */,
+				DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */,
 			);
 			path = Nav;
 			sourceTree = "<group>";
@@ -1096,6 +1105,7 @@
 				DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */,
 				DA381A301D554C9B00140F7E /* MOnboarding.swift in Sources */,
 				DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */,
+				DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
 				DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
@@ -1124,6 +1134,7 @@
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */,
+				DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
@@ -1146,6 +1157,7 @@
 				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
+				DA3218041D591B8800DAF787 /* MMainNavPos.swift in Sources */,
 				DA3218021D5918AA00DAF787 /* VMainShadow.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
 				DA800B391D5029AD008C4904 /* MMainNavItemHome.swift in Sources */,
