@@ -4,6 +4,7 @@ class VRootCell:UICollectionViewCell
 {
     weak var title:UILabel!
     weak var amount:UILabel!
+    weak var circle:UIImageView!
     
     override init(frame:CGRect)
     {
@@ -21,18 +22,20 @@ class VRootCell:UICollectionViewCell
         let amount:UILabel = UILabel()
         amount.userInteractionEnabled = false
         amount.backgroundColor = UIColor.clearColor()
-        amount.font = UIFont.numeric(16)
+        amount.font = UIFont.numeric(12)
         amount.translatesAutoresizingMaskIntoConstraints = false
         amount.textAlignment = NSTextAlignment.Center
-        amount.textColor = UIColor.complement()
+        amount.textColor = UIColor.main()
         self.amount = amount
         
         let circle:UIImageView = UIImageView()
         circle.userInteractionEnabled = false
         circle.clipsToBounds = true
         circle.translatesAutoresizingMaskIntoConstraints = false
-        circle.image = UIImage(named:"genericCircle")
+        circle.image = UIImage(named:"genericCircle")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
         circle.contentMode = UIViewContentMode.Center
+        circle.tintColor = UIColor.complement()
+        self.circle = circle
         
         addSubview(title)
         addSubview(circle)
@@ -82,6 +85,36 @@ class VRootCell:UICollectionViewCell
         fatalError()
     }
     
+    override var selected:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    override var highlighted:Bool
+    {
+        didSet
+        {
+            hover()
+        }
+    }
+    
+    //MARK: private
+    
+    private func hover()
+    {
+        if selected || highlighted
+        {
+            alpha = 0.1
+        }
+        else
+        {
+            alpha = 1
+        }
+    }
+    
     //MARK: public
     
     func config(list:MRootPoemsList)
@@ -93,12 +126,15 @@ class VRootCell:UICollectionViewCell
         if intAmount == 0
         {
             backgroundColor = UIColor.clearColor()
+            circle.hidden = true
         }
         else
         {
             backgroundColor = UIColor.whiteColor()
+            circle.hidden = false
         }
         
         amount.text = stringAmount
+        hover()
     }
 }
