@@ -7,7 +7,7 @@ class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     weak var collection:UICollectionView!
     private var sections:Int
     private let kCollectionBottom:CGFloat = 40
-    private let kCellHeight:CGFloat = 50
+    private let kCellHeight:CGFloat = 54
     private let kInterLine:CGFloat = 1
     
     init(controller:CRoot)

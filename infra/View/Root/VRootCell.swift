@@ -13,7 +13,7 @@ class VRootCell:UICollectionViewCell
         let title:UILabel = UILabel()
         title.userInteractionEnabled = false
         title.backgroundColor = UIColor.clearColor()
-        title.font = UIFont.bold(13)
+        title.font = UIFont.bold(15)
         title.textColor = UIColor.main()
         title.translatesAutoresizingMaskIntoConstraints = false
         self.title = title
@@ -21,18 +21,27 @@ class VRootCell:UICollectionViewCell
         let amount:UILabel = UILabel()
         amount.userInteractionEnabled = false
         amount.backgroundColor = UIColor.clearColor()
-        amount.font = UIFont.numeric(18)
+        amount.font = UIFont.numeric(16)
         amount.translatesAutoresizingMaskIntoConstraints = false
         amount.textAlignment = NSTextAlignment.Center
-        amount.textColor = UIColor.blackColor()
-        
+        amount.textColor = UIColor.complement()
         self.amount = amount
         
+        let circle:UIImageView = UIImageView()
+        circle.userInteractionEnabled = false
+        circle.clipsToBounds = true
+        circle.translatesAutoresizingMaskIntoConstraints = false
+        circle.image = UIImage(named:"genericCircle")
+        circle.contentMode = UIViewContentMode.Center
+        
         addSubview(title)
+        addSubview(circle)
         addSubview(amount)
         
         let views:[String:AnyObject] = [
-            "title":title]
+            "title":title,
+            "amount":amount,
+            "circle":circle]
         
         let metrics:[String:AnyObject] = [:]
         
@@ -43,6 +52,26 @@ class VRootCell:UICollectionViewCell
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[title]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:[circle(60)]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[circle]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:[amount(60)]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[amount]-0-|",
             options:[],
             metrics:metrics,
             views:views))
@@ -58,8 +87,10 @@ class VRootCell:UICollectionViewCell
     func config(list:MRootPoemsList)
     {
         title.text = list.state.title
+        let intAmount:Int = list.items.count
+        let stringAmount:String = "\(intAmount)"
         
-        if list.items.isEmpty
+        if intAmount == 0
         {
             backgroundColor = UIColor.clearColor()
         }
@@ -68,6 +99,6 @@ class VRootCell:UICollectionViewCell
             backgroundColor = UIColor.whiteColor()
         }
         
-        
+        amount.text = stringAmount
     }
 }
