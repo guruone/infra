@@ -62,4 +62,10 @@ class FDatabase
         let poemReference = reference.child(kReferencePoem).child(poemId)
         poemReference.updateChildValues(property)
     }
+    
+    func listenPoems(snapBlock:((FIRDataSnapshot) -> Void))
+    {
+        let poemsReference:FIRDatabaseReference = reference.child(kReferencePoem)
+        poemsReference.observeSingleEventOfType(FIRDataEventType.Value, withBlock:snapBlock)
+    }
 }
