@@ -7,7 +7,8 @@ class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     weak var collection:UICollectionView!
     private var sections:Int
     private let kCollectionBottom:CGFloat = 40
-    private let kCellHeight:CGFloat = 70
+    private let kCellHeight:CGFloat = 50
+    private let kInterLine:CGFloat = 1
     
     init(controller:CRoot)
     {
@@ -15,7 +16,7 @@ class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
         super.init(frame:CGRectZero)
         clipsToBounds = true
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor(white:0.95, alpha:1)
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
@@ -25,7 +26,7 @@ class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flow.headerReferenceSize = CGSizeZero
         flow.footerReferenceSize = CGSizeZero
-        flow.minimumLineSpacing = 0
+        flow.minimumLineSpacing = kInterLine
         flow.minimumInteritemSpacing = 0
         flow.scrollDirection = UICollectionViewScrollDirection.Vertical
         flow.sectionInset = UIEdgeInsetsMake(0, 0, kCollectionBottom, 0)

@@ -3,22 +3,33 @@ import UIKit
 class VRootCell:UICollectionViewCell
 {
     weak var title:UILabel!
+    weak var amount:UILabel!
     
     override init(frame:CGRect)
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clearColor()
         
         let title:UILabel = UILabel()
         title.userInteractionEnabled = false
         title.backgroundColor = UIColor.clearColor()
-        title.font = UIFont.bold(14)
+        title.font = UIFont.bold(13)
         title.textColor = UIColor.main()
         title.translatesAutoresizingMaskIntoConstraints = false
         self.title = title
         
+        let amount:UILabel = UILabel()
+        amount.userInteractionEnabled = false
+        amount.backgroundColor = UIColor.clearColor()
+        amount.font = UIFont.numeric(18)
+        amount.translatesAutoresizingMaskIntoConstraints = false
+        amount.textAlignment = NSTextAlignment.Center
+        amount.textColor = UIColor.blackColor()
+        
+        self.amount = amount
+        
         addSubview(title)
+        addSubview(amount)
         
         let views:[String:AnyObject] = [
             "title":title]
@@ -47,5 +58,16 @@ class VRootCell:UICollectionViewCell
     func config(list:MRootPoemsList)
     {
         title.text = list.state.title
+        
+        if list.items.isEmpty
+        {
+            backgroundColor = UIColor.clearColor()
+        }
+        else
+        {
+            backgroundColor = UIColor.whiteColor()
+        }
+        
+        
     }
 }
