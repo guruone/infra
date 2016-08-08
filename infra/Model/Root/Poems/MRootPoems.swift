@@ -39,6 +39,6 @@ class MRootPoems
     {
         let json:[String:AnyObject]? = snapshot.value as? [String:AnyObject]
         
-        print(json)
+        print(json!)
     }
 }

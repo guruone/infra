@@ -3,7 +3,6 @@ import Foundation
 class MRootPoemsState
 {
     let state:DInfraPoem.DInfraPoemStatus
-    private let comparator:Int
     
     class func Uploading() -> MRootPoemsStateUploading
     {
@@ -43,24 +42,5 @@ class MRootPoemsState
     init(state:DInfraPoem.DInfraPoemStatus)
     {
         self.state = state
-        comparator = Int(state.rawValue)
-    }
-    
-    //MARK: public
-    
-    func equalsState(rawState:Int) -> Bool
-    {
-        let isEqual:Bool
-        
-        if rawState == comparator
-        {
-            isEqual = true
-        }
-        else
-        {
-            isEqual = false
-        }
-        
-        return isEqual
     }
 }
