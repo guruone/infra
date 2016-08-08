@@ -32,4 +32,13 @@ class FStorage
             fPoem.save(poemId, poem:poem, storage:self.storageReference, completionHandler:completionHandler)
         }
     }
+    
+    func deletePoem(poemId:String, completionHandler:((String?)->())?)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        {
+            let fPoem:FStoragePoem = FStoragePoem()
+            fPoem.delete(poemId, storage:self.storageReference, completionHandler:completionHandler)
+        }
+    }
 }

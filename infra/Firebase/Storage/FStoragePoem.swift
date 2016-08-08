@@ -40,7 +40,7 @@ class FStoragePoem
         poemReference.deleteWithCompletion
         { (error) in
             
-            let errorString:String? = error!.localizedDescription
+            let errorString:String? = error?.localizedDescription
             completionHandler?(errorString)
         }
     }

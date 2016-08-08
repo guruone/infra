@@ -15,6 +15,14 @@ class CRootListUploading:CRootList
     
     func removeAll()
     {
-        
+        for item:MRootPoemsListItem in model.items
+        {
+            let poemId:String = item.poemId
+            FMain.sharedInstance.storage.deletePoem(poemId)
+            { (error) in
+                
+                FMain.sharedInstance.database.deletePoem(poemId)
+            }
+        }
     }
 }

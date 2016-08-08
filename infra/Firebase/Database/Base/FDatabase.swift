@@ -68,4 +68,10 @@ class FDatabase
         let poemsReference:FIRDatabaseReference = reference.child(kReferencePoem)
         poemsReference.observeSingleEventOfType(FIRDataEventType.Value, withBlock:snapBlock)
     }
+    
+    func deletePoem(poemId:String)
+    {
+        let poemReference = reference.child(kReferencePoem).child(poemId)
+        poemReference.removeValue()
+    }
 }
