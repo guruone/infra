@@ -94,6 +94,7 @@ class MMainTransitionPush:MMainTransition
         parent.layoutRight!.constant = -width
         parent.layoutLeftTemporal!.constant = 0
         parent.layoutRightTemporal!.constant = 0
+        parent.bar?.pushed()
     }
     
     override func animationAfter()

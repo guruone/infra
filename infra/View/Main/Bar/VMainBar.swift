@@ -7,11 +7,13 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     weak var layoutCollectionLeft:NSLayoutConstraint!
     weak var layoutCollectionRight:NSLayoutConstraint!
     private let model:MMainNav
+    private var pos:MMainNavPos
     private let kButtonWidth:CGFloat = 70
     
     init(controllerParent:CMainParent)
     {
         model = MMainNav()
+        pos = MMainNavPos.Normal()
         
         super.init(frame:CGRectZero)
         backgroundColor = UIColor.main()
@@ -56,6 +58,28 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             options:[],
             metrics:metrics,
             views:views))
+        
+        layoutCollectionRight = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Right,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Right,
+            multiplier:1,
+            constant:0)
+        layoutCollectionLeft = NSLayoutConstraint(
+            item:collection,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:0)
+        
+        addConstraint(layoutCollectionRight)
+        addConstraint(layoutCollectionLeft)
+        
+        pos.adjust(self)
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue())
         { [weak collection, weak model] in
@@ -105,7 +129,8 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func pushed()
     {
-        
+        pos = MMainNavPos.Pushed()
+        pos.adjust(self)
     }
     
     //MARK: col del
