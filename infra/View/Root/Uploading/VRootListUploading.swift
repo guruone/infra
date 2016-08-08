@@ -4,6 +4,8 @@ class VRootListUploading:UIView
 {
     weak var controller:CRootListUploading!
     weak var spinner:VMainLoader!
+    weak var layoutButtonLeft:NSLayoutConstraint!
+    private let kButtonWidth:CGFloat = 120
     
     convenience init(controller:CRootListUploading)
     {
@@ -50,7 +52,8 @@ class VRootListUploading:UIView
             "button":button,
             "spinner":spinner]
         
-        let metrics:[String:AnyObject] = [:]
+        let metrics:[String:AnyObject] = [
+            "buttonWidth":kButtonWidth]
         
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-0-[label]-0-|",
@@ -58,7 +61,7 @@ class VRootListUploading:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|-100-[button]-100-|",
+            "H:[button(buttonWidth)]",
             options:[],
             metrics:metrics,
             views:views))
@@ -77,13 +80,33 @@ class VRootListUploading:UIView
             options:[],
             metrics:metrics,
             views:views))
+        
+        layoutButtonLeft = NSLayoutConstraint(
+            item:button,
+            attribute:NSLayoutAttribute.Left,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1,
+            constant:0)
+        
+        addConstraint(layoutButtonLeft)
+    }
+    
+    override func layoutSubviews()
+    {
+        let width:CGFloat = bounds.maxX
+        let remain:CGFloat = width - kButtonWidth
+        let margin:CGFloat = remain / 2.0
+        
+        layoutButtonLeft.constant = margin
     }
     
     //MARK: actions
     
     func actionRemove(sender button:UIButton)
     {
-        button.hidden = true
+        button.removeFromSuperview()
         spinner.hidden = false
         spinner.startAnimating()
         

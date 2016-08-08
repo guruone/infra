@@ -67,11 +67,6 @@ class VMainBarBack:UIView
     
     func actionBack(sender button:UIButton)
     {
-        if main.previous != nil
-        {
-            let controller:UIViewController = main.previous!
-            let transition:MMainTransition = MMainTransition.Pop()
-            main.pushController(controller, transition:transition)
-        }
+        main.backController()
     }
 }

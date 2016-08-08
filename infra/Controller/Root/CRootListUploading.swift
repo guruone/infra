@@ -11,6 +11,13 @@ class CRootListUploading:CRootList
         view = viewUploading
     }
     
+    //MARK: private
+    
+    private func removeCompleted()
+    {
+        parent.backController()
+    }
+    
     //MARK: public
     
     func removeAll()
@@ -23,6 +30,16 @@ class CRootListUploading:CRootList
                 
                 FMain.sharedInstance.database.deletePoem(poemId)
             }
+        }
+        
+        let message:String = NSLocalizedString("CRootListUploading_done", comment:"")
+        VMainAlert.Message(message)
+        model.items = []
+        
+        dispatch_async(dispatch_get_main_queue())
+        { [weak self] in
+            
+            self?.removeCompleted()
         }
     }
 }

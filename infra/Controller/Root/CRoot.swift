@@ -11,6 +11,12 @@ class CRoot:CMainController
         model = MRootPoems(controller:self)
     }
     
+    override func viewDidAppear(animated:Bool)
+    {
+        super.viewDidAppear(animated)
+        viewRoot.collection.reloadData()
+    }
+    
     override func loadView()
     {
         let viewRoot:VRoot = VRoot(controller:self)

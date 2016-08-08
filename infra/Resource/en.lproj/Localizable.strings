@@ -3,6 +3,7 @@
 "CCreate_errorSaveFile"="Error saving poem";
 "CCreate_poemSaved"="Poem saved and waiting for revision";
 "COnboardingItemUser_defaultName"="Anonymous";
+"CRootListUploading_done"="Remove success!";
 
 "VAccessBanned_label"="Your account has been suspended, please contact support if you want more information";
 "VCreateHeader_title"="Add a poem";

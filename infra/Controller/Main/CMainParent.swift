@@ -130,4 +130,14 @@ class CMainParent:UIViewController
         let transition:MMainTransition = MMainTransition.Fade()
         pushController(onboarding, transition:transition)
     }
+    
+    func backController()
+    {
+        if previous != nil
+        {
+            let controller:UIViewController = previous!
+            let transition:MMainTransition = MMainTransition.Pop()
+            pushController(controller, transition:transition)
+        }
+    }
 }
