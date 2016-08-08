@@ -1,18 +1,23 @@
 import UIKit
 
-class VRoot:UIView
+class VRoot:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CRoot!
+    weak var spinner:VMainLoader?
+    private var sections:Int
     
-    convenience init(controller:CRoot)
+    init(controller:CRoot)
     {
-        self.init()
+        sections = 0
+        
+        super.init(frame:CGRectZero)
         clipsToBounds = true
         backgroundColor = UIColor.whiteColor()
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
         let spinner:VMainLoader = VMainLoader()
+        self.spinner = spinner
         
         addSubview(spinner)
         
@@ -31,5 +36,41 @@ class VRoot:UIView
             options:[],
             metrics:metrics,
             views:views))
+    }
+    
+    required init?(coder:NSCoder)
+    {
+        fatalError()
+    }
+    
+    //MARK: public
+    
+    func listLoaded()
+    {
+        sections = 1
+        
+        dispatch_async(dispatch_get_main_queue())
+        { [weak self] in
+            
+        }
+    }
+    
+    //MARK: col del
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return sections
+    }
+    
+    func collectionView(collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+        let count:Int = controller.model.lists.count
+        
+        return count
+    }
+    
+    func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell
+    {
+        
     }
 }

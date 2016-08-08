@@ -35,10 +35,45 @@ class MRootPoems
     
     //MARK: private
     
+    private func listForState(state:DInfraPoem.DInfraPoemStatus) -> MRootPoemsList?
+    {
+        var statusList:MRootPoemsList? = nil
+        
+        for list:MRootPoemsList in lists
+        {
+            if list.state.state == state
+            {
+                statusList = list
+                
+                break
+            }
+        }
+        
+        return statusList
+    }
+    
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
-        let json:[String:AnyObject]? = snapshot.value as? [String:AnyObject]
+        let json:[String:[String:AnyObject]]? = snapshot.value as? [String:[String:AnyObject]]
         
-        print(json!)
+        if json != nil
+        {
+            let keys:[String] = [String](json!.keys)
+            
+            for key:String in keys
+            {
+                let rawItem:[String:AnyObject] = json![key]!
+                let item:MRootPoemsListItem = MRootPoemsListItem(poemId:key, json:rawItem)
+                
+                let list:MRootPoemsList? = listForState(item.status)
+                
+                if list != nil
+                {
+                    list!.items.append(item)
+                }
+            }
+        }
+        
+        controller.viewRoot.listLoaded()
     }
 }

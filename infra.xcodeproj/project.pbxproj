@@ -107,6 +107,7 @@
 		DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */; };
 		DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */; };
 		DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */; };
+		DAA78FE91D58E915007D86D9 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE81D58E915007D86D9 /* VRootCell.swift */; };
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
 		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
@@ -241,6 +242,7 @@
 		DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateNeedsRevision.swift; sourceTree = "<group>"; };
 		DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateRejected.swift; sourceTree = "<group>"; };
 		DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReady.swift; sourceTree = "<group>"; };
+		DAA78FE81D58E915007D86D9 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
 		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 			isa = PBXGroup;
 			children = (
 				DAA78FD21D58CE18007D86D9 /* VRoot.swift */,
+				DAA78FE81D58E915007D86D9 /* VRootCell.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -982,6 +985,7 @@
 				DA381A311D554C9B00140F7E /* MOnboardingItem.swift in Sources */,
 				DAA78FCB1D57C4BC007D86D9 /* FStoragePoemDelegate.swift in Sources */,
 				DA800B231D5015A4008C4904 /* VMainBarButtonLiked.swift in Sources */,
+				DAA78FE91D58E915007D86D9 /* VRootCell.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA381A3A1D554CFE00140F7E /* MOnboardingItemHistoryModelItem.swift in Sources */,
 				DA0EA2071D4BD01100D300B2 /* CategoryNSNotification.swift in Sources */,
