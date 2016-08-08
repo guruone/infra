@@ -2,7 +2,7 @@ import UIKit
 
 class MMainTransitionPush:MMainTransition
 {
-    private let kAnimationDuration:NSTimeInterval = 0.3
+    private let kAnimationDuration:NSTimeInterval = 6
     
     init()
     {
@@ -13,6 +13,7 @@ class MMainTransitionPush:MMainTransition
     {
         let width:CGFloat = current!.view.bounds.maxX
         let barHeight:CGFloat
+        let shadow:VMainShadow = VMainShadow()
         
         if parent.bar == nil
         {
@@ -60,6 +61,25 @@ class MMainTransitionPush:MMainTransition
         parent.view.addConstraint(parent.layoutRightTemporal!)
         parent.view.addConstraint(parent.layoutTopTemporal!)
         parent.view.addConstraint(parent.layoutBottomTemporal!)
+        
+        parent.shadow = shadow
+        next.view.addSubview(shadow)
+        
+        let views:[String:AnyObject] = [
+            "shadow":shadow]
+        
+        let metrics:[String:AnyObject] = [:]
+        
+        next.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[shadow]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        next.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[shadow]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
     }
     
     override func animationBefore()
@@ -79,5 +99,6 @@ class MMainTransitionPush:MMainTransition
     override func animationAfter()
     {
         parent.view.layoutIfNeeded()
+        parent.shadow?.alpha = 1
     }
 }

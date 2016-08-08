@@ -9,6 +9,7 @@ class VMainShadow:UIView
         backgroundColor = UIColor.clearColor()
         userInteractionEnabled = false
         translatesAutoresizingMaskIntoConstraints = false
+        alpha = 0
         
         let visualEffect:UIVisualEffect = UIBlurEffect(style:UIBlurEffectStyle.Dark)
         let blur:UIVisualEffectView = UIVisualEffectView(effect:visualEffect)
