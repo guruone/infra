@@ -3,6 +3,7 @@ import UIKit
 class VRootListUploading:UIView
 {
     weak var controller:CRootListUploading!
+    weak var spinner:VMainLoader!
     
     convenience init(controller:CRootListUploading)
     {
@@ -34,13 +35,20 @@ class VRootListUploading:UIView
         button.setTitleColor(UIColor.main().colorWithAlphaComponent(0.1), forState:UIControlState.Highlighted)
         button.titleLabel?.font = UIFont.bold(14)
         button.setTitle(NSLocalizedString("VRootListUploading_button", comment:""), forState:UIControlState.Normal)
+        button.addTarget(self, action:#selector(self.actionRemove(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
+        
+        let spinner:VMainLoader = VMainLoader()
+        spinner.hidden = true
+        self.spinner = spinner
         
         addSubview(label)
         addSubview(button)
+        addSubview(spinner)
         
         let views:[String:AnyObject] = [
             "label":label,
-            "button":button]
+            "button":button,
+            "spinner":spinner]
         
         let metrics:[String:AnyObject] = [:]
         
@@ -55,9 +63,34 @@ class VRootListUploading:UIView
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-50-[label(150)]-0-[button(38)]",
+            "H:|-0-[spinner]-0-|",
             options:[],
             metrics:metrics,
             views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[label(160)]-0-[button(38)]",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[label]-(-20)-[spinner(78)]",
+            options:[],
+            metrics:metrics,
+            views:views))
+    }
+    
+    //MARK: actions
+    
+    func actionRemove(sender button:UIButton)
+    {
+        button.hidden = true
+        spinner.hidden = false
+        spinner.startAnimating()
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        { [weak self] in
+            
+            self?.controller.removeAll()
+        }
     }
 }

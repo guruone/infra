@@ -10,4 +10,11 @@ class CRootListUploading:CRootList
         self.viewUploading = viewUploading
         view = viewUploading
     }
+    
+    //MARK: public
+    
+    func removeAll()
+    {
+        
+    }
 }
