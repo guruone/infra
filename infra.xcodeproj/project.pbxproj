@@ -100,7 +100,6 @@
 		DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */; };
 		DAA0553E1D5407450070D0E0 /* VCreateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */; };
 		DAA78FC91D57C45A007D86D9 /* FStoragePoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */; };
-		DAA78FCB1D57C4BC007D86D9 /* FStoragePoemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCA1D57C4BC007D86D9 /* FStoragePoemDelegate.swift */; };
 		DAA78FCD1D58CBE5007D86D9 /* MMainNavItemRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCC1D58CBE5007D86D9 /* MMainNavItemRoot.swift */; };
 		DAA78FD01D58CD47007D86D9 /* CRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCF1D58CD47007D86D9 /* CRoot.swift */; };
 		DAA78FD71D58D1F7007D86D9 /* MRootPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */; };
@@ -245,7 +244,6 @@
 		DAA0553B1D53FE490070D0E0 /* MCreateItemPublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCreateItemPublish.swift; sourceTree = "<group>"; };
 		DAA0553D1D5407450070D0E0 /* VCreateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateHeader.swift; sourceTree = "<group>"; };
 		DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStoragePoem.swift; sourceTree = "<group>"; };
-		DAA78FCA1D57C4BC007D86D9 /* FStoragePoemDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStoragePoemDelegate.swift; sourceTree = "<group>"; };
 		DAA78FCC1D58CBE5007D86D9 /* MMainNavItemRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemRoot.swift; sourceTree = "<group>"; };
 		DAA78FCF1D58CD47007D86D9 /* CRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRoot.swift; sourceTree = "<group>"; };
 		DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoems.swift; sourceTree = "<group>"; };
@@ -686,7 +684,6 @@
 				DA800AFC1D4FD5D9008C4904 /* FStorageNews.swift */,
 				DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */,
 				DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */,
-				DAA78FCA1D57C4BC007D86D9 /* FStoragePoemDelegate.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -1079,7 +1076,6 @@
 				DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */,
 				DAA78FD01D58CD47007D86D9 /* CRoot.swift in Sources */,
 				DA381A311D554C9B00140F7E /* MOnboardingItem.swift in Sources */,
-				DAA78FCB1D57C4BC007D86D9 /* FStoragePoemDelegate.swift in Sources */,
 				DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */,
 				DA32180E1D593BE300DAF787 /* VRootListReview.swift in Sources */,
 				DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */,

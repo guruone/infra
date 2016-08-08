@@ -24,13 +24,12 @@ class FStorage
         }
     }
     
-    func savePoem(poemId:String, poem:NSURL, delegate:FStoragePoemDelegate?)
+    func savePoem(poemId:String, poem:NSURL, completionHandler:((String?)->())?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-        { [weak delegate] in
-            
+        {   
             let fPoem:FStoragePoem = FStoragePoem()
-            fPoem.save(poemId, poem:poem, storage:self.storageReference, delegate:delegate)
+            fPoem.save(poemId, poem:poem, storage:self.storageReference, completionHandler:completionHandler)
         }
     }
 }

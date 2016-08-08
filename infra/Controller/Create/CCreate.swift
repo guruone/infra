@@ -1,6 +1,6 @@
 import UIKit
 
-class CCreate:CMainController, FStoragePoemDelegate
+class CCreate:CMainController
 {
     weak var viewCreate:VCreate!
     weak var publishItem:MCreateItemPublish?
@@ -39,7 +39,40 @@ class CCreate:CMainController, FStoragePoemDelegate
         let poemTitle:String = model.itemTitle.title
         fPoem = FDatabaseModelPoem(title:poemTitle)
         poemId = FMain.sharedInstance.database.newPoem(fPoem!)
-        FMain.sharedInstance.storage.savePoem(poemId!, poem:poem, delegate:self)
+        FMain.sharedInstance.storage.savePoem(poemId!, poem:poem)
+        { [weak self] (error) in
+            
+            if error == nil
+            {
+                self?.poemCreated()
+            }
+            else
+            {
+                self?.publishFailed(error!)
+            }
+        }
+    }
+    
+    private func poemCreated()
+    {
+        DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
+        { [weak self] (model) in
+            
+            if self?.poemId != nil && self?.fPoem != nil
+            {
+                model.justSaved(self!.poemId!)
+                
+                let property:[String:AnyObject] = self!.fPoem!.propertyStatus(model.status)
+                FMain.sharedInstance.database.updatePoem(self!.poemId!, property:property)
+                
+                self?.poemSaved()
+            }
+            else
+            {
+                let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
+                self?.publishFailed(errorSaving)
+            }
+        }
     }
     
     private func poemSaved()
@@ -84,34 +117,5 @@ class CCreate:CMainController, FStoragePoemDelegate
                 self?.publishFailed(error!)
             }
         }
-    }
-    
-    //MARK: storage poem
-    
-    func fStoragePoemSaved()
-    {
-        DManager.sharedInstance.managerInfra.createManagedObject(DInfraPoem.self)
-        { [weak self] (model) in
-            
-            if self?.poemId != nil && self?.fPoem != nil
-            {
-                model.justSaved(self!.poemId!)
-                
-                let property:[String:AnyObject] = self!.fPoem!.propertyStatus(model.status)
-                FMain.sharedInstance.database.updatePoem(self!.poemId!, property:property)
-                
-                self?.poemSaved()
-            }
-            else
-            {
-                let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
-                self?.publishFailed(errorSaving)
-            }
-        }
-    }
-    
-    func fStoragePoemError(error:String)
-    {
-        publishFailed(error)
     }
 }
