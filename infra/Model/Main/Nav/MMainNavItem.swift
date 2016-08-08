@@ -42,6 +42,13 @@ class MMainNavItem
         return item
     }
     
+    class func Root(index:Int) -> MMainNavItem
+    {
+        let item:MMainNavItem = MMainNavItemRoot(index:index)
+        
+        return item
+    }
+    
     init(image:String, index:Int)
     {
         self.image = image

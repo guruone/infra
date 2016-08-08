@@ -18,8 +18,15 @@ class MMainNav
         items.append(itemCreate)
         let itemNotifications:MMainNavItem = MMainNavItem.Notifications(items.count)
         items.append(itemNotifications)
-        self.items = items
         
+        #if DEBUG
+            
+            let itemRoot:MMainNavItem = MMainNavItem.Root(items.count)
+            items.append(itemRoot)
+            
+        #endif
+        
+        self.items = items
         selectItem(itemHome)
     }
     
