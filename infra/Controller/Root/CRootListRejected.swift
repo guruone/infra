@@ -1,6 +1,6 @@
 import UIKit
 
-class CRootRejected:CRootList
+class CRootListRejected:CRootList
 {
     
 }

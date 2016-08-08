@@ -10,4 +10,13 @@ class MRootPoemsList
         self.state = state
         items = []
     }
+    
+    //MARK: public
+    
+    func controller() -> CRootList
+    {
+        let list:CRootList = state.controllerType.init(model:self)
+        
+        return list
+    }
 }

@@ -6,12 +6,8 @@ class MRootPoemsStateUploading:MRootPoemsState
     
     init()
     {
+        let controllerType:CRootList.Type = CRootListUploading.self
         let state:DInfraPoem.DInfraPoemStatus = DInfraPoem.DInfraPoemStatus.Uploading
-        super.init(state:state, title:kTitle)
-    }
-    
-    override func controller() -> UIViewController
-    {
-        
+        super.init(controllerType:controllerType, state:state, title:kTitle)
     }
 }

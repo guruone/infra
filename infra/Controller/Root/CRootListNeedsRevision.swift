@@ -1,6 +1,6 @@
 import UIKit
 
-class CRootRevision:CRootList
+class CRootListNeedsRevision:CRootList
 {
     
 }

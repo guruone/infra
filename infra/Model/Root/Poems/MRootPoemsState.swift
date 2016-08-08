@@ -4,6 +4,7 @@ class MRootPoemsState
 {
     let state:DInfraPoem.DInfraPoemStatus
     let title:String
+    let controllerType:CRootList.Type
     
     class func Uploading() -> MRootPoemsStateUploading
     {
@@ -40,16 +41,10 @@ class MRootPoemsState
         return state
     }
     
-    init(state:DInfraPoem.DInfraPoemStatus, title:String)
+    init(controllerType:CRootList.Type ,state:DInfraPoem.DInfraPoemStatus, title:String)
     {
+        self.controllerType = controllerType
         self.state = state
         self.title = title
-    }
-    
-    //MARK: public
-    
-    func controller() -> UIViewController
-    {
-        fatalError()
     }
 }

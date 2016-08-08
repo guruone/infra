@@ -6,7 +6,8 @@ class MRootPoemsStateReview:MRootPoemsState
     
     init()
     {
+        let controllerType:CRootList.Type = CRootListReview.self
         let state:DInfraPoem.DInfraPoemStatus = DInfraPoem.DInfraPoemStatus.Review
-        super.init(state:state, title:kTitle)
+        super.init(controllerType:controllerType, state:state, title:kTitle)
     }
 }

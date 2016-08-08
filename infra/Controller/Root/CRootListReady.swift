@@ -1,6 +1,6 @@
 import UIKit
 
-class CRootReady:CRootList
+class CRootListReady:CRootList
 {
     
 }

@@ -6,7 +6,8 @@ class MRootPoemsStateRejected:MRootPoemsState
     
     init()
     {
+        let controllerType:CRootList.Type = CRootListRejected.self
         let state:DInfraPoem.DInfraPoemStatus = DInfraPoem.DInfraPoemStatus.Rejected
-        super.init(state:state, title:kTitle)
+        super.init(controllerType:controllerType, state:state, title:kTitle)
     }
 }
