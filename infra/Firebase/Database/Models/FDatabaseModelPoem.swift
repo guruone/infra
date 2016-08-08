@@ -27,6 +27,19 @@ class FDatabaseModelPoem:FDatabaseModel
         lastEdited = Int(now)
     }
     
+    init(json:[String:AnyObject])
+    {
+        let rawStatus:Int = json[kKeyStatus] as! Int
+        let rawStatus16:Int16 = Int16(rawStatus)
+        
+        title = json[kKeyTitle] as! String
+        userId = json[kKeyUserId] as! String
+        status = DInfraPoem.DInfraPoemStatus(rawValue:rawStatus16)!
+        created = json[kKeyCreated] as! Int
+        lastEdited = json[kKeyLastEdit] as! Int
+        likes = json[kKeyLikes] as! Int
+    }
+    
     //MARK: public
     
     func modelJson() -> [String:AnyObject]

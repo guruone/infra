@@ -37,6 +37,8 @@ class MRootPoems
     
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
+        let json:[String:AnyObject]? = snapshot.value as? [String:AnyObject]
         
+        print(json)
     }
 }
