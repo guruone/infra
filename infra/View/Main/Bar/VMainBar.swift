@@ -4,7 +4,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 {
     weak var controllerParent:CMainParent!
     weak var collection:UICollectionView!
-    weak var back:UIButton!
+    weak var back:VMainBarBack!
     weak var layoutCollectionLeft:NSLayoutConstraint!
     weak var layoutCollectionRight:NSLayoutConstraint!
     weak var layoutBackLeft:NSLayoutConstraint!
@@ -49,14 +49,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         )
         self.collection = collection
         
-        let back:UIButton = UIButton()
-        back.translatesAutoresizingMaskIntoConstraints = false
-        back.clipsToBounds = true
-        back.setImage(UIImage(named:"genericBack"), forState:UIControlState.Normal)
-        back.imageView?.contentMode = UIViewContentMode.Center
-        back.imageView?.clipsToBounds = true
-        back.addTarget(self, action:#selector(self.actionBack(sender:)), forControlEvents:UIControlEvents.TouchUpInside)
-        back.imageEdgeInsets = UIEdgeInsetsMake(20, 0, 0, 0)
+        let back:VMainBarBack = VMainBarBack(main:controllerParent)
         self.back = back
         
         addSubview(collection)
@@ -96,7 +89,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             multiplier:1,
             constant:0)
         layoutBackRight = NSLayoutConstraint(
-            item:collection,
+            item:back,
             attribute:NSLayoutAttribute.Right,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
@@ -104,7 +97,7 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
             multiplier:1,
             constant:0)
         layoutBackLeft = NSLayoutConstraint(
-            item:collection,
+            item:back,
             attribute:NSLayoutAttribute.Left,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
@@ -153,13 +146,6 @@ class VMainBar:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         }
         
         super.layoutSubviews()
-    }
-    
-    //MARK: actions
-    
-    func actionBack(sender button:UIButton)
-    {
-        print("action back")
     }
     
     //MARK: private

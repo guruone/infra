@@ -43,6 +43,7 @@
 		DA3218041D591B8800DAF787 /* MMainNavPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218031D591B8800DAF787 /* MMainNavPos.swift */; };
 		DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */; };
 		DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */; };
+		DA32180A1D592D5000DAF787 /* VMainBarBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218091D592D5000DAF787 /* VMainBarBack.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -185,6 +186,7 @@
 		DA3218031D591B8800DAF787 /* MMainNavPos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPos.swift; sourceTree = "<group>"; };
 		DA3218051D591BF800DAF787 /* MMainNavPostNormal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostNormal.swift; sourceTree = "<group>"; };
 		DA3218071D591C0500DAF787 /* MMainNavPostPushed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavPostPushed.swift; sourceTree = "<group>"; };
+		DA3218091D592D5000DAF787 /* VMainBarBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarBack.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				DA3217F81D5918AA00DAF787 /* VMainBar.swift */,
+				DA3218091D592D5000DAF787 /* VMainBarBack.swift */,
 				DA3217F91D5918AA00DAF787 /* VMainBarCell.swift */,
 			);
 			path = Bar;
@@ -1080,6 +1083,7 @@
 				DA800B2F1D502981008C4904 /* MMainTransition.swift in Sources */,
 				DA800B0F1D4FED14008C4904 /* CAccessBanned.swift in Sources */,
 				DA0EA20A1D4BD01100D300B2 /* CategoryUIFont.swift in Sources */,
+				DA32180A1D592D5000DAF787 /* VMainBarBack.swift in Sources */,
 				DAA0551E1D53D9E60070D0E0 /* CCreate.swift in Sources */,
 				DA0EA21E1D4BD01100D300B2 /* DManagerSaver.swift in Sources */,
 				DAB21BA61D5508B9001CD703 /* COnboardingItemApp.swift in Sources */,
