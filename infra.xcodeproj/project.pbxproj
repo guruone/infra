@@ -82,8 +82,6 @@
 		DA800B001D4FD5D9008C4904 /* FMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AF81D4FD5D9008C4904 /* FMain.swift */; };
 		DA800B011D4FD5D9008C4904 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA800AF91D4FD5D9008C4904 /* GoogleService-Info.plist */; };
 		DA800B021D4FD5D9008C4904 /* FStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AFB1D4FD5D9008C4904 /* FStorage.swift */; };
-		DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AFC1D4FD5D9008C4904 /* FStorageNews.swift */; };
-		DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */; };
 		DA800B081D4FD69C008C4904 /* FDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B061D4FD69C008C4904 /* FDatabase.swift */; };
 		DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */; };
 		DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */; };
@@ -234,8 +232,6 @@
 		DA800AF81D4FD5D9008C4904 /* FMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FMain.swift; sourceTree = "<group>"; };
 		DA800AF91D4FD5D9008C4904 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DA800AFB1D4FD5D9008C4904 /* FStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStorage.swift; sourceTree = "<group>"; };
-		DA800AFC1D4FD5D9008C4904 /* FStorageNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStorageNews.swift; sourceTree = "<group>"; };
-		DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStorageNewsDelegate.swift; sourceTree = "<group>"; };
 		DA800B061D4FD69C008C4904 /* FDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabase.swift; sourceTree = "<group>"; };
 		DA800B091D4FD894008C4904 /* FDatabaseModelUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModelUser.swift; sourceTree = "<group>"; };
 		DA800B0B1D4FDF80008C4904 /* FDatabaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDatabaseModel.swift; sourceTree = "<group>"; };
@@ -728,8 +724,6 @@
 			isa = PBXGroup;
 			children = (
 				DA800AFB1D4FD5D9008C4904 /* FStorage.swift */,
-				DA800AFC1D4FD5D9008C4904 /* FStorageNews.swift */,
-				DA800AFD1D4FD5D9008C4904 /* FStorageNewsDelegate.swift */,
 				DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */,
 			);
 			path = Storage;
@@ -1197,14 +1191,12 @@
 				DAA78FF31D58FDD4007D86D9 /* CRootListReady.swift in Sources */,
 				DA0C453C1D4C017C003AF335 /* MConfiguration.swift in Sources */,
 				DAB8CE131D5503A500F273E1 /* DInfraPoem.swift in Sources */,
-				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
 				DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */,
 				DA3217FF1D5918AA00DAF787 /* VMainBarCell.swift in Sources */,
 				DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */,
 				DA4188881D5A1DEE00ADFD25 /* MRootPoemsList.swift in Sources */,
 				DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */,
 				DA41888F1D5A1DEE00ADFD25 /* MRootPoemsStateUploading.swift in Sources */,
-				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
 				DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */,
 				DA381A341D554C9B00140F7E /* MOnboardingItemUser.swift in Sources */,
 				DA800B351D50298D008C4904 /* MMainNav.swift in Sources */,

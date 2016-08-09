@@ -1,8 +1,9 @@
 import UIKit
+import FirebaseDatabase
 
 class MRootPoemsListItem
 {
-    var itemStatus:MRootPoemsListItemStatus
+    var itemStatus:MRootPoemsListItemStatus?
     let status:DInfraPoem.DInfraPoemStatus
     let poemId:String
     let title:String
@@ -12,6 +13,8 @@ class MRootPoemsListItem
     let likes:Int
     var text:String?
     var cellSize:CGSize?
+    var userName:String?
+    private var completion:((error:String?) -> ())?
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -23,23 +26,40 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
-        itemStatus = MRootPoemsListItemStatus.None()
+        itemStatus = MRootPoemsListItemStatus.None(self)
     }
     
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
-        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
-        access = fUser.access
-        name = fUser.name
+        userName = snapshot.value as? String
+    }
+    
+    private func loadUserName()
+    {
+        let fUser:FDatabaseModelUser = FDatabaseModelUser()
+        let property:String = fUser.kKeyName
         
-        MConfiguration.sharedInstance.userSynced()
+        FMain.sharedInstance.database.listenUser(userId, property:property, snapBlock:snapBlock)
+    }
+    
+    private func loadPoem()
+    {
+        FMain.sharedInstance.storage
     }
     
     //MARK: public
     
-    func loadData()
+    func errored(error:String)
     {
+        itemStatus = MRootPoemsListItemStatus.Error(self, error:error)
+    }
+    
+    func loadData(completion:((error:String?) -> ()))
+    {
+        itemStatus = MRootPoemsListItemStatus.Downloading(self)
+        self.completion = completion
         
+        loadUserName()
     }
     
     func cellSizeFor(width:CGFloat)

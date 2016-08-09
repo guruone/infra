@@ -4,8 +4,14 @@ class FDatabaseModelUser:FDatabaseModel
 {
     let access:DInfraUser.DInfraUserAccess
     let name:String
-    private let kKeyAccess:String = "access"
-    private let kKeyName:String = "name"
+    let kKeyAccess:String = "access"
+    let kKeyName:String = "name"
+    
+    init()
+    {
+        access = DInfraUser.DInfraUserAccess.Regular
+        name = ""
+    }
     
     init(dbUser:DInfraUser)
     {

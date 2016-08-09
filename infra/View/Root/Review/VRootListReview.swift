@@ -7,7 +7,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     private let kHeaderHeight:CGFloat = 100
     private let kFooterHeight:CGFloat = 80
     private let kCollectionBottom:CGFloat = 30
-    private(set) var model:[MRootPoemsListItem]
+    var model:[MRootPoemsListItem]
     
     init(controller:CRootListReview)
     {
@@ -72,6 +72,11 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     //MARK: public
+    
+    func insert(item:MRootPoemsListItem)
+    {
+        
+    }
     
     //MARK: col del
     

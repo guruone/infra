@@ -5,7 +5,6 @@ class FStorage
 {
     private let storage:FIRStorage
     private let storageReference:FIRStorageReference
-    weak private var storageNews:FStorageNews?
     
     init()
     {
@@ -14,15 +13,6 @@ class FStorage
     }
     
     //MARK: public
-    
-    func loadNews(delegate:FStorageNewsDelegate?)
-    {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-        { [weak delegate] in
-            
-            self.storageNews = FStorageNews(storage:self.storageReference, delegate:delegate)
-        }
-    }
     
     func savePoem(poemId:String, poem:NSData, completionHandler:((error:String?) -> ())?)
     {
@@ -39,6 +29,15 @@ class FStorage
         {
             let fPoem:FStoragePoem = FStoragePoem()
             fPoem.delete(poemId, storage:self.storageReference, completionHandler:completionHandler)
+        }
+    }
+    
+    func loadPoem(poemId:String, completionHandler:((poem:String?, error:String?) -> ())?)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        {
+            let fPoem:FStoragePoem = FStoragePoem()
+            fPoem.load(poemId, storage: self.storageReference, completionHandler:completionHandler)
         }
     }
 }

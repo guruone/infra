@@ -4,6 +4,7 @@ import Firebase
 class FStoragePoem
 {
     private let kReferenceRoot:String = "poems"
+    private let kFiveMegaBytes:Int64 = 5242880
     
     init()
     {
@@ -44,6 +45,49 @@ class FStoragePoem
             
             let errorString:String? = error?.localizedDescription
             completionHandler?(error:errorString)
+        }
+    }
+    
+    func load(poemId:String, storage:FIRStorageReference, completionHandler:((poem:String?, error:String?) -> ())?)
+    {
+        let rootReference:FIRStorageReference = storage.child(kReferenceRoot)
+        let poemReference:FIRStorageReference = rootReference.child(poemId)
+        
+        poemReference.dataWithMaxSize(kFiveMegaBytes)
+        { (data, error) in
+            
+            let poem:String?
+            let errorString:String?
+            
+            if error == nil && data != nil
+            {
+                poem = String(data:data!, encoding:NSUTF8StringEncoding)
+                
+                if poem == nil
+                {
+                    errorString = NSLocalizedString("general_errorDownload", comment:"")
+                }
+                else
+                {
+                    errorString = nil
+                }
+            }
+            else
+            {
+                poem = nil
+                let errorDescription:String? = error!.localizedDescription
+                
+                if errorDescription == nil
+                {
+                    errorString = NSLocalizedString("general_errorDownload", comment:"")
+                }
+                else
+                {
+                    errorString = errorDescription
+                }
+            }
+            
+            completionHandler?(poem:poem, error:errorString)
         }
     }
 }
