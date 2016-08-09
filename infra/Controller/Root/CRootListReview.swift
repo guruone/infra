@@ -6,11 +6,7 @@ class CRootListReview:CRootList
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        
-        let count:Int
-        
-        if model.items.count
+        super.viewDidLoad()   
     }
     
     override func loadView()

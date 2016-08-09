@@ -105,15 +105,6 @@
 		DAA78FC91D57C45A007D86D9 /* FStoragePoem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */; };
 		DAA78FCD1D58CBE5007D86D9 /* MMainNavItemRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCC1D58CBE5007D86D9 /* MMainNavItemRoot.swift */; };
 		DAA78FD01D58CD47007D86D9 /* CRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FCF1D58CD47007D86D9 /* CRoot.swift */; };
-		DAA78FD71D58D1F7007D86D9 /* MRootPoems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */; };
-		DAA78FD91D58D62C007D86D9 /* MRootPoemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */; };
-		DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */; };
-		DAA78FDD1D58D65C007D86D9 /* MRootPoemsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */; };
-		DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */; };
-		DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */; };
-		DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */; };
-		DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */; };
-		DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */; };
 		DAA78FEB1D58FDA0007D86D9 /* CRootListUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEA1D58FDA0007D86D9 /* CRootListUploading.swift */; };
 		DAA78FED1D58FDAC007D86D9 /* CRootListReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEC1D58FDAC007D86D9 /* CRootListReview.swift */; };
 		DAA78FEF1D58FDB9007D86D9 /* CRootListNeedsRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FEE1D58FDB9007D86D9 /* CRootListNeedsRevision.swift */; };
@@ -252,15 +243,6 @@
 		DAA78FC81D57C45A007D86D9 /* FStoragePoem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FStoragePoem.swift; sourceTree = "<group>"; };
 		DAA78FCC1D58CBE5007D86D9 /* MMainNavItemRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemRoot.swift; sourceTree = "<group>"; };
 		DAA78FCF1D58CD47007D86D9 /* CRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRoot.swift; sourceTree = "<group>"; };
-		DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoems.swift; sourceTree = "<group>"; };
-		DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsList.swift; sourceTree = "<group>"; };
-		DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsState.swift; sourceTree = "<group>"; };
-		DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItem.swift; sourceTree = "<group>"; };
-		DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReview.swift; sourceTree = "<group>"; };
-		DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateUploading.swift; sourceTree = "<group>"; };
-		DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateNeedsRevision.swift; sourceTree = "<group>"; };
-		DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateRejected.swift; sourceTree = "<group>"; };
-		DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsStateReady.swift; sourceTree = "<group>"; };
 		DAA78FEA1D58FDA0007D86D9 /* CRootListUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListUploading.swift; sourceTree = "<group>"; };
 		DAA78FEC1D58FDAC007D86D9 /* CRootListReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListReview.swift; sourceTree = "<group>"; };
 		DAA78FEE1D58FDB9007D86D9 /* CRootListNeedsRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListNeedsRevision.swift; sourceTree = "<group>"; };
@@ -854,15 +836,6 @@
 		DAA78FD51D58D1E7007D86D9 /* Poems */ = {
 			isa = PBXGroup;
 			children = (
-				DAA78FD61D58D1F7007D86D9 /* MRootPoems.swift */,
-				DAA78FDA1D58D651007D86D9 /* MRootPoemsState.swift */,
-				DAA78FE01D58D6B2007D86D9 /* MRootPoemsStateUploading.swift */,
-				DAA78FDE1D58D69B007D86D9 /* MRootPoemsStateReview.swift */,
-				DAA78FE21D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift */,
-				DAA78FE41D58D6DB007D86D9 /* MRootPoemsStateRejected.swift */,
-				DAA78FE61D58D6E5007D86D9 /* MRootPoemsStateReady.swift */,
-				DAA78FD81D58D62C007D86D9 /* MRootPoemsList.swift */,
-				DAA78FDC1D58D65C007D86D9 /* MRootPoemsListItem.swift */,
 			);
 			path = Poems;
 			sourceTree = "<group>";
@@ -1109,11 +1082,8 @@
 				DAA78FEB1D58FDA0007D86D9 /* CRootListUploading.swift in Sources */,
 				DAA78FF11D58FDC3007D86D9 /* CRootListRejected.swift in Sources */,
 				DA0EA20C1D4BD01100D300B2 /* CategoryUIViewController.swift in Sources */,
-				DAA78FE31D58D6C0007D86D9 /* MRootPoemsStateNeedsRevision.swift in Sources */,
 				DAA78FEF1D58FDB9007D86D9 /* CRootListNeedsRevision.swift in Sources */,
 				DA800B3B1D5029B9008C4904 /* MMainNavItemProfile.swift in Sources */,
-				DAA78FD91D58D62C007D86D9 /* MRootPoemsList.swift in Sources */,
-				DAA78FE71D58D6E5007D86D9 /* MRootPoemsStateReady.swift in Sources */,
 				DA0EA21D1D4BD01100D300B2 /* DManagerModelInfra.swift in Sources */,
 				DAD3521F1D4C657600401230 /* CHome.swift in Sources */,
 				DAA055251D53E73D0070D0E0 /* VCreateCellTitle.swift in Sources */,
@@ -1124,7 +1094,6 @@
 				DAA055361D53EBF50070D0E0 /* MCreateItemText.swift in Sources */,
 				DA3218081D591C0500DAF787 /* MMainNavPostPushed.swift in Sources */,
 				DA800B3D1D5029C2008C4904 /* MMainNavItemCreate.swift in Sources */,
-				DAA78FDB1D58D651007D86D9 /* MRootPoemsState.swift in Sources */,
 				DA32180C1D5932BD00DAF787 /* MMainTransitionPop.swift in Sources */,
 				DA0EA2051D4BD01100D300B2 /* CategoryNSFileManager.swift in Sources */,
 				DA381A3C1D554D0B00140F7E /* MOnboardingItemHistoryModelItemImage.swift in Sources */,
@@ -1132,27 +1101,23 @@
 				DAB8CE141D5503A500F273E1 /* DInfraPoem+CoreDataProperties.swift in Sources */,
 				DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */,
 				DA3218001D5918AA00DAF787 /* VMainAlert.swift in Sources */,
-				DAA78FD71D58D1F7007D86D9 /* MRootPoems.swift in Sources */,
 				DAA78FC91D57C45A007D86D9 /* FStoragePoem.swift in Sources */,
 				DA381A321D554C9B00140F7E /* MOnboardingItemApp.swift in Sources */,
 				DA3218011D5918AA00DAF787 /* VMainLoader.swift in Sources */,
 				DAF32B101D55962900704E75 /* VOnboardingItemUser.swift in Sources */,
 				DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
-				DAA78FE51D58D6DB007D86D9 /* MRootPoemsStateRejected.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
 				DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */,
 				DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */,
 				DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
-				DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */,
 				DA3218101D5956CD00DAF787 /* VRootListReviewCell.swift in Sources */,
 				DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */,
 				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
 				DA800B311D502981008C4904 /* MMainTransitionReplace.swift in Sources */,
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
-				DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */,
 				DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */,
 				DA3218121D59571A00DAF787 /* VRootListReviewHeader.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
@@ -1165,7 +1130,6 @@
 				DA800B041D4FD5D9008C4904 /* FStorageNewsDelegate.swift in Sources */,
 				DA800B0C1D4FDF80008C4904 /* FDatabaseModel.swift in Sources */,
 				DA3217FF1D5918AA00DAF787 /* VMainBarCell.swift in Sources */,
-				DAA78FDD1D58D65C007D86D9 /* MRootPoemsListItem.swift in Sources */,
 				DAB8CE101D54FFED00F273E1 /* FDatabaseModelPoem.swift in Sources */,
 				DA800B0A1D4FD894008C4904 /* FDatabaseModelUser.swift in Sources */,
 				DA800B031D4FD5D9008C4904 /* FStorageNews.swift in Sources */,
