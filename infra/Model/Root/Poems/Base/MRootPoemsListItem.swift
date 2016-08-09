@@ -22,7 +22,7 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
-        itemStatus =
+        itemStatus = MRootPoemsListItemStatus.None()
     }
     
     //MARK: public

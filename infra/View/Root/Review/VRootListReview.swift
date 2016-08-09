@@ -3,6 +3,7 @@ import UIKit
 class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     weak var controller:CRootListReview!
+    weak var collection:UICollectionView!
     
     convenience init(controller:CRootListReview)
     {
@@ -11,6 +12,37 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         backgroundColor = UIColor.whiteColor()
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
+        
+        let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        let collection:UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout:flow)
+        collection.backgroundColor = UIColor.clearColor()
+        collection.translatesAutoresizingMaskIntoConstraints = false
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
+        collection.clipsToBounds = true
+        collection.alwaysBounceVertical = true
+        collection.dataSource = self
+        collection.delegate = self
+        collection.registerClass(
+            VRootListReviewCell.self,
+            forCellWithReuseIdentifier:
+            VRootListReviewCell.reusableIdentifier())
+        collection.registerClass(
+            VRootListReviewHeader.self,
+            forSupplementaryViewOfKind:
+            UICollectionElementKindSectionHeader,
+            withReuseIdentifier:
+            VRootListReviewHeader.reusableIdentifier())
+        collection.registerClass(
+            VRootListReviewFooter.self,
+            forSupplementaryViewOfKind:
+            UICollectionElementKindSectionFooter,
+            withReuseIdentifier:
+            VRootListReviewFooter.reusableIdentifier())
+        self.collection = collection
+        
+        addSubview(collection)
     }
     
     //MARK: col del
