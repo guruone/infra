@@ -57,15 +57,14 @@ class MRootPoemsListItem
         FMain.sharedInstance.storage.loadPoem(poemId)
         { [weak self] (poem, error) in
             
-            self?.text = poem
-            
-            if poem != nil
+            if self != nil
             {
-                self?.attributedString = NSAttributedString(string:poem!, attributes:self!.attr)
+                self!.text = poem
+                self!.text = ""
+                self!.attributedString = NSAttributedString(string:self!.text!, attributes:self!.attr)
+                self!.completion?(error:error)
+                self!.completion = nil
             }
-            
-            self?.completion?(error:error)
-            self?.completion = nil
         }
     }
     

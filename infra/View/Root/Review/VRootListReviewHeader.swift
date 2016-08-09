@@ -3,9 +3,14 @@ import UIKit
 class VRootListReviewHeader:UICollectionReusableView
 {
     weak var label:UILabel!
+    private let attrTitle:[String:AnyObject]
+    private let attrUser:[String:AnyObject]
     
     override init(frame:CGRect)
     {
+        attrTitle = [NSFontAttributeName:UIFont.regular(16), NSForegroundColorAttributeName:UIColor.blackColor()]
+        attrUser = [NSFontAttributeName:UIFont.regular(14), NSForegroundColorAttributeName:UIColor(white:0.4, alpha:1)]
+        
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clearColor()
@@ -15,8 +20,6 @@ class VRootListReviewHeader:UICollectionReusableView
         label.userInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.regular(16)
-        label.textColor = UIColor.blackColor()
         self.label = label
         
         addSubview(label)
@@ -47,6 +50,24 @@ class VRootListReviewHeader:UICollectionReusableView
     
     func config(model:MRootPoemsListItem)
     {
-        label.text = model.title
+        let mutableString:NSMutableAttributedString = NSMutableAttributedString()
+        let rawTitle:String = "\(model.title)"
+        let rawUser:String
+        
+        if model.userName == nil
+        {
+            rawUser = ""
+        }
+        else
+        {
+            rawUser = String(format:NSLocalizedString("VRootListReviewHeader_labelUser", comment:""), model.userName!)
+        }
+        
+        let stringTitle:NSAttributedString = NSAttributedString(string:rawTitle, attributes:attrTitle)
+        let stringUser:NSAttributedString = NSAttributedString(string:rawUser, attributes:attrUser)
+        mutableString.appendAttributedString(stringTitle)
+        mutableString.appendAttributedString(stringUser)
+        
+        label.attributedText = mutableString
     }
 }

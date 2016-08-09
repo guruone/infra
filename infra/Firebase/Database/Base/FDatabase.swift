@@ -41,7 +41,7 @@ class FDatabase
     
     func listenUser(userId:String, property:String, snapBlock:((FIRDataSnapshot) -> Void))
     {
-        let userReference:FIRDatabaseReference = reference.child(kReferenceUser)
+        let userReference:FIRDatabaseReference = reference.child(kReferenceUser).child(userId)
         let propertyReference:FIRDatabaseReference = userReference.child(property)
         propertyReference.observeSingleEventOfType(FIRDataEventType.Value, withBlock:snapBlock)
     }
