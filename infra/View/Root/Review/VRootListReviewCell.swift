@@ -19,7 +19,6 @@ class VRootListReviewCell:UICollectionViewCell
         label.userInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.regular(14)
         label.textColor = UIColor.main()
         self.label = label
         
@@ -73,6 +72,10 @@ class VRootListReviewCell:UICollectionViewCell
     
     func config(model:MRootPoemsListItem)
     {
-        
+        layoutLabelTop.constant = model.kMarginVertical
+        layoutLabelBottom.constant = model.kMarginVertical
+        layoutLabelLeft.constant = model.kMarginHorizontal
+        layoutLabelRight.constant = model.kMarginHorizontal
+        label.attributedText = model.attributedString
     }
 }

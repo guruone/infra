@@ -22,10 +22,10 @@ class CRootListReview:CRootList
     {
         super.viewDidLoad()
         
-        if !model.items.isEmpty
-        {
-            let indexPath:NSIndexPath = NSIndexPath(forItem:0, inSection:0)
-            pullItems(indexPath)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
+        { [weak self] in
+            
+            self?.backgroundPull(0)
         }
     }
     
@@ -39,11 +39,10 @@ class CRootListReview:CRootList
     private func backgroundPull(index:Int)
     {
         let max:Int = model.items.count
-        let nextItem:Int = index + 1
         
-        if nextItem < max
+        if index < max
         {
-            let item:MRootPoemsListItem = model.items[nextItem]
+            let item:MRootPoemsListItem = model.items[index]
             item.itemStatus?.pull()
             { [weak self] (error) in
                 
@@ -86,11 +85,10 @@ class CRootListReview:CRootList
     
     func pullItems(lastPulled:NSIndexPath)
     {
-        let index:Int = lastPulled.section
-        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         { [weak self] in
             
+            let index:Int = lastPulled.section + 1
             self?.backgroundPull(index)
         }
     }

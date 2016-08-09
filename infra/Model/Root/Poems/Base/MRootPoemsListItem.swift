@@ -14,6 +14,7 @@ class MRootPoemsListItem
     var text:String?
     var cellSize:CGSize?
     var userName:String?
+    var attributedString:NSAttributedString?
     private var completion:((error:String?) -> ())?
     let kMarginHorizontal:CGFloat = 10
     let kMarginVertical:CGFloat = 20
@@ -76,11 +77,11 @@ class MRootPoemsListItem
     func cellSizeFor(width:CGFloat)
     {
         let attr:[String:AnyObject] = [NSFontAttributeName:UIFont.regular(15)]
-        let attrString:NSAttributedString = NSAttributedString(string:text!, attributes:attr)
+        attributedString = NSAttributedString(string:text!, attributes:attr)
         let maxWidth:CGFloat = width - (kMarginHorizontal + kMarginHorizontal)
         let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
         let drawingOptions:NSStringDrawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
-        let rect:CGRect = attrString.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
+        let rect:CGRect = attributedString!.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
         let height:CGFloat = rect.maxY
         let totalHeight:CGFloat = height + (kMarginVertical + kMarginVertical)
         cellSize = CGSizeMake(width, totalHeight)
