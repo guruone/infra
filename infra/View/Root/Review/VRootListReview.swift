@@ -7,10 +7,13 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     private let kHeaderHeight:CGFloat = 100
     private let kFooterHeight:CGFloat = 80
     private let kCollectionBottom:CGFloat = 30
+    private(set) var model:[MRootPoemsListItem]
     
-    convenience init(controller:CRootListReview)
+    init(controller:CRootListReview)
     {
-        self.init()
+        model = []
+        
+        super.init(frame:CGRectZero)
         clipsToBounds = true
         backgroundColor = UIColor.whiteColor()
         translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +57,36 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         addSubview(collection)
     }
     
+    required init?(coder:NSCoder)
+    {
+        fatalError()
+    }
+    
+    //MARK: private
+    
+    private func modelAtIndex(index:NSIndexPath) -> MRootPoemsListItem
+    {
+        let item:MRootPoemsListItem = model[index.item]
+        
+        return item
+    }
+    
+    //MARK: public
+    
     //MARK: col del
+    
+    func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    {
+        let item:MRootPoemsListItem = modelAtIndex(indexPath)
+        
+        if item.cellSize == nil
+        {
+            let width:CGFloat = collectionView.bounds.maxX
+            item.cellSizeFor(width)
+        }
+        
+        return item.cellSize!
+    }
     
     func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
     {

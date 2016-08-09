@@ -11,7 +11,7 @@ class MRootPoemsListItem
     let lastEdit:NSTimeInterval
     let likes:Int
     var text:String?
-    var cellHeight:CGFloat?
+    var cellSize:CGSize?
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -29,6 +29,11 @@ class MRootPoemsListItem
     //MARK: public
     
     func loadData()
+    {
+        
+    }
+    
+    func cellSizeFor(width:CGFloat)
     {
         
     }
