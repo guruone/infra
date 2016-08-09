@@ -12,7 +12,7 @@ class VRootListReviewCell:UICollectionViewCell
     {
         super.init(frame:frame)
         clipsToBounds = true
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.whiteColor()
         userInteractionEnabled = false
         
         let label:UILabel = UILabel()
@@ -34,26 +34,26 @@ class VRootListReviewCell:UICollectionViewCell
             constant:0)
         layoutLabelBottom = NSLayoutConstraint(
             item:label,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Bottom,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Bottom,
             multiplier:1,
             constant:0)
         layoutLabelLeft = NSLayoutConstraint(
             item:label,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Left,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Left,
             multiplier:1,
             constant:0)
         layoutLabelRight = NSLayoutConstraint(
             item:label,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Right,
             relatedBy:NSLayoutRelation.Equal,
             toItem:self,
-            attribute:NSLayoutAttribute.Top,
+            attribute:NSLayoutAttribute.Right,
             multiplier:1,
             constant:0)
         
@@ -73,9 +73,9 @@ class VRootListReviewCell:UICollectionViewCell
     func config(model:MRootPoemsListItem)
     {
         layoutLabelTop.constant = model.kMarginVertical
-        layoutLabelBottom.constant = model.kMarginVertical
+        layoutLabelBottom.constant = -model.kMarginVertical
         layoutLabelLeft.constant = model.kMarginHorizontal
-        layoutLabelRight.constant = model.kMarginHorizontal
+        layoutLabelRight.constant = -model.kMarginHorizontal
         label.attributedText = model.attributedString
     }
 }

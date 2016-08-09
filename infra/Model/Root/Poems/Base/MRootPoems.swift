@@ -30,7 +30,31 @@ class MRootPoems
             listReady
         ]
         
-        FMain.sharedInstance.database.listenPoems(snapBlock)
+        FMain.sharedInstance.database.listenPoems()
+        { [weak self] (snapshot) in
+            
+            let json:[String:[String:AnyObject]]? = snapshot.value as? [String:[String:AnyObject]]
+            
+            if json != nil
+            {
+                let keys:[String] = [String](json!.keys)
+                
+                for key:String in keys
+                {
+                    let rawItem:[String:AnyObject] = json![key]!
+                    let item:MRootPoemsListItem = MRootPoemsListItem(poemId:key, json:rawItem)
+                    
+                    let list:MRootPoemsList? = self?.listForState(item.status)
+                    
+                    if list != nil
+                    {
+                        list!.items.append(item)
+                    }
+                }
+            }
+            
+            self?.controller?.viewRoot.listLoaded()
+        }
     }
     
     //MARK: private
@@ -50,30 +74,5 @@ class MRootPoems
         }
         
         return statusList
-    }
-    
-    private func snapBlock(snapshot:FIRDataSnapshot)
-    {
-        let json:[String:[String:AnyObject]]? = snapshot.value as? [String:[String:AnyObject]]
-        
-        if json != nil
-        {
-            let keys:[String] = [String](json!.keys)
-            
-            for key:String in keys
-            {
-                let rawItem:[String:AnyObject] = json![key]!
-                let item:MRootPoemsListItem = MRootPoemsListItem(poemId:key, json:rawItem)
-                
-                let list:MRootPoemsList? = listForState(item.status)
-                
-                if list != nil
-                {
-                    list!.items.append(item)
-                }
-            }
-        }
-        
-        controller?.viewRoot.listLoaded()
     }
 }

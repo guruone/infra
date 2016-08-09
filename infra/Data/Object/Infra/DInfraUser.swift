@@ -26,15 +26,6 @@ class DInfraUser:NSManagedObject
         return "User"
     }
     
-    private func snapBlock(snapshot:FIRDataSnapshot)
-    {
-        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
-        access = fUser.access
-        name = fUser.name
-        
-        MConfiguration.sharedInstance.userSynced()
-    }
-    
     //MARK: public
     
     func syncUser()
@@ -45,7 +36,15 @@ class DInfraUser:NSManagedObject
             userId = FMain.sharedInstance.database.newUser(fUser)
         }
         
-        updateHandler = FMain.sharedInstance.database.listenUser(userId!, snapBlock:snapBlock)
+        updateHandler = FMain.sharedInstance.database.listenUser(userId!)
+        { [weak self] (snapshot) in
+            
+            let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
+            self?.access = fUser.access
+            self?.name = fUser.name
+            
+            MConfiguration.sharedInstance.userSynced()
+        }
     }
     
     func stopSyncing()

@@ -12,6 +12,7 @@ class MRootPoemsListItem
     let lastEdit:NSTimeInterval
     let likes:Int
     var text:String?
+    var cellWidth:CGFloat
     var cellSize:CGSize?
     var userName:String?
     var attributedString:NSAttributedString?
@@ -30,13 +31,8 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
+        cellWidth = 0
         itemStatus = MRootPoemsListItemStatus.None(self)
-    }
-    
-    private func snapBlock(snapshot:FIRDataSnapshot)
-    {
-        userName = snapshot.value as? String
-        loadPoem()
     }
     
     private func loadUserName()
@@ -44,7 +40,12 @@ class MRootPoemsListItem
         let fUser:FDatabaseModelUser = FDatabaseModelUser()
         let property:String = fUser.kKeyName
         
-        FMain.sharedInstance.database.listenUser(userId, property:property, snapBlock:snapBlock)
+        FMain.sharedInstance.database.listenUser(userId, property:property)
+        { [weak self] (snapshot) in
+            
+            self?.userName = snapshot.value as? String
+            self?.loadPoem()
+        }
     }
     
     private func loadPoem()
@@ -76,14 +77,15 @@ class MRootPoemsListItem
     
     func cellSizeFor(width:CGFloat)
     {
+        cellWidth = width
         let attr:[String:AnyObject] = [NSFontAttributeName:UIFont.regular(15)]
         attributedString = NSAttributedString(string:text!, attributes:attr)
-        let maxWidth:CGFloat = width - (kMarginHorizontal + kMarginHorizontal)
+        let maxWidth:CGFloat = cellWidth - (kMarginHorizontal + kMarginHorizontal)
         let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
         let drawingOptions:NSStringDrawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
         let rect:CGRect = attributedString!.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
         let height:CGFloat = rect.maxY
         let totalHeight:CGFloat = height + (kMarginVertical + kMarginVertical)
-        cellSize = CGSizeMake(width, totalHeight)
+        cellSize = CGSizeMake(cellWidth, totalHeight)
     }
 }

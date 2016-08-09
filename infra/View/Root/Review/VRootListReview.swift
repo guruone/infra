@@ -4,7 +4,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
 {
     weak var controller:CRootListReview!
     weak var collection:UICollectionView!
-    private let kHeaderHeight:CGFloat = 100
+    private let kHeaderHeight:CGFloat = 60
     private let kFooterHeight:CGFloat = 80
     private let kCollectionBottom:CGFloat = 30
     var model:[MRootPoemsListItem]
@@ -15,7 +15,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         
         super.init(frame:CGRectZero)
         clipsToBounds = true
-        backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor(white:0.95, alpha:1)
         translatesAutoresizingMaskIntoConstraints = false
         self.controller = controller
         
@@ -78,6 +78,12 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         fatalError()
     }
     
+    override func layoutSubviews()
+    {
+        collection.collectionViewLayout.invalidateLayout()
+        super.layoutSubviews()
+    }
+    
     //MARK: private
     
     private func modelAtIndex(index:NSIndexPath) -> MRootPoemsListItem
@@ -91,11 +97,11 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
     {
+        let width:CGFloat = collectionView.bounds.maxX
         let item:MRootPoemsListItem = modelAtIndex(indexPath)
         
-        if item.cellSize == nil
+        if item.cellWidth != width
         {
-            let width:CGFloat = collectionView.bounds.maxX
             item.cellSizeFor(width)
         }
         
