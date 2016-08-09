@@ -17,7 +17,7 @@ class VRootListReviewFooter:UICollectionReusableView
     
     //MARK: public
     
-    func config()
+    func config(model:MRootPoemsListItem)
     {
         
     }

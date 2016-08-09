@@ -66,7 +66,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     private func modelAtIndex(index:NSIndexPath) -> MRootPoemsListItem
     {
-        let item:MRootPoemsListItem = model[index.item]
+        let item:MRootPoemsListItem = model[index.section]
         
         return item
     }
@@ -98,6 +98,37 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
     {
         return 1
+    }
+    
+    func collectionView(collectionView:UICollectionView, viewForSupplementaryElementOfKind kind:String, atIndexPath indexPath:NSIndexPath) -> UICollectionReusableView
+    {
+        let item:MRootPoemsListItem = modelAtIndex(indexPath)
+        let reusable:UICollectionReusableView
+        
+        if kind == UICollectionElementKindSectionHeader
+        {
+            let header:VRootListReviewHeader = collectionView.dequeueReusableSupplementaryViewOfKind(
+                kind,
+                withReuseIdentifier:
+                VRootListReviewHeader.reusableIdentifier(),
+                forIndexPath:indexPath) as! VRootListReviewHeader
+            header.config(item)
+            
+            reusable = header
+        }
+        else
+        {
+            let footer:VRootListReviewFooter = collectionView.dequeueReusableSupplementaryViewOfKind(
+                kind,
+                withReuseIdentifier:
+                VRootListReviewFooter.reusableIdentifier(),
+                forIndexPath:indexPath) as! VRootListReviewFooter
+            footer.config(item)
+            
+            reusable = footer
+        }
+        
+        return reusable
     }
     
     func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell

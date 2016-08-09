@@ -29,7 +29,7 @@ class VRootListReviewHeader:UICollectionReusableView
     
     //MARK: public
     
-    func config()
+    func config(model:MRootPoemsListItem)
     {
         
     }
