@@ -102,6 +102,13 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell
     {
-        let cell
+        let item:MRootPoemsListItem = modelAtIndex(indexPath)
+        let cell:VRootListReviewCell = collectionView.dequeueReusableCellWithReuseIdentifier(
+            VRootListReviewCell.reusableIdentifier(),
+            forIndexPath:
+            indexPath) as! VRootListReviewCell
+        cell.config(item)
+        
+        return cell
     }
 }

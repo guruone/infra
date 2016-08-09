@@ -71,7 +71,7 @@ class VRootListReviewCell:UICollectionViewCell
     
     //MARK: public
     
-    func config()
+    func config(model:MRootPoemsListItem)
     {
         
     }
