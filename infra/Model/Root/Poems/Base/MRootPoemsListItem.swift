@@ -26,6 +26,15 @@ class MRootPoemsListItem
         itemStatus = MRootPoemsListItemStatus.None()
     }
     
+    private func snapBlock(snapshot:FIRDataSnapshot)
+    {
+        let fUser:FDatabaseModelUser = FDatabaseModelUser(snapshot:snapshot.value)
+        access = fUser.access
+        name = fUser.name
+        
+        MConfiguration.sharedInstance.userSynced()
+    }
+    
     //MARK: public
     
     func loadData()

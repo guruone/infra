@@ -140,6 +140,8 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
             indexPath) as! VRootListReviewCell
         cell.config(item)
         
+        controller.pullItems(indexPath)
+        
         return cell
     }
 }

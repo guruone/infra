@@ -11,7 +11,7 @@ class FStoragePoem
     
     //MARK: public
     
-    func save(poemId:String, poem:NSData, storage:FIRStorageReference, completionHandler:((String?)->())?)
+    func save(poemId:String, poem:NSData, storage:FIRStorageReference, completionHandler:((error:String?) -> ())?)
     {
         let rootReference:FIRStorageReference = storage.child(kReferenceRoot)
         let poemReference:FIRStorageReference = rootReference.child(poemId)
@@ -31,11 +31,11 @@ class FStoragePoem
                 errorString = NSLocalizedString("FStoragePoem_errorSaving", comment:"")
             }
             
-            completionHandler?(errorString)
+            completionHandler?(error:errorString)
         }
     }
     
-    func delete(poemId:String, storage:FIRStorageReference, completionHandler:((String?)->())?)
+    func delete(poemId:String, storage:FIRStorageReference, completionHandler:((error:String?) -> ())?)
     {
         let rootReference:FIRStorageReference = storage.child(kReferenceRoot)
         let poemReference:FIRStorageReference = rootReference.child(poemId)
@@ -43,7 +43,7 @@ class FStoragePoem
         { (error) in
             
             let errorString:String? = error?.localizedDescription
-            completionHandler?(errorString)
+            completionHandler?(error:errorString)
         }
     }
 }

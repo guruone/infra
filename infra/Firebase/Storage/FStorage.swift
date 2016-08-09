@@ -24,7 +24,7 @@ class FStorage
         }
     }
     
-    func savePoem(poemId:String, poem:NSData, completionHandler:((String?)->())?)
+    func savePoem(poemId:String, poem:NSData, completionHandler:((error:String?) -> ())?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         {   
@@ -33,7 +33,7 @@ class FStorage
         }
     }
     
-    func deletePoem(poemId:String, completionHandler:((String?)->())?)
+    func deletePoem(poemId:String, completionHandler:((error:String?) -> ())?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
         {

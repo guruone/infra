@@ -29,4 +29,10 @@ class MRootPoemsListItemStatus
         
         return status
     }
+    
+    //MARK: public
+    
+    func pull(completion:((error:String?) -> ()))
+    {
+    }
 }
