@@ -2,6 +2,7 @@ import Foundation
 
 class MRootPoemsListItem
 {
+    var itemStatus:MRootPoemsListItemStatus
     let status:DInfraPoem.DInfraPoemStatus
     let poemId:String
     let title:String
@@ -9,6 +10,7 @@ class MRootPoemsListItem
     let created:NSTimeInterval
     let lastEdit:NSTimeInterval
     let likes:Int
+    var text:String?
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -20,7 +22,7 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
-        dataLoaded = false
+        itemStatus =
     }
     
     //MARK: public
