@@ -46,6 +46,9 @@
 		DA32180A1D592D5000DAF787 /* VMainBarBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218091D592D5000DAF787 /* VMainBarBack.swift */; };
 		DA32180C1D5932BD00DAF787 /* MMainTransitionPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */; };
 		DA32180E1D593BE300DAF787 /* VRootListReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180D1D593BE300DAF787 /* VRootListReview.swift */; };
+		DA3218101D5956CD00DAF787 /* VRootListReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA32180F1D5956CD00DAF787 /* VRootListReviewCell.swift */; };
+		DA3218121D59571A00DAF787 /* VRootListReviewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218111D59571A00DAF787 /* VRootListReviewHeader.swift */; };
+		DA3218141D59572200DAF787 /* VRootListReviewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3218131D59572200DAF787 /* VRootListReviewFooter.swift */; };
 		DA381A241D55497300140F7E /* VOnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */; };
 		DA381A261D554A5300140F7E /* VOnboardingItemHistoryImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */; };
 		DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */; };
@@ -190,6 +193,9 @@
 		DA3218091D592D5000DAF787 /* VMainBarBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VMainBarBack.swift; sourceTree = "<group>"; };
 		DA32180B1D5932BD00DAF787 /* MMainTransitionPop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionPop.swift; sourceTree = "<group>"; };
 		DA32180D1D593BE300DAF787 /* VRootListReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReview.swift; sourceTree = "<group>"; };
+		DA32180F1D5956CD00DAF787 /* VRootListReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReviewCell.swift; sourceTree = "<group>"; };
+		DA3218111D59571A00DAF787 /* VRootListReviewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReviewHeader.swift; sourceTree = "<group>"; };
+		DA3218131D59572200DAF787 /* VRootListReviewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReviewFooter.swift; sourceTree = "<group>"; };
 		DA381A221D55497300140F7E /* VOnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistory.swift; sourceTree = "<group>"; };
 		DA381A251D554A5300140F7E /* VOnboardingItemHistoryImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryImage.swift; sourceTree = "<group>"; };
 		DA381A271D554A6300140F7E /* VOnboardingItemHistoryDescr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VOnboardingItemHistoryDescr.swift; sourceTree = "<group>"; };
@@ -559,6 +565,9 @@
 			isa = PBXGroup;
 			children = (
 				DA32180D1D593BE300DAF787 /* VRootListReview.swift */,
+				DA3218111D59571A00DAF787 /* VRootListReviewHeader.swift */,
+				DA3218131D59572200DAF787 /* VRootListReviewFooter.swift */,
+				DA32180F1D5956CD00DAF787 /* VRootListReviewCell.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -1073,6 +1082,7 @@
 				DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */,
 				DAA055301D53EB890070D0E0 /* MCreate.swift in Sources */,
 				DA3217F41D590F3F00DAF787 /* VRootCell.swift in Sources */,
+				DA3218141D59572200DAF787 /* VRootListReviewFooter.swift in Sources */,
 				DA381A281D554A6300140F7E /* VOnboardingItemHistoryDescr.swift in Sources */,
 				DAA78FD01D58CD47007D86D9 /* CRoot.swift in Sources */,
 				DA381A311D554C9B00140F7E /* MOnboardingItem.swift in Sources */,
@@ -1136,6 +1146,7 @@
 				DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */,
 				DA0EA21F1D4BD01100D300B2 /* DInfraModel.xcdatamodeld in Sources */,
 				DAA78FE11D58D6B2007D86D9 /* MRootPoemsStateUploading.swift in Sources */,
+				DA3218101D5956CD00DAF787 /* VRootListReviewCell.swift in Sources */,
 				DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */,
 				DAA0552B1D53E88B0070D0E0 /* VCreateCellPublish.swift in Sources */,
 				DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */,
@@ -1143,6 +1154,7 @@
 				DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */,
 				DAA78FDF1D58D69B007D86D9 /* MRootPoemsStateReview.swift in Sources */,
 				DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */,
+				DA3218121D59571A00DAF787 /* VRootListReviewHeader.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
 				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
