@@ -9,6 +9,7 @@ class MRootPoemsListItem
     let created:NSTimeInterval
     let lastEdit:NSTimeInterval
     let likes:Int
+    var dataLoaded:Bool
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -20,5 +21,13 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
+        dataLoaded = false
+    }
+    
+    //MARK: public
+    
+    func loadData()
+    {
+        
     }
 }
