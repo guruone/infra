@@ -4,6 +4,9 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
 {
     weak var controller:CRootListReview!
     weak var collection:UICollectionView!
+    private let kHeaderHeight:CGFloat = 100
+    private let kFooterHeight:CGFloat = 80
+    private let kCollectionBottom:CGFloat = 30
     
     convenience init(controller:CRootListReview)
     {
@@ -14,6 +17,12 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         self.controller = controller
         
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        flow.headerReferenceSize = CGSizeMake(0, kHeaderHeight)
+        flow.footerReferenceSize = CGSizeMake(0, kFooterHeight)
+        flow.minimumLineSpacing = 0
+        flow.minimumInteritemSpacing = 0
+        flow.scrollDirection = UICollectionViewScrollDirection.Vertical
+        flow.sectionInset = UIEdgeInsetsMake(0, 0, kCollectionBottom, 0)
         
         let collection:UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout:flow)
         collection.backgroundColor = UIColor.clearColor()

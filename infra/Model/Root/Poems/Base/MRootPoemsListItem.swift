@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class MRootPoemsListItem
 {
@@ -11,6 +11,7 @@ class MRootPoemsListItem
     let lastEdit:NSTimeInterval
     let likes:Int
     var text:String?
+    var cellHeight:CGFloat?
     
     init(poemId:String, json:[String:AnyObject])
     {
