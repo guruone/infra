@@ -30,10 +30,7 @@ class MRootPoems
             listReady
         ]
         
-        let dummy:FDatabaseModelPoem = FDatabaseModelPoem()
-        let sortParameter:String = dummy.kKeyCreated
-        
-        FMain.sharedInstance.database.listenPoems(sortParameter)
+        FMain.sharedInstance.database.listenPoems()
         { [weak self] (snapshot) in
             
             let json:[String:[String:AnyObject]]? = snapshot.value as? [String:[String:AnyObject]]
@@ -51,7 +48,7 @@ class MRootPoems
                     
                     if list != nil
                     {
-                        list!.items.append(item)
+                        list!.add(item)
                     }
                 }
             }
