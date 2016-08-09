@@ -8,12 +8,22 @@ class FDatabaseModelPoem:FDatabaseModel
     let created:Int
     let lastEdited:Int
     let likes:Int
-    private let kKeyTitle:String = "title"
-    private let kKeyUserId:String = "user_id"
-    private let kKeyStatus:String = "status"
-    private let kKeyCreated:String = "created"
-    private let kKeyLastEdit:String = "last_edit"
-    private let kKeyLikes:String = "likes"
+    let kKeyTitle:String = "title"
+    let kKeyUserId:String = "user_id"
+    let kKeyStatus:String = "status"
+    let kKeyCreated:String = "created"
+    let kKeyLastEdit:String = "last_edit"
+    let kKeyLikes:String = "likes"
+    
+    init()
+    {
+        title = ""
+        userId = ""
+        status = DInfraPoem.DInfraPoemStatus.Uploading
+        created = 0
+        lastEdited = 0
+        likes = 0
+    }
     
     init(title:String)
     {

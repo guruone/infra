@@ -30,7 +30,10 @@ class MRootPoems
             listReady
         ]
         
-        FMain.sharedInstance.database.listenPoems()
+        let dummy:FDatabaseModelPoem = FDatabaseModelPoem()
+        let sortParameter:String = dummy.kKeyCreated
+        
+        FMain.sharedInstance.database.listenPoems(sortParameter)
         { [weak self] (snapshot) in
             
             let json:[String:[String:AnyObject]]? = snapshot.value as? [String:[String:AnyObject]]

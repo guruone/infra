@@ -20,6 +20,8 @@ class MRootPoemsListItem
     let kMarginHorizontal:CGFloat = 10
     let kMarginVertical:CGFloat = 20
     let kMaxHeight:CGFloat = 3000
+    let drawingOptions:NSStringDrawingOptions
+    let attr:[String:AnyObject]
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -32,6 +34,8 @@ class MRootPoemsListItem
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
         cellWidth = 0
+        drawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
+        attr = [NSFontAttributeName:UIFont.regular(19)]
         itemStatus = MRootPoemsListItemStatus.None(self)
     }
     
@@ -54,6 +58,12 @@ class MRootPoemsListItem
         { [weak self] (poem, error) in
             
             self?.text = poem
+            
+            if poem != nil
+            {
+                self?.attributedString = NSAttributedString(string:poem!, attributes:self!.attr)
+            }
+            
             self?.completion?(error:error)
             self?.completion = nil
         }
@@ -78,11 +88,8 @@ class MRootPoemsListItem
     func cellSizeFor(width:CGFloat)
     {
         cellWidth = width
-        let attr:[String:AnyObject] = [NSFontAttributeName:UIFont.regular(15)]
-        attributedString = NSAttributedString(string:text!, attributes:attr)
         let maxWidth:CGFloat = cellWidth - (kMarginHorizontal + kMarginHorizontal)
         let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
-        let drawingOptions:NSStringDrawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
         let rect:CGRect = attributedString!.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
         let height:CGFloat = rect.maxY
         let totalHeight:CGFloat = height + (kMarginVertical + kMarginVertical)

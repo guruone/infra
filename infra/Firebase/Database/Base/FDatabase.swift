@@ -70,10 +70,11 @@ class FDatabase
         poemReference.updateChildValues(property)
     }
     
-    func listenPoems(snapBlock:((FIRDataSnapshot) -> Void))
+    func listenPoems(orderParameter:String, snapBlock:((FIRDataSnapshot) -> Void))
     {
         let poemsReference:FIRDatabaseReference = reference.child(kReferencePoem)
-        poemsReference.observeSingleEventOfType(FIRDataEventType.Value, withBlock:snapBlock)
+        let poemsQuery:FIRDatabaseQuery = poemsReference.queryOrderedByChild(orderParameter)
+        poemsQuery.observeSingleEventOfType(FIRDataEventType.Value, withBlock:snapBlock)
     }
     
     func deletePoem(poemId:String)

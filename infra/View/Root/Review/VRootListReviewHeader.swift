@@ -15,7 +15,7 @@ class VRootListReviewHeader:UICollectionReusableView
         label.userInteractionEnabled = false
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.regular(15)
+        label.font = UIFont.regular(16)
         label.textColor = UIColor.blackColor()
         self.label = label
         

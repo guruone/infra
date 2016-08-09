@@ -4,9 +4,9 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
 {
     weak var controller:CRootListReview!
     weak var collection:UICollectionView!
-    private let kHeaderHeight:CGFloat = 60
+    private let kHeaderHeight:CGFloat = 90
     private let kFooterHeight:CGFloat = 80
-    private let kCollectionBottom:CGFloat = 30
+    private let kCollectionBottom:CGFloat = 10
     var model:[MRootPoemsListItem]
     
     init(controller:CRootListReview)
