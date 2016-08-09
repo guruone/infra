@@ -15,6 +15,9 @@ class MRootPoemsListItem
     var cellSize:CGSize?
     var userName:String?
     private var completion:((error:String?) -> ())?
+    let kMarginHorizontal:CGFloat = 10
+    let kMarginVertical:CGFloat = 20
+    let kMaxHeight:CGFloat = 3000
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -32,6 +35,7 @@ class MRootPoemsListItem
     private func snapBlock(snapshot:FIRDataSnapshot)
     {
         userName = snapshot.value as? String
+        loadPoem()
     }
     
     private func loadUserName()
@@ -44,7 +48,13 @@ class MRootPoemsListItem
     
     private func loadPoem()
     {
-        FMain.sharedInstance.storage
+        FMain.sharedInstance.storage.loadPoem(poemId)
+        { [weak self] (poem, error) in
+            
+            self?.text = poem
+            self?.completion?(error:error)
+            self?.completion = nil
+        }
     }
     
     //MARK: public
@@ -52,6 +62,7 @@ class MRootPoemsListItem
     func errored(error:String)
     {
         itemStatus = MRootPoemsListItemStatus.Error(self, error:error)
+        self.completion = nil
     }
     
     func loadData(completion:((error:String?) -> ()))
@@ -64,6 +75,14 @@ class MRootPoemsListItem
     
     func cellSizeFor(width:CGFloat)
     {
-        
+        let attr:[String:AnyObject] = [NSFontAttributeName:UIFont.regular(15)]
+        let attrString:NSAttributedString = NSAttributedString(string:text!, attributes:attr)
+        let maxWidth:CGFloat = width - (kMarginHorizontal + kMarginHorizontal)
+        let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
+        let drawingOptions:NSStringDrawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
+        let rect:CGRect = attrString.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
+        let height:CGFloat = rect.maxY
+        let totalHeight:CGFloat = height + (kMarginVertical + kMarginVertical)
+        cellSize = CGSizeMake(width, totalHeight)
     }
 }

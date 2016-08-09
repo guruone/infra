@@ -20,7 +20,13 @@ class CRootListReview:CRootList
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()   
+        super.viewDidLoad()
+        
+        if !model.items.isEmpty
+        {
+            let indexPath:NSIndexPath = NSIndexPath(forItem:0, inSection:0)
+            pullItems(indexPath)
+        }
     }
     
     override func loadView()
@@ -43,11 +49,11 @@ class CRootListReview:CRootList
                 
                 if error == nil
                 {
-                    item.errored(error!)
+                    self?.insertItem(item)
                 }
                 else
                 {
-                    self?.insertItem(item)
+                    item.errored(error!)
                 }
             }
         }

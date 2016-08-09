@@ -55,6 +55,22 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         self.collection = collection
         
         addSubview(collection)
+        
+        let views:[String:AnyObject] = [
+            "collection":collection]
+        
+        let metrics:[String:AnyObject] = [:]
+        
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[collection]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[collection]-0-|",
+            options:[],
+            metrics:metrics,
+            views:views))
     }
     
     required init?(coder:NSCoder)
@@ -69,13 +85,6 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         let item:MRootPoemsListItem = model[index.section]
         
         return item
-    }
-    
-    //MARK: public
-    
-    func insert(item:MRootPoemsListItem)
-    {
-        
     }
     
     //MARK: col del
@@ -95,7 +104,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     
     func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
     {
-        let count:Int = controller.model.items.count
+        let count:Int = model.count
         
         return count
     }

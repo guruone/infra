@@ -41,6 +41,5 @@ class MRootPoemsListItemStatus
     
     func pull(completion:((error:String?) -> ()))
     {
-        
     }
 }
