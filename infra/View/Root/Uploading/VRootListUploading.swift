@@ -4,7 +4,7 @@ class VRootListUploading:UIView
 {
     weak var controller:CRootListUploading!
     weak var spinner:VMainLoader!
-    weak var layoutButtonLeft:NSLayoutConstraint!
+    weak var layoutButtonLeft:NSLayoutConstraint?
     private let kButtonWidth:CGFloat = 120
     
     convenience init(controller:CRootListUploading)
@@ -90,7 +90,7 @@ class VRootListUploading:UIView
             multiplier:1,
             constant:0)
         
-        addConstraint(layoutButtonLeft)
+        addConstraint(layoutButtonLeft!)
     }
     
     override func layoutSubviews()
@@ -99,7 +99,7 @@ class VRootListUploading:UIView
         let remain:CGFloat = width - kButtonWidth
         let margin:CGFloat = remain / 2.0
         
-        layoutButtonLeft.constant = margin
+        layoutButtonLeft?.constant = margin
     }
     
     //MARK: actions

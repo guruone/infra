@@ -41,21 +41,12 @@ class MCreate
         return error
     }
     
-    func poemFile() -> NSURL?
+    func poemFile() -> NSData?
     {
         let poemText:String = itemText.text
-        var poemUrl:NSURL? = NSURL(fileURLWithPath:NSTemporaryDirectory()).URLByAppendingPathComponent(kPoemFileName)
+        let poemData:NSData? = poemText.dataUsingEncoding(NSUTF8StringEncoding)
         
-        do
-        {
-            try poemText.writeToURL(poemUrl!, atomically:true, encoding:NSUTF8StringEncoding)
-        }
-        catch
-        {
-            poemUrl = nil
-        }
-        
-        return poemUrl
+        return poemData
     }
     
     func clean()

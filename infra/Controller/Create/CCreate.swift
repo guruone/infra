@@ -34,7 +34,7 @@ class CCreate:CMainController
         VMainAlert.Message(error)
     }
     
-    private func createPoem(poem:NSURL)
+    private func createPoem(poem:NSData)
     {
         let poemTitle:String = model.itemTitle.title
         fPoem = FDatabaseModelPoem(title:poemTitle)
@@ -100,16 +100,16 @@ class CCreate:CMainController
             
             if error == nil
             {
-                let poemUrl:NSURL? = self?.model.poemFile()
+                let poemData:NSData? = self?.model.poemFile()
                 
-                if poemUrl == nil
+                if poemData == nil
                 {
                     let errorSaving:String = NSLocalizedString("CCreate_errorSaveFile", comment:"")
                     self?.publishFailed(errorSaving)
                 }
                 else
                 {
-                    self?.createPoem(poemUrl!)
+                    self?.createPoem(poemData!)
                 }
             }
             else

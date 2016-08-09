@@ -11,11 +11,11 @@ class FStoragePoem
     
     //MARK: public
     
-    func save(poemId:String, poem:NSURL, storage:FIRStorageReference, completionHandler:((String?)->())?)
+    func save(poemId:String, poem:NSData, storage:FIRStorageReference, completionHandler:((String?)->())?)
     {
         let rootReference:FIRStorageReference = storage.child(kReferenceRoot)
         let poemReference:FIRStorageReference = rootReference.child(poemId)
-        poemReference.putFile(poem, metadata:nil)
+        poemReference.putData(poem, metadata:nil)
         { (metadata, error) in
             
             let errorString:String?
@@ -26,6 +26,8 @@ class FStoragePoem
             }
             else
             {
+                print(error!)
+                
                 errorString = NSLocalizedString("FStoragePoem_errorSaving", comment:"")
             }
             
