@@ -76,5 +76,6 @@ class VRootListReviewFooterOption:UICollectionViewCell
     func config(model:MRootPoemsListItemAction)
     {
         image.image = UIImage(named:model.image)
+        hover()
     }
 }

@@ -22,7 +22,6 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
         super.init(frame:frame)
         clipsToBounds = true
         backgroundColor = UIColor.clearColor()
-        userInteractionEnabled = false
         
         let collectionWidth:CGFloat = kCellWidth * CGFloat(actions.count)
         let flow:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
