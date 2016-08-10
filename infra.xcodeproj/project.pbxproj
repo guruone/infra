@@ -32,6 +32,7 @@
 		DA0EA2861D4BD81100D300B2 /* CMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA2791D4BD81100D300B2 /* CMainController.swift */; };
 		DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27A1D4BD81100D300B2 /* CMainParent.swift */; };
 		DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27E1D4BD81100D300B2 /* VLanding.swift */; };
+		DA1849491D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1849481D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift */; };
 		DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217EC1D590F3F00DAF787 /* VRoot.swift */; };
 		DA3217F41D590F3F00DAF787 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217ED1D590F3F00DAF787 /* VRootCell.swift */; };
 		DA3217F61D59122F00DAF787 /* VRootListUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F51D59122F00DAF787 /* VRootListUploading.swift */; };
@@ -182,6 +183,7 @@
 		DA0EA2791D4BD81100D300B2 /* CMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMainController.swift; sourceTree = "<group>"; };
 		DA0EA27A1D4BD81100D300B2 /* CMainParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMainParent.swift; sourceTree = "<group>"; };
 		DA0EA27E1D4BD81100D300B2 /* VLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLanding.swift; sourceTree = "<group>"; };
+		DA1849481D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReviewFooterOption.swift; sourceTree = "<group>"; };
 		DA3217EC1D590F3F00DAF787 /* VRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRoot.swift; sourceTree = "<group>"; };
 		DA3217ED1D590F3F00DAF787 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
 		DA3217F51D59122F00DAF787 /* VRootListUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListUploading.swift; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 				DA32180D1D593BE300DAF787 /* VRootListReview.swift */,
 				DA3218111D59571A00DAF787 /* VRootListReviewHeader.swift */,
 				DA3218131D59572200DAF787 /* VRootListReviewFooter.swift */,
+				DA1849481D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift */,
 				DA32180F1D5956CD00DAF787 /* VRootListReviewCell.swift */,
 			);
 			path = Review;
@@ -1162,6 +1165,7 @@
 				DAB8CE141D5503A500F273E1 /* DInfraPoem+CoreDataProperties.swift in Sources */,
 				DA41888C1D5A1DEE00ADFD25 /* MRootPoemsStateReady.swift in Sources */,
 				DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */,
+				DA1849491D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift in Sources */,
 				DA3218001D5918AA00DAF787 /* VMainAlert.swift in Sources */,
 				DAA78FC91D57C45A007D86D9 /* FStoragePoem.swift in Sources */,
 				DA381A321D554C9B00140F7E /* MOnboardingItemApp.swift in Sources */,

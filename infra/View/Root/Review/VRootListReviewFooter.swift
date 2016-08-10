@@ -1,6 +1,6 @@
 import UIKit
 
-class VRootListReviewFooter:UICollectionReusableView
+class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 {
     override init(frame:CGRect)
     {
@@ -20,5 +20,20 @@ class VRootListReviewFooter:UICollectionReusableView
     func config(model:MRootPoemsListItem)
     {
         
+    }
+    
+    //MARK: col del
+    
+    func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(collectionView:UICollectionView, numberOfItemsInSection section:Int) -> Int
+    {
+    }
+    
+    func collectionView(collectionView:UICollectionView, cellForItemAtIndexPath indexPath:NSIndexPath) -> UICollectionViewCell
+    {
     }
 }
