@@ -29,4 +29,10 @@ class MRootPoemsListItemAction
     {
         self.image = image
     }
+    
+    //MARK: public
+    
+    func selected(model:MRootPoemsListItem)
+    {
+    }
 }

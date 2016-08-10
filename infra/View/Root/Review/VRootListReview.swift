@@ -96,6 +96,32 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         return item
     }
     
+    //MARK: public
+    
+    func removeItem(item:MRootPoemsListItem)
+    {
+        let totalItems:Int = model.count
+        var indexSet:NSIndexSet?
+        
+        for index:Int in 0 ..< totalItems
+        {
+            let anItem:MRootPoemsListItem = model[index]
+            
+            if anItem === item
+            {
+                indexSet = NSIndexSet(index:index)
+                model.removeAtIndex(index)
+                
+                break
+            }
+        }
+        
+        if indexSet != nil
+        {
+            collection.deleteSections(indexSet!)
+        }
+    }
+    
     //MARK: col del
     
     func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize

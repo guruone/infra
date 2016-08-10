@@ -124,6 +124,9 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     
     func collectionView(collectionView:UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
+        let item:MRootPoemsListItemAction = modelAtIndex(indexPath)
+        item.selected(model!)
+        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue())
         { [weak collectionView] in
             
