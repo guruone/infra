@@ -33,6 +33,10 @@
 		DA0EA2871D4BD81100D300B2 /* CMainParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27A1D4BD81100D300B2 /* CMainParent.swift */; };
 		DA0EA2881D4BD81100D300B2 /* VLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EA27E1D4BD81100D300B2 /* VLanding.swift */; };
 		DA1849491D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1849481D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift */; };
+		DA18494C1D5AC75900C151F5 /* MRootPoemsListItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18494B1D5AC75900C151F5 /* MRootPoemsListItemAction.swift */; };
+		DA18494E1D5AC76300C151F5 /* MRootPoemsListItemActionAccept.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18494D1D5AC76300C151F5 /* MRootPoemsListItemActionAccept.swift */; };
+		DA1849501D5AC76E00C151F5 /* MRootPoemsListItemActionReject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18494F1D5AC76E00C151F5 /* MRootPoemsListItemActionReject.swift */; };
+		DA1849521D5AC77600C151F5 /* MRootPoemsListItemActionRevision.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1849511D5AC77600C151F5 /* MRootPoemsListItemActionRevision.swift */; };
 		DA3217F31D590F3F00DAF787 /* VRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217EC1D590F3F00DAF787 /* VRoot.swift */; };
 		DA3217F41D590F3F00DAF787 /* VRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217ED1D590F3F00DAF787 /* VRootCell.swift */; };
 		DA3217F61D59122F00DAF787 /* VRootListUploading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3217F51D59122F00DAF787 /* VRootListUploading.swift */; };
@@ -184,6 +188,10 @@
 		DA0EA27A1D4BD81100D300B2 /* CMainParent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMainParent.swift; sourceTree = "<group>"; };
 		DA0EA27E1D4BD81100D300B2 /* VLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VLanding.swift; sourceTree = "<group>"; };
 		DA1849481D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListReviewFooterOption.swift; sourceTree = "<group>"; };
+		DA18494B1D5AC75900C151F5 /* MRootPoemsListItemAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemAction.swift; sourceTree = "<group>"; };
+		DA18494D1D5AC76300C151F5 /* MRootPoemsListItemActionAccept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemActionAccept.swift; sourceTree = "<group>"; };
+		DA18494F1D5AC76E00C151F5 /* MRootPoemsListItemActionReject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemActionReject.swift; sourceTree = "<group>"; };
+		DA1849511D5AC77600C151F5 /* MRootPoemsListItemActionRevision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemActionRevision.swift; sourceTree = "<group>"; };
 		DA3217EC1D590F3F00DAF787 /* VRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRoot.swift; sourceTree = "<group>"; };
 		DA3217ED1D590F3F00DAF787 /* VRootCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootCell.swift; sourceTree = "<group>"; };
 		DA3217F51D59122F00DAF787 /* VRootListUploading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRootListUploading.swift; sourceTree = "<group>"; };
@@ -539,6 +547,17 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		DA18494A1D5AC70A00C151F5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				DA18494B1D5AC75900C151F5 /* MRootPoemsListItemAction.swift */,
+				DA18494D1D5AC76300C151F5 /* MRootPoemsListItemActionAccept.swift */,
+				DA18494F1D5AC76E00C151F5 /* MRootPoemsListItemActionReject.swift */,
+				DA1849511D5AC77600C151F5 /* MRootPoemsListItemActionRevision.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		DA3217EB1D590F3F00DAF787 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,6 +908,7 @@
 		DAA78FD51D58D1E7007D86D9 /* Poems */ = {
 			isa = PBXGroup;
 			children = (
+				DA18494A1D5AC70A00C151F5 /* Actions */,
 				DA4188901D5A1E2300ADFD25 /* Status */,
 				DA41887C1D5A1DEE00ADFD25 /* Base */,
 			);
@@ -1167,6 +1187,7 @@
 				DAF32B0E1D5586BC00704E75 /* VOnboardingItemApp.swift in Sources */,
 				DA1849491D5AC5DE00C151F5 /* VRootListReviewFooterOption.swift in Sources */,
 				DA3218001D5918AA00DAF787 /* VMainAlert.swift in Sources */,
+				DA1849521D5AC77600C151F5 /* MRootPoemsListItemActionRevision.swift in Sources */,
 				DAA78FC91D57C45A007D86D9 /* FStoragePoem.swift in Sources */,
 				DA381A321D554C9B00140F7E /* MOnboardingItemApp.swift in Sources */,
 				DA3218011D5918AA00DAF787 /* VMainLoader.swift in Sources */,
@@ -1174,6 +1195,7 @@
 				DAF03C691D518AE000DA1B81 /* MMainNavItemNotifications.swift in Sources */,
 				DA0EA21B1D4BD01100D300B2 /* DManager.swift in Sources */,
 				DA0EA21C1D4BD01100D300B2 /* DManagerModel.swift in Sources */,
+				DA18494C1D5AC75900C151F5 /* MRootPoemsListItemAction.swift in Sources */,
 				DA800B3F1D5029CB008C4904 /* MMainNavItemLiked.swift in Sources */,
 				DA800B371D50299B008C4904 /* MMainNavItem.swift in Sources */,
 				DAA0553C1D53FE490070D0E0 /* MCreateItemPublish.swift in Sources */,
@@ -1189,6 +1211,7 @@
 				DA3218061D591BF800DAF787 /* MMainNavPostNormal.swift in Sources */,
 				DA3218121D59571A00DAF787 /* VRootListReviewHeader.swift in Sources */,
 				DA0EA20B1D4BD01100D300B2 /* CategoryUILocalNotification.swift in Sources */,
+				DA18494E1D5AC76300C151F5 /* MRootPoemsListItemActionAccept.swift in Sources */,
 				DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */,
 				DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */,
 				DA800B321D502981008C4904 /* MMainTransitionScrollLeft.swift in Sources */,
@@ -1209,6 +1232,7 @@
 				DA800B301D502981008C4904 /* MMainTransitionFade.swift in Sources */,
 				DA0EA2041D4BD01100D300B2 /* CategoryNSDate.swift in Sources */,
 				DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */,
+				DA1849501D5AC76E00C151F5 /* MRootPoemsListItemActionReject.swift in Sources */,
 				DA3218041D591B8800DAF787 /* MMainNavPos.swift in Sources */,
 				DA3218021D5918AA00DAF787 /* VMainShadow.swift in Sources */,
 				DA800AFE1D4FD5D9008C4904 /* FAnalytics.swift in Sources */,
