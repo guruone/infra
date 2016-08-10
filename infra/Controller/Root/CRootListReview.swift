@@ -3,20 +3,6 @@ import UIKit
 class CRootListReview:CRootList
 {
     weak var viewReview:VRootListReview!
-    private let queue:dispatch_queue_t
-    
-    required init(model:MRootPoemsList)
-    {
-        queue = dispatch_queue_create("queue_items", DISPATCH_QUEUE_SERIAL)
-        dispatch_set_target_queue(queue, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0))
-        
-        super.init(model:model)
-    }
-    
-    required init?(coder:NSCoder)
-    {
-        fatalError()
-    }
     
     override func viewDidLoad()
     {
@@ -43,17 +29,25 @@ class CRootListReview:CRootList
         if index < max
         {
             let item:MRootPoemsListItem = model.items[index]
-            item.itemStatus?.pull()
-            { [weak self] (error) in
+            
+            if !viewReview.model.contains(
+            { anItem in
                 
-                if error == nil
-                {
-                    item.completed()
-                    self?.insertItem(item)
-                }
-                else
-                {
-                    item.errored(error!)
+                return anItem === item
+            })
+            {
+                item.itemStatus?.pull()
+                { [weak self] (error) in
+                    
+                    if error == nil
+                    {
+                        item.completed()
+                        self?.insertItem(item)
+                    }
+                    else
+                    {
+                        item.errored(error!)
+                    }
                 }
             }
         }
@@ -64,21 +58,11 @@ class CRootListReview:CRootList
         let currentLastItem:Int = viewReview.model.count
         let indexSet:NSIndexSet = NSIndexSet(index:currentLastItem)
         
-        dispatch_async(queue)
+        dispatch_async(dispatch_get_main_queue())
         { [weak self] in
             
             self?.viewReview.model.append(item)
-            
-            dispatch_async(dispatch_get_main_queue())
-            { [weak self] in
-                
-                self?.viewReview.collection.performBatchUpdates(
-                { [weak self] in
-                    
-                    self?.viewReview.collection.insertSections(indexSet)
-                    
-                }, completion:nil)
-            }
+            self?.viewReview.collection.insertSections(indexSet)
         }
     }
     
