@@ -4,14 +4,18 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
 {
     weak var controller:CRootListReview!
     weak var collection:UICollectionView!
+    var model:[MRootPoemsListItem]
+    private let attributesText:[String:AnyObject]
     private let kHeaderHeight:CGFloat = 90
     private let kFooterHeight:CGFloat = 80
     private let kCollectionBottom:CGFloat = 10
-    var model:[MRootPoemsListItem]
+    private let kCellMarginHorizontal:CGFloat = 10
+    private let kCellMarginVertical:CGFloat = 20
     
     init(controller:CRootListReview)
     {
         model = []
+        attributesText = [NSFontAttributeName:UIFont.regular(16)]
         
         super.init(frame:CGRectZero)
         clipsToBounds = true
@@ -102,7 +106,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         
         if item.cellWidth != width
         {
-            item.cellSizeFor(width)
+            item.measureString(attributesText, cellWidth:width, marginHorizontal:kCellMarginHorizontal, marginVertical:kCellMarginVertical)
         }
         
         return item.cellSize!

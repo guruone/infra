@@ -13,15 +13,14 @@ class MRootPoemsListItem
     let likes:Int
     var text:String?
     var cellWidth:CGFloat
+    var marginHorizontal:CGFloat
+    var marginVertical:CGFloat
     var cellSize:CGSize?
     var userName:String?
     var attributedString:NSAttributedString?
     private var completion:((error:String?) -> ())?
-    let kMarginHorizontal:CGFloat = 10
-    let kMarginVertical:CGFloat = 20
-    let kMaxHeight:CGFloat = 5000
-    let drawingOptions:NSStringDrawingOptions
-    let attr:[String:AnyObject]
+    private let kMaxHeight:CGFloat = 10000
+    private let drawingOptions:NSStringDrawingOptions
     
     init(poemId:String, json:[String:AnyObject])
     {
@@ -33,9 +32,10 @@ class MRootPoemsListItem
         created = NSTimeInterval(fPoem.created)
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
-        cellWidth = 0
-        attr = [NSFontAttributeName:UIFont.regular(16)]
         drawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
+        cellWidth = 0
+        marginHorizontal = 0
+        marginVertical = 0
         itemStatus = MRootPoemsListItemStatus.None(self)
     }
     
@@ -68,10 +68,10 @@ class MRootPoemsListItem
                     self!.text = poem
                 }
                 
-                self!.attributedString = NSAttributedString(string:self!.text!, attributes:self!.attr)
                 self!.completion?(error:error)
-                self!.completion = nil
             }
+            
+            self?.completion = nil
         }
     }
     
@@ -95,14 +95,17 @@ class MRootPoemsListItem
         loadUserName()
     }
     
-    func cellSizeFor(width:CGFloat)
+    func measureString(attributes:[String:AnyObject], cellWidth:CGFloat, marginHorizontal:CGFloat, marginVertical:CGFloat)
     {
-        cellWidth = width
-        let maxWidth:CGFloat = cellWidth - (kMarginHorizontal + kMarginHorizontal)
+        attributedString = NSAttributedString(string:text!, attributes:attributes)
+        self.cellWidth = cellWidth
+        self.marginVertical = marginVertical
+        self.marginHorizontal = marginHorizontal
+        let maxWidth:CGFloat = cellWidth - (marginHorizontal + marginHorizontal)
         let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
         let rect:CGRect = attributedString!.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
         let height:CGFloat = ceil(rect.maxY)
-        let totalHeight:CGFloat = height + kMarginVertical + kMarginVertical
+        let totalHeight:CGFloat = height + marginVertical + marginVertical
         cellSize = CGSizeMake(cellWidth, totalHeight)
     }
 }

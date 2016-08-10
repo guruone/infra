@@ -73,10 +73,10 @@ class VRootListReviewCell:UICollectionViewCell
     
     func config(model:MRootPoemsListItem)
     {
-        layoutLabelTop.constant = model.kMarginVertical
-        layoutLabelBottom.constant = -model.kMarginVertical
-        layoutLabelLeft.constant = model.kMarginHorizontal
-        layoutLabelRight.constant = -model.kMarginHorizontal
+        layoutLabelTop.constant = model.marginVertical
+        layoutLabelBottom.constant = -model.marginVertical
+        layoutLabelLeft.constant = model.marginHorizontal
+        layoutLabelRight.constant = -model.marginHorizontal
         label.attributedText = model.attributedString
     }
 }
