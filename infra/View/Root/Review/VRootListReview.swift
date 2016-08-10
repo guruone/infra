@@ -172,7 +172,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
                 withReuseIdentifier:
                 VRootListReviewFooter.reusableIdentifier(),
                 forIndexPath:indexPath) as! VRootListReviewFooter
-            footer.config(item)
+            footer.config(item, parent:self)
             
             reusable = footer
         }

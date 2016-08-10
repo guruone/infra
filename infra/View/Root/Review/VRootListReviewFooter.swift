@@ -5,6 +5,7 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     let actions:[MRootPoemsListItemAction]
     weak var collection:UICollectionView!
     weak var model:MRootPoemsListItem?
+    weak var parent:VRootListReview?
     private let kCellWidth:CGFloat = 55
     
     override init(frame:CGRect)
@@ -83,9 +84,10 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     
     //MARK: public
     
-    func config(model:MRootPoemsListItem)
+    func config(model:MRootPoemsListItem, parent:VRootListReview)
     {
         self.model = model
+        self.parent = parent
     }
     
     //MARK: col del
@@ -126,11 +128,19 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     {
         let item:MRootPoemsListItemAction = modelAtIndex(indexPath)
         item.selected(model!)
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC)), dispatch_get_main_queue())
-        { [weak collectionView] in
+        { [weak self, weak collectionView] (done) in
             
-            collectionView?.selectItemAtIndexPath(nil, animated:false, scrollPosition:UICollectionViewScrollPosition.None)
+            if self != nil
+            {
+                if done
+                {
+                    self!.parent?.removeItem(self!.model!)
+                }
+                else
+                {
+                    collectionView?.selectItemAtIndexPath(nil, animated:false, scrollPosition:UICollectionViewScrollPosition.None)
+                }
+            }
         }
     }
 }
