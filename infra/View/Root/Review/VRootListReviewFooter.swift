@@ -5,7 +5,7 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     let actions:[MRootPoemsListItemAction]
     weak var collection:UICollectionView!
     weak var model:MRootPoemsListItem?
-    private let kCellWidth:CGFloat = 80
+    private let kCellWidth:CGFloat = 90
     
     override init(frame:CGRect)
     {
@@ -90,6 +90,14 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     }
     
     //MARK: col del
+    
+    func collectionView(collectionView:UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAtIndexPath indexPath:NSIndexPath) -> CGSize
+    {
+        let height:CGFloat = collectionView.bounds.size.height
+        let size:CGSize = CGSizeMake(kCellWidth, height)
+        
+        return size
+    }
     
     func numberOfSectionsInCollectionView(collectionView:UICollectionView) -> Int
     {

@@ -7,8 +7,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     var model:[MRootPoemsListItem]
     private let attributesText:[String:AnyObject]
     private let kHeaderHeight:CGFloat = 90
-    private let kFooterHeight:CGFloat = 80
-    private let kCollectionBottom:CGFloat = 10
+    private let kFooterHeight:CGFloat = 60
     private let kCellMarginHorizontal:CGFloat = 10
     private let kCellMarginVertical:CGFloat = 20
     
@@ -29,7 +28,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
         flow.minimumLineSpacing = 0
         flow.minimumInteritemSpacing = 0
         flow.scrollDirection = UICollectionViewScrollDirection.Vertical
-        flow.sectionInset = UIEdgeInsetsMake(0, 0, kCollectionBottom, 0)
+        flow.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
         
         let collection:UICollectionView = UICollectionView(frame:CGRectZero, collectionViewLayout:flow)
         collection.backgroundColor = UIColor.clearColor()

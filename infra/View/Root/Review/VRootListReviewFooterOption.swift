@@ -30,7 +30,7 @@ class VRootListReviewFooterOption:UICollectionViewCell
             metrics:metrics,
             views:views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-0-[image]-0-|",
+            "V:|-0-[image]-20-|",
             options:[],
             metrics:metrics,
             views:views))
