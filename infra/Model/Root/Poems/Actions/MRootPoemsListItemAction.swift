@@ -2,6 +2,8 @@ import Foundation
 
 class MRootPoemsListItemAction
 {
+    let image:String
+    
     class func Accept() -> MRootPoemsListItemActionAccept
     {
         let action:MRootPoemsListItemActionAccept = MRootPoemsListItemActionAccept()
@@ -21,5 +23,10 @@ class MRootPoemsListItemAction
         let action:MRootPoemsListItemActionRevision = MRootPoemsListItemActionRevision()
         
         return action
+    }
+    
+    init(image:String)
+    {
+        self.image = image
     }
 }
