@@ -77,10 +77,14 @@ class MRootPoemsListItem
     
     //MARK: public
     
+    func completed()
+    {
+        itemStatus = MRootPoemsListItemStatus.Ready(self)
+    }
+    
     func errored(error:String)
     {
         itemStatus = MRootPoemsListItemStatus.Error(self, error:error)
-        self.completion = nil
     }
     
     func loadData(completion:((error:String?) -> ()))

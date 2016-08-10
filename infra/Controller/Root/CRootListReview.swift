@@ -48,6 +48,7 @@ class CRootListReview:CRootList
                 
                 if error == nil
                 {
+                    item.completed()
                     self?.insertItem(item)
                 }
                 else
