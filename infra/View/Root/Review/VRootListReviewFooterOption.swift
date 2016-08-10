@@ -63,7 +63,7 @@ class VRootListReviewFooterOption:UICollectionViewCell
     {
         if selected || highlighted
         {
-            alpha = 0.2
+            alpha = 0.1
         }
         else
         {
