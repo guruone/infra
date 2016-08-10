@@ -20,6 +20,7 @@ class VRootListReviewCell:UICollectionViewCell
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         label.textColor = UIColor.main()
+        label.backgroundColor = UIColor.clearColor()
         self.label = label
         
         addSubview(label)

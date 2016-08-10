@@ -19,7 +19,7 @@ class MRootPoemsListItem
     private var completion:((error:String?) -> ())?
     let kMarginHorizontal:CGFloat = 10
     let kMarginVertical:CGFloat = 20
-    let kMaxHeight:CGFloat = 3000
+    let kMaxHeight:CGFloat = 5000
     let drawingOptions:NSStringDrawingOptions
     let attr:[String:AnyObject]
     
@@ -34,8 +34,8 @@ class MRootPoemsListItem
         lastEdit = NSTimeInterval(fPoem.lastEdited)
         likes = fPoem.likes
         cellWidth = 0
+        attr = [NSFontAttributeName:UIFont.regular(16)]
         drawingOptions = NSStringDrawingOptions([NSStringDrawingOptions.UsesLineFragmentOrigin, NSStringDrawingOptions.UsesFontLeading])
-        attr = [NSFontAttributeName:UIFont.regular(19)]
         itemStatus = MRootPoemsListItemStatus.None(self)
     }
     
@@ -58,9 +58,16 @@ class MRootPoemsListItem
         { [weak self] (poem, error) in
             
             if self != nil
-            {
-                self!.text = poem
-                self!.text = ""
+            {   
+                if poem == nil
+                {
+                    self!.text = ""
+                }
+                else
+                {
+                    self!.text = poem
+                }
+                
                 self!.attributedString = NSAttributedString(string:self!.text!, attributes:self!.attr)
                 self!.completion?(error:error)
                 self!.completion = nil
@@ -90,8 +97,8 @@ class MRootPoemsListItem
         let maxWidth:CGFloat = cellWidth - (kMarginHorizontal + kMarginHorizontal)
         let boundingSize:CGSize = CGSizeMake(maxWidth, kMaxHeight)
         let rect:CGRect = attributedString!.boundingRectWithSize(boundingSize, options:drawingOptions, context:nil)
-        let height:CGFloat = rect.maxY
-        let totalHeight:CGFloat = height + (kMarginVertical + kMarginVertical)
+        let height:CGFloat = ceil(rect.maxY)
+        let totalHeight:CGFloat = height + kMarginVertical + kMarginVertical
         cellSize = CGSizeMake(cellWidth, totalHeight)
     }
 }

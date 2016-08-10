@@ -8,8 +8,8 @@ class VRootListReviewHeader:UICollectionReusableView
     
     override init(frame:CGRect)
     {
-        attrTitle = [NSFontAttributeName:UIFont.regular(16), NSForegroundColorAttributeName:UIColor.blackColor()]
-        attrUser = [NSFontAttributeName:UIFont.regular(14), NSForegroundColorAttributeName:UIColor(white:0.4, alpha:1)]
+        attrTitle = [NSFontAttributeName:UIFont.regular(17), NSForegroundColorAttributeName:UIColor.blackColor()]
+        attrUser = [NSFontAttributeName:UIFont.regular(15), NSForegroundColorAttributeName:UIColor(white:0.5, alpha:1)]
         
         super.init(frame:frame)
         clipsToBounds = true
