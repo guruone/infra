@@ -7,7 +7,7 @@ class VRootListReview:UIView, UICollectionViewDelegate, UICollectionViewDataSour
     var model:[MRootPoemsListItem]
     private let attributesText:[String:AnyObject]
     private let kHeaderHeight:CGFloat = 90
-    private let kFooterHeight:CGFloat = 60
+    private let kFooterHeight:CGFloat = 70
     private let kCellMarginHorizontal:CGFloat = 10
     private let kCellMarginVertical:CGFloat = 20
     

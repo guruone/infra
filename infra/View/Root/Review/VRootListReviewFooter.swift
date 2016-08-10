@@ -5,7 +5,7 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     let actions:[MRootPoemsListItemAction]
     weak var collection:UICollectionView!
     weak var model:MRootPoemsListItem?
-    private let kCellWidth:CGFloat = 90
+    private let kCellWidth:CGFloat = 55
     
     override init(frame:CGRect)
     {
