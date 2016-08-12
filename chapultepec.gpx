@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+    <metadata>
+        <link href="http://www.mapstogpx.com">
+            <text>Sverrir Sigmundarson</text>
+        </link>
+        <!--desc>Map data copyright 2016 Google</desc-->
+        <!--copyright author="Google Inc">
+         <year>2016</year>
+         <license>https://developers.google.com/maps/terms</license>
+         </copyright-->
+        <!--url>https://www.google.co.uk/maps/dir/19.4220488,-99.1860779/19.4228789,-99.1863785/@19.4222996,-99.1863732,19z/data=!4m2!4m1!3e2?hl=en&hl=en</url-->
+        <time>2016-08-11T21:24:29Z</time>
+    </metadata>
+    <wpt lat="19.42210" lon="-99.18580" />
+    <wpt lat="19.42215" lon="-99.18580" />
+    <wpt lat="19.42220" lon="-99.18580" />
+    <wpt lat="19.42225" lon="-99.18580" />
+    <wpt lat="19.42230" lon="-99.18580" />
+    <wpt lat="19.42235" lon="-99.18580" />
+    <wpt lat="19.42240" lon="-99.18580" />
+    <wpt lat="19.42245" lon="-99.18580" />
+    <wpt lat="19.42250" lon="-99.18580" />
+    <wpt lat="19.42255" lon="-99.18580" />
+    <wpt lat="19.42260" lon="-99.18580" />
+    <wpt lat="19.42265" lon="-99.18580" />
+    <wpt lat="19.42270" lon="-99.18580" />
+    <wpt lat="19.42275" lon="-99.18580" />
+    <wpt lat="19.42280" lon="-99.18580" />
+    <wpt lat="19.42285" lon="-99.18580" />
+    <wpt lat="19.42290" lon="-99.18580" />
+    <wpt lat="19.42290" lon="-99.18580" />
+    <wpt lat="19.42290" lon="-99.18575" />
+    <wpt lat="19.42290" lon="-99.18570" />
+    <wpt lat="19.42290" lon="-99.18565" />
+    <wpt lat="19.42290" lon="-99.18560" />
+    <wpt lat="19.42290" lon="-99.18555" />
+    <wpt lat="19.42290" lon="-99.18550" />
+    <wpt lat="19.42290" lon="-99.18545" />
+    <wpt lat="19.42290" lon="-99.18540" />
+    <wpt lat="19.42290" lon="-99.18535" />
+    <wpt lat="19.42290" lon="-99.18530" />
+    <wpt lat="19.42290" lon="-99.18525" />
+    <wpt lat="19.42290" lon="-99.18520" />
+    <wpt lat="19.42290" lon="-99.18515" />
+    <wpt lat="19.42290" lon="-99.18510" />
+    <wpt lat="19.42290" lon="-99.18505" />
+    <wpt lat="19.42290" lon="-99.18500" />
+    <wpt lat="19.42290" lon="-99.18495" />
+    <wpt lat="19.42290" lon="-99.18490" />
+    <wpt lat="19.42290" lon="-99.18485" />
+    <wpt lat="19.42290" lon="-99.18480" />
+    <wpt lat="19.42290" lon="-99.18480" />
+    <wpt lat="19.42285" lon="-99.18480" />
+    <wpt lat="19.42280" lon="-99.18480" />
+    <wpt lat="19.42275" lon="-99.18480" />
+    <wpt lat="19.42270" lon="-99.18480" />
+    <wpt lat="19.42265" lon="-99.18480" />
+    <wpt lat="19.42260" lon="-99.18480" />
+    <wpt lat="19.42255" lon="-99.18480" />
+    <wpt lat="19.42250" lon="-99.18480" />
+    <wpt lat="19.42245" lon="-99.18480" />
+    <wpt lat="19.42240" lon="-99.18480" />
+    <wpt lat="19.42235" lon="-99.18480" />
+    <wpt lat="19.42230" lon="-99.18480" />
+    <wpt lat="19.42225" lon="-99.18480" />
+    <wpt lat="19.42220" lon="-99.18480" />
+    <wpt lat="19.42215" lon="-99.18480" />
+    <wpt lat="19.42210" lon="-99.18480" />
+    <wpt lat="19.42210" lon="-99.18480" />
+    <wpt lat="19.42210" lon="-99.18485" />
+    <wpt lat="19.42210" lon="-99.18490" />
+    <wpt lat="19.42210" lon="-99.18495" />
+    <wpt lat="19.42210" lon="-99.18500" />
+    <wpt lat="19.42210" lon="-99.18505" />
+    <wpt lat="19.42210" lon="-99.18510" />
+    <wpt lat="19.42210" lon="-99.18515" />
+    <wpt lat="19.42210" lon="-99.18520" />
+    <wpt lat="19.42210" lon="-99.18525" />
+    <wpt lat="19.42210" lon="-99.18530" />
+    <wpt lat="19.42210" lon="-99.18535" />
+    <wpt lat="19.42210" lon="-99.18540" />
+    <wpt lat="19.42210" lon="-99.18545" />
+    <wpt lat="19.42210" lon="-99.18550" />
+    <wpt lat="19.42210" lon="-99.18555" />
+    <wpt lat="19.42210" lon="-99.18560" />
+    <wpt lat="19.42210" lon="-99.18565" />
+    <wpt lat="19.42210" lon="-99.18570" />
+    <wpt lat="19.42210" lon="-99.18575" />
+    <wpt lat="19.42210" lon="-99.18580" />
+</gpx>

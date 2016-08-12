@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+  <metadata>
+    <link href="http://www.mapstogpx.com">
+      <text>Sverrir Sigmundarson</text>
+    </link>
+    <!--desc>Map data copyright 2016 Google</desc-->
+    <!--copyright author="Google Inc">
+    	<year>2016</year>
+    	<license>https://developers.google.com/maps/terms</license>
+    </copyright-->
+    <!--url>https://www.google.co.uk/maps/dir/19.703371,-101.1950079/Avenida Francisco I. Madero Poniente 377-477, Centro Histórico, Morelia, Mich./@19.7031349,-101.195834,20z/data=!4m8!4m7!1m0!1m5!1m1!1s0x842d0e70767f6b7b:0x34060883ca2e717c!2m2!1d-101.1959207!2d19.7030057?hl=en&hl=en</url-->
+    <time>2016-08-10T19:48:32Z</time>
+  </metadata>
+  <wpt lat="19.7033708" lon="-101.1950018">
+    <name>WP001</name>
+  </wpt>
+  <wpt lat="19.703358212112" lon="-101.19500210234">
+    <name>WP002</name>
+  </wpt>
+  <wpt lat="19.703345624224" lon="-101.19500240469">
+    <name>WP003</name>
+  </wpt>
+  <wpt lat="19.703333036336" lon="-101.19500270703">
+    <name>WP004</name>
+  </wpt>
+  <wpt lat="19.703320448448" lon="-101.19500300937">
+    <name>WP005</name>
+  </wpt>
+  <wpt lat="19.70330786056" lon="-101.19500331172">
+    <name>WP006</name>
+  </wpt>
+  <wpt lat="19.703295272672" lon="-101.19500361406">
+    <name>WP007</name>
+  </wpt>
+  <wpt lat="19.703282684784" lon="-101.1950039164">
+    <name>WP008</name>
+  </wpt>
+  <wpt lat="19.703270096896" lon="-101.19500421875">
+    <name>WP009</name>
+  </wpt>
+  <wpt lat="19.703257509008" lon="-101.19500452109">
+    <name>WP010</name>
+  </wpt>
+  <wpt lat="19.70324492112" lon="-101.19500482343">
+    <name>WP011</name>
+  </wpt>
+  <wpt lat="19.703232333232" lon="-101.19500512578">
+    <name>WP012</name>
+  </wpt>
+  <wpt lat="19.703219745344" lon="-101.19500542812">
+    <name>WP013</name>
+  </wpt>
+  <wpt lat="19.703207157456" lon="-101.19500573046">
+    <name>WP014</name>
+  </wpt>
+  <wpt lat="19.703194569568" lon="-101.19500603281">
+    <name>WP015</name>
+  </wpt>
+  <wpt lat="19.70318198168" lon="-101.19500633515">
+    <name>WP016</name>
+  </wpt>
+  <wpt lat="19.703169393792" lon="-101.19500663749">
+    <name>WP017</name>
+  </wpt>
+  <wpt lat="19.703156805904" lon="-101.19500693984">
+    <name>WP018</name>
+  </wpt>
+  <wpt lat="19.703144218016" lon="-101.19500724218">
+    <name>WP019</name>
+  </wpt>
+  <wpt lat="19.703131630128" lon="-101.19500754452">
+    <name>WP020</name>
+  </wpt>
+  <wpt lat="19.70311904224" lon="-101.19500784687">
+    <name>WP021</name>
+  </wpt>
+  <wpt lat="19.703106454352" lon="-101.19500814921">
+    <name>WP022</name>
+  </wpt>
+  <wpt lat="19.703093866464" lon="-101.19500845155">
+    <name>WP023</name>
+  </wpt>
+  <wpt lat="19.703081278577" lon="-101.1950087539">
+    <name>WP024</name>
+  </wpt>
+  <wpt lat="19.703068690689" lon="-101.19500905624">
+    <name>WP025</name>
+  </wpt>
+  <wpt lat="19.703056102801" lon="-101.19500935858">
+    <name>WP026</name>
+  </wpt>
+  <wpt lat="19.703043514913" lon="-101.19500966093">
+    <name>WP027</name>
+  </wpt>
+  <wpt lat="19.703030927025" lon="-101.19500996327">
+    <name>WP028</name>
+  </wpt>
+  <wpt lat="19.703018339137" lon="-101.19501026561">
+    <name>WP029</name>
+  </wpt>
+  <wpt lat="19.703005751249" lon="-101.19501056796">
+    <name>WP030</name>
+  </wpt>
+  <wpt lat="19.702993163361" lon="-101.1950108703">
+    <name>WP031</name>
+  </wpt>
+  <wpt lat="19.7029836" lon="-101.1950111">
+    <name>WP032</name>
+  </wpt>
+</gpx>
