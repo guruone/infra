@@ -32,7 +32,7 @@ class MRootPoemsListItemAction
     
     //MARK: public
     
-    func selected(model:MRootPoemsListItem, onAction:((done:Bool) -> ())?)
+    func selected(model:MRootPoemsListItem, controller:CRootList, onAction:((done:Bool) -> ())?)
     {
     }
 }

@@ -127,7 +127,7 @@ class VRootListReviewFooter:UICollectionReusableView, UICollectionViewDelegate, 
     func collectionView(collectionView:UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         let item:MRootPoemsListItemAction = modelAtIndex(indexPath)
-        item.selected(model!)
+        item.selected(model!, controller:parent!.controller)
         { [weak self, weak collectionView] (done) in
             
             if self != nil

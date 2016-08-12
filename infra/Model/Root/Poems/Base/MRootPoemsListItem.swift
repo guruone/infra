@@ -108,4 +108,8 @@ class MRootPoemsListItem
         let totalHeight:CGFloat = height + marginVertical + marginVertical
         cellSize = CGSizeMake(cellWidth, totalHeight)
     }
+    
+    func accept()
+    {
+    }
 }

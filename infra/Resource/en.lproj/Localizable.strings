@@ -23,5 +23,8 @@
 "MCreateItemTitle_maxCharacters"="Title should have %@ characters max";
 "MCreateItemText_minCharacters"="Poem missing!";
 "MCreateItemText_maxCharacters"="Poem can't be longer than %@ characters";
+"MRootPoemsListItemActionAccept_title"="Accept";
+"MRootPoemsListItemActionAccept_accept"="Accept";
+"MRootPoemsListItemActionAccept_cancel"="Cancel";
 
 "FStoragePoem_errorSaving"="Error saving, try again";

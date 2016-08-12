@@ -80,6 +80,8 @@
 		DA4188961D5A1E5100ADFD25 /* MRootPoemsListItemStatusDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4188951D5A1E5100ADFD25 /* MRootPoemsListItemStatusDownloading.swift */; };
 		DA4188981D5A1E5C00ADFD25 /* MRootPoemsListItemStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4188971D5A1E5C00ADFD25 /* MRootPoemsListItemStatusError.swift */; };
 		DA41889A1D5A1E6700ADFD25 /* MRootPoemsListItemStatusReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4188991D5A1E6700ADFD25 /* MRootPoemsListItemStatusReady.swift */; };
+		DA77390C1D5BFAEC004323F6 /* parkmexico.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA77390B1D5BFAEC004323F6 /* parkmexico.gpx */; };
+		DA77390E1D5C02F7004323F6 /* morelia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA77390D1D5C02F7004323F6 /* morelia.gpx */; };
 		DA800ACD1D4FC3F1008C4904 /* DInfraUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */; };
 		DA800ACE1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */; };
 		DA800AD01D4FC8E0008C4904 /* MConfigurationFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */; };
@@ -107,6 +109,11 @@
 		DA800B431D502B92008C4904 /* MMainNavItemStateNone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */; };
 		DA800B471D502BAC008C4904 /* MMainNavItemStateActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */; };
 		DA8421371D4D90A2003CDEA2 /* VHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8421361D4D90A2003CDEA2 /* VHome.swift */; };
+		DA885F2F1D5D462700922F72 /* lagoPatos.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA885F2E1D5D462700922F72 /* lagoPatos.gpx */; };
+		DA885F311D5D568500922F72 /* parkeVenados.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA885F301D5D568500922F72 /* parkeVenados.gpx */; };
+		DA885F331D5D5AEE00922F72 /* stLorenz.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA885F321D5D5AEE00922F72 /* stLorenz.gpx */; };
+		DA885F351D5D5D2300922F72 /* pilares.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA885F341D5D5D2300922F72 /* pilares.gpx */; };
+		DA885F371D5D695E00922F72 /* chapultepec.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DA885F361D5D695E00922F72 /* chapultepec.gpx */; };
 		DAA0551E1D53D9E60070D0E0 /* CCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA0551D1D53D9E60070D0E0 /* CCreate.swift */; };
 		DAA055211D53DAC20070D0E0 /* VCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055201D53DAC20070D0E0 /* VCreate.swift */; };
 		DAA055231D53E1C60070D0E0 /* VCreateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA055221D53E1C60070D0E0 /* VCreateCell.swift */; };
@@ -129,6 +136,7 @@
 		DAA78FF31D58FDD4007D86D9 /* CRootListReady.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */; };
 		DAA78FF51D58FF08007D86D9 /* CRootList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF41D58FF08007D86D9 /* CRootList.swift */; };
 		DAA78FF71D5903E7007D86D9 /* MMainTransitionPush.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */; };
+		DAA9F0D01D5E0BED00E8CDCE /* londonTowerBridge.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DAA9F0CF1D5E0BED00E8CDCE /* londonTowerBridge.gpx */; };
 		DAB21B951D5506D8001CD703 /* COnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21B941D5506D8001CD703 /* COnboarding.swift */; };
 		DAB21BA21D550887001CD703 /* COnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA11D550887001CD703 /* COnboardingItem.swift */; };
 		DAB21BA41D5508AD001CD703 /* COnboardingItemHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */; };
@@ -235,6 +243,8 @@
 		DA4188951D5A1E5100ADFD25 /* MRootPoemsListItemStatusDownloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemStatusDownloading.swift; sourceTree = "<group>"; };
 		DA4188971D5A1E5C00ADFD25 /* MRootPoemsListItemStatusError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemStatusError.swift; sourceTree = "<group>"; };
 		DA4188991D5A1E6700ADFD25 /* MRootPoemsListItemStatusReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRootPoemsListItemStatusReady.swift; sourceTree = "<group>"; };
+		DA77390B1D5BFAEC004323F6 /* parkmexico.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parkmexico.gpx; sourceTree = SOURCE_ROOT; };
+		DA77390D1D5C02F7004323F6 /* morelia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = morelia.gpx; sourceTree = SOURCE_ROOT; };
 		DA800AC91D4FC3F1008C4904 /* DInfraUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DInfraUser.swift; sourceTree = "<group>"; };
 		DA800ACA1D4FC3F1008C4904 /* DInfraUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DInfraUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DA800ACF1D4FC8E0008C4904 /* MConfigurationFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MConfigurationFont.swift; sourceTree = "<group>"; };
@@ -262,6 +272,11 @@
 		DA800B421D502B92008C4904 /* MMainNavItemStateNone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemStateNone.swift; sourceTree = "<group>"; };
 		DA800B461D502BAC008C4904 /* MMainNavItemStateActive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainNavItemStateActive.swift; sourceTree = "<group>"; };
 		DA8421361D4D90A2003CDEA2 /* VHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHome.swift; sourceTree = "<group>"; };
+		DA885F2E1D5D462700922F72 /* lagoPatos.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = lagoPatos.gpx; sourceTree = SOURCE_ROOT; };
+		DA885F301D5D568500922F72 /* parkeVenados.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parkeVenados.gpx; sourceTree = SOURCE_ROOT; };
+		DA885F321D5D5AEE00922F72 /* stLorenz.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stLorenz.gpx; sourceTree = SOURCE_ROOT; };
+		DA885F341D5D5D2300922F72 /* pilares.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = pilares.gpx; sourceTree = SOURCE_ROOT; };
+		DA885F361D5D695E00922F72 /* chapultepec.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = chapultepec.gpx; sourceTree = SOURCE_ROOT; };
 		DAA0551D1D53D9E60070D0E0 /* CCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCreate.swift; sourceTree = "<group>"; };
 		DAA055201D53DAC20070D0E0 /* VCreate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreate.swift; sourceTree = "<group>"; };
 		DAA055221D53E1C60070D0E0 /* VCreateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCreateCell.swift; sourceTree = "<group>"; };
@@ -284,6 +299,7 @@
 		DAA78FF21D58FDD4007D86D9 /* CRootListReady.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootListReady.swift; sourceTree = "<group>"; };
 		DAA78FF41D58FF08007D86D9 /* CRootList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRootList.swift; sourceTree = "<group>"; };
 		DAA78FF61D5903E7007D86D9 /* MMainTransitionPush.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMainTransitionPush.swift; sourceTree = "<group>"; };
+		DAA9F0CF1D5E0BED00E8CDCE /* londonTowerBridge.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = londonTowerBridge.gpx; sourceTree = SOURCE_ROOT; };
 		DAB21B941D5506D8001CD703 /* COnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboarding.swift; sourceTree = "<group>"; };
 		DAB21BA11D550887001CD703 /* COnboardingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItem.swift; sourceTree = "<group>"; };
 		DAB21BA31D5508AD001CD703 /* COnboardingItemHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = COnboardingItemHistory.swift; sourceTree = "<group>"; };
@@ -366,6 +382,14 @@
 		DA0EA1441D4BBE1600D300B2 /* infra */ = {
 			isa = PBXGroup;
 			children = (
+				DAA9F0CF1D5E0BED00E8CDCE /* londonTowerBridge.gpx */,
+				DA885F361D5D695E00922F72 /* chapultepec.gpx */,
+				DA885F341D5D5D2300922F72 /* pilares.gpx */,
+				DA885F321D5D5AEE00922F72 /* stLorenz.gpx */,
+				DA885F301D5D568500922F72 /* parkeVenados.gpx */,
+				DA885F2E1D5D462700922F72 /* lagoPatos.gpx */,
+				DA77390D1D5C02F7004323F6 /* morelia.gpx */,
+				DA77390B1D5BFAEC004323F6 /* parkmexico.gpx */,
 				DA800AF21D4FD5D9008C4904 /* Firebase */,
 				DA0EA2741D4BD81100D300B2 /* Controller */,
 				DA0EA27B1D4BD81100D300B2 /* Model */,
@@ -1042,7 +1066,15 @@
 				DA0EA24C1D4BD01100D300B2 /* Localizable.strings in Resources */,
 				DA0EA2021D4BD01100D300B2 /* brand.xcassets in Resources */,
 				DA800B011D4FD5D9008C4904 /* GoogleService-Info.plist in Resources */,
+				DA885F311D5D568500922F72 /* parkeVenados.gpx in Resources */,
+				DAA9F0D01D5E0BED00E8CDCE /* londonTowerBridge.gpx in Resources */,
+				DA885F351D5D5D2300922F72 /* pilares.gpx in Resources */,
 				DA0EA24B1D4BD01100D300B2 /* LaunchScreen.storyboard in Resources */,
+				DA885F371D5D695E00922F72 /* chapultepec.gpx in Resources */,
+				DA885F2F1D5D462700922F72 /* lagoPatos.gpx in Resources */,
+				DA77390E1D5C02F7004323F6 /* morelia.gpx in Resources */,
+				DA77390C1D5BFAEC004323F6 /* parkmexico.gpx in Resources */,
+				DA885F331D5D5AEE00922F72 /* stLorenz.gpx in Resources */,
 				DA0EA2031D4BD01100D300B2 /* ui.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
