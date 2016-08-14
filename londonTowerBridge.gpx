@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" creator="mapstogpx.com" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
-<!-->
   <wpt lat="51.50680" lon="-0.07445" />
   <wpt lat="51.50685" lon="-0.07445" />
   <wpt lat="51.50690" lon="-0.07445" />
@@ -30,45 +29,25 @@
   <wpt lat="51.50810" lon="-0.07445" />
   <wpt lat="51.50815" lon="-0.07445" />
   <wpt lat="51.50820" lon="-0.07445" />
-  <wpt lat="51.50820" lon="-0.07445" />
   <wpt lat="51.50820" lon="-0.07440" />
-  <wpt lat="51.50820" lon="-0.07435" />
   <wpt lat="51.50820" lon="-0.07430" />
-  <wpt lat="51.50820" lon="-0.07425" />
   <wpt lat="51.50820" lon="-0.07420" />
-  <wpt lat="51.50820" lon="-0.07415" />
   <wpt lat="51.50820" lon="-0.07410" />
-  <wpt lat="51.50820" lon="-0.07405" />
   <wpt lat="51.50820" lon="-0.07400" />
-  <wpt lat="51.50820" lon="-0.07400" />
-  <wpt lat="51.50820" lon="-0.07395" />
   <wpt lat="51.50820" lon="-0.07390" />
-  <wpt lat="51.50820" lon="-0.07385" />
   <wpt lat="51.50820" lon="-0.07380" />
-  <wpt lat="51.50820" lon="-0.07375" />
   <wpt lat="51.50820" lon="-0.07370" />
-  <wpt lat="51.50820" lon="-0.07365" />
-  <wpt lat="51.50820" lon="-0.07360" />
   <wpt lat="51.50820" lon="-0.07360" />
 <name name="go down" />
   <wpt lat="51.50815" lon="-0.07360" />
-  <wpt lat="51.50810" lon="-0.07360" />
   <wpt lat="51.50805" lon="-0.07360" />
-  <wpt lat="51.50800" lon="-0.07360" />
   <wpt lat="51.50795" lon="-0.07360" />
-  <wpt lat="51.50790" lon="-0.07360" />
   <wpt lat="51.50785" lon="-0.07360" />
-  <wpt lat="51.50780" lon="-0.07360" />
   <wpt lat="51.50775" lon="-0.07360" />
-  <wpt lat="51.50770" lon="-0.07360" />
   <wpt lat="51.50765" lon="-0.07360" />
-  <wpt lat="51.50760" lon="-0.07360" />
   <wpt lat="51.50755" lon="-0.07360" />
-  <wpt lat="51.50750" lon="-0.07360" />
   <wpt lat="51.50745" lon="-0.07360" />
-  <wpt lat="51.50740" lon="-0.07360" />
   <wpt lat="51.50735" lon="-0.07360" />
-  <wpt lat="51.50730" lon="-0.07360" />
   <wpt lat="51.50725" lon="-0.07360" />
   <wpt lat="51.50720" lon="-0.07360" />
   <wpt lat="51.50715" lon="-0.07360" />
@@ -376,6 +355,7 @@
   <wpt lat="51.50765" lon="-0.07620" />
   <wpt lat="51.50765" lon="-0.07625" />
   <wpt lat="51.50765" lon="-0.07630" />
+  <wpt lat="51.50765" lon="-0.07635" />
   <wpt lat="51.50765" lon="-0.07640" />
   <wpt lat="51.50765" lon="-0.07645" />
   <wpt lat="51.50765" lon="-0.07650" />
@@ -395,6 +375,7 @@
   <wpt lat="51.50765" lon="-0.07720" />
   <wpt lat="51.50765" lon="-0.07725" />
   <wpt lat="51.50765" lon="-0.07730" />
+  <wpt lat="51.50765" lon="-0.07735" />
   <wpt lat="51.50765" lon="-0.07740" />
   <wpt lat="51.50765" lon="-0.07745" />
   <wpt lat="51.50765" lon="-0.07750" />
@@ -414,6 +395,7 @@
   <wpt lat="51.50765" lon="-0.07820" />
   <wpt lat="51.50765" lon="-0.07825" />
   <wpt lat="51.50765" lon="-0.07830" />
+  <wpt lat="51.50765" lon="-0.07835" />
   <wpt lat="51.50765" lon="-0.07840" />
   <wpt lat="51.50765" lon="-0.07845" />
   <wpt lat="51.50765" lon="-0.07850" />
